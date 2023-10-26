@@ -297,11 +297,8 @@ class quick_gait_assessment: BaseViewController {
         self.navigationController?.pushViewController(pushVC, animated: true)*/
         
         // new update
-        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "SwingViewController") as! SwingViewController
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "stance_phase_id") as! stance_phase
         self.navigationController?.pushViewController(pushVC, animated: true)
-        
-        
-        
         
         // }
     }

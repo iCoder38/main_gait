@@ -80,6 +80,9 @@ class PDFPageView: UIView {
         self.setUpTDSData()
         self.setUpSwingData()
         self.setUpFocusData()
+        
+        print(self.setUpSwingData as Any)
+        
     }
     
     func setUpUserData(){
@@ -139,6 +142,15 @@ class PDFPageView: UIView {
     }
     
     func setUpSwingData(){
+        lblSwingFoot.text   = selectedSwingData["foot"] as? String
+        lblSwingAnkle.text  = selectedSwingData["ankle"] as? String
+        lblSwingKnee.text   = selectedSwingData["knee"] as? String
+        lblSWingHip.text    = selectedSwingData["hip"] as? String
+        lblSwingPelivs.text = selectedSwingData["pelvis"] as? String
+        lblSwingTrunk.text  = selectedSwingData["trunk"] as? String
+    }
+    
+    func setUpStancePhase(){
         lblSwingFoot.text   = selectedSwingData["foot"] as? String
         lblSwingAnkle.text  = selectedSwingData["ankle"] as? String
         lblSwingKnee.text   = selectedSwingData["knee"] as? String

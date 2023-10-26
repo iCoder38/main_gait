@@ -124,7 +124,7 @@ class SwingViewController: BaseViewController {
             selectedSwingData.setObject(hipArr.joined(separator:"\n"), forKey: "hip" as NSCopying)
             selectedSwingData.setObject(pelvisArr.joined(separator:"\n"), forKey: "pelvis" as NSCopying)
             selectedSwingData.setObject(trunkArr.joined(separator:"\n"), forKey: "trunk" as NSCopying)
-            //print(selectedSwingData)
+            print(selectedSwingData)
         }
     }
     

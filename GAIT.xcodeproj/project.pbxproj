@@ -47,6 +47,7 @@
 		B9435D0F2AE92F2800EB0DD6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9435D0E2AE92F2800EB0DD6 /* Utils.swift */; };
 		B9435D122AE9341600EB0DD6 /* how_the_app_works.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9435D112AE9341600EB0DD6 /* how_the_app_works.swift */; };
 		B9435D152AE947CC00EB0DD6 /* types_of_gait.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9435D142AE947CC00EB0DD6 /* types_of_gait.swift */; };
+		B94709322AEA7D7A00D5B355 /* stance_phase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94709312AEA7D7A00D5B355 /* stance_phase.swift */; };
 		B96F4DC728EFFF81002ABEAF /* calibrib.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B96F4DC428EFFF81002ABEAF /* calibrib.ttf */; };
 		B96F4DC828EFFF81002ABEAF /* calibril.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B96F4DC528EFFF81002ABEAF /* calibril.ttf */; };
 		B96F4DC928EFFF81002ABEAF /* Calibri.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B96F4DC628EFFF81002ABEAF /* Calibri.ttf */; };
@@ -97,6 +98,7 @@
 		B9435D0E2AE92F2800EB0DD6 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B9435D112AE9341600EB0DD6 /* how_the_app_works.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = how_the_app_works.swift; sourceTree = "<group>"; };
 		B9435D142AE947CC00EB0DD6 /* types_of_gait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = types_of_gait.swift; sourceTree = "<group>"; };
+		B94709312AEA7D7A00D5B355 /* stance_phase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stance_phase.swift; sourceTree = "<group>"; };
 		B96F4DC428EFFF81002ABEAF /* calibrib.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = calibrib.ttf; sourceTree = "<group>"; };
 		B96F4DC528EFFF81002ABEAF /* calibril.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = calibril.ttf; sourceTree = "<group>"; };
 		B96F4DC628EFFF81002ABEAF /* Calibri.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Calibri.ttf; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 		527FEEA9255410C600C03BEF /* DashBoard */ = {
 			isa = PBXGroup;
 			children = (
+				B94709302AEA7CE700D5B355 /* stance_phase */,
 				B9435D0B2AE92C9D00EB0DD6 /* would_like_to */,
 				1852B0A528522BEF005DEA22 /* play_videos */,
 				A4723C4A2604DCE3003D4984 /* CongratulationsTableCell */,
@@ -300,6 +303,14 @@
 				B9435D142AE947CC00EB0DD6 /* types_of_gait.swift */,
 			);
 			path = type_of_gait;
+			sourceTree = "<group>";
+		};
+		B94709302AEA7CE700D5B355 /* stance_phase */ = {
+			isa = PBXGroup;
+			children = (
+				B94709312AEA7D7A00D5B355 /* stance_phase.swift */,
+			);
+			path = stance_phase;
 			sourceTree = "<group>";
 		};
 		C61DAD2F52D70A63B69B837C /* Pods */ = {
@@ -455,6 +466,7 @@
 				A4723C4C2604DD05003D4984 /* CongratulationsTwo.swift in Sources */,
 				527FEECB25555D9600C03BEF /* Alert.swift in Sources */,
 				527FEE9825540C5700C03BEF /* SplashViewController.swift in Sources */,
+				B94709322AEA7D7A00D5B355 /* stance_phase.swift in Sources */,
 				B92847A32AEA469A00C8FF37 /* quick_gait_assessment.swift in Sources */,
 				527FEEC3255417F600C03BEF /* CongratulationsViewController.swift in Sources */,
 				527FEEAF2554146300C03BEF /* BaseViewController.swift in Sources */,

@@ -168,7 +168,8 @@ extension would_to_to:UITableViewDelegate,UITableViewDataSource{
             /*let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "how_the_app_works_id") as? how_the_app_works
             pushVC!.str_profile_name = "comprehensive_gait_assessment"
             self.navigationController?.pushViewController(pushVC!, animated: true)*/
-            
+            let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "PatientInformationViewController") as! PatientInformationViewController
+            self.navigationController?.pushViewController(pushVC, animated: true)
             
         }  else if (indexPath.row == 6) {
             
