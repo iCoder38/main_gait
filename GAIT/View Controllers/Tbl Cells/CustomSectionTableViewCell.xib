@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="gait_bold.otf">
+            <string>D-DIN-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomSectionTableViewCell" id="KGk-i7-Jjw" customClass="CustomSectionTableViewCell" customModule="G_A_I_T" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zqn-n0-Ihh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8b-kX-g65">
+                                <rect key="frame" x="15" y="2" width="295" height="40"/>
+                                <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="App_Orang_Color"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="i8b-kX-g65" secondAttribute="bottom" constant="2" id="Xce-dn-R7b"/>
+                            <constraint firstItem="i8b-kX-g65" firstAttribute="top" secondItem="zqn-n0-Ihh" secondAttribute="top" constant="2" id="doq-2N-XOT"/>
+                            <constraint firstItem="i8b-kX-g65" firstAttribute="leading" secondItem="zqn-n0-Ihh" secondAttribute="leading" constant="15" id="qj0-WB-qas"/>
+                            <constraint firstAttribute="trailing" secondItem="i8b-kX-g65" secondAttribute="trailing" constant="10" id="xXH-fe-ThX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zqn-n0-Ihh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Sf9-8g-Syz"/>
+                    <constraint firstAttribute="trailing" secondItem="zqn-n0-Ihh" secondAttribute="trailing" id="WM1-p2-tWg"/>
+                    <constraint firstAttribute="bottom" secondItem="zqn-n0-Ihh" secondAttribute="bottom" id="b3Z-oM-JtR"/>
+                    <constraint firstItem="zqn-n0-Ihh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="d4N-NV-v6X"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bgView" destination="zqn-n0-Ihh" id="GHD-XB-XUI"/>
+                <outlet property="lblSectionName" destination="i8b-kX-g65" id="WSM-VL-i6C"/>
+            </connections>
+            <point key="canvasLocation" x="141" y="93"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="App_Orang_Color">
+            <color red="0.98000001907348633" green="0.54900002479553223" blue="0.046999998390674591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
