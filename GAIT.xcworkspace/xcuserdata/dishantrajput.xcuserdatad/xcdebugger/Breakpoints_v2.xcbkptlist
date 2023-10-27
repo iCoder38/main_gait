@@ -52,5 +52,180 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E0D75C18-8751-46C3-B748-DBD24AC3D758"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GAIT/View Controllers/DashBoard/stance_phase/stance_phase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
+            landmarkName = "save_and_continue_click_method()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E0D75C18-8751-46C3-B748-DBD24AC3D758 - 1d3c9aec97772c94"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "G_A_I_T.stance_phase.fareFootClickMethod() -&gt; ()"
+                  moduleName = "G.A.I.T"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dishantrajput/Documents/evs_2022/gait/GAIT/View%20Controllers/DashBoard/stance_phase/stance_phase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "212"
+                  endingLineNumber = "212"
+                  offsetFromSymbolStart = "3510">
+               </Location>
+               <Location
+                  uuid = "E0D75C18-8751-46C3-B748-DBD24AC3D758 - 2e0ec955580d684c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "G_A_I_T.stance_phase.save_and_continue_click_method() -&gt; ()"
+                  moduleName = "G.A.I.T"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dishantrajput/Documents/evs_2022/gait/GAIT/View%20Controllers/DashBoard/stance_phase/stance_phase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "212"
+                  endingLineNumber = "212"
+                  offsetFromSymbolStart = "14705">
+               </Location>
+               <Location
+                  uuid = "E0D75C18-8751-46C3-B748-DBD24AC3D758 - 2e0ec955580d684c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "G_A_I_T.stance_phase.save_and_continue_click_method() -&gt; ()"
+                  moduleName = "G.A.I.T"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dishantrajput/Documents/evs_2022/gait/GAIT/View%20Controllers/DashBoard/stance_phase/stance_phase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "212"
+                  endingLineNumber = "212"
+                  offsetFromSymbolStart = "15116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "29D975F2-7EA6-41C7-A11A-D0FE6D003E42"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GAIT/View Controllers/DashBoard/stance_phase/stance_phase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "894"
+            endingLineNumber = "894"
+            landmarkName = "ankle_inversion_main_clicked_method()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "29D975F2-7EA6-41C7-A11A-D0FE6D003E42 - 4b9786e6ac05b920"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "G_A_I_T.stance_phase.trunk_restricted_ClickMethod() -&gt; ()"
+                  moduleName = "G.A.I.T"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dishantrajput/Documents/evs_2022/gait/GAIT/View%20Controllers/DashBoard/stance_phase/stance_phase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "898"
+                  endingLineNumber = "898"
+                  offsetFromSymbolStart = "1162">
+               </Location>
+               <Location
+                  uuid = "29D975F2-7EA6-41C7-A11A-D0FE6D003E42 - 74a52924ecf6fcdc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "G_A_I_T.stance_phase.ankle_inversion_main_clicked_method() -&gt; ()"
+                  moduleName = "G.A.I.T"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dishantrajput/Documents/evs_2022/gait/GAIT/View%20Controllers/DashBoard/stance_phase/stance_phase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "894"
+                  endingLineNumber = "894"
+                  offsetFromSymbolStart = "11430">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6A6C8048-DDBB-4DA5-AEE4-CB7E4DD2B487"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GAIT/View Controllers/DashBoard/stance_phase/stance_phase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "save_and_continue_click_method()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6A6C8048-DDBB-4DA5-AEE4-CB7E4DD2B487 - 1d3c9aec97772ec7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "G_A_I_T.stance_phase.fareFootClickMethod() -&gt; ()"
+                  moduleName = "G.A.I.T"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dishantrajput/Documents/evs_2022/gait/GAIT/View%20Controllers/DashBoard/stance_phase/stance_phase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "199"
+                  endingLineNumber = "199"
+                  offsetFromSymbolStart = "803">
+               </Location>
+               <Location
+                  uuid = "6A6C8048-DDBB-4DA5-AEE4-CB7E4DD2B487 - 2e0ec955580d6a1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "G_A_I_T.stance_phase.save_and_continue_click_method() -&gt; ()"
+                  moduleName = "G.A.I.T"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dishantrajput/Documents/evs_2022/gait/GAIT/View%20Controllers/DashBoard/stance_phase/stance_phase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "199"
+                  endingLineNumber = "199"
+                  offsetFromSymbolStart = "12788">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB416BCD-D1DD-4CD5-8D28-E996A2104C77"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GAIT/View Controllers/DashBoard/stance_phase/stance_phase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "save_and_continue_click_method()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

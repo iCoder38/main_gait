@@ -4561,11 +4561,11 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                             <outlet property="lbl_title" destination="kG6-QX-qHt" id="vPc-NN-pLm"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="six_table_cell" rowHeight="250" id="eB7-xw-cv3" customClass="stance_phase_table_cell" customModule="G_A_I_T" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1728" width="320" height="250"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="six_table_cell" rowHeight="294" id="eB7-xw-cv3" customClass="stance_phase_table_cell" customModule="G_A_I_T" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="1728" width="320" height="294"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eB7-xw-cv3" id="WiL-Eh-RPD">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="294"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forward Lean" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKk-2B-A9X">
@@ -4713,6 +4713,14 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" image="uncheck_icon"/>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itG-SQ-Ggy">
+                                                    <rect key="frame" x="16" y="248" width="288" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="Save and Continue"/>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="V2C-2I-rkP" firstAttribute="leading" secondItem="WiL-Eh-RPD" secondAttribute="leading" id="4Pe-qg-jBW"/>
@@ -4758,6 +4766,7 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="btn_save_and_continue" destination="itG-SQ-Ggy" id="8oR-bd-b9W"/>
                                             <outlet property="btn_trunk_backward" destination="SUS-mJ-a4c" id="XIt-ub-b2x"/>
                                             <outlet property="btn_trunk_forward" destination="e3Z-i3-mSU" id="4gM-IB-l6P"/>
                                             <outlet property="btn_trunk_left" destination="46d-Fh-mbm" id="IdO-Cg-Q5j"/>
