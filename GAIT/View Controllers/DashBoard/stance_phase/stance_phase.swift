@@ -1127,6 +1127,10 @@ class stance_phase: UIViewController {
             cell.btn_ankle_eversion_main_moderate.tag = 280
             cell.btn_ankle_eversion_main_excessive.tag = 290
             
+            self.remove_data_in_array(dynamic_mut_arr: arr_ankle, my_name: "Eversion : Slight")
+            self.remove_data_in_array(dynamic_mut_arr: arr_ankle, my_name: "Eversion : Moderate")
+            self.remove_data_in_array(dynamic_mut_arr: arr_ankle, my_name: "Eversion : Excessive")
+            
             cell.btn_ankle_eversion_main.tag = 260
         }
     }
@@ -1143,9 +1147,27 @@ class stance_phase: UIViewController {
                 
                 cell.btn_ankle_eversion_main_slight.setImage(UIImage(named: "check_icon"), for: .normal)
                 
+                // add
+                self.add_data_in_array(dynamic_mut_arr: arr_ankle, my_name: my_name)
+                
+                
+                
+                // remove other two
+                cell.btn_ankle_eversion_main_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_ankle_eversion_main_moderate.tag = 280
+                
+                cell.btn_ankle_eversion_main_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_ankle_eversion_main_excessive.tag = 290
+                
+                self.remove_data_in_array(dynamic_mut_arr: arr_ankle, my_name: "Eversion : Moderate")
+                self.remove_data_in_array(dynamic_mut_arr: arr_ankle, my_name: "Eversion : Excessive")
+                
                 cell.btn_ankle_eversion_main_slight.tag = 271
             } else {
                 cell.btn_ankle_eversion_main_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                
+                // remove
+                self.remove_data_in_array(dynamic_mut_arr: arr_ankle, my_name: my_name)
                 
                 cell.btn_ankle_eversion_main_slight.tag = 270
             }
@@ -1166,9 +1188,24 @@ class stance_phase: UIViewController {
                 
                 cell.btn_ankle_eversion_main_moderate.setImage(UIImage(named: "check_icon"), for: .normal)
                 
+                // add
+                self.add_data_in_array(dynamic_mut_arr: arr_ankle, my_name: my_name)
+                
+                // remove two
+                cell.btn_ankle_eversion_main_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_ankle_eversion_main_slight.tag = 270
+                cell.btn_ankle_eversion_main_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_ankle_eversion_main_excessive.tag = 290
+                
+                self.remove_data_in_array(dynamic_mut_arr: arr_ankle, my_name: "Eversion : Slight")
+                self.remove_data_in_array(dynamic_mut_arr: arr_ankle, my_name: "Eversion : Excessive")
+                
                 cell.btn_ankle_eversion_main_moderate.tag = 281
             } else {
                 cell.btn_ankle_eversion_main_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                
+                // remove
+                self.remove_data_in_array(dynamic_mut_arr: arr_ankle, my_name: my_name)
                 
                 cell.btn_ankle_eversion_main_moderate.tag = 280
             }
@@ -1190,9 +1227,24 @@ class stance_phase: UIViewController {
                 
                 cell.btn_ankle_eversion_main_excessive.setImage(UIImage(named: "check_icon"), for: .normal)
                 
+                // add
+                self.add_data_in_array(dynamic_mut_arr: arr_ankle, my_name: my_name)
+                
+                // remove two
+                cell.btn_ankle_eversion_main_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_ankle_eversion_main_slight.tag = 270
+                cell.btn_ankle_eversion_main_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_ankle_eversion_main_moderate.tag = 280
+                
+                self.remove_data_in_array(dynamic_mut_arr: arr_ankle, my_name: "Eversion : Slight")
+                self.remove_data_in_array(dynamic_mut_arr: arr_ankle, my_name: "Eversion : Moderate")
+                
                 cell.btn_ankle_eversion_main_excessive.tag = 291
             } else {
                 cell.btn_ankle_eversion_main_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                
+                // remove
+                self.remove_data_in_array(dynamic_mut_arr: arr_ankle, my_name: my_name)
                 
                 cell.btn_ankle_eversion_main_excessive.tag = 290
             }
@@ -1339,6 +1391,7 @@ class stance_phase: UIViewController {
         let indexPath = IndexPath.init(row: knee_index, section: 0)
         let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
         
+        
         print(cell.btn_knee_varus_main.tag as Any)
         if (cell.btn_knee_varus_main.tag == 350) {
             
@@ -1357,12 +1410,17 @@ class stance_phase: UIViewController {
             cell.btn_knee_varus_moderate.tag = 370
             cell.btn_knee_varus_excessive.tag = 380
             
+            self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Varus : Slight")
+            self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Varus : Moderate")
+            self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Varus : Excessive")
+            
             cell.btn_knee_varus_main.tag = 350
         }
     }
     @objc func knee_varus_slight_clicked_method() {
         let indexPath = IndexPath.init(row: knee_index, section: 0)
         let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Varus : Slight"
         
         if (cell.btn_knee_varus_main.tag == 351) {
             
@@ -1371,9 +1429,24 @@ class stance_phase: UIViewController {
                 
                 cell.btn_knee_varus_slight.setImage(UIImage(named: "check_icon"), for: .normal)
                 
+                // add
+                self.add_data_in_array(dynamic_mut_arr: arr_knee, my_name: my_name)
+                
+                // remove two
+                cell.btn_knee_varus_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_knee_varus_moderate.tag = 370
+                cell.btn_knee_varus_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_knee_varus_excessive.tag = 380
+                
+                self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Varus : Moderate")
+                self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Varus : Excessive")
+                
                 cell.btn_knee_varus_slight.tag = 361
             } else {
                 cell.btn_knee_varus_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                
+                // remove
+                self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: my_name)
                 
                 cell.btn_knee_varus_slight.tag = 360
             }
@@ -1386,15 +1459,32 @@ class stance_phase: UIViewController {
     @objc func knee_varus_moderate_clicked_method() {
         let indexPath = IndexPath.init(row: knee_index, section: 0)
         let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Varus : Moderate"
+        
         if (cell.btn_knee_varus_main.tag == 351) {
         print(cell.btn_knee_varus_moderate.tag as Any)
         if (cell.btn_knee_varus_moderate.tag == 370) {
             
             cell.btn_knee_varus_moderate.setImage(UIImage(named: "check_icon"), for: .normal)
             
+            // add
+            self.add_data_in_array(dynamic_mut_arr: arr_knee, my_name: my_name)
+            
+            // remove two
+            cell.btn_knee_varus_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_knee_varus_slight.tag = 360
+            cell.btn_knee_varus_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_knee_varus_excessive.tag = 380
+            
+            self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Varus : Slight")
+            self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Varus : Excessive")
+            
             cell.btn_knee_varus_moderate.tag = 371
         } else {
             cell.btn_knee_varus_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            
+            // remove
+            self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: my_name)
             
             cell.btn_knee_varus_moderate.tag = 370
         }
@@ -1405,6 +1495,7 @@ class stance_phase: UIViewController {
     @objc func knee_varus_excessive_clicked_method() {
         let indexPath = IndexPath.init(row: knee_index, section: 0)
         let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Varus : Excessive"
         
         if (cell.btn_knee_varus_main.tag == 351) {
             
@@ -1413,9 +1504,24 @@ class stance_phase: UIViewController {
                 
                 cell.btn_knee_varus_excessive.setImage(UIImage(named: "check_icon"), for: .normal)
                 
+                // add
+                self.add_data_in_array(dynamic_mut_arr: arr_knee, my_name: my_name)
+                
+                // remove two
+                cell.btn_knee_varus_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_knee_varus_slight.tag = 360
+                cell.btn_knee_varus_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_knee_varus_moderate.tag = 370
+                
+                self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Varus : Slight")
+                self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Varus : Moderate")
+                
                 cell.btn_knee_varus_excessive.tag = 381
             } else {
                 cell.btn_knee_varus_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                
+                // remove
+                self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: my_name)
                 
                 cell.btn_knee_varus_excessive.tag = 380
             }
@@ -1433,6 +1539,7 @@ class stance_phase: UIViewController {
     @objc func knee_valgus_main_clicked_method() {
         let indexPath = IndexPath.init(row: knee_index, section: 0)
         let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Valgus"
         
         print(cell.btn_knee_valgus_main.tag as Any)
         if (cell.btn_knee_valgus_main.tag == 390) {
@@ -1443,12 +1550,25 @@ class stance_phase: UIViewController {
         } else {
             cell.btn_knee_valgus_main.setImage(UIImage(named: "uncheck_icon"), for: .normal)
             
+            // remove all
+            cell.btn_knee_valgus_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_knee_valgus_slight.tag = 400
+            cell.btn_knee_valgus_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_knee_valgus_moderate.tag = 410
+            cell.btn_knee_valgus_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_knee_valgus_excessive.tag = 420
+            
+            self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Valgus : Slight")
+            self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Valgus : Moderate")
+            self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Valgus : Excessive")
+            
             cell.btn_knee_valgus_main.tag = 390
         }
     }
     @objc func knee_valgus_slight_clicked_method() {
         let indexPath = IndexPath.init(row: knee_index, section: 0)
         let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Valgus : Slight"
         
         if (cell.btn_knee_varus_main.tag == 351) {
             
@@ -1457,9 +1577,24 @@ class stance_phase: UIViewController {
             
             cell.btn_knee_valgus_slight.setImage(UIImage(named: "check_icon"), for: .normal)
             
+            // add
+            self.add_data_in_array(dynamic_mut_arr: arr_knee, my_name: my_name)
+            
+            // remove two
+            cell.btn_knee_valgus_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_knee_valgus_moderate.tag = 410
+            cell.btn_knee_valgus_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_knee_valgus_excessive.tag = 420
+            
+            self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Valgus : Moderate")
+            self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Valgus : Excessive")
+            
             cell.btn_knee_valgus_slight.tag = 401
         } else {
             cell.btn_knee_valgus_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            
+            // remove
+            self.remove_data_in_array(dynamic_mut_arr:arr_knee, my_name: my_name)
             
             cell.btn_knee_valgus_slight.tag = 400
         }
@@ -1470,6 +1605,7 @@ class stance_phase: UIViewController {
     @objc func knee_valgus_moderate_clicked_method() {
         let indexPath = IndexPath.init(row: knee_index, section: 0)
         let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Valgus : Moderate"
         
         if (cell.btn_knee_varus_main.tag == 351) {
             
@@ -1478,9 +1614,24 @@ class stance_phase: UIViewController {
             
             cell.btn_knee_valgus_moderate.setImage(UIImage(named: "check_icon"), for: .normal)
             
+            // add
+            self.add_data_in_array(dynamic_mut_arr: arr_knee, my_name: my_name)
+            
+            // remove two
+            cell.btn_knee_valgus_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_knee_valgus_slight.tag = 400
+            cell.btn_knee_valgus_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_knee_valgus_excessive.tag = 420
+            
+            self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Valgus : Slight")
+            self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Valgus : Excessive")
+            
             cell.btn_knee_valgus_moderate.tag = 411
         } else {
             cell.btn_knee_valgus_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            
+            // remove
+            self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: my_name)
             
             cell.btn_knee_valgus_moderate.tag = 410
         }
@@ -1491,6 +1642,7 @@ class stance_phase: UIViewController {
     @objc func knee_valgus_excessive_clicked_method() {
         let indexPath = IndexPath.init(row: knee_index, section: 0)
         let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Valgus : Excessive"
         
         if (cell.btn_knee_varus_main.tag == 351) {
             
@@ -1499,9 +1651,21 @@ class stance_phase: UIViewController {
                 
                 cell.btn_knee_valgus_excessive.setImage(UIImage(named: "check_icon"), for: .normal)
                 
+                // remove two
+                cell.btn_knee_valgus_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_knee_valgus_slight.tag = 400
+                cell.btn_knee_valgus_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_knee_valgus_moderate.tag = 410
+                
+                self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Valgus : Slight")
+                self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Valgus : Moderate")
+                
                 cell.btn_knee_valgus_excessive.tag = 421
             } else {
                 cell.btn_knee_valgus_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                
+                // remove
+                self.remove_data_in_array(dynamic_mut_arr:arr_knee, my_name: my_name)
                 
                 cell.btn_knee_valgus_excessive.tag = 420
             }
