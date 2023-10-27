@@ -821,7 +821,7 @@ extension types_of_gait:UITableViewDelegate,UITableViewDataSource{
             
             if (indexPath.row == 3) {
                 let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-                pushVC.str_video_link = "https://vimeo.com/876787751/065bb992a8?share=copy"
+                pushVC.str_video_link = "https://vimeo.com/876787462/973fd01286?share=copy"
                 pushVC.str_video_header = " "+self.str_select_gait_type
                 self.navigationController?.pushViewController(pushVC, animated: true)
             }
@@ -830,7 +830,7 @@ extension types_of_gait:UITableViewDelegate,UITableViewDataSource{
             
             if (indexPath.row == 3) {
                 let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-                pushVC.str_video_link = "https://vimeo.com/876787751/065bb992a8?share=copy"
+                pushVC.str_video_link = "https://vimeo.com/876738858/592288819c?share=copy"
                 pushVC.str_video_header = " "+self.str_select_gait_type
                 self.navigationController?.pushViewController(pushVC, animated: true)
             }
@@ -839,7 +839,7 @@ extension types_of_gait:UITableViewDelegate,UITableViewDataSource{
             
             if (indexPath.row == 3) {
                 let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-                pushVC.str_video_link = "https://vimeo.com/876787751/065bb992a8?share=copy"
+                pushVC.str_video_link = "https://vimeo.com/876738549/bdd453eaaa?share=copy"
                 pushVC.str_video_header = " "+self.str_select_gait_type
                 self.navigationController?.pushViewController(pushVC, animated: true)
             }
@@ -848,7 +848,7 @@ extension types_of_gait:UITableViewDelegate,UITableViewDataSource{
             
             if (indexPath.row == 3) {
                 let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-                pushVC.str_video_link = "https://vimeo.com/876787751/065bb992a8?share=copy"
+                pushVC.str_video_link = "https://vimeo.com/876738347/202cdec542?share=copy"
                 pushVC.str_video_header = " "+self.str_select_gait_type
                 self.navigationController?.pushViewController(pushVC, animated: true)
             }
@@ -857,7 +857,7 @@ extension types_of_gait:UITableViewDelegate,UITableViewDataSource{
             
             if (indexPath.row == 3) {
                 let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-                pushVC.str_video_link = "https://vimeo.com/876787751/065bb992a8?share=copy"
+                pushVC.str_video_link = "https://vimeo.com/876736496/908bcdbabd?share=copy"
                 pushVC.str_video_header = " "+self.str_select_gait_type
                 self.navigationController?.pushViewController(pushVC, animated: true)
             }
@@ -866,7 +866,7 @@ extension types_of_gait:UITableViewDelegate,UITableViewDataSource{
             
             if (indexPath.row == 3) {
                 let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-                pushVC.str_video_link = "https://vimeo.com/876787751/065bb992a8?share=copy"
+                pushVC.str_video_link = "https://vimeo.com/876735571/d3a1083c89?share=copy"
                 pushVC.str_video_header = " "+self.str_select_gait_type
                 self.navigationController?.pushViewController(pushVC, animated: true)
             }
@@ -875,7 +875,7 @@ extension types_of_gait:UITableViewDelegate,UITableViewDataSource{
             
             if (indexPath.row == 3) {
                 let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-                pushVC.str_video_link = "https://vimeo.com/876787751/065bb992a8?share=copy"
+                pushVC.str_video_link = "https://vimeo.com/876734940/814ca62194?share=copy"
                 pushVC.str_video_header = " "+self.str_select_gait_type
                 self.navigationController?.pushViewController(pushVC, animated: true)
             }
@@ -884,7 +884,7 @@ extension types_of_gait:UITableViewDelegate,UITableViewDataSource{
             
             if (indexPath.row == 3) {
                 let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-                pushVC.str_video_link = "https://vimeo.com/876787751/065bb992a8?share=copy"
+                pushVC.str_video_link = "https://vimeo.com/876734527/53aa4d8b4a?share=copy"
                 pushVC.str_video_header = " "+self.str_select_gait_type
                 self.navigationController?.pushViewController(pushVC, animated: true)
             }
@@ -893,7 +893,7 @@ extension types_of_gait:UITableViewDelegate,UITableViewDataSource{
             
             if (indexPath.row == 3) {
                 let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-                pushVC.str_video_link = "https://vimeo.com/876787751/065bb992a8?share=copy"
+                pushVC.str_video_link = "https://vimeo.com/876732394/aebabbdcc7?share=copy"
                 pushVC.str_video_header = " "+self.str_select_gait_type
                 self.navigationController?.pushViewController(pushVC, animated: true)
             }
@@ -902,7 +902,7 @@ extension types_of_gait:UITableViewDelegate,UITableViewDataSource{
             
             if (indexPath.row == 3) {
                 let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-                pushVC.str_video_link = "https://vimeo.com/876787751/065bb992a8?share=copy"
+                pushVC.str_video_link = "https://vimeo.com/876731890/7dbb160a33?share=copy"
                 pushVC.str_video_header = " "+self.str_select_gait_type
                 self.navigationController?.pushViewController(pushVC, animated: true)
             }

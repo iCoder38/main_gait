@@ -7,474 +7,7 @@
 //
 
 import UIKit
-/*
-var selected_stance_phase = NSMutableDictionary.init()
 
-/*
- {
-     ankle = " Contralateral Vaulting";
-     foot = " Foot / Toe Drag";
-     hip = " Insufficient Flexion";
-     knee = " Insufficient Flexion";
-     pelvis = "";
-     trunk = " Forward Lean\n Backward Lean";
- }
- */
-class stance_phase: BaseViewController {
-    
-    @IBOutlet weak var tblView: UITableView!{
-        didSet{
-            tblView.delegate = self
-            tblView.dataSource = self
-            tblView.sectionHeaderHeight = 50
-            tblView.allowsMultipleSelection = true
-        }
-    }
-    
-    
-    lazy var swingListData: [SectionData] = {
-        let section1 = SectionData(title: "Foot Deviations 2.0",
-                                   data: RowData.init(title: " Foot / Toe Drag"))
-        
-        let section2 = SectionData(title: "Ankle Deviations",
-                                   data: RowData.init(title: " Excessive Plantarflexion"),
-                                   RowData.init(title: " Contralateral Vaulting"))
-        
-        let section3 = SectionData(title: "Knee Deviations",
-                                   data: RowData.init(title: " Insufficient Flexion"),
-                                   RowData.init(title: " Excessive Flexion (Steppage Gait)"),
-                                   RowData.init(title: " Insufficient Extension"),
-                                   RowData.init(title: " Forceful Extension"))
-        
-        let section4 = SectionData(title: "Hip Deviations",
-                                   data: RowData.init(title: " Insufficient Flexion"),
-                                   RowData.init(title: " Circumduction"),
-                                   RowData.init(title: " Thigh Retraction"))
-        
-        let section5 = SectionData(title: "Pelvis Deviations",
-                                   data: RowData.init(title: " Pelvic Hiking"),
-                                   RowData.init(title: " Insufficient Forward Rotation"),
-                                   RowData.init(title: " Excessive Forward Rotation"))
-        
-        let section6 = SectionData(title: "Trunk Deviations",
-                                   data: RowData.init(title: " Forward Lean"),
-                                   RowData.init(title: " Backward Lean"),
-                                   RowData.init(title: " Right Lean"),
-                                   RowData.init(title: " Left Lean"))
-        return [section1, section2, section3, section4, section5, section6]
-    }()
-    
-    var selectedSection : [Int] = [0,1,2,3,4,5]
-    
-    //MARK: - Life Cycle Func -
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        self.setUpNavigationWithBack(titleStr: navigationTitle.stance_phase)
-    }
-    
-    //MARK: - Helper
-    
-    func isValid()-> Bool{
-        for section in selectedSection{
-            switch  section{
-            case 0:
-                validationString.selectFootOption.showAsToast()
-            case 1:
-                validationString.selectAnkleOption.showAsToast()
-            case 2:
-                validationString.selectKneeOption.showAsToast()
-            case 3:
-                validationString.selectHipOption.showAsToast()
-            case 4:
-                validationString.selectPelvisOption.showAsToast()
-            case 5:
-                validationString.selectTrunkOption.showAsToast()
-            default:
-                return true
-            }
-            return false
-        }
-        return true
-    }
-    
-    func saveSalectedData(){
-        if var selectedPath = self.tblView.indexPathsForSelectedRows{
-            selectedPath = selectedPath.sorted()
-            var (footArr, ankleArr, kneeArr, hipArr, pelvisArr, trunkArr) = ([String](),[String](),[String](),[String](),[String](),[String]())
-            for data in selectedPath{
-                switch data.section {
-                case 0:
-                    let selectedStr = swingListData[data.section].data[data.row].rowTitle
-                    footArr.append(selectedStr)
-                case 1:
-                    let selectedStr = swingListData[data.section].data[data.row].rowTitle
-                    ankleArr.append(selectedStr)
-                case 2:
-                    let selectedStr = swingListData[data.section].data[data.row].rowTitle
-                    kneeArr.append(selectedStr)
-                case 3:
-                    let selectedStr = swingListData[data.section].data[data.row].rowTitle
-                    hipArr.append(selectedStr)
-                case 4:
-                    let selectedStr = swingListData[data.section].data[data.row].rowTitle
-                    pelvisArr.append(selectedStr)
-                case 5:
-                    let selectedStr = swingListData[data.section].data[data.row].rowTitle
-                    trunkArr.append(selectedStr)
-                default:
-                    break
-                }
-            }
-            
-            selected_stance_phase.setObject(footArr.joined(separator:"\n"), forKey: "foot" as NSCopying)
-            selected_stance_phase.setObject(ankleArr.joined(separator:"\n"), forKey: "ankle" as NSCopying)
-            selected_stance_phase.setObject(kneeArr.joined(separator:"\n"), forKey: "knee" as NSCopying)
-            selected_stance_phase.setObject(hipArr.joined(separator:"\n"), forKey: "hip" as NSCopying)
-            selected_stance_phase.setObject(pelvisArr.joined(separator:"\n"), forKey: "pelvis" as NSCopying)
-            selected_stance_phase.setObject(trunkArr.joined(separator:"\n"), forKey: "trunk" as NSCopying)
-            print(selected_stance_phase)
-        }
-    }
-    
-    //MARK: - IBAtions
-    
-    @IBAction func tapSaveContinueBtn(_ sender : UIButton){
-        //if isValid(){
-            self.saveSalectedData()
-            let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "AdditionalViewController") as! AdditionalViewController
-            self.navigationController?.pushViewController(pushVC, animated: true)
-        //}
-    }
-}
-
-extension stance_phase: UITableViewDataSource{
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return swingListData.count
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return swingListData[section].numberOfItems
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return swingListData[section].title
-    }
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tblCell = tableView.dequeueReusableCell(withIdentifier: "MultipleSelectionTblCell", for: indexPath) as! MultipleSelectionTblCell
-        tblCell.lblTitleName.text = swingListData[indexPath.section].data[indexPath.row].rowTitle
-        tblCell.btnSelect.isSelected = swingListData[indexPath.section].data[indexPath.row].isSelected
-        
-        if tblCell.lblTitleName.text == " Foot / Toe Drag" {
-            
-            tblCell.btn_info.tag = 1
-            tblCell.btn_info.isHidden = false
-            
-        }
-        else if tblCell.lblTitleName.text == " Excessive Plantarflexion" {
-            
-            tblCell.btn_info.tag = 2
-            tblCell.btn_info.isHidden = false
-            
-        }
-        else if tblCell.lblTitleName.text == " Contralateral Vaulting" {
-            
-            tblCell.btn_info.tag = 3
-            tblCell.btn_info.isHidden = false
-            
-        }
-        
-        
-        else if tblCell.lblTitleName.text == " Insufficient Flexion" {
-            
-            tblCell.btn_info.tag = 4
-            tblCell.btn_info.isHidden = false
-            
-        }
-        else if tblCell.lblTitleName.text == " Excessive Flexion (Steppage Gait)" {
-            
-            tblCell.btn_info.tag = 5
-            tblCell.btn_info.isHidden = false
-            
-        }
-        else if tblCell.lblTitleName.text == " Insufficient Extension" {
-            
-            tblCell.btn_info.tag = 6
-            tblCell.btn_info.isHidden = false
-            
-        }
-        
-        else if tblCell.lblTitleName.text == " Forceful Extension" {
-            
-            tblCell.btn_info.tag = 7
-            tblCell.btn_info.isHidden = false
-            
-        }
-        
-        else if tblCell.lblTitleName.text == " Insufficient Flexion" {
-            
-            tblCell.btn_info.tag = 8
-            tblCell.btn_info.isHidden = false
-            
-        }
-        else if tblCell.lblTitleName.text == " Circumduction" {
-            
-            tblCell.btn_info.tag = 9
-            tblCell.btn_info.isHidden = false
-            
-        }
-        else if tblCell.lblTitleName.text == " Thigh Retraction" {
-            
-            tblCell.btn_info.tag = 10
-            tblCell.btn_info.isHidden = false
-            
-        }
-        
-        
-        else if tblCell.lblTitleName.text == " Pelvic Hiking" {
-            
-            tblCell.btn_info.tag = 11
-            tblCell.btn_info.isHidden = false
-            
-        }
-        else if tblCell.lblTitleName.text == " Insufficient Forward Rotation" {
-            
-            tblCell.btn_info.tag = 12
-            tblCell.btn_info.isHidden = false
-            
-        }
-        else if tblCell.lblTitleName.text == " Excessive Forward Rotation" {
-            
-            tblCell.btn_info.tag = 13
-            tblCell.btn_info.isHidden = false
-            
-        }
-        
-        else if tblCell.lblTitleName.text == " Forward Lean" {
-            
-            tblCell.btn_info.tag = 14
-            tblCell.btn_info.isHidden = false
-            
-        }
-        else if tblCell.lblTitleName.text == " Backward Lean" {
-            
-            tblCell.btn_info.tag = 15
-            tblCell.btn_info.isHidden = false
-            
-        }
-        else if tblCell.lblTitleName.text == " Right Lean" {
-            
-            tblCell.btn_info.tag = 16
-            tblCell.btn_info.isHidden = false
-            
-        }
-        else if tblCell.lblTitleName.text == " Left Lean" {
-            
-            tblCell.btn_info.tag = 17
-            tblCell.btn_info.isHidden = false
-            
-        }
-        tblCell.btn_info.addTarget(self, action: #selector(click_one_method), for:  .touchUpInside)
-        
-        return tblCell
-    }
-    
-    @objc func click_one_method(_ sender:UIButton) {
-        print("===> one <===")
-        
-        if sender.tag == 1 {
-            
-            let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-            pushVC.str_video_link = "https://vimeo.com/747374932/04f26bb450"
-            pushVC.str_video_header = " Foot / Toe Drag"
-            self.navigationController?.pushViewController(pushVC, animated: true)
-            
-        } else if sender.tag == 2 {
-            
-            let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-            pushVC.str_video_link = "https://vimeo.com/747434119/a6465c8fc3"
-            pushVC.str_video_header = " Excessive Plantarflexion"
-            self.navigationController?.pushViewController(pushVC, animated: true)
-            
-        } else if sender.tag == 3 {
-            
-            let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-            pushVC.str_video_link = "https://vimeo.com/747434071/dd0ae3e989"
-            pushVC.str_video_header = " Contralateral Vaulting"
-            self.navigationController?.pushViewController(pushVC, animated: true)
-            
-        }
-        
-        /*
-         RowData.init(title: " Insufficient Flexion"),
-         RowData.init(title: " Steppage Gait"),
-         RowData.init(title: " Extension Thrust"))
-         */
-        else if sender.tag == 4 {
-           
-           let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-           pushVC.str_video_link = "https://vimeo.com/747448922/464b0f3e53"
-           pushVC.str_video_header = " Insufficient Flexion"
-           self.navigationController?.pushViewController(pushVC, animated: true)
-           
-       }
-       
-        else if sender.tag == 5 {
-           
-           let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-           pushVC.str_video_link = "https://vimeo.com/747448977/125cfae803"
-           pushVC.str_video_header = " Excessive Flexion (Steppage Gait)"
-           self.navigationController?.pushViewController(pushVC, animated: true)
-           
-       }
-        else if sender.tag == 6 {
-           
-           let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-           pushVC.str_video_link = "https://vimeo.com/747449440/ef2725a1f7"
-           pushVC.str_video_header = " Insufficient Extension"
-           self.navigationController?.pushViewController(pushVC, animated: true)
-           
-       }
-        else if sender.tag == 7 {
-           
-           let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-           pushVC.str_video_link = "https://vimeo.com/747448880/d2a7d70449"
-           pushVC.str_video_header = " Forceful Extension"
-           self.navigationController?.pushViewController(pushVC, animated: true)
-           
-       }
-      
-        else if sender.tag == 8 {
-           
-           let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-           pushVC.str_video_link = "https://vimeo.com/747881419/34c158d7f7"
-           pushVC.str_video_header = " Insufficient Flexion"
-           self.navigationController?.pushViewController(pushVC, animated: true)
-           
-       }
-        else if sender.tag == 9 {
-           
-           let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-           pushVC.str_video_link = "https://vimeo.com/747881363/e7fbf592be"
-           pushVC.str_video_header = " Circumduction"
-           self.navigationController?.pushViewController(pushVC, animated: true)
-           
-       }
-        else if sender.tag == 10 {
-           
-           let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-           pushVC.str_video_link = "https://vimeo.com/747881456/d9b5fec192"
-           pushVC.str_video_header = " Thigh Retraction"
-           self.navigationController?.pushViewController(pushVC, animated: true)
-           
-       }
-        
-        /*
-        RowData.init(title: " Pelvic Hiking"),
-        RowData.init(title: " Ipsilateral Drop"))
-        */
-        else if sender.tag == 11 {
-           
-           let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-           pushVC.str_video_link = "https://vimeo.com/747882873/83cc264959"
-           pushVC.str_video_header = " Pelvic Hiking"
-           self.navigationController?.pushViewController(pushVC, animated: true)
-           
-       }
-        else if sender.tag == 12 {
-           
-           let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-           pushVC.str_video_link = "https://vimeo.com/747882839/905f4c46bc"
-           pushVC.str_video_header = " Insufficient Forward Rotation"
-           self.navigationController?.pushViewController(pushVC, animated: true)
-           
-       }
-        else if sender.tag == 13 {
-           
-           let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-           pushVC.str_video_link = "https://vimeo.com/747882796/aac3322946"
-           pushVC.str_video_header = " Excessive Forward Rotation"
-           self.navigationController?.pushViewController(pushVC, animated: true)
-           
-       }
-        /*
-         RowData.init(title: " Forward Lean"),
-         RowData.init(title: " Backward Lean"),
-         RowData.init(title: " Right Lean"),
-         RowData.init(title: " Left Lean")
-         */
-        else if sender.tag == 14 {
-           
-           let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-           pushVC.str_video_link = "https://vimeo.com/749001847/35ceb6dec8"
-           pushVC.str_video_header = " Forward Lean"
-           self.navigationController?.pushViewController(pushVC, animated: true)
-           
-       }
-        else if sender.tag == 15 {
-           
-           let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-           pushVC.str_video_link = "https://vimeo.com/749001829/e345d27e8c"
-           pushVC.str_video_header = " Backward Lean"
-           self.navigationController?.pushViewController(pushVC, animated: true)
-           
-       }
-        else if sender.tag == 16 {
-           
-           let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-           pushVC.str_video_link = "https://vimeo.com/749001906/a8c67f0023"
-           pushVC.str_video_header = " Right Lean"
-           self.navigationController?.pushViewController(pushVC, animated: true)
-           
-       }
-        else if sender.tag == 17 {
-           
-           let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-           pushVC.str_video_link = "https://vimeo.com/749001871/26bbe65cda"
-           pushVC.str_video_header = " Left Lean"
-           self.navigationController?.pushViewController(pushVC, animated: true)
-           
-       }
-        
-    }
-    
-     
-    
-}
-
-extension stance_phase: UITableViewDelegate{
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        guard let headerView = view as? UITableViewHeaderFooterView else { return }
-        headerView.tintColor = .appOrangColors()
-        headerView.textLabel?.textColor = .white
-        headerView.textLabel?.textAlignment = .center
-        headerView.textLabel?.font = UIFont(name: "Arial Bold", size: 18)
-    }
-    
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var selected = self.tblView.indexPathsForSelectedRows
-        selected = selected?.sorted()
-        //print(selected!, "index = ",  indexPath.row , "Section", indexPath.section)
-        if selectedSection.contains(where: {$0 == indexPath.section}){
-            selectedSection.removeAll(where: {$0 == indexPath.section})
-        }
-    }
-    
-    func tableView( _ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        //let selected = self.tblView.indexPathsForSelectedRows
-        //print("index = ",  indexPath.row , "Section", indexPath.section)
-        if selectedSection.contains(where: {$0 == indexPath.section}) == false{
-            selectedSection.append(indexPath.section)
-        }
-    }
-    
-}
-*/
 import UIKit
  
 var selected_stance_phase = NSMutableDictionary.init()
@@ -482,12 +15,21 @@ var selected_stance_phase = NSMutableDictionary.init()
 class stance_phase: UIViewController {
 
     var ankle_index = 1
-    var pelvis_index = 2
-    var trunk_index = 3
+    var knee_index = 2
+    var pelvis_index = 3
+    var trunk_index = 4
     
     @IBOutlet weak var tble_view:UITableView!
     
     var arr_mut_would_like_to:NSMutableArray! = []
+    
+    var (footArr, ankleArr, pelvisArr ,kneeArr, hipArr, trunkArr) = ([String](),[String](),[String](),[String](),[String](),[String]())
+    
+    var arr_foot:NSMutableArray! = []
+    var arr_ankle:NSMutableArray! = []
+    var arr_knee:NSMutableArray! = []
+    var arr_pelvis:NSMutableArray! = []
+    var arr_trunk:NSMutableArray! = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -507,217 +49,762 @@ class stance_phase: UIViewController {
         self.tble_view.dataSource = self
         self.tble_view.reloadData()
         
+        // MARK: - FOOT DATA SORTING -
+        // foot data
+        let arr_foot_data = ["Forefoot Contact","Foot-flat Contact","Foot Slap","Early Heel Rise","Delayed Heel Rise"]
+        
+        for indexx in 0..<arr_foot_data.count {
+            let custom_foot = [
+                "name":"\(arr_foot_data[indexx])",
+                "type":"no"
+            ]
+            self.arr_foot.add(custom_foot)
+        }
+        
+        // MARK: - ANKLE SORTING -
+        // foot data
+        let arr_ankle_data = ["Excessive Plantarflexion","Insufficient Plantarflexion","Excessive Dorsiflexion","Insufficient Dorsiflexion","Inversion : Slight","Inversion : Moderate","Inversion : Excessive",
+                              "Eversion : Slight","Eversion : Moderate","Eversion : Excessive",
+                              "Stiff ankle","Unstable Ankle"]
+        
+        for indexx in 0..<arr_ankle_data.count {
+            let custom_foot = [
+                "name":"\(arr_ankle_data[indexx])",
+                "type":"no"
+            ]
+            self.arr_ankle.add(custom_foot)
+        }
+        
+        // MARK: - KNEE SORTING -
+        // foot data
+        let arr_knee_data = ["Excessive Flexion","Insufficient Flexion","Hyperextension",
+                             "Varus : Slight","Varus : Moderate","Varus : Excessive",
+                             "Valgus : Slight","Valgus : Moderate","Valgus : Excessive",
+                             "Stiff Knee", "Unstable Knee"]
+        
+        for indexx in 0..<arr_knee_data.count {
+            let custom_foot = [
+                "name":"\(arr_knee_data[indexx])",
+                "type":"no"
+            ]
+            self.arr_foot.add(custom_foot)
+        }
+        
+        // MARK: - PELVIS SORTING -
+        // foot data
+        let arr_pelvis_data = ["Insufficient Forward Rotation","Excessive Forward Rotation","Insufficient Backward Rotation","Excessive Backward Rotation","Contralateral Drop","Excessive Anterior Tilt","Restricted Pelvic Movement"]
+        
+        for indexx in 0..<arr_pelvis_data.count {
+            let custom_foot = [
+                "name":"\(arr_pelvis_data[indexx])",
+                "type":"no"
+            ]
+            self.arr_pelvis.add(custom_foot)
+        }
+        
+        // MARK: - TRUNK SORTING -
+        // foot data
+        let arr_trunk_data = ["Forward Lean","Backward Lean","Right Lean","Left Lean","Restricted Trunk Rotation"]
+        
+        for indexx in 0..<arr_trunk_data.count {
+            let custom_foot = [
+                "name":"\(arr_trunk_data[indexx])",
+                "type":"no"
+            ]
+            self.arr_trunk.add(custom_foot)
+        }
+        
+         
+        
+        
     }
     
     @objc func backClickMethod() {
         self.navigationController?.popViewController(animated: true)
     }
 
+    @objc func show_data() {
+         print(self.arr_foot as Any)
+        print(self.arr_pelvis as Any)
+         // self.navigationItem.title = "\(self.arr_foot)"
+        
+        // count
+        // print(self.arr_foot.count as Any)
+    }
+    
     @objc func fareFootClickMethod() {
          let indexPath = IndexPath.init(row: 0, section: 0)
          let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Forefoot Contact"
         
-        print(cell.btn_foot_farefoot.tag as Any)
+         print(cell.btn_foot_farefoot.tag as Any)
         
         if (cell.btn_foot_farefoot.tag == 10) {
             
             cell.btn_foot_farefoot.setImage(UIImage(named: "check_icon"), for: .normal)
             
+            // add
+            for indexx in 0..<self.arr_foot.count {
+                let item = self.arr_foot[indexx] as? [String:Any]
+                
+                if "\(item!["name"]!)" == my_name {
+                    print(indexx)
+                    // remove
+                    self.arr_foot.removeObject(at: indexx)
+                    // insert
+                    let custom_foot = [
+                        "name":my_name,
+                        "type":"yes"
+                    ]
+                    self.arr_foot.insert(custom_foot, at: indexx)
+                    
+                }
+            }
+            
+            
+            
+            //
             cell.btn_foot_farefoot.tag = 11
         } else {
             cell.btn_foot_farefoot.setImage(UIImage(named: "uncheck_icon"), for: .normal)
             
+            // remove
+            for indexx in 0..<self.arr_foot.count {
+                let item = self.arr_foot[indexx] as? [String:Any]
+                
+                if "\(item!["name"]!)" == "Forefoot Contact" {
+                    print(indexx)
+                    // remove
+                    self.arr_foot.removeObject(at: indexx)
+                    // insert
+                    let custom_foot = [
+                        "name":my_name,
+                        "type":"no"
+                    ]
+                    self.arr_foot.insert(custom_foot, at: indexx)
+                    
+                }
+            }
+            //
             cell.btn_foot_farefoot.tag = 10
         }
         
+        // show data
+         self.show_data()
     }
     
     @objc func footFlatClickMethod() {
         let indexPath = IndexPath.init(row: 0, section: 0)
         let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Foot-flat Contact"
         
-        print(cell.btn_foot_footFlat.tag as Any)
+         print(cell.btn_foot_footFlat.tag as Any)
         if (cell.btn_foot_footFlat.tag == 20) {
             
             cell.btn_foot_footFlat.setImage(UIImage(named: "check_icon"), for: .normal)
             
+            // add
+            for indexx in 0..<self.arr_foot.count {
+                let item = self.arr_foot[indexx] as? [String:Any]
+                
+                if "\(item!["name"]!)" == my_name {
+                    print(indexx)
+                    // remove
+                    self.arr_foot.removeObject(at: indexx)
+                    // insert
+                    let custom_foot = [
+                        "name":my_name,
+                        "type":"yes"
+                    ]
+                    self.arr_foot.insert(custom_foot, at: indexx)
+                    
+                }
+            }
+            //
             cell.btn_foot_footFlat.tag = 21
         } else {
             cell.btn_foot_footFlat.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            // remove
+            for indexx in 0..<self.arr_foot.count {
+                let item = self.arr_foot[indexx] as? [String:Any]
+                
+                if "\(item!["name"]!)" == my_name {
+                    print(indexx)
+                    // remove
+                    self.arr_foot.removeObject(at: indexx)
+                    // insert
+                    let custom_foot = [
+                        "name":my_name,
+                        "type":"no"
+                    ]
+                    self.arr_foot.insert(custom_foot, at: indexx)
+                    
+                }
+            }
             
             cell.btn_foot_footFlat.tag = 20
         }
+        
+        // show data
+         self.show_data()
+        
     }
     
     @objc func footSlapClickMethod() {
         let indexPath = IndexPath.init(row: 0, section: 0)
         let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Foot Slap"
         
         print(cell.btn_foot_footSlap.tag as Any)
         if (cell.btn_foot_footSlap.tag == 30) {
             
             cell.btn_foot_footSlap.setImage(UIImage(named: "check_icon"), for: .normal)
-            
+           
+            // add
+            for indexx in 0..<self.arr_foot.count {
+                let item = self.arr_foot[indexx] as? [String:Any]
+                
+                if "\(item!["name"]!)" == my_name {
+                    print(indexx)
+                    // remove
+                    self.arr_foot.removeObject(at: indexx)
+                    // insert
+                    let custom_foot = [
+                        "name":my_name,
+                        "type":"yes"
+                    ]
+                    self.arr_foot.insert(custom_foot, at: indexx)
+                    
+                }
+            }
+            //
             cell.btn_foot_footSlap.tag = 31
         } else {
             cell.btn_foot_footSlap.setImage(UIImage(named: "uncheck_icon"), for: .normal)
-            
+            // remove
+            for indexx in 0..<self.arr_foot.count {
+                let item = self.arr_foot[indexx] as? [String:Any]
+                
+                if "\(item!["name"]!)" == my_name {
+                    print(indexx)
+                    // remove
+                    self.arr_foot.removeObject(at: indexx)
+                    // insert
+                    let custom_foot = [
+                        "name":my_name,
+                        "type":"no"
+                    ]
+                    self.arr_foot.insert(custom_foot, at: indexx)
+                    
+                }
+            }
             cell.btn_foot_footSlap.tag = 30
         }
+        
+        // show data
+        self.show_data()
     }
     
     @objc func earlyHeelRiseClickMethod() {
         let indexPath = IndexPath.init(row: 0, section: 0)
         let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Early Heel Rise"
         
         print(cell.btn_foot_earlyHeelRise.tag as Any)
         if (cell.btn_foot_earlyHeelRise.tag == 40) {
             
             cell.btn_foot_earlyHeelRise.setImage(UIImage(named: "check_icon"), for: .normal)
-            
+            // add
+            for indexx in 0..<self.arr_foot.count {
+                let item = self.arr_foot[indexx] as? [String:Any]
+                
+                if "\(item!["name"]!)" == my_name {
+                    print(indexx)
+                    // remove
+                    self.arr_foot.removeObject(at: indexx)
+                    // insert
+                    let custom_foot = [
+                        "name":my_name,
+                        "type":"yes"
+                    ]
+                    self.arr_foot.insert(custom_foot, at: indexx)
+                    
+                }
+            }
+            //
             cell.btn_foot_earlyHeelRise.tag = 41
         } else {
             cell.btn_foot_earlyHeelRise.setImage(UIImage(named: "uncheck_icon"), for: .normal)
-            
+            // remove
+            for indexx in 0..<self.arr_foot.count {
+                let item = self.arr_foot[indexx] as? [String:Any]
+                
+                if "\(item!["name"]!)" == my_name {
+                    print(indexx)
+                    // remove
+                    self.arr_foot.removeObject(at: indexx)
+                    // insert
+                    let custom_foot = [
+                        "name":my_name,
+                        "type":"no"
+                    ]
+                    self.arr_foot.insert(custom_foot, at: indexx)
+                    
+                }
+            }
             cell.btn_foot_earlyHeelRise.tag = 40
         }
+        
+        // show data
+        self.show_data()
     }
     
     @objc func delayedHeelRiseClickMethod() {
         let indexPath = IndexPath.init(row: 0, section: 0)
         let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Delayed Heel Rise"
         
         print(cell.btn_foot_delayedHeelRise.tag as Any)
         if (cell.btn_foot_delayedHeelRise.tag == 50) {
             
             cell.btn_foot_delayedHeelRise.setImage(UIImage(named: "check_icon"), for: .normal)
-            
+            // add
+            for indexx in 0..<self.arr_foot.count {
+                let item = self.arr_foot[indexx] as? [String:Any]
+                
+                if "\(item!["name"]!)" == my_name {
+                    print(indexx)
+                    // remove
+                    self.arr_foot.removeObject(at: indexx)
+                    // insert
+                    let custom_foot = [
+                        "name":my_name,
+                        "type":"yes"
+                    ]
+                    self.arr_foot.insert(custom_foot, at: indexx)
+                    
+                }
+            }
+            //
             cell.btn_foot_delayedHeelRise.tag = 51
         } else {
             cell.btn_foot_delayedHeelRise.setImage(UIImage(named: "uncheck_icon"), for: .normal)
-            
+            // remove
+            for indexx in 0..<self.arr_foot.count {
+                let item = self.arr_foot[indexx] as? [String:Any]
+                
+                if "\(item!["name"]!)" == my_name    {
+                    print(indexx)
+                    // remove
+                    self.arr_foot.removeObject(at: indexx)
+                    // insert
+                    let custom_foot = [
+                        "name":my_name,
+                        "type":"no"
+                    ]
+                    self.arr_foot.insert(custom_foot, at: indexx)
+                    
+                }
+            }
             cell.btn_foot_delayedHeelRise.tag = 50
         }
+        
+        // show data
+        self.show_data()
     }
     
-    // pelvis
+    // MARK: - PELVIS -
     @objc func insufficientForwardClickMethod() {
         let indexPath = IndexPath.init(row: pelvis_index, section: 0)
         let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Insufficient Forward Rotation"
         
         print(cell.btn_pelvis_insufficient_forward.tag as Any)
         if (cell.btn_pelvis_insufficient_forward.tag == 60) {
             
             cell.btn_pelvis_insufficient_forward.setImage(UIImage(named: "check_icon"), for: .normal)
             
+            // add
+            for indexx in 0..<self.arr_pelvis.count {
+                let item = self.arr_pelvis[indexx] as? [String:Any]
+                
+                if "\(item!["name"]!)" == my_name {
+                    print(indexx)
+                    // remove
+                    self.arr_pelvis.removeObject(at: indexx)
+                    // insert
+                    let custom_foot = [
+                        "name":my_name,
+                        "type":"yes"
+                    ]
+                    self.arr_pelvis.insert(custom_foot, at: indexx)
+                    
+                }
+            }
+            
             cell.btn_pelvis_insufficient_forward.tag = 61
         } else {
             cell.btn_pelvis_insufficient_forward.setImage(UIImage(named: "uncheck_icon"), for: .normal)
             
+            // remove
+            for indexx in 0..<self.arr_pelvis.count {
+                let item = self.arr_pelvis[indexx] as? [String:Any]
+                
+                if "\(item!["name"]!)" == my_name {
+                    print(indexx)
+                    // remove
+                    self.arr_pelvis.removeObject(at: indexx)
+                    // insert
+                    let custom_foot = [
+                        "name":my_name,
+                        "type":"no"
+                    ]
+                    self.arr_pelvis.insert(custom_foot, at: indexx)
+                    
+                }
+            }
+            
+            //
             cell.btn_pelvis_insufficient_forward.tag = 60
         }
+        // show data
+        self.show_data()
     }
     
     @objc func excessive_forward_ClickMethod() {
         let indexPath = IndexPath.init(row: pelvis_index, section: 0)
         let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Excessive Forward Rotation"
         
         print(cell.btn_pelvis_excessive_forward.tag as Any)
         if (cell.btn_pelvis_excessive_forward.tag == 70) {
             
             cell.btn_pelvis_excessive_forward.setImage(UIImage(named: "check_icon"), for: .normal)
             
+            // add
+            for indexx in 0..<self.arr_pelvis.count {
+                let item = self.arr_pelvis[indexx] as? [String:Any]
+                
+                if "\(item!["name"]!)" == my_name {
+                    print(indexx)
+                    // remove
+                    self.arr_pelvis.removeObject(at: indexx)
+                    // insert
+                    let custom_foot = [
+                        "name":my_name,
+                        "type":"yes"
+                    ]
+                    self.arr_pelvis.insert(custom_foot, at: indexx)
+                    
+                }
+            }
+            
             cell.btn_pelvis_excessive_forward.tag = 71
         } else {
             cell.btn_pelvis_excessive_forward.setImage(UIImage(named: "uncheck_icon"), for: .normal)
             
+            // remove
+            for indexx in 0..<self.arr_pelvis.count {
+                let item = self.arr_pelvis[indexx] as? [String:Any]
+                
+                if "\(item!["name"]!)" == my_name {
+                    print(indexx)
+                    // remove
+                    self.arr_pelvis.removeObject(at: indexx)
+                    // insert
+                    let custom_foot = [
+                        "name":my_name,
+                        "type":"no"
+                    ]
+                    self.arr_pelvis.insert(custom_foot, at: indexx)
+                    
+                }
+            }
+            
             cell.btn_pelvis_excessive_forward.tag = 70
         }
+        // show data
+        self.show_data()
     }
     
     @objc func insufficient_backward_ClickMethod() {
         let indexPath = IndexPath.init(row: pelvis_index, section: 0)
         let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Insufficient Backward Rotation"
         
         print(cell.btn_pelvis_insufficient_backward.tag as Any)
         if (cell.btn_pelvis_insufficient_backward.tag == 80) {
             
             cell.btn_pelvis_insufficient_backward.setImage(UIImage(named: "check_icon"), for: .normal)
             
+            // add
+            for indexx in 0..<self.arr_pelvis.count {
+                let item = self.arr_pelvis[indexx] as? [String:Any]
+                
+                if "\(item!["name"]!)" == my_name {
+                    print(indexx)
+                    // remove
+                    self.arr_pelvis.removeObject(at: indexx)
+                    // insert
+                    let custom_foot = [
+                        "name":my_name,
+                        "type":"yes"
+                    ]
+                    self.arr_pelvis.insert(custom_foot, at: indexx)
+                    
+                }
+            }
+            
             cell.btn_pelvis_insufficient_backward.tag = 81
         } else {
             cell.btn_pelvis_insufficient_backward.setImage(UIImage(named: "uncheck_icon"), for: .normal)
             
+            // remove
+            for indexx in 0..<self.arr_pelvis.count {
+                let item = self.arr_pelvis[indexx] as? [String:Any]
+                
+                if "\(item!["name"]!)" == my_name {
+                    print(indexx)
+                    // remove
+                    self.arr_pelvis.removeObject(at: indexx)
+                    // insert
+                    let custom_foot = [
+                        "name":my_name,
+                        "type":"no"
+                    ]
+                    self.arr_pelvis.insert(custom_foot, at: indexx)
+                    
+                }
+            }
+            
             cell.btn_pelvis_insufficient_backward.tag = 80
         }
+        // show data
+        self.show_data()
     }
     
     @objc func excessive_backward_ClickMethod() {
         let indexPath = IndexPath.init(row: pelvis_index, section: 0)
         let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Excessive Backward Rotation"
         
         print(cell.btn_pelvis_excessive_backward.tag as Any)
         if (cell.btn_pelvis_excessive_backward.tag == 90) {
             
             cell.btn_pelvis_excessive_backward.setImage(UIImage(named: "check_icon"), for: .normal)
             
+            // add
+            for indexx in 0..<self.arr_pelvis.count {
+                let item = self.arr_pelvis[indexx] as? [String:Any]
+                
+                if "\(item!["name"]!)" == my_name {
+                    print(indexx)
+                    // remove
+                    self.arr_pelvis.removeObject(at: indexx)
+                    // insert
+                    let custom_foot = [
+                        "name":my_name,
+                        "type":"yes"
+                    ]
+                    self.arr_pelvis.insert(custom_foot, at: indexx)
+                    
+                }
+            }
+            
             cell.btn_pelvis_excessive_backward.tag = 91
         } else {
             cell.btn_pelvis_excessive_backward.setImage(UIImage(named: "uncheck_icon"), for: .normal)
             
+            // remove
+            for indexx in 0..<self.arr_pelvis.count {
+                let item = self.arr_pelvis[indexx] as? [String:Any]
+                
+                if "\(item!["name"]!)" == my_name {
+                    print(indexx)
+                    // remove
+                    self.arr_pelvis.removeObject(at: indexx)
+                    // insert
+                    let custom_foot = [
+                        "name":my_name,
+                        "type":"no"
+                    ]
+                    self.arr_pelvis.insert(custom_foot, at: indexx)
+                    
+                }
+            }
+            
             cell.btn_pelvis_excessive_backward.tag = 90
         }
+        // show data
+        self.show_data()
     }
     
     @objc func contralateral_dropClickMethod() {
         let indexPath = IndexPath.init(row: pelvis_index, section: 0)
         let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Contralateral Drop"
         
         print(cell.btn_pelvis_contralateral_drop.tag as Any)
         if (cell.btn_pelvis_contralateral_drop.tag == 100) {
             
             cell.btn_pelvis_contralateral_drop.setImage(UIImage(named: "check_icon"), for: .normal)
             
+            // add
+            for indexx in 0..<self.arr_pelvis.count {
+                let item = self.arr_pelvis[indexx] as? [String:Any]
+                
+                if "\(item!["name"]!)" == my_name {
+                    print(indexx)
+                    // remove
+                    self.arr_pelvis.removeObject(at: indexx)
+                    // insert
+                    let custom_foot = [
+                        "name":my_name,
+                        "type":"yes"
+                    ]
+                    self.arr_pelvis.insert(custom_foot, at: indexx)
+                    
+                }
+            }
+            
             cell.btn_pelvis_contralateral_drop.tag = 101
         } else {
             cell.btn_pelvis_contralateral_drop.setImage(UIImage(named: "uncheck_icon"), for: .normal)
             
+            // remove
+            for indexx in 0..<self.arr_pelvis.count {
+                let item = self.arr_pelvis[indexx] as? [String:Any]
+                
+                if "\(item!["name"]!)" == my_name {
+                    print(indexx)
+                    // remove
+                    self.arr_pelvis.removeObject(at: indexx)
+                    // insert
+                    let custom_foot = [
+                        "name":my_name,
+                        "type":"no"
+                    ]
+                    self.arr_pelvis.insert(custom_foot, at: indexx)
+                    
+                }
+            }
+            
             cell.btn_pelvis_contralateral_drop.tag = 100
         }
+        // show data
+        self.show_data()
     }
     
     @objc func excessive_anteriorClickMethod() {
         let indexPath = IndexPath.init(row: pelvis_index, section: 0)
         let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Excessive Anterior Tilt"
         
         print(cell.btn_pelvis_excessive_anterior.tag as Any)
         if (cell.btn_pelvis_excessive_anterior.tag == 110) {
             
             cell.btn_pelvis_excessive_anterior.setImage(UIImage(named: "check_icon"), for: .normal)
             
+            // add
+            for indexx in 0..<self.arr_pelvis.count {
+                let item = self.arr_pelvis[indexx] as? [String:Any]
+                
+                if "\(item!["name"]!)" == my_name {
+                    print(indexx)
+                    // remove
+                    self.arr_pelvis.removeObject(at: indexx)
+                    // insert
+                    let custom_foot = [
+                        "name":my_name,
+                        "type":"yes"
+                    ]
+                    self.arr_pelvis.insert(custom_foot, at: indexx)
+                    
+                }
+            }
+            
             cell.btn_pelvis_excessive_anterior.tag = 111
         } else {
             cell.btn_pelvis_excessive_anterior.setImage(UIImage(named: "uncheck_icon"), for: .normal)
             
+            // remove
+            for indexx in 0..<self.arr_pelvis.count {
+                let item = self.arr_pelvis[indexx] as? [String:Any]
+                
+                if "\(item!["name"]!)" == my_name {
+                    print(indexx)
+                    // remove
+                    self.arr_pelvis.removeObject(at: indexx)
+                    // insert
+                    let custom_foot = [
+                        "name":my_name,
+                        "type":"no"
+                    ]
+                    self.arr_pelvis.insert(custom_foot, at: indexx)
+                    
+                }
+            }
+            
             cell.btn_pelvis_excessive_anterior.tag = 110
         }
+        // show data
+        self.show_data()
     }
     
     @objc func restricted_pelvicClickMethod() {
         let indexPath = IndexPath.init(row: pelvis_index, section: 0)
         let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Restricted Pelvic Movement"
         
         print(cell.btn_pelvis_restricted_pelvic.tag as Any)
         if (cell.btn_pelvis_restricted_pelvic.tag == 120) {
             
             cell.btn_pelvis_restricted_pelvic.setImage(UIImage(named: "check_icon"), for: .normal)
             
+            // add
+            for indexx in 0..<self.arr_pelvis.count {
+                let item = self.arr_pelvis[indexx] as? [String:Any]
+                
+                if "\(item!["name"]!)" == my_name {
+                    print(indexx)
+                    // remove
+                    self.arr_pelvis.removeObject(at: indexx)
+                    // insert
+                    let custom_foot = [
+                        "name":my_name,
+                        "type":"yes"
+                    ]
+                    self.arr_pelvis.insert(custom_foot, at: indexx)
+                    
+                }
+            }
+            
             cell.btn_pelvis_restricted_pelvic.tag = 121
         } else {
             cell.btn_pelvis_restricted_pelvic.setImage(UIImage(named: "uncheck_icon"), for: .normal)
             
+            // remove
+            for indexx in 0..<self.arr_pelvis.count {
+                let item = self.arr_pelvis[indexx] as? [String:Any]
+                
+                if "\(item!["name"]!)" == my_name {
+                    print(indexx)
+                    // remove
+                    self.arr_pelvis.removeObject(at: indexx)
+                    // insert
+                    let custom_foot = [
+                        "name":my_name,
+                        "type":"no"
+                    ]
+                    self.arr_pelvis.insert(custom_foot, at: indexx)
+                    
+                }
+            }
+            
             cell.btn_pelvis_restricted_pelvic.tag = 120
         }
+        // show data
+        self.show_data()
     }
     
     /*
@@ -727,6 +814,7 @@ class stance_phase: UIViewController {
      cell.btn_trunk_left.addTarget(self, action: #selector(trunk_left_ClickMethod), for: .touchUpInside)
      cell.btn_trunk_restricted.addTarget(self, action: #selector(trunk_restricted_ClickMethod), for: .touchUpInside)
      */
+    // MARK: - TRUNK -
     @objc func trunk_forward_ClickMethod() {
         let indexPath = IndexPath.init(row: trunk_index, section: 0)
         let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
@@ -832,7 +920,7 @@ class stance_phase: UIViewController {
      cell.btn_ankle_unstable.addTarget(self, action: #selector(ankle_excessive_plant_clicked_method), for: .touchUpInside)
      
      */
-    
+    // MARK: - ANKLE -
     @objc func ankle_excessive_plant_clicked_method() {
         let indexPath = IndexPath.init(row: ankle_index, section: 0)
         let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
@@ -938,6 +1026,10 @@ class stance_phase: UIViewController {
                 
                 cell.btn_inversion_main_Slight.setImage(UIImage(named: "check_icon"), for: .normal)
                 
+                // uncheck other
+                cell.btn_inversion_main_Moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_inversion_main_Excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                
                 cell.btn_inversion_main_Slight.tag = 231
             } else {
                 cell.btn_inversion_main_Slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
@@ -961,6 +1053,10 @@ class stance_phase: UIViewController {
             
             cell.btn_inversion_main_Moderate.setImage(UIImage(named: "check_icon"), for: .normal)
             
+            // uncheck other
+            cell.btn_inversion_main_Slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_inversion_main_Excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            
             cell.btn_inversion_main_Moderate.tag = 241
         } else {
             cell.btn_inversion_main_Moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
@@ -981,6 +1077,10 @@ class stance_phase: UIViewController {
             if (cell.btn_inversion_main_Excessive.tag == 250) {
                 
                 cell.btn_inversion_main_Excessive.setImage(UIImage(named: "check_icon"), for: .normal)
+                
+                // uncheck other
+                cell.btn_inversion_main_Slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_inversion_main_Moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
                 
                 cell.btn_inversion_main_Excessive.tag = 251
             } else {
@@ -1124,10 +1224,318 @@ class stance_phase: UIViewController {
         }
     }
     
- 
+    // MARK: - KNEE -
+    /*
+    cell.btn_knee_excessive_flexion.addTarget(self, action: #selector(knee_excessive_flexion_clicked_method), for: .touchUpInside)
+    cell.btn_knee_insufficient_flexion.addTarget(self, action: #selector(knee_insufficient_flexion_clicked_method), for: .touchUpInside)
+    cell.btn_knee_hyperextension.addTarget(self, action: #selector(knee_hyperextension_clicked_method), for: .touchUpInside)
+    */
+    @objc func knee_excessive_flexion_clicked_method() {
+        let indexPath = IndexPath.init(row: knee_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        
+        print(cell.btn_knee_excessive_flexion.tag as Any)
+        if (cell.btn_knee_excessive_flexion.tag == 320) {
+            
+            cell.btn_knee_excessive_flexion.setImage(UIImage(named: "check_icon"), for: .normal)
+            
+            cell.btn_knee_excessive_flexion.tag = 321
+        } else {
+            cell.btn_knee_excessive_flexion.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            
+            cell.btn_knee_excessive_flexion.tag = 320
+        }
+    }
+    @objc func knee_insufficient_flexion_clicked_method() {
+        let indexPath = IndexPath.init(row: knee_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        
+        print(cell.btn_knee_insufficient_flexion.tag as Any)
+        if (cell.btn_knee_insufficient_flexion.tag == 330) {
+            
+            cell.btn_knee_insufficient_flexion.setImage(UIImage(named: "check_icon"), for: .normal)
+            
+            cell.btn_knee_insufficient_flexion.tag = 331
+        } else {
+            cell.btn_knee_insufficient_flexion.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            
+            cell.btn_knee_insufficient_flexion.tag = 330
+        }
+    }
+    @objc func knee_hyperextension_clicked_method() {
+        let indexPath = IndexPath.init(row: knee_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        
+        print(cell.btn_knee_hyperextension.tag as Any)
+        if (cell.btn_knee_hyperextension.tag == 340) {
+            
+            cell.btn_knee_hyperextension.setImage(UIImage(named: "check_icon"), for: .normal)
+            
+            cell.btn_knee_hyperextension.tag = 341
+        } else {
+            cell.btn_knee_hyperextension.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            
+            cell.btn_knee_hyperextension.tag = 340
+        }
+    }
     
+    /*
+     cell.btn_knee_varus_main.addTarget(self, action: #selector(knee_varus_main_clicked_method), for: .touchUpInside)
+     cell.btn_knee_varus_slight.addTarget(self, action: #selector(knee_varus_slight_clicked_method), for: .touchUpInside)
+     cell.btn_knee_varus_moderate.addTarget(self, action: #selector(knee_varus_moderate_clicked_method), for: .touchUpInside)
+     cell.btn_knee_varus_excessive.addTarget(self, action: #selector(knee_varus_excessive_clicked_method), for: .touchUpInside)
+     */
+    @objc func knee_varus_main_clicked_method() {
+        let indexPath = IndexPath.init(row: knee_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        
+        print(cell.btn_knee_varus_main.tag as Any)
+        if (cell.btn_knee_varus_main.tag == 350) {
+            
+            cell.btn_knee_varus_main.setImage(UIImage(named: "check_icon"), for: .normal)
+            
+            cell.btn_knee_varus_main.tag = 351
+        } else {
+            cell.btn_knee_varus_main.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            
+            // uncheck sub category
+            cell.btn_knee_varus_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_knee_varus_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_knee_varus_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            
+            cell.btn_knee_varus_slight.tag = 360
+            cell.btn_knee_varus_moderate.tag = 370
+            cell.btn_knee_varus_excessive.tag = 380
+            
+            cell.btn_knee_varus_main.tag = 350
+        }
+    }
+    @objc func knee_varus_slight_clicked_method() {
+        let indexPath = IndexPath.init(row: knee_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        
+        if (cell.btn_knee_varus_main.tag == 351) {
+            
+            print(cell.btn_knee_varus_slight.tag as Any)
+            if (cell.btn_knee_varus_slight.tag == 360) {
+                
+                cell.btn_knee_varus_slight.setImage(UIImage(named: "check_icon"), for: .normal)
+                
+                cell.btn_knee_varus_slight.tag = 361
+            } else {
+                cell.btn_knee_varus_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                
+                cell.btn_knee_varus_slight.tag = 360
+            }
+            
+        } else {
+            
+        }
+    }
     
+    @objc func knee_varus_moderate_clicked_method() {
+        let indexPath = IndexPath.init(row: knee_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        if (cell.btn_knee_varus_main.tag == 351) {
+        print(cell.btn_knee_varus_moderate.tag as Any)
+        if (cell.btn_knee_varus_moderate.tag == 370) {
+            
+            cell.btn_knee_varus_moderate.setImage(UIImage(named: "check_icon"), for: .normal)
+            
+            cell.btn_knee_varus_moderate.tag = 371
+        } else {
+            cell.btn_knee_varus_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            
+            cell.btn_knee_varus_moderate.tag = 370
+        }
+        } else {
+            
+        }
+    }
+    @objc func knee_varus_excessive_clicked_method() {
+        let indexPath = IndexPath.init(row: knee_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        
+        if (cell.btn_knee_varus_main.tag == 351) {
+            
+            print(cell.btn_knee_varus_excessive.tag as Any)
+            if (cell.btn_knee_varus_excessive.tag == 380) {
+                
+                cell.btn_knee_varus_excessive.setImage(UIImage(named: "check_icon"), for: .normal)
+                
+                cell.btn_knee_varus_excessive.tag = 381
+            } else {
+                cell.btn_knee_varus_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                
+                cell.btn_knee_varus_excessive.tag = 380
+            }
+        } else {
+            
+        }
+    }
+    
+    /*
+     cell.btn_knee_valgus_main.addTarget(self, action: #selector(knee_valgus_main_clicked_method), for: .touchUpInside)
+    cell.btn_knee_valgus_slight.addTarget(self, action: #selector(knee_valgus_slight_clicked_method), for: .touchUpInside)
+    cell.btn_knee_valgus_moderate.addTarget(self, action: #selector(knee_valgus_moderate_clicked_method), for: .touchUpInside)
+    cell.btn_knee_valgus_excessive.addTarget(self, action: #selector(knee_valgus_excessive_clicked_method), for: .touchUpInside)
+    */
+    @objc func knee_valgus_main_clicked_method() {
+        let indexPath = IndexPath.init(row: knee_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        
+        print(cell.btn_knee_valgus_main.tag as Any)
+        if (cell.btn_knee_valgus_main.tag == 390) {
+            
+            cell.btn_knee_valgus_main.setImage(UIImage(named: "check_icon"), for: .normal)
+            
+            cell.btn_knee_valgus_main.tag = 391
+        } else {
+            cell.btn_knee_valgus_main.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            
+            cell.btn_knee_valgus_main.tag = 390
+        }
+    }
+    @objc func knee_valgus_slight_clicked_method() {
+        let indexPath = IndexPath.init(row: knee_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        
+        if (cell.btn_knee_varus_main.tag == 351) {
+            
+        print(cell.btn_knee_valgus_slight.tag as Any)
+        if (cell.btn_knee_valgus_slight.tag == 400) {
+            
+            cell.btn_knee_valgus_slight.setImage(UIImage(named: "check_icon"), for: .normal)
+            
+            cell.btn_knee_valgus_slight.tag = 401
+        } else {
+            cell.btn_knee_valgus_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            
+            cell.btn_knee_valgus_slight.tag = 400
+        }
+        } else {
+            
+        }
+    }
+    @objc func knee_valgus_moderate_clicked_method() {
+        let indexPath = IndexPath.init(row: knee_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        
+        if (cell.btn_knee_varus_main.tag == 351) {
+            
+        print(cell.btn_knee_valgus_moderate.tag as Any)
+        if (cell.btn_knee_valgus_moderate.tag == 410) {
+            
+            cell.btn_knee_valgus_moderate.setImage(UIImage(named: "check_icon"), for: .normal)
+            
+            cell.btn_knee_valgus_moderate.tag = 411
+        } else {
+            cell.btn_knee_valgus_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            
+            cell.btn_knee_valgus_moderate.tag = 410
+        }
+        } else {
+            
+        }
+    }
+    @objc func knee_valgus_excessive_clicked_method() {
+        let indexPath = IndexPath.init(row: knee_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        
+        if (cell.btn_knee_varus_main.tag == 351) {
+            
+            print(cell.btn_knee_valgus_excessive.tag as Any)
+            if (cell.btn_knee_valgus_excessive.tag == 420) {
+                
+                cell.btn_knee_valgus_excessive.setImage(UIImage(named: "check_icon"), for: .normal)
+                
+                cell.btn_knee_valgus_excessive.tag = 421
+            } else {
+                cell.btn_knee_valgus_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                
+                cell.btn_knee_valgus_excessive.tag = 420
+            }
+        } else {
+            
+        }
+    }
+    /*
+     cell.btn_knee_stiff.addTarget(self, action: #selector(knee_stiff_clicked_method), for: .touchUpInside)
+     cell.btn_knee_unstable.addTarget(self, action: #selector(knee_unstable_clicked_method), for: .touchUpInside)
+     */
+    @objc func knee_stiff_clicked_method() {
+        let indexPath = IndexPath.init(row: knee_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        
+        print(cell.btn_knee_stiff.tag as Any)
+        if (cell.btn_knee_stiff.tag == 430) {
+            
+            cell.btn_knee_stiff.setImage(UIImage(named: "check_icon"), for: .normal)
+            
+            cell.btn_knee_stiff.tag = 431
+        } else {
+            cell.btn_knee_stiff.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            
+            cell.btn_knee_stiff.tag = 430
+        }
+    }
+    @objc func knee_unstable_clicked_method() {
+        let indexPath = IndexPath.init(row: knee_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        
+        print(cell.btn_knee_unstable.tag as Any)
+        if (cell.btn_knee_unstable.tag == 440) {
+            
+            cell.btn_knee_unstable.setImage(UIImage(named: "check_icon"), for: .normal)
+            
+            cell.btn_knee_unstable.tag = 441
+        } else {
+            cell.btn_knee_unstable.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            
+            cell.btn_knee_unstable.tag = 440
+        }
+    }
    
+    //
+    /*func saveSalectedData(){
+        if var selectedPath = self.tblView.indexPathsForSelectedRows{
+            selectedPath = selectedPath.sorted()
+            var (footArr, ankleArr, kneeArr, hipArr, pelvisArr, trunkArr) = ([String](),[String](),[String](),[String](),[String](),[String]())
+            for data in selectedPath{
+                switch data.section {
+                case 0:
+                    let selectedStr = swingListData[data.section].data[data.row].rowTitle
+                    footArr.append(selectedStr)
+                case 1:
+                    let selectedStr = swingListData[data.section].data[data.row].rowTitle
+                    ankleArr.append(selectedStr)
+                case 2:
+                    let selectedStr = swingListData[data.section].data[data.row].rowTitle
+                    kneeArr.append(selectedStr)
+                case 3:
+                    let selectedStr = swingListData[data.section].data[data.row].rowTitle
+                    hipArr.append(selectedStr)
+                case 4:
+                    let selectedStr = swingListData[data.section].data[data.row].rowTitle
+                    pelvisArr.append(selectedStr)
+                case 5:
+                    let selectedStr = swingListData[data.section].data[data.row].rowTitle
+                    trunkArr.append(selectedStr)
+                default:
+                    break
+                }
+            }
+            
+            selected_stance_phase.setObject(footArr.joined(separator:"\n"), forKey: "foot" as NSCopying)
+            selected_stance_phase.setObject(ankleArr.joined(separator:"\n"), forKey: "ankle" as NSCopying)
+            selected_stance_phase.setObject(kneeArr.joined(separator:"\n"), forKey: "knee" as NSCopying)
+            selected_stance_phase.setObject(hipArr.joined(separator:"\n"), forKey: "hip" as NSCopying)
+            selected_stance_phase.setObject(pelvisArr.joined(separator:"\n"), forKey: "pelvis" as NSCopying)
+            selected_stance_phase.setObject(trunkArr.joined(separator:"\n"), forKey: "trunk" as NSCopying)
+            print(selected_stance_phase)
+        }
+    }*/
+    //
 }
 
 
@@ -1138,7 +1546,7 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -1160,7 +1568,7 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
             
             return cell
             
-        } else if (indexPath.row == 2) {
+        } else if (indexPath.row == 3) {
             
             let cell:stance_phase_table_cell = tableView.dequeueReusableCell(withIdentifier: "five_table_cell") as! stance_phase_table_cell
             cell.backgroundColor = .white
@@ -1179,7 +1587,7 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
             
             return cell
             
-        } else if (indexPath.row == 3) {
+        } else if (indexPath.row == 4) {
             
             let cell:stance_phase_table_cell = tableView.dequeueReusableCell(withIdentifier: "six_table_cell") as! stance_phase_table_cell
             cell.backgroundColor = .white
@@ -1259,6 +1667,39 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
             
             return cell
             
+        } else if (indexPath.row == 2) {
+            
+            let cell:stance_phase_table_cell = tableView.dequeueReusableCell(withIdentifier: "three_table_cell") as! stance_phase_table_cell
+            cell.backgroundColor = .white
+            
+            let backgroundView = UIView()
+            backgroundView.backgroundColor = .clear
+            cell.selectedBackgroundView = backgroundView
+          
+            
+            cell.btn_knee_excessive_flexion.addTarget(self, action: #selector(knee_excessive_flexion_clicked_method), for: .touchUpInside)
+            cell.btn_knee_insufficient_flexion.addTarget(self, action: #selector(knee_insufficient_flexion_clicked_method), for: .touchUpInside)
+            cell.btn_knee_hyperextension.addTarget(self, action: #selector(knee_hyperextension_clicked_method), for: .touchUpInside)
+            
+            cell.btn_knee_varus_main.addTarget(self, action: #selector(knee_varus_main_clicked_method), for: .touchUpInside)
+            cell.btn_knee_varus_slight.addTarget(self, action: #selector(knee_varus_slight_clicked_method), for: .touchUpInside)
+            cell.btn_knee_varus_moderate.addTarget(self, action: #selector(knee_varus_moderate_clicked_method), for: .touchUpInside)
+            cell.btn_knee_varus_excessive.addTarget(self, action: #selector(knee_varus_excessive_clicked_method), for: .touchUpInside)
+            
+            cell.btn_knee_valgus_main.addTarget(self, action: #selector(knee_valgus_main_clicked_method), for: .touchUpInside)
+            cell.btn_knee_valgus_slight.addTarget(self, action: #selector(knee_valgus_slight_clicked_method), for: .touchUpInside)
+            cell.btn_knee_valgus_moderate.addTarget(self, action: #selector(knee_valgus_moderate_clicked_method), for: .touchUpInside)
+            cell.btn_knee_valgus_excessive.addTarget(self, action: #selector(knee_valgus_excessive_clicked_method), for: .touchUpInside)
+            
+            cell.btn_knee_stiff.addTarget(self, action: #selector(knee_stiff_clicked_method), for: .touchUpInside)
+            cell.btn_knee_unstable.addTarget(self, action: #selector(knee_unstable_clicked_method), for: .touchUpInside)
+            
+            
+            
+            
+            
+            return cell
+            
         } else {
             let cell:stance_phase_table_cell = tableView.dequeueReusableCell(withIdentifier: "crash_my_app") as! stance_phase_table_cell
             cell.backgroundColor = .white
@@ -1277,12 +1718,14 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if (indexPath.row == 0 || indexPath.row == 3 ) {
+        if (indexPath.row == 0 || indexPath.row == 4 ) {
             return 250
-        } else if (indexPath.row == 2) {
+        } else if (indexPath.row == 3) {
             return 364
         } else if (indexPath.row == 1) {
             return 568
+        } else if (indexPath.row == 2) {
+            return 524
         } else {
             return 0
         }
@@ -1520,6 +1963,90 @@ class stance_phase_table_cell: UITableViewCell {
     @IBOutlet weak var btn_ankle_unstable:UIButton! {
         didSet {
             btn_ankle_unstable.tag = 310
+        }
+    }
+    
+    
+    
+    // knee deviation
+    @IBOutlet weak var btn_knee_excessive_flexion:UIButton! {
+        didSet {
+            btn_knee_excessive_flexion.tag = 320
+        }
+    }
+    
+    @IBOutlet weak var btn_knee_insufficient_flexion:UIButton! {
+        didSet {
+            btn_knee_insufficient_flexion.tag = 330
+        }
+    }
+    
+    @IBOutlet weak var btn_knee_hyperextension:UIButton! {
+        didSet {
+            btn_knee_hyperextension.tag = 340
+        }
+    }
+    
+    @IBOutlet weak var btn_knee_varus_main:UIButton! {
+        didSet {
+            btn_knee_varus_main.tag = 350
+        }
+    }
+    
+    @IBOutlet weak var btn_knee_varus_slight:UIButton! {
+        didSet {
+            btn_knee_varus_slight.tag = 360
+        }
+    }
+    
+    @IBOutlet weak var btn_knee_varus_moderate:UIButton! {
+        didSet {
+            btn_knee_varus_moderate.tag = 370
+        }
+    }
+    
+    @IBOutlet weak var btn_knee_varus_excessive:UIButton! {
+        didSet {
+            btn_knee_varus_excessive.tag = 380
+        }
+    }
+    
+    @IBOutlet weak var btn_knee_valgus_main:UIButton! {
+        didSet {
+            btn_knee_valgus_main.tag = 390
+        }
+    }
+     
+    // eversion start
+    @IBOutlet weak var btn_knee_valgus_slight:UIButton! {
+        didSet {
+            btn_knee_valgus_slight.tag = 400
+        }
+    }
+    
+    @IBOutlet weak var btn_knee_valgus_moderate:UIButton! {
+        didSet {
+            btn_knee_valgus_moderate.tag = 410
+        }
+    }
+    
+    @IBOutlet weak var btn_knee_valgus_excessive:UIButton! {
+        didSet {
+            btn_knee_valgus_excessive.tag = 420
+        }
+    }
+     
+    // eversion end
+    
+    @IBOutlet weak var btn_knee_stiff:UIButton! {
+        didSet {
+            btn_knee_stiff.tag = 430
+        }
+    }
+    
+    @IBOutlet weak var btn_knee_unstable:UIButton! {
+        didSet {
+            btn_knee_unstable.tag = 440
         }
     }
     

@@ -7,69 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "880A5F43-8A36-4BD2-A989-9BA07FF37A12"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GAIT/View Controllers/Xib/PDFPageView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "setUpData()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "880A5F43-8A36-4BD2-A989-9BA07FF37A12 - 828ce69d9ee52f57"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "G_A_I_T.PDFPageView.setUpData() -&gt; ()"
-                  moduleName = "G.A.I.T"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dishantrajput/Documents/evs_2022/gait/GAIT/View%20Controllers/Xib/PDFPageView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "191">
-               </Location>
-               <Location
-                  uuid = "880A5F43-8A36-4BD2-A989-9BA07FF37A12 - 8f92ac74464e55ee"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "implicit closure #1 (G_A_I_T.PDFPageView) -&gt; () -&gt; () in G_A_I_T.PDFPageView.setUpData() -&gt; ()"
-                  moduleName = "G.A.I.T"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dishantrajput/Documents/evs_2022/gait/GAIT/View%20Controllers/Xib/PDFPageView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "66">
-               </Location>
-               <Location
-                  uuid = "880A5F43-8A36-4BD2-A989-9BA07FF37A12 - 898aefd691e5ec0a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "implicit closure #2 () -&gt; () in implicit closure #1 (G_A_I_T.PDFPageView) -&gt; () -&gt; () in G_A_I_T.PDFPageView.setUpData() -&gt; ()"
-                  moduleName = "G.A.I.T"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dishantrajput/Documents/evs_2022/gait/GAIT/View%20Controllers/Xib/PDFPageView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "22">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "5B44A131-8620-4066-B243-590A7B01809E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"

@@ -686,7 +686,7 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
                 self.navigationController?.pushViewController(pushVC, animated: true)
             } else if (indexPath.row == 3) {
                 let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "types_of_gait_id") as! types_of_gait
-                pushVC.str_select_gait_type = " Choreiform Gait"
+                pushVC.str_select_gait_type = " Choreiform Gait (Hyperkinetic Gait)"
                 self.navigationController?.pushViewController(pushVC, animated: true)
             } else if (indexPath.row == 4) {
                 let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "types_of_gait_id") as! types_of_gait
