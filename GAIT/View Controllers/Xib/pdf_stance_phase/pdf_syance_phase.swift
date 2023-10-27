@@ -19,6 +19,7 @@ class pdf_syance_phase: UIView {
     @IBOutlet weak var lblPatOnsetDate: UILabel!
     @IBOutlet weak var lblPatGoal: UILabel!
     @IBOutlet weak var lblPatWalkerAid: UILabel!
+    
     //Table_IDS_Data
     @IBOutlet weak var lblIDSFoot: UILabel!
     @IBOutlet weak var lblIDSAnkle: UILabel!
@@ -51,7 +52,6 @@ class pdf_syance_phase: UIView {
     @IBOutlet weak var lblSwingPelivs: UILabel!
     @IBOutlet weak var lblSwingTrunk: UILabel!
      
- 
     //Table_Swing_Data
     @IBOutlet weak var lbl_stance_phase_Foot: UILabel!
     @IBOutlet weak var lbl_stance_phase_Ankle: UILabel!
@@ -59,7 +59,6 @@ class pdf_syance_phase: UIView {
     @IBOutlet weak var lbl_stance_phase_Hip: UILabel!
     @IBOutlet weak var lbl_stance_phase_Pelivs: UILabel!
     @IBOutlet weak var lbl_stance_phase_Trunk: UILabel!
-    
     
     //Table_IDS_Data
     @IBOutlet weak var lblLength: UILabel!
@@ -72,29 +71,25 @@ class pdf_syance_phase: UIView {
     @IBOutlet weak var lblTreatmentGoal: UILabel!
     @IBOutlet weak var lblNotes: UILabel!
     
-    @IBOutlet weak var stack_one:UIStackView!
+    /*@IBOutlet weak var stack_one:UIStackView!
     @IBOutlet weak var stack_two:UIStackView!
     @IBOutlet weak var stack_three:UIStackView!
     @IBOutlet weak var stack_four:UIStackView!
-    @IBOutlet weak var stack_five:UIStackView!
+    @IBOutlet weak var stack_five:UIStackView!*/
     
     internal func setupViewContent() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
-        /*
-         if let dateLabel = self.dateLabel {
-         dateLabel.text = dateFormatter.string(from: NSDate() as Date)
-         }
-         */
+       
         self.setUpData()
     }
     
     func setUpData() {
         
-        self.stack_one.isHidden = true
+        /*self.stack_one.isHidden = true
         self.stack_two.isHidden = true
-        self.stack_three.isHidden = true
+        self.stack_three.isHidden = true*/
         
         self.setUpUserData()
         self.setUpIDSData()
@@ -108,7 +103,7 @@ class pdf_syance_phase: UIView {
         
     }
     
-    func setUpUserData(){
+    func setUpUserData() {
         // var normalText = "Hi am normal"
         // var boldText  = "And I am BOLD!"
         // var attributedString = NSMutableAttributedString(string:normalText)
@@ -137,7 +132,7 @@ class pdf_syance_phase: UIView {
         lblPatWalkerAid.text = "Walking Aid : \(userInfoData["wakingAid"] as? String ?? "")"
     }
     
-    func setUpIDSData(){
+    func setUpIDSData() {
         lblIDSFoot.text   = selectedIDSData["foot"] as? String
         lblIDSAnkle.text  = selectedIDSData["ankle"] as? String
         lblIDSKnee.text   = selectedIDSData["knee"] as? String
@@ -146,7 +141,7 @@ class pdf_syance_phase: UIView {
         lblIDSTrunk.text  = selectedIDSData["trunk"] as? String
     }
     
-    func setUpSSData(){
+    func setUpSSData() {
         lblSSFoot.text   = selectedSLSData["foot"] as? String
         lblSSAnkle.text  = selectedSLSData["ankle"] as? String
         lblSSKneee.text  = selectedSLSData["knee"] as? String
@@ -155,7 +150,7 @@ class pdf_syance_phase: UIView {
         lblSSTrunk.text  = selectedSLSData["trunk"] as? String
     }
     
-    func setUpTDSData(){
+    func setUpTDSData() {
         lblTDSFoot.text   = selectedTDSData["foot"] as? String
         lblTDSAnkle.text  = selectedTDSData["ankle"] as? String
         lblTDSKnee.text   = selectedTDSData["knee"] as? String
@@ -164,7 +159,7 @@ class pdf_syance_phase: UIView {
         lblTDSTrunk.text  = selectedTDSData["trunk"] as? String
     }
     
-    func setUpSwingData(){
+    func setUpSwingData() {
         lblSwingFoot.text   = selectedSwingData["foot"] as? String
         lblSwingAnkle.text  = selectedSwingData["ankle"] as? String
         lblSwingKnee.text   = selectedSwingData["knee"] as? String
@@ -181,15 +176,7 @@ class pdf_syance_phase: UIView {
         lbl_stance_phase_Pelivs.text = selected_stance_phase["pelvis"] as? String
         lbl_stance_phase_Trunk.text  = selected_stance_phase["trunk"] as? String
     }
-//    func setUpStancePhase(){
-//        lblSwingFoot.text   = selectedSwingData["foot"] as? String
-//        lblSwingAnkle.text  = selectedSwingData["ankle"] as? String
-//        lblSwingKnee.text   = selectedSwingData["knee"] as? String
-//        lblSWingHip.text    = selectedSwingData["hip"] as? String
-//        lblSwingPelivs.text = selectedSwingData["pelvis"] as? String
-//        lblSwingTrunk.text  = selectedSwingData["trunk"] as? String
-//    }
-    
+
     func setUpFocusData() {
         
         lblLength.text = "\(selectedAdditionalData["lenght"] as? String ?? "")"
@@ -235,10 +222,10 @@ class pdf_syance_phase: UIView {
     }
 }*/
 
-func addBoldText(fullString: NSString, boldPartOfString: NSString, font: UIFont!, boldFont: UIFont!) -> NSAttributedString {
-    let nonBoldFontAttribute = [NSAttributedString.Key.font:font!]
-    let boldFontAttribute = [NSAttributedString.Key.font:boldFont!]
-   let boldString = NSMutableAttributedString(string: fullString as String, attributes:nonBoldFontAttribute)
-    boldString.addAttributes(boldFontAttribute, range: fullString.range(of: boldPartOfString as String))
-   return boldString
-}
+//func addBoldText(fullString: NSString, boldPartOfString: NSString, font: UIFont!, boldFont: UIFont!) -> NSAttributedString {
+//    let nonBoldFontAttribute = [NSAttributedString.Key.font:font!]
+//    let boldFontAttribute = [NSAttributedString.Key.font:boldFont!]
+//   let boldString = NSMutableAttributedString(string: fullString as String, attributes:nonBoldFontAttribute)
+//    boldString.addAttributes(boldFontAttribute, range: fullString.range(of: boldPartOfString as String))
+//   return boldString
+//}

@@ -52,5 +52,84 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4AB5FD2B-AD48-477E-BE91-644E89FEF2E6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GAIT/View Controllers/DashBoard/CongratulationsTableCell/CongratulationsTwo.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "generateButtonTouchUpInside()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C29282D8-8CA1-4E57-9903-02969017B7A6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GAIT/View Controllers/DashBoard/CongratulationsTableCell/CongratulationsTwo.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "generateButtonTouchUpInside()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C29282D8-8CA1-4E57-9903-02969017B7A6 - e36dfa2b244cf097"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "G_A_I_T.CongratulationsTwo.generateButtonTouchUpInside() -&gt; ()"
+                  moduleName = "G.A.I.T"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dishantrajput/Documents/evs_2022/gait/GAIT/View%20Controllers/DashBoard/CongratulationsTableCell/CongratulationsTwo.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "1874">
+               </Location>
+               <Location
+                  uuid = "C29282D8-8CA1-4E57-9903-02969017B7A6 - e36dfa2b244cf097"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "G_A_I_T.CongratulationsTwo.generateButtonTouchUpInside() -&gt; ()"
+                  moduleName = "G.A.I.T"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dishantrajput/Documents/evs_2022/gait/GAIT/View%20Controllers/DashBoard/CongratulationsTableCell/CongratulationsTwo.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "2235">
+               </Location>
+               <Location
+                  uuid = "C29282D8-8CA1-4E57-9903-02969017B7A6 - e36dfa2b244cf097"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "G_A_I_T.CongratulationsTwo.generateButtonTouchUpInside() -&gt; ()"
+                  moduleName = "G.A.I.T"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dishantrajput/Documents/evs_2022/gait/GAIT/View%20Controllers/DashBoard/CongratulationsTableCell/CongratulationsTwo.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "2817">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

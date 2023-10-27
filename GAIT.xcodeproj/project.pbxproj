@@ -44,6 +44,7 @@
 		A4723C4E2604DD1E003D4984 /* CongratulationsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4723C4D2604DD1E003D4984 /* CongratulationsTableCell.swift */; };
 		B92847A32AEA469A00C8FF37 /* quick_gait_assessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92847A22AEA469A00C8FF37 /* quick_gait_assessment.swift */; };
 		B938CBF02AEC05990015DC17 /* pdf_syance_phase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B938CBEF2AEC05990015DC17 /* pdf_syance_phase.swift */; };
+		B938CBF22AEC06BC0015DC17 /* pdf_stance_phase.xib in Resources */ = {isa = PBXBuildFile; fileRef = B938CBF12AEC06BC0015DC17 /* pdf_stance_phase.xib */; };
 		B9435D0D2AE92CE300EB0DD6 /* would_to_to.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9435D0C2AE92CE200EB0DD6 /* would_to_to.swift */; };
 		B9435D0F2AE92F2800EB0DD6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9435D0E2AE92F2800EB0DD6 /* Utils.swift */; };
 		B9435D122AE9341600EB0DD6 /* how_the_app_works.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9435D112AE9341600EB0DD6 /* how_the_app_works.swift */; };
@@ -96,6 +97,7 @@
 		A4723C4D2604DD1E003D4984 /* CongratulationsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsTableCell.swift; sourceTree = "<group>"; };
 		B92847A22AEA469A00C8FF37 /* quick_gait_assessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quick_gait_assessment.swift; sourceTree = "<group>"; };
 		B938CBEF2AEC05990015DC17 /* pdf_syance_phase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pdf_syance_phase.swift; sourceTree = "<group>"; };
+		B938CBF12AEC06BC0015DC17 /* pdf_stance_phase.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = pdf_stance_phase.xib; sourceTree = "<group>"; };
 		B9435D0C2AE92CE200EB0DD6 /* would_to_to.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = would_to_to.swift; sourceTree = "<group>"; };
 		B9435D0E2AE92F2800EB0DD6 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B9435D112AE9341600EB0DD6 /* how_the_app_works.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = how_the_app_works.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				B938CBEF2AEC05990015DC17 /* pdf_syance_phase.swift */,
+				B938CBF12AEC06BC0015DC17 /* pdf_stance_phase.xib */,
 			);
 			path = pdf_stance_phase;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				B96F4DC728EFFF81002ABEAF /* calibrib.ttf in Resources */,
 				527FEECF25559BC400C03BEF /* CustomSectionTableViewCell.xib in Resources */,
 				527D7E0E2570F0AC009AB6F5 /* gait_bold.otf in Resources */,
+				B938CBF22AEC06BC0015DC17 /* pdf_stance_phase.xib in Resources */,
 				52F5DDDA255EC1AE00CF65FE /* PDFPageView.xib in Resources */,
 				527D7E102570F0AC009AB6F5 /* gait_din_italic.otf in Resources */,
 				527FEE9B25540C5700C03BEF /* Main.storyboard in Resources */,

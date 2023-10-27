@@ -86,19 +86,44 @@ extension CongratulationsTwo {
     func generateButtonTouchUpInside() {
         var pages:Array<UIView> = []
         // Load Views with NibName
-        let pdfPageView = Bundle.main.loadNibNamed("PDFPageView", owner: self, options: nil)?.last as! PDFPageView
-        // Fill Views With Data
-        pdfPageView.setupViewContent()
-        // Generate PDF from pages Array
-        pages.append(contentsOf: [pdfPageView])
-        //let tempFilePath = SwiftPDFGenerator.generatePDFWithPages(pages: pages)
-        let tempFilePath = pdfPageView.exportAsPdfFromView()
-        self.downloadFile(pdfUrl: tempFilePath)
-        // present PDF
-        //let pdfLoc = NSURL(fileURLWithPath: tempFilePath)
-        //self.pdfUrl = pdfLoc
-        //self.pdfUrl = URL(string: tempFilePath)
-        //configureView()
+        
+        if let loadedString = UserDefaults.standard.string(forKey: "key_quick_gait_assessment") {
+            print(loadedString) // "quick_gait_assessment"
+            
+            if (loadedString == "quick_gait_assessment") {
+                let pdfPageView = Bundle.main.loadNibNamed("pdf_stance_phase", owner: self, options: nil)?.last as! pdf_syance_phase
+                // Fill Views With Data
+                pdfPageView.setupViewContent()
+                // Generate PDF from pages Array
+                pages.append(contentsOf: [pdfPageView])
+                //let tempFilePath = SwiftPDFGenerator.generatePDFWithPages(pages: pages)
+                let tempFilePath = pdfPageView.exportAsPdfFromView()
+                self.downloadFile(pdfUrl: tempFilePath)
+                // present PDF
+                //let pdfLoc = NSURL(fileURLWithPath: tempFilePath)
+                //self.pdfUrl = pdfLoc
+                //self.pdfUrl = URL(string: tempFilePath)
+                //configureView()
+            }
+           
+            
+        } else {
+            let pdfPageView = Bundle.main.loadNibNamed("PDFPageView", owner: self, options: nil)?.last as! PDFPageView
+            // Fill Views With Data
+            pdfPageView.setupViewContent()
+            // Generate PDF from pages Array
+            pages.append(contentsOf: [pdfPageView])
+            //let tempFilePath = SwiftPDFGenerator.generatePDFWithPages(pages: pages)
+            let tempFilePath = pdfPageView.exportAsPdfFromView()
+            self.downloadFile(pdfUrl: tempFilePath)
+            // present PDF
+            //let pdfLoc = NSURL(fileURLWithPath: tempFilePath)
+            //self.pdfUrl = pdfLoc
+            //self.pdfUrl = URL(string: tempFilePath)
+            //configureView()
+        }
+        
+        
     }
     
     func downloadFile(pdfUrl: String) {

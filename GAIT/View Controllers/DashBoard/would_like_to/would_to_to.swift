@@ -17,6 +17,8 @@ class would_to_to: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        UserDefaults.standard.set("", forKey: "key_quick_gait_assessment")
+
         self.view.backgroundColor = .white
         // self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.navigationItem.title = "G.A.I.T App".uppercased()
@@ -111,6 +113,9 @@ extension would_to_to:UITableViewDelegate,UITableViewDataSource{
             cell.lbl_index_number.backgroundColor = UIColor.init(red: 230.0/255.0, green: 230.0/255.0, blue: 230.0/255.0, alpha: 1)
             
         } else if (indexPath.row == 6) {
+            
+            UserDefaults.standard.set("quick_gait_assessment", forKey: "key_quick_gait_assessment")
+            
             cell.lbl_title.text = "Quick Gait Assessment"
             cell.accessoryType = .disclosureIndicator
             cell.lbl_index_number.isHidden = false

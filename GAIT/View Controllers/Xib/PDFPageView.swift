@@ -71,11 +71,11 @@ class PDFPageView: UIView {
     @IBOutlet weak var lblTreatmentGoal: UILabel!
     @IBOutlet weak var lblNotes: UILabel!
     
-    @IBOutlet weak var stack_one:UIStackView!
+    /*@IBOutlet weak var stack_one:UIStackView!
     @IBOutlet weak var stack_two:UIStackView!
     @IBOutlet weak var stack_three:UIStackView!
     @IBOutlet weak var stack_four:UIStackView!
-    @IBOutlet weak var stack_five:UIStackView!
+    @IBOutlet weak var stack_five:UIStackView!*/
     
     internal func setupViewContent() {
         let dateFormatter = DateFormatter()
@@ -91,9 +91,9 @@ class PDFPageView: UIView {
     
     func setUpData() {
         
-        self.stack_one.isHidden = true
+        /*self.stack_one.isHidden = true
         self.stack_two.isHidden = true
-        self.stack_three.isHidden = true
+        self.stack_three.isHidden = true*/
         
         self.setUpUserData()
         self.setUpIDSData()
