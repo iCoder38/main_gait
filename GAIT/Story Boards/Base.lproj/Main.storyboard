@@ -4561,11 +4561,11 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                             <outlet property="lbl_title" destination="kG6-QX-qHt" id="vPc-NN-pLm"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="six_table_cell" rowHeight="294" id="eB7-xw-cv3" customClass="stance_phase_table_cell" customModule="G_A_I_T" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1728" width="320" height="294"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="six_table_cell" rowHeight="304" id="eB7-xw-cv3" customClass="stance_phase_table_cell" customModule="G_A_I_T" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="1728" width="320" height="304"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eB7-xw-cv3" id="WiL-Eh-RPD">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="294"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="304"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forward Lean" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKk-2B-A9X">
@@ -4713,16 +4713,19 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" image="uncheck_icon"/>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itG-SQ-Ggy">
-                                                    <rect key="frame" x="16" y="248" width="288" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itG-SQ-Ggy">
+                                                    <rect key="frame" x="16" y="248" width="288" height="44"/>
                                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="uZy-fP-o4v"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" title="Save and Continue"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="itG-SQ-Ggy" firstAttribute="leading" secondItem="WiL-Eh-RPD" secondAttribute="leadingMargin" id="3Cl-Vf-0HU"/>
                                                 <constraint firstItem="V2C-2I-rkP" firstAttribute="leading" secondItem="WiL-Eh-RPD" secondAttribute="leading" id="4Pe-qg-jBW"/>
                                                 <constraint firstItem="MWI-Ud-B90" firstAttribute="leading" secondItem="Y8C-pL-5yH" secondAttribute="trailing" constant="8" symbolic="YES" id="6KX-lh-0Dx"/>
                                                 <constraint firstItem="MWI-Ud-B90" firstAttribute="top" secondItem="DeY-pZ-9Sr" secondAttribute="bottom" constant="17" id="75a-1P-5qr"/>
@@ -4730,6 +4733,7 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                                 <constraint firstItem="SUS-mJ-a4c" firstAttribute="leading" secondItem="WiL-Eh-RPD" secondAttribute="leadingMargin" id="Bk2-ms-VFI"/>
                                                 <constraint firstItem="OQ8-py-tEi" firstAttribute="trailing" secondItem="WiL-Eh-RPD" secondAttribute="trailingMargin" constant="-6" id="FUq-lI-qB6"/>
                                                 <constraint firstItem="DeY-pZ-9Sr" firstAttribute="top" secondItem="AKk-2B-A9X" secondAttribute="bottom" constant="17" id="Kwr-jZ-urU"/>
+                                                <constraint firstItem="itG-SQ-Ggy" firstAttribute="top" secondItem="UpI-Lk-mUd" secondAttribute="bottom" constant="8" symbolic="YES" id="Nwv-SU-UiE"/>
                                                 <constraint firstItem="OQ8-py-tEi" firstAttribute="leading" secondItem="46d-Fh-mbm" secondAttribute="trailing" constant="8" symbolic="YES" id="OSL-xp-hqK"/>
                                                 <constraint firstItem="Y8C-pL-5yH" firstAttribute="top" secondItem="SUS-mJ-a4c" secondAttribute="bottom" constant="17" id="Ohl-FJ-Xde"/>
                                                 <constraint firstItem="Y8C-pL-5yH" firstAttribute="leading" secondItem="WiL-Eh-RPD" secondAttribute="leadingMargin" id="Orq-t8-U1P"/>
@@ -4746,6 +4750,7 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                                 <constraint firstAttribute="trailing" secondItem="V2C-2I-rkP" secondAttribute="trailing" id="a2U-XF-EuJ"/>
                                                 <constraint firstItem="MWI-Ud-B90" firstAttribute="trailing" secondItem="WiL-Eh-RPD" secondAttribute="trailingMargin" constant="-6" id="agb-lH-wkG"/>
                                                 <constraint firstAttribute="trailing" secondItem="3ne-sj-YNy" secondAttribute="trailing" id="akM-P0-Edy"/>
+                                                <constraint firstItem="itG-SQ-Ggy" firstAttribute="trailing" secondItem="WiL-Eh-RPD" secondAttribute="trailingMargin" id="b6W-KG-2B1"/>
                                                 <constraint firstItem="QGh-qr-FpA" firstAttribute="leading" secondItem="WiL-Eh-RPD" secondAttribute="leading" id="cFg-hp-ajL"/>
                                                 <constraint firstItem="46d-Fh-mbm" firstAttribute="top" secondItem="Y8C-pL-5yH" secondAttribute="bottom" constant="17" id="f9h-dp-dmD"/>
                                                 <constraint firstAttribute="trailing" secondItem="XDg-t4-xqw" secondAttribute="trailing" id="jQc-Oe-e03"/>

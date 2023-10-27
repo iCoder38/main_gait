@@ -205,11 +205,15 @@ class stance_phase: UIViewController {
         selected_stance_phase.setObject(footArr.joined(separator:"\n"), forKey: "foot" as NSCopying)
         selected_stance_phase.setObject(ankleArr.joined(separator:"\n"), forKey: "ankle" as NSCopying)
         selected_stance_phase.setObject(kneeArr.joined(separator:"\n"), forKey: "knee" as NSCopying)
-        // selected_stance_phase.setObject(hipArr.joined(separator:"\n"), forKey: "hip" as NSCopying)
+        selected_stance_phase.setObject(hipArr.joined(separator:"\n"), forKey: "hip" as NSCopying)
         selected_stance_phase.setObject(pelvisArr.joined(separator:"\n"), forKey: "pelvis" as NSCopying)
         selected_stance_phase.setObject(trunkArr.joined(separator:"\n"), forKey: "trunk" as NSCopying)
         
         print(selected_stance_phase as Any)
+        
+        // push to swing screen
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "SwingViewController") as! SwingViewController
+        self.navigationController?.pushViewController(pushVC, animated: true)
     }
     
     @objc func fareFootClickMethod() {
@@ -1570,7 +1574,7 @@ class stance_phase: UIViewController {
         let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
         let my_name = "Valgus : Slight"
         
-        if (cell.btn_knee_varus_main.tag == 351) {
+        if (cell.btn_knee_valgus_main.tag == 391) {
             
         print(cell.btn_knee_valgus_slight.tag as Any)
         if (cell.btn_knee_valgus_slight.tag == 400) {
@@ -1607,7 +1611,7 @@ class stance_phase: UIViewController {
         let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
         let my_name = "Valgus : Moderate"
         
-        if (cell.btn_knee_varus_main.tag == 351) {
+        if (cell.btn_knee_valgus_main.tag == 391) {
             
         print(cell.btn_knee_valgus_moderate.tag as Any)
         if (cell.btn_knee_valgus_moderate.tag == 410) {
@@ -1644,12 +1648,15 @@ class stance_phase: UIViewController {
         let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
         let my_name = "Valgus : Excessive"
         
-        if (cell.btn_knee_varus_main.tag == 351) {
+        if (cell.btn_knee_valgus_main.tag == 391) {
             
             print(cell.btn_knee_valgus_excessive.tag as Any)
             if (cell.btn_knee_valgus_excessive.tag == 420) {
                 
                 cell.btn_knee_valgus_excessive.setImage(UIImage(named: "check_icon"), for: .normal)
+                
+                // add
+                self.add_data_in_array(dynamic_mut_arr: arr_knee, my_name: my_name)
                 
                 // remove two
                 cell.btn_knee_valgus_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
@@ -2004,7 +2011,7 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
         } else if (indexPath.row == 2) {
             return 524
         } else if (indexPath.row == 4) {
-            return 294
+            return 304
         } else {
             return 0
         }
@@ -2329,6 +2336,13 @@ class stance_phase_table_cell: UITableViewCell {
         }
     }
     
-    @IBOutlet weak var btn_save_and_continue:UIButton!
+    @IBOutlet weak var btn_save_and_continue:UIButton! {
+        didSet {
+            btn_save_and_continue.layer.cornerRadius = 20
+            btn_save_and_continue.clipsToBounds = true
+            btn_save_and_continue.backgroundColor = .systemGreen
+            btn_save_and_continue.setTitleColor(.white, for: .normal)
+        }
+    }
     
 }

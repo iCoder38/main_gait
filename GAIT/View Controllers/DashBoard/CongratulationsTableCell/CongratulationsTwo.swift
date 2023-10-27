@@ -40,6 +40,7 @@ class CongratulationsTwo: BaseViewController {
         selectedSLSData.removeAllObjects()
         selectedTDSData.removeAllObjects()
         selectedSwingData.removeAllObjects()
+        selected_stance_phase.removeAllObjects()
         selectedAdditionalData.removeAllObjects()
         selectedInterventionData.removeAllObjects()
     }

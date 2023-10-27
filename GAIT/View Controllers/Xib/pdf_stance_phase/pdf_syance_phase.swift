@@ -1,14 +1,15 @@
 //
-//  PDFPageView.swift
+//  pdf_syance_phase.swift
 //  GAIT
 //
-//  Created by Shyam on 13/11/20.
-//  Copyright © 2020 EVS. All rights reserved.
+//  Created by Dishant Rajput on 27/10/23.
+//  Copyright © 2023 EVS. All rights reserved.
 //
 
 import UIKit
 
-class PDFPageView: UIView {
+class pdf_syance_phase: UIView {
+    
     //UserInfo
     @IBOutlet weak var lblPatName: UILabel!
     @IBOutlet weak var lblPatDob: UILabel!
@@ -189,7 +190,8 @@ class PDFPageView: UIView {
 //        lblSwingTrunk.text  = selectedSwingData["trunk"] as? String
 //    }
     
-    func setUpFocusData(){
+    func setUpFocusData() {
+        
         lblLength.text = "\(selectedAdditionalData["lenght"] as? String ?? "")"
         lblWidth.text  = "\(selectedAdditionalData["width"] as? String ?? "")"
         lblSwing.text  = "\(selectedAdditionalData["swing"] as? String ?? "")"
@@ -200,11 +202,11 @@ class PDFPageView: UIView {
         lblIntervFoucs.text = "\(selectedInterventionData["intervention"] as? String ?? "")"
         lblTreatmentGoal.text = "\(selectedInterventionData["treatmentGoal"] as? String ?? "")"
         lblNotes.text = "\(selectedInterventionData["notes"] as? String ?? "")"
+        
     }
 }
 
-
-extension UIView {
+/*extension UIView {
 
   // Export pdf from Save pdf in drectory and return pdf file path
   func exportAsPdfFromView() -> String {
@@ -231,7 +233,7 @@ extension UIView {
             return ""
         }
     }
-}
+}*/
 
 func addBoldText(fullString: NSString, boldPartOfString: NSString, font: UIFont!, boldFont: UIFont!) -> NSAttributedString {
     let nonBoldFontAttribute = [NSAttributedString.Key.font:font!]

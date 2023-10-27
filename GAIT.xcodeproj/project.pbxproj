@@ -43,6 +43,7 @@
 		A4723C4C2604DD05003D4984 /* CongratulationsTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4723C4B2604DD05003D4984 /* CongratulationsTwo.swift */; };
 		A4723C4E2604DD1E003D4984 /* CongratulationsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4723C4D2604DD1E003D4984 /* CongratulationsTableCell.swift */; };
 		B92847A32AEA469A00C8FF37 /* quick_gait_assessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92847A22AEA469A00C8FF37 /* quick_gait_assessment.swift */; };
+		B938CBF02AEC05990015DC17 /* pdf_syance_phase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B938CBEF2AEC05990015DC17 /* pdf_syance_phase.swift */; };
 		B9435D0D2AE92CE300EB0DD6 /* would_to_to.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9435D0C2AE92CE200EB0DD6 /* would_to_to.swift */; };
 		B9435D0F2AE92F2800EB0DD6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9435D0E2AE92F2800EB0DD6 /* Utils.swift */; };
 		B9435D122AE9341600EB0DD6 /* how_the_app_works.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9435D112AE9341600EB0DD6 /* how_the_app_works.swift */; };
@@ -94,6 +95,7 @@
 		A4723C4B2604DD05003D4984 /* CongratulationsTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsTwo.swift; sourceTree = "<group>"; };
 		A4723C4D2604DD1E003D4984 /* CongratulationsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsTableCell.swift; sourceTree = "<group>"; };
 		B92847A22AEA469A00C8FF37 /* quick_gait_assessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quick_gait_assessment.swift; sourceTree = "<group>"; };
+		B938CBEF2AEC05990015DC17 /* pdf_syance_phase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pdf_syance_phase.swift; sourceTree = "<group>"; };
 		B9435D0C2AE92CE200EB0DD6 /* would_to_to.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = would_to_to.swift; sourceTree = "<group>"; };
 		B9435D0E2AE92F2800EB0DD6 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B9435D112AE9341600EB0DD6 /* how_the_app_works.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = how_the_app_works.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 		52F5DDD6255EC12F00CF65FE /* Xib */ = {
 			isa = PBXGroup;
 			children = (
+				B938CBEE2AEC05600015DC17 /* pdf_stance_phase */,
 				52F5DDD7255EC19D00CF65FE /* PDFPageView.swift */,
 				52F5DDD9255EC1AE00CF65FE /* PDFPageView.xib */,
 			);
@@ -276,6 +279,14 @@
 				B92847A22AEA469A00C8FF37 /* quick_gait_assessment.swift */,
 			);
 			path = quick_gait_assessment;
+			sourceTree = "<group>";
+		};
+		B938CBEE2AEC05600015DC17 /* pdf_stance_phase */ = {
+			isa = PBXGroup;
+			children = (
+				B938CBEF2AEC05990015DC17 /* pdf_syance_phase.swift */,
+			);
+			path = pdf_stance_phase;
 			sourceTree = "<group>";
 		};
 		B9435D0B2AE92C9D00EB0DD6 /* would_like_to */ = {
@@ -483,6 +494,7 @@
 				B9435D0D2AE92CE300EB0DD6 /* would_to_to.swift in Sources */,
 				527FEEB5255415CA00C03BEF /* StartAssessmentViewController.swift in Sources */,
 				527FEEBF255417BF00C03BEF /* AdditionalViewController.swift in Sources */,
+				B938CBF02AEC05990015DC17 /* pdf_syance_phase.swift in Sources */,
 				527FEEAD255411BB00C03BEF /* Extension_Class.swift in Sources */,
 				527FEE9425540C5700C03BEF /* AppDelegate.swift in Sources */,
 			);
