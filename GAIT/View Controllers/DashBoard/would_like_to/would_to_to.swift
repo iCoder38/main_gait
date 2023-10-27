@@ -185,7 +185,7 @@ extension would_to_to:UITableViewDelegate,UITableViewDataSource{
             self.navigationController?.pushViewController(pushVC!, animated: true)
             
         }
-        else if (indexPath.row == 8) {
+        else if (indexPath.row == 9) {
            
            let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "how_the_app_works_id") as? how_the_app_works
            pushVC!.str_profile_name = "practice_gait_skills"

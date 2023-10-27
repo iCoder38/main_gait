@@ -41,11 +41,9 @@ class how_the_app_works: UIViewController {
             self.navigationItem.title = "Gait Comaprision".uppercased()
             
         } else if (self.str_profile_name == "practice_gait_skills") {
-            self.navigationItem.title = "Practice Gait Skills".uppercased()
+            self.navigationItem.title = "Practice Videos".uppercased()
             
         }
-        
-        
         
         self.tble_view.separatorColor = .clear
         
@@ -85,6 +83,8 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
             return 25
         } else if (self.str_profile_name == "types_of_gait") {
             return 11
+        } else if (self.str_profile_name == "practice_gait_skills") {
+            return 24
         } else {
             return 0
         }
@@ -355,6 +355,181 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
                 
             }
             
+        } else  if (self.str_profile_name == "practice_gait_skills") {
+            
+            if (indexPath.row == 0) {
+                cell.lbl_title.text = "Prosthetics"
+                cell.backgroundColor = .systemOrange
+                cell.lbl_index_number.isHidden = true
+                
+            } else if (indexPath.row == 1) {
+                cell.lbl_title.text = "Unilateral Below Knee Amputee"
+                cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_index_number.isHidden = false
+                cell.lbl_index_number.text = "\(indexPath.row)"
+                
+            } else if (indexPath.row == 2) {
+                cell.lbl_title.text = "Above-Knee Amputee – 1"
+                cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_index_number.isHidden = false
+                cell.lbl_index_number.text = "\(indexPath.row)"
+                
+            } else if (indexPath.row == 3) {
+                cell.lbl_title.text = "Above-Knee Amputee – 2"
+                cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_index_number.isHidden = false
+                cell.lbl_index_number.text = "\(indexPath.row)"
+                
+            } else if (indexPath.row == 4) {
+                cell.lbl_title.text = "Bilateral Above & Below Knee Amputee"
+                cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_index_number.isHidden = false
+                cell.lbl_index_number.text = "\(indexPath.row)"
+                
+            } else if (indexPath.row == 5) {
+                cell.lbl_title.text = "Hip Disarticulation Amputee"
+                cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_index_number.isHidden = false
+                cell.lbl_index_number.text = "\(indexPath.row)"
+                
+            }
+            //
+            else if (indexPath.row == 6) {
+                cell.lbl_title.text = "Orthotics"
+                cell.backgroundColor = .systemOrange
+                cell.lbl_index_number.isHidden = true
+                
+            }  else if (indexPath.row == 7) {
+                cell.lbl_title.text = "Metal Double-Upright Ankle Foot Orthosis"
+                cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_index_number.isHidden = false
+                cell.lbl_index_number.text = "1"
+                
+            } else if (indexPath.row == 8) {
+                cell.lbl_title.text = "Unilateral Carbon-fiber Ankle Foot Orthosis"
+                cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_index_number.isHidden = false
+                cell.lbl_index_number.text = "2"
+                
+            } else if (indexPath.row == 9) {
+                cell.lbl_title.text = "Bilateral Carbon-fiber Ankle Foot Orthoses"
+                cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_index_number.isHidden = false
+                cell.lbl_index_number.text = "3"
+                
+            } else if (indexPath.row == 10) {
+                cell.lbl_title.text = "Orthotics Practice Video 1"
+                cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_index_number.isHidden = false
+                cell.lbl_index_number.text = "4"
+                
+            } else if (indexPath.row == 11) {
+                cell.lbl_title.text = "Orthotics Practice Video 2"
+                cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_index_number.isHidden = false
+                cell.lbl_index_number.text = "5"
+                
+            }
+            // 3
+            else if (indexPath.row == 12) {
+                cell.lbl_title.text = "Neurological Conditions"
+                cell.backgroundColor = .systemOrange
+                cell.lbl_index_number.isHidden = true
+                
+            }  else if (indexPath.row == 13) {
+                cell.lbl_title.text = "Cerebro-Vascular Accident (CVA)"
+                cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_index_number.isHidden = false
+                cell.lbl_index_number.text = "1"
+                
+            } else if (indexPath.row == 14) {
+                cell.lbl_title.text = "Guillian Barre"
+                cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_index_number.isHidden = false
+                cell.lbl_index_number.text = "2"
+                
+            } else if (indexPath.row == 15) {
+                cell.lbl_title.text = "Cerebral Palsy (CP)"
+                cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_index_number.isHidden = false
+                cell.lbl_index_number.text = "3"
+                
+            } else if (indexPath.row == 16) {
+                cell.lbl_title.text = "Neuro Practice Video 1 (Foot Slap)"
+                cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_index_number.isHidden = false
+                cell.lbl_index_number.text = "4"
+                
+            } else if (indexPath.row == 17) {
+                cell.lbl_title.text = "Neuro Practice Video 2 (Shuffling Gait)"
+                cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_index_number.isHidden = false
+                cell.lbl_index_number.text = "5"
+                
+            }  // 4
+            else if (indexPath.row == 18) {
+                cell.lbl_title.text = "Orthopedic Conditions"
+                cell.backgroundColor = .systemOrange
+                cell.lbl_index_number.isHidden = true
+                
+            }   else if (indexPath.row == 19) {
+                cell.lbl_title.text = "Polio"
+                cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_index_number.isHidden = false
+                cell.lbl_index_number.text = "1"
+                
+            } else if (indexPath.row == 20) {
+                cell.lbl_title.text = "Severe Osteoarthritis"
+                cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_index_number.isHidden = false
+                cell.lbl_index_number.text = "2"
+                
+            } else if (indexPath.row == 21) {
+                cell.lbl_title.text = "Ortho Practice Video 1"
+                cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_index_number.isHidden = false
+                cell.lbl_index_number.text = "3"
+                
+            } else if (indexPath.row == 22) {
+                cell.lbl_title.text = "Ortho Practice Video 2"
+                cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_index_number.isHidden = false
+                cell.lbl_index_number.text = "4"
+                
+            } else if (indexPath.row == 23) {
+                cell.lbl_title.text = "Ortho Practice Video 3"
+                cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_index_number.isHidden = false
+                cell.lbl_index_number.text = "5"
+                
+            }
+            
+            
+            
+            
+            
+            
+            
         }
         
         return cell
@@ -546,6 +721,118 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
         } else if (self.str_profile_name == "comprehensive_gait_assessment") {
              let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "StartViewController")
              self.navigationController?.pushViewController(pushVC!, animated: true)
+            
+            
+            
+        } else  if (self.str_profile_name == "practice_gait_skills") {
+            
+            if (indexPath.row == 1) {
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+                pushVC.str_video_link = "https://vimeo.com/875093911/5201e9134f?share=copy"
+                pushVC.str_video_header = " Unilateral Below Knee Amputee"
+                self.navigationController?.pushViewController(pushVC, animated: true)
+            } else if (indexPath.row == 2) {
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+                pushVC.str_video_link = "https://vimeo.com/875094781/108400d901?share=copy"
+                pushVC.str_video_header = " Above-Knee Amputee – 1"
+                self.navigationController?.pushViewController(pushVC, animated: true)
+            } else if (indexPath.row == 3) {
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+                pushVC.str_video_link = "https://vimeo.com/875101976/f676b22856?share=copy"
+                pushVC.str_video_header = " Above-Knee Amputee – 2"
+                self.navigationController?.pushViewController(pushVC, animated: true)
+            } else if (indexPath.row == 4) {
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+                pushVC.str_video_link = "https://vimeo.com/875096420/0203134b51?share=copy"
+                pushVC.str_video_header = " Bilateral Above & Below Knee Amputee"
+                self.navigationController?.pushViewController(pushVC, animated: true)
+            } else if (indexPath.row == 5) {
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+                pushVC.str_video_link = "https://vimeo.com/875096728/d4514cfed0?share=copy"
+                pushVC.str_video_header = " Hip Disarticulation Amputee"
+                self.navigationController?.pushViewController(pushVC, animated: true)
+            } else if (indexPath.row == 7) {
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+                pushVC.str_video_link = "https://vimeo.com/875098710/876b8a3d09?share=copy"
+                pushVC.str_video_header = " Metal Double-Upright Ankle Foot Orthosis"
+                self.navigationController?.pushViewController(pushVC, animated: true)
+            } else if (indexPath.row == 8) {
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+                pushVC.str_video_link = "https://vimeo.com/875098987/0465872c6e?share=copy"
+                pushVC.str_video_header = " Unilateral Carbon-fiber Ankle Foot Orthosis"
+                self.navigationController?.pushViewController(pushVC, animated: true)
+            } else if (indexPath.row == 9) {
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+                pushVC.str_video_link = "https://vimeo.com/875099216/8f25d5a063?share=copy"
+                pushVC.str_video_header = " Bilateral Carbon-fiber Ankle Foot Orthoses"
+                self.navigationController?.pushViewController(pushVC, animated: true)
+            } else if (indexPath.row == 10) {
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+                pushVC.str_video_link = "https://vimeo.com/875100078/d891ef7713?share=copy"
+                pushVC.str_video_header = " Orthotics Practice Video 1"
+                self.navigationController?.pushViewController(pushVC, animated: true)
+            } else if (indexPath.row == 11) {
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+                pushVC.str_video_link = "https://vimeo.com/875100479/741fba70aa?share=copy"
+                pushVC.str_video_header = " Orthotics Practice Video 2"
+                self.navigationController?.pushViewController(pushVC, animated: true)
+            } else if (indexPath.row == 13) {
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+                pushVC.str_video_link = "https://vimeo.com/875102490/e8c6128b3a?share=copy"
+                pushVC.str_video_header = " Cerebro-Vascular Accident (CVA)"
+                self.navigationController?.pushViewController(pushVC, animated: true)
+            } else if (indexPath.row == 14) {
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+                pushVC.str_video_link = "https://vimeo.com/875104728/fa8a280dd1?share=copy"
+                pushVC.str_video_header = " Guillian Barre"
+                self.navigationController?.pushViewController(pushVC, animated: true)
+            } else if (indexPath.row == 15) {
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+                pushVC.str_video_link = "https://vimeo.com/875103203/5ef153e1fc?share=copy"
+                pushVC.str_video_header = " Cerebral Palsy (CP)"
+                self.navigationController?.pushViewController(pushVC, animated: true)
+            } else if (indexPath.row == 16) {
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+                pushVC.str_video_link = "https://vimeo.com/875104216/f8140e746f?share=copy"
+                pushVC.str_video_header = " Neuro Practice Video 1 (Foot Slap)"
+                self.navigationController?.pushViewController(pushVC, animated: true)
+            } else if (indexPath.row == 17) {
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+                pushVC.str_video_link = "https://vimeo.com/875112733/ac49436a7d?share=copy"
+                pushVC.str_video_header = " Neuro Practice Video 2 (Shuffling Gait)"
+                self.navigationController?.pushViewController(pushVC, animated: true)
+            } else if (indexPath.row == 19) {
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+                pushVC.str_video_link = "https://vimeo.com/875117961/d67461f3b2?share=copy"
+                pushVC.str_video_header = " Polio"
+                self.navigationController?.pushViewController(pushVC, animated: true)
+            } else if (indexPath.row == 20) {
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+                pushVC.str_video_link = "https://vimeo.com/875118151/8ccbd33898?share=copy"
+                pushVC.str_video_header = " Severe Osteoarthritis"
+                self.navigationController?.pushViewController(pushVC, animated: true)
+            } else if (indexPath.row == 21) {
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+                pushVC.str_video_link = "https://vimeo.com/875117307/169ce53fad?share=copy"
+                pushVC.str_video_header = " Ortho Practice Video 1"
+                self.navigationController?.pushViewController(pushVC, animated: true)
+            } else if (indexPath.row == 22) {
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+                pushVC.str_video_link = "https://vimeo.com/875119189/b6db40d6bc?share=copy"
+                pushVC.str_video_header = " Ortho Practice Video 2"
+                self.navigationController?.pushViewController(pushVC, animated: true)
+            } else if (indexPath.row == 23) {
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+                pushVC.str_video_link = "https://vimeo.com/875118953/351f056c86?share=copy"
+                pushVC.str_video_header = " Ortho Practice Video 3"
+                self.navigationController?.pushViewController(pushVC, animated: true)
+            }
+            
+            
+            
+            
+            
+            
         }
         
     }
