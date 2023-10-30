@@ -87,7 +87,7 @@ extension CongratulationsTwo {
         var pages:Array<UIView> = []
         // Load Views with NibName
         
-        if let loadedString = UserDefaults.standard.string(forKey: "key_quick_gait_assessment") {
+        if let loadedString = UserDefaults.standard.string(forKey: "key_pdf") {
             print(loadedString) // "quick_gait_assessment" , "key_gait_comparision"
             
             if (loadedString == "quick_gait_assessment") {
@@ -104,7 +104,7 @@ extension CongratulationsTwo {
                 //self.pdfUrl = pdfLoc
                 //self.pdfUrl = URL(string: tempFilePath)
                 //configureView()
-            } else if (loadedString == "key_gait_comparision") {
+            } else if (loadedString == "gait_comparision") {
                 let pdfPageView = Bundle.main.loadNibNamed("pdf_gait_comparision", owner: self, options: nil)?.last as! pdf_gait_comparision
                 // Fill Views With Data
                 pdfPageView.setupViewContent()
