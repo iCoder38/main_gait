@@ -29,7 +29,7 @@ class rate_the_change: BaseViewController {
                                    data: RowData.init(title: "Significant Improvement"),
                                    RowData.init(title: "Moderate Improvement"),
                                    RowData.init(title: "No Change"),
-                                   RowData.init(title: "moderate Decline"),
+                                   RowData.init(title: "Moderate Decline"),
                                    RowData.init(title: "Significant Decline"))
         
         let section2 = SectionData(title: "Equality / Symmetry",
@@ -529,7 +529,7 @@ extension rate_the_change: UITableViewDelegate {
         if (section == 0) {
             label2.text = "(Improvement = Greater stability)"
         } else if (section == 1) {
-            label2.text = "(Improvement = Similar linb movements observed)"
+            label2.text = "(Improvement = Similar limb movements observed)"
         } else if (section == 2) {
             label2.text = "(Improvement = Lower energy used for walking)"
         } else if (section == 3) {
@@ -537,15 +537,15 @@ extension rate_the_change: UITableViewDelegate {
         } else if (section == 4) {
             label2.text = "(Improvement = Normative joint movement observed during weight transfer)"
         } else if (section == 5) {
-            label2.text = "(Improvement = Fewer deviation observed)"
+            label2.text = "(Improvement = Fewer deviations observed)"
         } else if (section == 6) {
             label2.text = "(Improvement = Greater symmetry in step length)"
         } else if (section == 7) {
-            label2.text = "(Improvement = Greate symmetry in stance time)"
+            label2.text = "(Improvement = Greater symmetry in stance time)"
         } else if (section == 8) {
             label2.text = "(Improvement = Normative step width observed)"
         } else if (section == 9) {
-            label2.text = "(Improvement = Normative tow out angle observed)"
+            label2.text = "(Improvement = “Normative” toe out angle observed)"
         }
         
         label2.font = UIFont(name: "Arial Bold", size: 16)

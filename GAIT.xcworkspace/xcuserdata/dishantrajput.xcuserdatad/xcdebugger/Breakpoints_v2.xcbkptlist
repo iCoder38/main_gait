@@ -109,6 +109,51 @@
                   endingLineNumber = "94"
                   offsetFromSymbolStart = "3912">
                </Location>
+               <Location
+                  uuid = "F6EA328F-7BBF-471B-9F5D-CDEC93C41EDF - e36dfa2b244cf244"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "G_A_I_T.CongratulationsTwo.generateButtonTouchUpInside() -&gt; ()"
+                  moduleName = "G.A.I.T"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dishantrajput/Documents/evs_2022/gait/GAIT/View%20Controllers/DashBoard/CongratulationsTableCell/CongratulationsTwo.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "969">
+               </Location>
+               <Location
+                  uuid = "F6EA328F-7BBF-471B-9F5D-CDEC93C41EDF - e36dfa2b244cf244"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "G_A_I_T.CongratulationsTwo.generateButtonTouchUpInside() -&gt; ()"
+                  moduleName = "G.A.I.T"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dishantrajput/Documents/evs_2022/gait/GAIT/View%20Controllers/DashBoard/CongratulationsTableCell/CongratulationsTwo.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "1330">
+               </Location>
+               <Location
+                  uuid = "F6EA328F-7BBF-471B-9F5D-CDEC93C41EDF - e36dfa2b244cf244"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "G_A_I_T.CongratulationsTwo.generateButtonTouchUpInside() -&gt; ()"
+                  moduleName = "G.A.I.T"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dishantrajput/Documents/evs_2022/gait/GAIT/View%20Controllers/DashBoard/CongratulationsTableCell/CongratulationsTwo.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "4911">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -187,6 +232,51 @@
                   endingLineNumber = "139"
                   offsetFromSymbolStart = "3960">
                </Location>
+               <Location
+                  uuid = "5816CA84-E7A2-4D33-81CA-FDD3B5D5E324 - e36dfa2b244cfc7b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "G_A_I_T.CongratulationsTwo.generateButtonTouchUpInside() -&gt; ()"
+                  moduleName = "G.A.I.T"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dishantrajput/Documents/evs_2022/gait/GAIT/View%20Controllers/DashBoard/CongratulationsTableCell/CongratulationsTwo.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "3976">
+               </Location>
+               <Location
+                  uuid = "5816CA84-E7A2-4D33-81CA-FDD3B5D5E324 - e36dfa2b244cfc7b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "G_A_I_T.CongratulationsTwo.generateButtonTouchUpInside() -&gt; ()"
+                  moduleName = "G.A.I.T"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dishantrajput/Documents/evs_2022/gait/GAIT/View%20Controllers/DashBoard/CongratulationsTableCell/CongratulationsTwo.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "4337">
+               </Location>
+               <Location
+                  uuid = "5816CA84-E7A2-4D33-81CA-FDD3B5D5E324 - e36dfa2b244cfc7b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "G_A_I_T.CongratulationsTwo.generateButtonTouchUpInside() -&gt; ()"
+                  moduleName = "G.A.I.T"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dishantrajput/Documents/evs_2022/gait/GAIT/View%20Controllers/DashBoard/CongratulationsTableCell/CongratulationsTwo.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "4935">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -250,7 +340,68 @@
                   endingLineNumber = "122"
                   offsetFromSymbolStart = "3944">
                </Location>
+               <Location
+                  uuid = "D2C76DC9-59DF-4FC5-8DF6-DB0A03862F78 - e36dfa2b244cfe28"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "G_A_I_T.CongratulationsTwo.generateButtonTouchUpInside() -&gt; ()"
+                  moduleName = "G.A.I.T"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dishantrajput/Documents/evs_2022/gait/GAIT/View%20Controllers/DashBoard/CongratulationsTableCell/CongratulationsTwo.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "122"
+                  endingLineNumber = "122"
+                  offsetFromSymbolStart = "2997">
+               </Location>
+               <Location
+                  uuid = "D2C76DC9-59DF-4FC5-8DF6-DB0A03862F78 - e36dfa2b244cfe28"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "G_A_I_T.CongratulationsTwo.generateButtonTouchUpInside() -&gt; ()"
+                  moduleName = "G.A.I.T"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dishantrajput/Documents/evs_2022/gait/GAIT/View%20Controllers/DashBoard/CongratulationsTableCell/CongratulationsTwo.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "122"
+                  endingLineNumber = "122"
+                  offsetFromSymbolStart = "3358">
+               </Location>
+               <Location
+                  uuid = "D2C76DC9-59DF-4FC5-8DF6-DB0A03862F78 - e36dfa2b244cfe28"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "G_A_I_T.CongratulationsTwo.generateButtonTouchUpInside() -&gt; ()"
+                  moduleName = "G.A.I.T"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dishantrajput/Documents/evs_2022/gait/GAIT/View%20Controllers/DashBoard/CongratulationsTableCell/CongratulationsTwo.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "122"
+                  endingLineNumber = "122"
+                  offsetFromSymbolStart = "4927">
+               </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EB8467A2-C91F-466B-8FB3-BF5727BEED0A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GAIT/View Controllers/DashBoard/gate_comparision/rate_the_change/rate_the_change.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
+            landmarkName = "saveSalectedData()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
