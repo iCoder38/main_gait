@@ -4283,8 +4283,500 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                             <outlet property="lbl_title" destination="WDr-zi-tDW" id="eDO-Ui-ic6"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="four_table_cell" rowHeight="620" id="KMj-a3-t8r" customClass="stance_phase_table_cell" customModule="G_A_I_T" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="1392" width="320" height="620"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KMj-a3-t8r" id="q9q-u4-xBh">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="620"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insufficient Flexion" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoM-CV-JPz">
+                                                    <rect key="frame" x="48" y="52" width="250" height="24"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="Bjv-y8-Fdk"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0N-s8-QQm">
+                                                    <rect key="frame" x="16" y="52" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="bgu-Or-obg"/>
+                                                        <constraint firstAttribute="width" constant="24" id="xCF-6z-pfW"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="uncheck_icon"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insufficient Extension" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJu-09-k8Q">
+                                                    <rect key="frame" x="48" y="93" width="250" height="24"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="u3M-pz-GyM"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5z-iM-xbz">
+                                                    <rect key="frame" x="16" y="93" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="bb0-oW-qxQ"/>
+                                                        <constraint firstAttribute="width" constant="24" id="qLn-0v-Jfh"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="uncheck_icon"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Excessive External Rotation" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17z-1n-9DQ">
+                                                    <rect key="frame" x="48" y="134" width="250" height="24"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="wJJ-2v-ER4"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ad4-ZL-Jqd">
+                                                    <rect key="frame" x="16" y="134" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="gFO-R9-Xwm"/>
+                                                        <constraint firstAttribute="height" constant="24" id="k04-lO-ufT"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="uncheck_icon"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hip Deviations" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mp-6o-6BN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="hUU-Uz-v5X"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forefoot Contact" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2id-TT-vDg">
+                                                    <rect key="frame" x="0.0" y="84" width="320" height="1"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="gMI-60-s7D"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forefoot Contact" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Jw-pg-kOR">
+                                                    <rect key="frame" x="0.0" y="125" width="320" height="1"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="2t7-c3-6x9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forefoot Contact" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8b-4l-LYM">
+                                                    <rect key="frame" x="0.0" y="166" width="320" height="1"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="Ae3-hr-m1N"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abduction" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxJ-EL-agz">
+                                                    <rect key="frame" x="48" y="175" width="250" height="24"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="pAe-qd-W61"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOG-Xp-HVU">
+                                                    <rect key="frame" x="16" y="175" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="IRB-X0-doZ"/>
+                                                        <constraint firstAttribute="width" constant="24" id="bVX-IY-nym"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="uncheck_icon"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N00-gy-q4Z">
+                                                    <rect key="frame" x="48" y="207" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="Ldj-he-g2n"/>
+                                                        <constraint firstAttribute="width" constant="24" id="hQk-Qt-mlL"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="uncheck_icon"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFe-oO-OyH">
+                                                    <rect key="frame" x="48" y="239" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="khd-Q7-jE9"/>
+                                                        <constraint firstAttribute="width" constant="24" id="sMW-aI-3Hq"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="uncheck_icon"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WK-GI-Dn5">
+                                                    <rect key="frame" x="48" y="271" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="Ok0-D7-nlb"/>
+                                                        <constraint firstAttribute="height" constant="24" id="x5f-9c-Y2c"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="uncheck_icon"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slight" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvu-qN-nnK">
+                                                    <rect key="frame" x="80" y="207" width="224" height="24"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="oUk-oP-yp4"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moderate" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8K-Dx-cZm">
+                                                    <rect key="frame" x="80" y="239" width="224" height="24"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="YhM-Q6-LRC"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Excessive" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKB-xR-ZgR">
+                                                    <rect key="frame" x="80" y="271" width="224" height="24"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="x2e-Vw-Rqa"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forefoot Contact" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AF3-hW-DrT">
+                                                    <rect key="frame" x="0.0" y="303" width="320" height="1"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="275-sP-vvq"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adduction" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuJ-rp-EIi">
+                                                    <rect key="frame" x="48" y="312" width="250" height="24"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="1P7-23-1Zq"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mw-co-psN">
+                                                    <rect key="frame" x="16" y="312" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="OUb-hA-rlU"/>
+                                                        <constraint firstAttribute="width" constant="24" id="mid-1V-RYN"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="uncheck_icon"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obe-Kt-Tdc">
+                                                    <rect key="frame" x="48" y="344" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="Lmu-tM-Psv"/>
+                                                        <constraint firstAttribute="width" constant="24" id="tBe-AI-egM"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="uncheck_icon"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOA-Ow-YTA">
+                                                    <rect key="frame" x="48" y="376" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="OXJ-qJ-eHj"/>
+                                                        <constraint firstAttribute="height" constant="24" id="W6M-VE-sqq"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="uncheck_icon"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Px4-6v-THa">
+                                                    <rect key="frame" x="48" y="408" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="8km-oP-5Wl"/>
+                                                        <constraint firstAttribute="height" constant="24" id="rOP-PB-9tK"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="uncheck_icon"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Slight" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APy-QO-vVk">
+                                                    <rect key="frame" x="80" y="344" width="224" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Moderate" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="le8-x7-3XZ">
+                                                    <rect key="frame" x="80" y="376" width="224" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Excessive" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1I-Of-WXV">
+                                                    <rect key="frame" x="80" y="408" width="224" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forefoot Contact" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyQ-x1-hNB">
+                                                    <rect key="frame" x="0.0" y="440" width="320" height="1"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="Iom-tS-OCf"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Internal Rotation" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEQ-8r-1Yi">
+                                                    <rect key="frame" x="48" y="449" width="250" height="24"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="WYp-tl-eO0"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M54-F2-Apr">
+                                                    <rect key="frame" x="16" y="449" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="XwZ-Sn-6DD"/>
+                                                        <constraint firstAttribute="height" constant="24" id="aPA-HV-Hh2"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="uncheck_icon"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sld-fO-atw">
+                                                    <rect key="frame" x="48" y="481" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="EgY-Om-kvQ"/>
+                                                        <constraint firstAttribute="height" constant="24" id="wft-Np-wVg"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="uncheck_icon"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PpS-w1-dDm">
+                                                    <rect key="frame" x="48" y="513" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="2Tx-Aw-iPp"/>
+                                                        <constraint firstAttribute="height" constant="24" id="Xeb-tk-Kj5"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="uncheck_icon"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yaq-eD-SUf">
+                                                    <rect key="frame" x="48" y="545" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="37M-Bs-JJp"/>
+                                                        <constraint firstAttribute="height" constant="24" id="Tol-gI-WeS"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="uncheck_icon"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slight" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z68-xg-B2v">
+                                                    <rect key="frame" x="80" y="481" width="224" height="24"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="IYd-no-7iu"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moderate" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyK-k9-uZb">
+                                                    <rect key="frame" x="80" y="513" width="224" height="24"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="Qzv-4f-bgV"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Excessive" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0Y-hS-oLR">
+                                                    <rect key="frame" x="80" y="545" width="224" height="24"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="krS-h3-tSA"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forefoot Contact" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuD-5d-KaB">
+                                                    <rect key="frame" x="0.0" y="577" width="320" height="1"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="dcT-gH-3Xe"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stiff Hip" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJR-sl-Bkm">
+                                                    <rect key="frame" x="48" y="586" width="250" height="24"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="BD6-1l-E4D"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQN-bL-ZQ8">
+                                                    <rect key="frame" x="16" y="586" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="iLp-Hk-762"/>
+                                                        <constraint firstAttribute="height" constant="24" id="iiq-jA-7Br"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="uncheck_icon"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JuD-5d-KaB" firstAttribute="leading" secondItem="q9q-u4-xBh" secondAttribute="leading" id="0go-qD-dno"/>
+                                                <constraint firstItem="Obe-Kt-Tdc" firstAttribute="leading" secondItem="q9q-u4-xBh" secondAttribute="leadingMargin" constant="32" id="1v0-IA-nBi"/>
+                                                <constraint firstItem="i0N-s8-QQm" firstAttribute="leading" secondItem="q9q-u4-xBh" secondAttribute="leadingMargin" id="21t-na-MJC"/>
+                                                <constraint firstItem="JuD-5d-KaB" firstAttribute="top" secondItem="Yaq-eD-SUf" secondAttribute="bottom" constant="8" symbolic="YES" id="2Q4-XA-T8F"/>
+                                                <constraint firstItem="0Mp-6o-6BN" firstAttribute="leading" secondItem="q9q-u4-xBh" secondAttribute="leading" id="3Xj-yV-ZO1"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="OxJ-EL-agz" secondAttribute="trailing" constant="6" id="4CW-LK-rzR"/>
+                                                <constraint firstItem="2id-TT-vDg" firstAttribute="leading" secondItem="q9q-u4-xBh" secondAttribute="leading" id="4Gj-wS-uv4"/>
+                                                <constraint firstItem="UyK-k9-uZb" firstAttribute="trailing" secondItem="q9q-u4-xBh" secondAttribute="trailingMargin" id="4Pi-qD-QAL"/>
+                                                <constraint firstItem="z68-xg-B2v" firstAttribute="trailing" secondItem="q9q-u4-xBh" secondAttribute="trailingMargin" id="4dH-dZ-BEG"/>
+                                                <constraint firstItem="ad4-ZL-Jqd" firstAttribute="leading" secondItem="q9q-u4-xBh" secondAttribute="leadingMargin" id="4fN-xd-zqS"/>
+                                                <constraint firstItem="K8b-4l-LYM" firstAttribute="top" secondItem="17z-1n-9DQ" secondAttribute="bottom" constant="8" symbolic="YES" id="63c-8t-OGN"/>
+                                                <constraint firstItem="SFe-oO-OyH" firstAttribute="leading" secondItem="q9q-u4-xBh" secondAttribute="leadingMargin" constant="32" id="6OU-ka-SN1"/>
+                                                <constraint firstItem="yyQ-x1-hNB" firstAttribute="top" secondItem="Px4-6v-THa" secondAttribute="bottom" constant="8" symbolic="YES" id="6Tu-SA-NVY"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="CuJ-rp-EIi" secondAttribute="trailing" constant="6" id="6bE-w2-Pex"/>
+                                                <constraint firstAttribute="trailing" secondItem="0Mp-6o-6BN" secondAttribute="trailing" id="6jN-VJ-lQl"/>
+                                                <constraint firstItem="K8b-4l-LYM" firstAttribute="leading" secondItem="q9q-u4-xBh" secondAttribute="leading" id="6r6-A4-hG2"/>
+                                                <constraint firstItem="ad4-ZL-Jqd" firstAttribute="top" secondItem="U5z-iM-xbz" secondAttribute="bottom" constant="17" id="6yo-VV-ZkL"/>
+                                                <constraint firstItem="N00-gy-q4Z" firstAttribute="top" secondItem="OxJ-EL-agz" secondAttribute="bottom" constant="8" symbolic="YES" id="7Ba-c9-2GF"/>
+                                                <constraint firstItem="vEQ-8r-1Yi" firstAttribute="leading" secondItem="M54-F2-Apr" secondAttribute="trailing" constant="8" symbolic="YES" id="8MW-wx-HnF"/>
+                                                <constraint firstAttribute="trailing" secondItem="K8b-4l-LYM" secondAttribute="trailing" id="8pf-tt-4RN"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="vEQ-8r-1Yi" secondAttribute="trailing" constant="6" id="9SY-Wh-MnQ"/>
+                                                <constraint firstItem="U5z-iM-xbz" firstAttribute="top" secondItem="i0N-s8-QQm" secondAttribute="bottom" constant="17" id="9bJ-H2-Nk0"/>
+                                                <constraint firstItem="z68-xg-B2v" firstAttribute="leading" secondItem="sld-fO-atw" secondAttribute="trailing" constant="8" symbolic="YES" id="9bu-Er-bzX"/>
+                                                <constraint firstItem="FQN-bL-ZQ8" firstAttribute="top" secondItem="yyQ-x1-hNB" secondAttribute="bottom" constant="145" id="AYn-yD-P1n"/>
+                                                <constraint firstItem="M54-F2-Apr" firstAttribute="leading" secondItem="q9q-u4-xBh" secondAttribute="leadingMargin" id="AfO-r9-35c"/>
+                                                <constraint firstItem="cKB-xR-ZgR" firstAttribute="top" secondItem="f8K-Dx-cZm" secondAttribute="bottom" constant="8" symbolic="YES" id="AfX-3J-7du"/>
+                                                <constraint firstItem="AF3-hW-DrT" firstAttribute="leading" secondItem="q9q-u4-xBh" secondAttribute="leading" id="Ckr-8d-U91"/>
+                                                <constraint firstItem="UyK-k9-uZb" firstAttribute="top" secondItem="z68-xg-B2v" secondAttribute="bottom" constant="8" symbolic="YES" id="Ds0-9b-4Yw"/>
+                                                <constraint firstItem="Cvu-qN-nnK" firstAttribute="trailing" secondItem="q9q-u4-xBh" secondAttribute="trailingMargin" id="E3c-qq-wgx"/>
+                                                <constraint firstItem="0Jw-pg-kOR" firstAttribute="leading" secondItem="q9q-u4-xBh" secondAttribute="leading" id="EsE-Ii-XF1"/>
+                                                <constraint firstItem="9mw-co-psN" firstAttribute="leading" secondItem="q9q-u4-xBh" secondAttribute="leadingMargin" id="FGF-Hq-Mgf"/>
+                                                <constraint firstAttribute="trailing" secondItem="2id-TT-vDg" secondAttribute="trailing" id="Iol-ja-bJo"/>
+                                                <constraint firstItem="17z-1n-9DQ" firstAttribute="top" secondItem="RJu-09-k8Q" secondAttribute="bottom" constant="17" id="Izg-oW-wGb"/>
+                                                <constraint firstItem="PpS-w1-dDm" firstAttribute="top" secondItem="sld-fO-atw" secondAttribute="bottom" constant="8" symbolic="YES" id="JJZ-Ly-dJZ"/>
+                                                <constraint firstItem="Cvu-qN-nnK" firstAttribute="top" secondItem="OxJ-EL-agz" secondAttribute="bottom" constant="8" symbolic="YES" id="JNR-s4-E1Y"/>
+                                                <constraint firstItem="CuJ-rp-EIi" firstAttribute="top" secondItem="AF3-hW-DrT" secondAttribute="bottom" constant="8" symbolic="YES" id="Jh3-Tc-zn4"/>
+                                                <constraint firstItem="OxJ-EL-agz" firstAttribute="top" secondItem="K8b-4l-LYM" secondAttribute="bottom" constant="8" symbolic="YES" id="KLT-8C-1NP"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="jJR-sl-Bkm" secondAttribute="trailing" constant="6" id="LCH-B3-1WG"/>
+                                                <constraint firstItem="RJu-09-k8Q" firstAttribute="trailing" secondItem="q9q-u4-xBh" secondAttribute="trailingMargin" constant="-6" id="LNC-lK-fOp"/>
+                                                <constraint firstItem="cKB-xR-ZgR" firstAttribute="leading" secondItem="6WK-GI-Dn5" secondAttribute="trailing" constant="8" symbolic="YES" id="M4V-Cm-zua"/>
+                                                <constraint firstItem="Yaq-eD-SUf" firstAttribute="top" secondItem="PpS-w1-dDm" secondAttribute="bottom" constant="8" symbolic="YES" id="MvE-sX-XBq"/>
+                                                <constraint firstItem="17z-1n-9DQ" firstAttribute="trailing" secondItem="q9q-u4-xBh" secondAttribute="trailingMargin" constant="-6" id="R0I-dc-8vx"/>
+                                                <constraint firstItem="UyK-k9-uZb" firstAttribute="leading" secondItem="PpS-w1-dDm" secondAttribute="trailing" constant="8" symbolic="YES" id="Rdp-Ev-ZU1"/>
+                                                <constraint firstItem="hOG-Xp-HVU" firstAttribute="leading" secondItem="q9q-u4-xBh" secondAttribute="leadingMargin" id="SLN-ZL-uWB"/>
+                                                <constraint firstItem="2id-TT-vDg" firstAttribute="top" secondItem="YoM-CV-JPz" secondAttribute="bottom" constant="8" symbolic="YES" id="SZP-T6-a4c"/>
+                                                <constraint firstItem="AF3-hW-DrT" firstAttribute="top" secondItem="6WK-GI-Dn5" secondAttribute="bottom" constant="8" symbolic="YES" id="TqE-25-LSa"/>
+                                                <constraint firstItem="N00-gy-q4Z" firstAttribute="leading" secondItem="q9q-u4-xBh" secondAttribute="leadingMargin" constant="32" id="UTf-yV-LAG"/>
+                                                <constraint firstItem="f8K-Dx-cZm" firstAttribute="leading" secondItem="SFe-oO-OyH" secondAttribute="trailing" constant="8" symbolic="YES" id="UUN-32-fpw"/>
+                                                <constraint firstItem="17z-1n-9DQ" firstAttribute="leading" secondItem="ad4-ZL-Jqd" secondAttribute="trailing" constant="8" symbolic="YES" id="Uue-6M-9Dw"/>
+                                                <constraint firstItem="cKB-xR-ZgR" firstAttribute="trailing" secondItem="q9q-u4-xBh" secondAttribute="trailingMargin" id="WbS-mB-R2a"/>
+                                                <constraint firstItem="M54-F2-Apr" firstAttribute="top" secondItem="yyQ-x1-hNB" secondAttribute="bottom" constant="8" symbolic="YES" id="Wik-er-qgG"/>
+                                                <constraint firstItem="N0Y-hS-oLR" firstAttribute="top" secondItem="UyK-k9-uZb" secondAttribute="bottom" constant="8" symbolic="YES" id="WoW-Qd-Ppb"/>
+                                                <constraint firstItem="RJu-09-k8Q" firstAttribute="leading" secondItem="U5z-iM-xbz" secondAttribute="trailing" constant="8" symbolic="YES" id="XEj-Jw-kXv"/>
+                                                <constraint firstItem="sld-fO-atw" firstAttribute="top" secondItem="vEQ-8r-1Yi" secondAttribute="bottom" constant="8" symbolic="YES" id="XSr-6k-53g"/>
+                                                <constraint firstItem="CuJ-rp-EIi" firstAttribute="leading" secondItem="9mw-co-psN" secondAttribute="trailing" constant="8" symbolic="YES" id="Xil-ID-RIG"/>
+                                                <constraint firstItem="vEQ-8r-1Yi" firstAttribute="top" secondItem="yyQ-x1-hNB" secondAttribute="bottom" constant="8" symbolic="YES" id="aer-iV-aRO"/>
+                                                <constraint firstAttribute="trailing" secondItem="JuD-5d-KaB" secondAttribute="trailing" id="aoB-rE-bqd"/>
+                                                <constraint firstItem="hOG-Xp-HVU" firstAttribute="top" secondItem="K8b-4l-LYM" secondAttribute="bottom" constant="8" symbolic="YES" id="atj-KQ-5Uu"/>
+                                                <constraint firstItem="z68-xg-B2v" firstAttribute="top" secondItem="vEQ-8r-1Yi" secondAttribute="bottom" constant="8" symbolic="YES" id="b1d-RU-uWg"/>
+                                                <constraint firstItem="yyQ-x1-hNB" firstAttribute="leading" secondItem="q9q-u4-xBh" secondAttribute="leading" id="bj1-sG-sX0"/>
+                                                <constraint firstItem="Yaq-eD-SUf" firstAttribute="leading" secondItem="q9q-u4-xBh" secondAttribute="leadingMargin" constant="32" id="boF-k2-bKm"/>
+                                                <constraint firstItem="FQN-bL-ZQ8" firstAttribute="leading" secondItem="q9q-u4-xBh" secondAttribute="leadingMargin" id="cOZ-YV-Pc3"/>
+                                                <constraint firstItem="f8K-Dx-cZm" firstAttribute="top" secondItem="Cvu-qN-nnK" secondAttribute="bottom" constant="8" symbolic="YES" id="d75-nM-cly"/>
+                                                <constraint firstItem="jJR-sl-Bkm" firstAttribute="top" secondItem="yyQ-x1-hNB" secondAttribute="bottom" constant="145" id="deO-fn-hTG"/>
+                                                <constraint firstItem="Px4-6v-THa" firstAttribute="leading" secondItem="q9q-u4-xBh" secondAttribute="leadingMargin" constant="32" id="dx3-qF-tQR"/>
+                                                <constraint firstItem="SFe-oO-OyH" firstAttribute="top" secondItem="N00-gy-q4Z" secondAttribute="bottom" constant="8" symbolic="YES" id="fjH-6L-wrQ"/>
+                                                <constraint firstItem="i0N-s8-QQm" firstAttribute="top" secondItem="q9q-u4-xBh" secondAttribute="topMargin" constant="41" id="fqw-Qe-r4U"/>
+                                                <constraint firstItem="6WK-GI-Dn5" firstAttribute="top" secondItem="SFe-oO-OyH" secondAttribute="bottom" constant="8" symbolic="YES" id="frY-9i-aGo"/>
+                                                <constraint firstAttribute="trailing" secondItem="0Jw-pg-kOR" secondAttribute="trailing" id="g1T-or-8t4"/>
+                                                <constraint firstItem="sOA-Ow-YTA" firstAttribute="top" secondItem="Obe-Kt-Tdc" secondAttribute="bottom" constant="8" symbolic="YES" id="h5p-48-1aL"/>
+                                                <constraint firstItem="YoM-CV-JPz" firstAttribute="trailing" secondItem="q9q-u4-xBh" secondAttribute="trailingMargin" constant="-6" id="j4Q-YB-DHs"/>
+                                                <constraint firstItem="YoM-CV-JPz" firstAttribute="top" secondItem="q9q-u4-xBh" secondAttribute="topMargin" constant="41" id="jfZ-Qy-LWO"/>
+                                                <constraint firstItem="sld-fO-atw" firstAttribute="leading" secondItem="q9q-u4-xBh" secondAttribute="leadingMargin" constant="32" id="kUb-2u-0pC"/>
+                                                <constraint firstAttribute="trailing" secondItem="yyQ-x1-hNB" secondAttribute="trailing" id="nNe-AV-P1o"/>
+                                                <constraint firstItem="6WK-GI-Dn5" firstAttribute="leading" secondItem="q9q-u4-xBh" secondAttribute="leadingMargin" constant="32" id="nfN-yj-gXk"/>
+                                                <constraint firstAttribute="trailing" secondItem="AF3-hW-DrT" secondAttribute="trailing" id="qUz-uh-roK"/>
+                                                <constraint firstItem="Cvu-qN-nnK" firstAttribute="leading" secondItem="N00-gy-q4Z" secondAttribute="trailing" constant="8" symbolic="YES" id="rBa-Gy-qmP"/>
+                                                <constraint firstItem="N0Y-hS-oLR" firstAttribute="leading" secondItem="Yaq-eD-SUf" secondAttribute="trailing" constant="8" symbolic="YES" id="rV2-24-fBV"/>
+                                                <constraint firstItem="OxJ-EL-agz" firstAttribute="leading" secondItem="hOG-Xp-HVU" secondAttribute="trailing" constant="8" symbolic="YES" id="rgG-dV-7dT"/>
+                                                <constraint firstItem="0Jw-pg-kOR" firstAttribute="top" secondItem="RJu-09-k8Q" secondAttribute="bottom" constant="8" symbolic="YES" id="sG4-NV-bUO"/>
+                                                <constraint firstItem="0Mp-6o-6BN" firstAttribute="top" secondItem="q9q-u4-xBh" secondAttribute="top" id="tZu-2z-Hu2"/>
+                                                <constraint firstItem="f8K-Dx-cZm" firstAttribute="trailing" secondItem="q9q-u4-xBh" secondAttribute="trailingMargin" id="u2O-MV-KGg"/>
+                                                <constraint firstItem="U5z-iM-xbz" firstAttribute="leading" secondItem="q9q-u4-xBh" secondAttribute="leadingMargin" id="u62-2a-ZGl"/>
+                                                <constraint firstItem="sOA-Ow-YTA" firstAttribute="leading" secondItem="q9q-u4-xBh" secondAttribute="leadingMargin" constant="32" id="uDA-90-IIC"/>
+                                                <constraint firstItem="Obe-Kt-Tdc" firstAttribute="top" secondItem="CuJ-rp-EIi" secondAttribute="bottom" constant="8" symbolic="YES" id="ucZ-qa-otu"/>
+                                                <constraint firstItem="N0Y-hS-oLR" firstAttribute="trailing" secondItem="q9q-u4-xBh" secondAttribute="trailingMargin" id="vvI-ZV-lRl"/>
+                                                <constraint firstItem="jJR-sl-Bkm" firstAttribute="leading" secondItem="FQN-bL-ZQ8" secondAttribute="trailing" constant="8" symbolic="YES" id="wMb-ZR-SCB"/>
+                                                <constraint firstItem="Px4-6v-THa" firstAttribute="top" secondItem="sOA-Ow-YTA" secondAttribute="bottom" constant="8" symbolic="YES" id="wbU-RY-QYc"/>
+                                                <constraint firstItem="9mw-co-psN" firstAttribute="top" secondItem="AF3-hW-DrT" secondAttribute="bottom" constant="8" symbolic="YES" id="weG-Pf-81W"/>
+                                                <constraint firstItem="YoM-CV-JPz" firstAttribute="leading" secondItem="i0N-s8-QQm" secondAttribute="trailing" constant="8" symbolic="YES" id="wy9-Cj-Y9C"/>
+                                                <constraint firstItem="PpS-w1-dDm" firstAttribute="leading" secondItem="q9q-u4-xBh" secondAttribute="leadingMargin" constant="32" id="ymG-nD-ymC"/>
+                                                <constraint firstItem="RJu-09-k8Q" firstAttribute="top" secondItem="YoM-CV-JPz" secondAttribute="bottom" constant="17" id="zS3-30-r4V"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btn_hip_abduction" destination="hOG-Xp-HVU" id="N3n-B5-gSp"/>
+                                            <outlet property="btn_hip_abduction_excessive" destination="6WK-GI-Dn5" id="1Hk-9Q-qou"/>
+                                            <outlet property="btn_hip_abduction_moderate" destination="SFe-oO-OyH" id="i4j-vm-lxi"/>
+                                            <outlet property="btn_hip_abduction_slight" destination="N00-gy-q4Z" id="akJ-ew-enO"/>
+                                            <outlet property="btn_hip_adduction" destination="9mw-co-psN" id="xWo-zr-2RI"/>
+                                            <outlet property="btn_hip_adduction_excessive" destination="Px4-6v-THa" id="VaY-tb-Jbe"/>
+                                            <outlet property="btn_hip_adduction_moderate" destination="sOA-Ow-YTA" id="UeE-hu-D76"/>
+                                            <outlet property="btn_hip_adduction_slight" destination="Obe-Kt-Tdc" id="Ief-tr-Tcd"/>
+                                            <outlet property="btn_hip_excessive_external_rotation" destination="ad4-ZL-Jqd" id="wBN-iv-4NE"/>
+                                            <outlet property="btn_hip_insufficient_extension" destination="U5z-iM-xbz" id="sg2-3w-LtV"/>
+                                            <outlet property="btn_hip_insufficient_flexion" destination="i0N-s8-QQm" id="YOY-7i-vaq"/>
+                                            <outlet property="btn_hip_internal_rotation" destination="M54-F2-Apr" id="5A8-tN-d2N"/>
+                                            <outlet property="btn_hip_internal_rotation_excessive" destination="Yaq-eD-SUf" id="okS-gC-fqs"/>
+                                            <outlet property="btn_hip_internal_rotation_moderate" destination="PpS-w1-dDm" id="ijl-z2-fGp"/>
+                                            <outlet property="btn_hip_internal_rotation_slight" destination="sld-fO-atw" id="fIR-qf-vWB"/>
+                                            <outlet property="btn_hip_stiff" destination="FQN-bL-ZQ8" id="tKL-sv-Pl1"/>
+                                            <outlet property="lbl_knee_deviation" destination="0Mp-6o-6BN" id="2Vf-QL-1JX"/>
+                                            <outlet property="lbl_title" destination="YoM-CV-JPz" id="XCK-Fx-Y5G"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="five_table_cell" rowHeight="336" id="aFX-if-VSP" customClass="stance_phase_table_cell" customModule="G_A_I_T" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1392" width="320" height="336"/>
+                                        <rect key="frame" x="0.0" y="2012" width="320" height="336"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aFX-if-VSP" id="Tcb-hl-c4Z">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="336"/>
@@ -4566,7 +5058,7 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="six_table_cell" rowHeight="304" id="eB7-xw-cv3" customClass="stance_phase_table_cell" customModule="G_A_I_T" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1728" width="320" height="304"/>
+                                        <rect key="frame" x="0.0" y="2348" width="320" height="304"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eB7-xw-cv3" id="WiL-Eh-RPD">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="304"/>

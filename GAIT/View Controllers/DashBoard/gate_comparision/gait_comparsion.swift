@@ -11,7 +11,6 @@ import DropDown
 
 var userInfoData_gait_comparision = NSMutableDictionary.init()
 
-
 class gait_comparsion: BaseViewController {
     
     @IBOutlet weak var txtName: UITextField!

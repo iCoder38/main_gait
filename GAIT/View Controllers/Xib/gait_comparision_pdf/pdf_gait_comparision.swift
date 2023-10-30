@@ -210,6 +210,7 @@ class pdf_gait_comparision: UIView {
     }
     
     func set_up_gait_comparision() {
+        
         /*
          @IBOutlet weak var img_balance_significant:UIImageView!
          @IBOutlet weak var img_balance_moderate_decline:UIImageView!
@@ -217,6 +218,7 @@ class pdf_gait_comparision: UIView {
          @IBOutlet weak var img_balance_moderate_significant:UIImageView!
          @IBOutlet weak var img_balance_significant_improvement:UIImageView!
          */
+        
         // lblIDSFoot.text   = selectedIDSData["foot"] as? String
         if (select_rate_the_change["balance"] as? String) == "Significant Improvement" {
             
@@ -267,7 +269,6 @@ class pdf_gait_comparision: UIView {
             self.img_balance_significant_improvement.image = uncheck_icon_image
             
         }
-        
         
         self.check_and_set_quality(type: "equality")
     }

@@ -16,8 +16,9 @@ class stance_phase: UIViewController {
 
     var ankle_index = 1
     var knee_index = 2
-    var pelvis_index = 3
-    var trunk_index = 4
+    var hip_index = 3
+    var pelvis_index = 4
+    var trunk_index = 5
     
     @IBOutlet weak var tble_view:UITableView!
     
@@ -28,6 +29,7 @@ class stance_phase: UIViewController {
     var arr_foot:NSMutableArray! = []
     var arr_ankle:NSMutableArray! = []
     var arr_knee:NSMutableArray! = []
+    var arr_hip:NSMutableArray! = []
     var arr_pelvis:NSMutableArray! = []
     var arr_trunk:NSMutableArray! = []
     
@@ -79,7 +81,9 @@ class stance_phase: UIViewController {
         // MARK: - KNEE SORTING -
         // foot data
         let arr_knee_data = ["Excessive Flexion","Insufficient Flexion","Hyperextension",
+                             
                              "Varus : Slight","Varus : Moderate","Varus : Excessive",
+                             
                              "Valgus : Slight","Valgus : Moderate","Valgus : Excessive",
                              "Stiff Knee", "Unstable Knee"]
         
@@ -115,6 +119,32 @@ class stance_phase: UIViewController {
             self.arr_trunk.add(custom_foot)
         }
         
+        // MARK: - HIP SORTING -
+         
+        let arr_hip_data = ["Insufficient Flexion","Insufficient Extension","Excessive External Rotation",
+                            
+                            "Abduction : Slight",
+                            "Abduction : Moderate",
+                            "Abduction : Excessive",
+                            
+                            "Adduction : Slight",
+                            "Adduction : Moderate",
+                            "Adduction : Excessive",
+                            
+                            "Internal Rotation : Slight",
+                            "Internal Rotation : Moderate",
+                            "Internal Rotation : Excessive",
+                            
+                            "Stiff Hip"]
+        
+        for indexx in 0..<arr_hip_data.count {
+            let custom_foot = [
+                "name":"\(arr_hip_data[indexx])",
+                "type":"no"
+            ]
+            self.arr_hip.add(custom_foot)
+        }
+        
          
         
         
@@ -128,6 +158,7 @@ class stance_phase: UIViewController {
         print(self.arr_foot as Any)
         print(self.arr_pelvis as Any)
         print(self.arr_trunk as Any)
+        print(self.arr_hip as Any)
         
         // FOOT
         if let foot_ns_array = self.arr_foot as NSArray as? [String] {
@@ -197,6 +228,22 @@ class stance_phase: UIViewController {
             }
         }
          print(self.kneeArr as Any)
+        
+        
+        
+        // HIP
+        print(self.arr_hip as Any)
+        print(self.hipArr as Any)
+        self.hipArr = [String]()
+        print(self.hipArr as Any)
+        for foot_index in 0..<self.arr_hip.count {
+            //
+            let item = self.arr_hip[foot_index] as? [String:Any]
+            if (item!["type"] as! String) == "yes" {
+                hipArr.append(item!["name"] as! String)
+            }
+        }
+         print(self.hipArr as Any)
         
         
         
@@ -1818,6 +1865,445 @@ class stance_phase: UIViewController {
         }
     }*/
     //
+    
+    /*
+     cell..addTarget(self, action: #selector(hip_insufficient_flexion_clicked_method), for: .touchUpInside)
+     cell..addTarget(self, action: #selector(hip_insufficient_extension_clicked_method), for: .touchUpInside)
+     cell..addTarget(self, action: #selector(hip_excessive_external_rotation_clicked_method), for: .touchUpInside)
+     cell..addTarget(self, action: #selector(hip_stiff_clicked_method), for: .touchUpInside)
+     
+     */
+    // MARK: - HIP -
+    @objc func hip_insufficient_flexion_clicked_method() {
+        let indexPath = IndexPath.init(row: hip_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Insufficient Flexion"
+        
+        print(cell.btn_hip_insufficient_flexion.tag as Any)
+        if (cell.btn_hip_insufficient_flexion.tag == 450) {
+            
+            cell.btn_hip_insufficient_flexion.setImage(UIImage(named: "check_icon"), for: .normal)
+            
+            // add
+            // add
+            self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+            
+            cell.btn_hip_insufficient_flexion.tag = 451
+        } else {
+            cell.btn_hip_insufficient_flexion.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            
+            // remove
+            self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+            
+            cell.btn_hip_insufficient_flexion.tag = 450
+        }
+    }
+    @objc func hip_insufficient_extension_clicked_method() {
+        let indexPath = IndexPath.init(row: hip_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Insufficient Extension"
+        
+        print(cell.btn_hip_insufficient_extension.tag as Any)
+        if (cell.btn_hip_insufficient_extension.tag == 460) {
+            
+            cell.btn_hip_insufficient_extension.setImage(UIImage(named: "check_icon"), for: .normal)
+            
+            // add
+            // add
+            self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+            
+            cell.btn_hip_insufficient_extension.tag = 461
+        } else {
+            cell.btn_hip_insufficient_extension.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            
+            // remove
+            self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+            
+            cell.btn_hip_insufficient_extension.tag = 460
+        }
+    }
+    @objc func hip_excessive_external_rotation_clicked_method() {
+        let indexPath = IndexPath.init(row: hip_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Excessive External Rotation"
+        
+        print(cell.btn_hip_excessive_external_rotation.tag as Any)
+        if (cell.btn_hip_excessive_external_rotation.tag == 470) {
+            
+            cell.btn_hip_excessive_external_rotation.setImage(UIImage(named: "check_icon"), for: .normal)
+            
+            // add
+            // add
+            self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+            
+            cell.btn_hip_excessive_external_rotation.tag = 471
+        } else {
+            cell.btn_hip_excessive_external_rotation.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            
+            // remove
+            self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+            
+            cell.btn_hip_excessive_external_rotation.tag = 470
+        }
+    }
+    @objc func hip_stiff_clicked_method() {
+        let indexPath = IndexPath.init(row: hip_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Stiff Hip"
+        
+        print(cell.btn_hip_stiff.tag as Any)
+        if (cell.btn_hip_stiff.tag == 600) {
+            
+            cell.btn_hip_stiff.setImage(UIImage(named: "check_icon"), for: .normal)
+            
+            // add
+            // add
+            self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+            
+            cell.btn_hip_stiff.tag = 601
+        } else {
+            cell.btn_hip_stiff.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            
+            // remove
+            self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+            
+            cell.btn_hip_stiff.tag = 600
+        }
+    }
+    
+    /*
+     
+     cell..addTarget(self, action: #selector(hip_abduction_clicked_method), for: .touchUpInside)
+     cell..addTarget(self, action: #selector(hip_abduction_slight_clicked_method), for: .touchUpInside)
+     cell..addTarget(self, action: #selector(hip_abduction_moderate_clicked_method), for: .touchUpInside)
+     cell..addTarget(self, action: #selector(hip_abduction_excessive_clicked_method), for: .touchUpInside)
+     
+     */
+    // abduction
+    @objc func hip_abduction_clicked_method() {
+        let indexPath = IndexPath.init(row: hip_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Abduction"
+        
+        print(cell.btn_hip_abduction.tag as Any)
+        if (cell.btn_hip_abduction.tag == 480) {
+            
+            cell.btn_hip_abduction.setImage(UIImage(named: "check_icon"), for: .normal)
+            
+            // add
+            // add
+            self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+            
+            cell.btn_hip_abduction.tag = 481
+        } else {
+            cell.btn_hip_abduction.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            
+            // remove
+            self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+            
+            cell.btn_hip_abduction_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_hip_abduction_slight.tag = 460
+            
+            cell.btn_hip_abduction_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_hip_abduction_moderate.tag = 470
+            
+            cell.btn_hip_abduction_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_hip_abduction_excessive.tag = 600
+            
+            self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Abduction : Slight")
+            self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Abduction : Moderate")
+            self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Abduction : Excessive")
+            
+            cell.btn_hip_abduction.tag = 480
+        }
+    }
+    @objc func hip_abduction_slight_clicked_method() {
+        let indexPath = IndexPath.init(row: hip_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Abduction : Slight"
+        
+        if (cell.btn_hip_abduction.tag == 481) {
+            
+            print(cell.btn_hip_abduction_slight.tag as Any)
+            if (cell.btn_hip_abduction_slight.tag == 490) {
+                
+                cell.btn_hip_abduction_slight.setImage(UIImage(named: "check_icon"), for: .normal)
+                
+                // add
+                self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+                
+                cell.btn_hip_abduction_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_abduction_moderate.tag = 500
+                
+                cell.btn_hip_abduction_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_abduction_excessive.tag = 510
+                
+                self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Abduction : Moderate")
+                self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Abduction : Excessive")
+                
+                cell.btn_hip_abduction_slight.tag = 491
+            } else {
+                cell.btn_hip_abduction_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                
+                // remove
+                self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+                
+                cell.btn_hip_abduction_slight.tag = 490
+            }
+        } else {
+            
+        }
+       
+    }
+    @objc func hip_abduction_moderate_clicked_method() {
+        let indexPath = IndexPath.init(row: hip_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Abduction : Moderate"
+        
+        if (cell.btn_hip_abduction.tag == 481) {
+            
+        print(cell.btn_hip_abduction_moderate.tag as Any)
+        if (cell.btn_hip_abduction_moderate.tag == 500) {
+            
+            cell.btn_hip_abduction_moderate.setImage(UIImage(named: "check_icon"), for: .normal)
+            
+            // add
+            // add
+            self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+            
+            cell.btn_hip_abduction_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_hip_abduction_excessive.tag = 510
+            
+            cell.btn_hip_abduction_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_hip_abduction_slight.tag = 490
+            
+            self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Abduction : Slight")
+            self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Abduction : Excessive")
+            
+            cell.btn_hip_abduction_moderate.tag = 501
+        } else {
+            cell.btn_hip_abduction_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            
+            // remove
+            self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+            
+            cell.btn_hip_abduction_moderate.tag = 500
+        }
+        } else {
+            
+        }
+    }
+    @objc func hip_abduction_excessive_clicked_method() {
+        let indexPath = IndexPath.init(row: hip_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Abduction : Excessive"
+        
+        if (cell.btn_hip_abduction.tag == 481) {
+            
+            print(cell.btn_hip_abduction_excessive.tag as Any)
+            if (cell.btn_hip_abduction_excessive.tag == 510) {
+                
+                cell.btn_hip_abduction_excessive.setImage(UIImage(named: "check_icon"), for: .normal)
+                
+                // add
+                // add
+                self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+                
+                cell.btn_hip_abduction_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_abduction_moderate.tag = 470
+                
+                cell.btn_hip_abduction_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_abduction_slight.tag = 490
+                
+                self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Abduction : Slight")
+                self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Abduction : Moderate")
+                
+                cell.btn_hip_abduction_excessive.tag = 511
+            } else {
+                cell.btn_hip_abduction_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                
+                // remove
+                self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+                
+                cell.btn_hip_abduction_excessive.tag = 510
+            }
+        } else {
+            
+        }
+    }
+    
+    /*
+     
+     cell..addTarget(self, action: #selector(hip_adduction_clicked_method), for: .touchUpInside)
+     cell..addTarget(self, action: #selector(hip_adduction_slight_clicked_method), for: .touchUpInside)
+     cell..addTarget(self, action: #selector(hip_adduction_moderate_clicked_method), for: .touchUpInside)
+     cell..addTarget(self, action: #selector(hip_adduction_excessive_clicked_method), for: .touchUpInside)
+     
+     */
+    // Adduction
+    @objc func hip_adduction_clicked_method() {
+        let indexPath = IndexPath.init(row: hip_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Adduction"
+        
+        print(cell.btn_hip_adduction.tag as Any)
+        if (cell.btn_hip_adduction.tag == 520) {
+            
+            cell.btn_hip_adduction.setImage(UIImage(named: "check_icon"), for: .normal)
+            
+            // add
+            self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+            
+            cell.btn_hip_adduction.tag = 521
+        } else {
+            cell.btn_hip_adduction.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            
+            // remove
+            self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+            
+            
+            cell.btn_hip_adduction_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_hip_adduction_slight.tag = 530
+             
+            cell.btn_hip_adduction_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_hip_adduction_excessive.tag = 550
+            
+            cell.btn_hip_adduction_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_hip_adduction_moderate.tag = 540
+            
+            self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Adduction : Slight")
+            self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Adduction : Moderate")
+            self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Adduction : Excessive")
+            
+            
+            cell.btn_hip_adduction.tag = 520
+        }
+    }
+    @objc func hip_adduction_slight_clicked_method() {
+        let indexPath = IndexPath.init(row: hip_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Adduction : Slight"
+        
+        if (cell.btn_hip_adduction.tag == 521) {
+            
+            print(cell.btn_hip_adduction_slight.tag as Any)
+            if (cell.btn_hip_adduction_slight.tag == 530) {
+                
+                cell.btn_hip_adduction_slight.setImage(UIImage(named: "check_icon"), for: .normal)
+                
+                // add
+                self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+                   
+                cell.btn_hip_adduction_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_adduction_excessive.tag = 550
+                
+                cell.btn_hip_adduction_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_adduction_moderate.tag = 540
+                
+                self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Adduction : Moderate")
+                self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Adduction : Excessive")
+                
+                
+                cell.btn_hip_adduction_slight.tag = 531
+            } else {
+                cell.btn_hip_adduction_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                
+                // remove
+                self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+                
+                cell.btn_hip_adduction_slight.tag = 530
+            }
+        } else {
+            
+        }
+        
+    }
+    @objc func hip_adduction_moderate_clicked_method() {
+        let indexPath = IndexPath.init(row: hip_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Adduction : Moderate"
+        
+        if (cell.btn_hip_adduction.tag == 521) {
+            
+            print(cell.btn_hip_adduction_moderate.tag as Any)
+            if (cell.btn_hip_adduction_moderate.tag == 540) {
+                
+                cell.btn_hip_adduction_moderate.setImage(UIImage(named: "check_icon"), for: .normal)
+                
+                // add
+                // add
+                self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+                
+                
+                cell.btn_hip_adduction_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_adduction_slight.tag = 530
+                 
+                cell.btn_hip_adduction_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_adduction_excessive.tag = 550
+                
+                self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Adduction : Slight")
+                self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Adduction : Excessive")
+                
+                
+                cell.btn_hip_adduction_moderate.tag = 541
+            } else {
+                cell.btn_hip_adduction_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                
+                // remove
+                self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+                
+                cell.btn_hip_adduction_moderate.tag = 540
+            }
+        } else {
+            
+        }
+    }
+    @objc func hip_adduction_excessive_clicked_method() {
+        let indexPath = IndexPath.init(row: hip_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Adduction : Excessive"
+        
+        if (cell.btn_hip_adduction.tag == 521) {
+            
+            print(cell.btn_hip_adduction_excessive.tag as Any)
+            if (cell.btn_hip_adduction_excessive.tag == 550) {
+                
+                cell.btn_hip_adduction_excessive.setImage(UIImage(named: "check_icon"), for: .normal)
+                
+                // add
+                self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+                
+                cell.btn_hip_adduction_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_adduction_slight.tag = 530
+                
+                cell.btn_hip_adduction_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_adduction_moderate.tag = 540
+                 
+                self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Adduction : Slight")
+                self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Adduction : Moderate")
+                
+                cell.btn_hip_adduction_excessive.tag = 551
+            } else {
+                cell.btn_hip_adduction_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                
+                // remove
+                self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+                
+                cell.btn_hip_adduction_excessive.tag = 550
+            }
+        } else {
+            
+        }
+    }
+    
+    /*
+     
+     cell.btn_hip_internal_rotation.addTarget(self, action: #selector(hip_internal_rotation_clicked_method), for: .touchUpInside)
+     cell.btn_hip_internal_rotation_slight.addTarget(self, action: #selector(hip_internal_rotation_slight_clicked_method), for: .touchUpInside)
+     cell.btn_hip_internal_rotation_moderate.addTarget(self, action: #selector(hip_internal_rotation_moderate_clicked_method), for: .touchUpInside)
+     cell.btn_hip_internal_rotation_excessive.addTarget(self, action: #selector(hip_internal_rotation_excessive_clicked_method), for: .touchUpInside)
+     */
+    
 }
 
 
@@ -1828,7 +2314,7 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 6
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -1850,7 +2336,7 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
             
             return cell
             
-        } else if (indexPath.row == 3) {
+        } else if (indexPath.row == 4) {
             
             let cell:stance_phase_table_cell = tableView.dequeueReusableCell(withIdentifier: "five_table_cell") as! stance_phase_table_cell
             cell.backgroundColor = .white
@@ -1869,7 +2355,7 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
             
             return cell
             
-        } else if (indexPath.row == 4) {
+        } else if (indexPath.row == 5) {
             
             let cell:stance_phase_table_cell = tableView.dequeueReusableCell(withIdentifier: "six_table_cell") as! stance_phase_table_cell
             cell.backgroundColor = .white
@@ -1984,6 +2470,63 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
             
             return cell
             
+        } else if (indexPath.row == 3) {
+            
+            let cell:stance_phase_table_cell = tableView.dequeueReusableCell(withIdentifier: "four_table_cell") as! stance_phase_table_cell
+            cell.backgroundColor = .white
+            
+            let backgroundView = UIView()
+            backgroundView.backgroundColor = .clear
+            cell.selectedBackgroundView = backgroundView
+          
+            
+            /*
+             // MARK: - HIP -
+             @IBOutlet weak var btn_hip_insufficient_flexion:UIButton!
+             @IBOutlet weak var btn_hip_insufficient_extension:UIButton!
+             @IBOutlet weak var btn_hip_excessive_external_rotation:UIButton!
+             @IBOutlet weak var btn_hip_stiff:UIButton!
+             // abduction
+             @IBOutlet weak var btn_hip_abduction:UIButton!
+             @IBOutlet weak var btn_hip_abduction_slight:UIButton!
+             @IBOutlet weak var btn_hip_abduction_moderate:UIButton!
+             @IBOutlet weak var btn_hip_abduction_excessive:UIButton!
+             // abduction
+             @IBOutlet weak var btn_hip_adduction:UIButton!
+             @IBOutlet weak var btn_hip_adduction_slight:UIButton!
+             @IBOutlet weak var btn_hip_adduction_moderate:UIButton!
+             @IBOutlet weak var btn_hip_adduction_excessive:UIButton!
+             // Internal Rotation
+             @IBOutlet weak var btn_hip_internal_rotation:UIButton!
+             @IBOutlet weak var btn_hip_internal_rotation_slight:UIButton!
+             @IBOutlet weak var btn_hip_internal_rotation_moderate:UIButton!
+             @IBOutlet weak var btn_hip_internal_rotation_excessive:UIButton!
+             // Stiff Hip
+             
+             */
+            cell.btn_hip_insufficient_flexion.addTarget(self, action: #selector(hip_insufficient_flexion_clicked_method), for: .touchUpInside)
+            cell.btn_hip_insufficient_extension.addTarget(self, action: #selector(hip_insufficient_extension_clicked_method), for: .touchUpInside)
+            cell.btn_hip_excessive_external_rotation.addTarget(self, action: #selector(hip_excessive_external_rotation_clicked_method), for: .touchUpInside)
+            cell.btn_hip_stiff.addTarget(self, action: #selector(hip_stiff_clicked_method), for: .touchUpInside)
+            
+            cell.btn_hip_abduction.addTarget(self, action: #selector(hip_abduction_clicked_method), for: .touchUpInside)
+            cell.btn_hip_abduction_slight.addTarget(self, action: #selector(hip_abduction_slight_clicked_method), for: .touchUpInside)
+            cell.btn_hip_abduction_moderate.addTarget(self, action: #selector(hip_abduction_moderate_clicked_method), for: .touchUpInside)
+            cell.btn_hip_abduction_excessive.addTarget(self, action: #selector(hip_abduction_excessive_clicked_method), for: .touchUpInside)
+            
+            cell.btn_hip_adduction.addTarget(self, action: #selector(hip_adduction_clicked_method), for: .touchUpInside)
+            cell.btn_hip_adduction_slight.addTarget(self, action: #selector(hip_adduction_slight_clicked_method), for: .touchUpInside)
+            cell.btn_hip_adduction_moderate.addTarget(self, action: #selector(hip_adduction_moderate_clicked_method), for: .touchUpInside)
+            cell.btn_hip_adduction_excessive.addTarget(self, action: #selector(hip_adduction_excessive_clicked_method), for: .touchUpInside)
+            
+            /*cell.btn_hip_internal_rotation.addTarget(self, action: #selector(hip_internal_rotation_clicked_method), for: .touchUpInside)
+            cell.btn_hip_internal_rotation_slight.addTarget(self, action: #selector(hip_internal_rotation_slight_clicked_method), for: .touchUpInside)
+            cell.btn_hip_internal_rotation_moderate.addTarget(self, action: #selector(hip_internal_rotation_moderate_clicked_method), for: .touchUpInside)
+            cell.btn_hip_internal_rotation_excessive.addTarget(self, action: #selector(hip_internal_rotation_excessive_clicked_method), for: .touchUpInside)*/
+            
+            
+            return cell
+            
         } else {
             let cell:stance_phase_table_cell = tableView.dequeueReusableCell(withIdentifier: "crash_my_app") as! stance_phase_table_cell
             cell.backgroundColor = .white
@@ -2004,14 +2547,16 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if (indexPath.row == 0) {
             return 250
-        } else if (indexPath.row == 3) {
+        } else if (indexPath.row == 5) {
             return 364
         } else if (indexPath.row == 1) {
             return 568
         } else if (indexPath.row == 2) {
             return 524
-        } else if (indexPath.row == 4) {
+        } else if (indexPath.row == 5) {
             return 304
+        } else if (indexPath.row == 3) {
+            return 620
         } else {
             return 0
         }
@@ -2371,6 +2916,126 @@ class stance_phase_table_cell: UITableViewCell {
             lbl_trunk_deviation.backgroundColor = header_color
         }
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    // MARK: - HIP -
+    @IBOutlet weak var btn_hip_insufficient_flexion:UIButton! {
+        didSet {
+            btn_hip_insufficient_flexion.tag = 450
+        }
+    }
+    
+    @IBOutlet weak var btn_hip_insufficient_extension:UIButton! {
+        didSet {
+            btn_hip_insufficient_extension.tag = 460
+        }
+    }
+    
+    @IBOutlet weak var btn_hip_excessive_external_rotation:UIButton! {
+        didSet {
+            btn_hip_excessive_external_rotation.tag = 470
+        }
+    }
+    
+    // abduction
+    @IBOutlet weak var btn_hip_abduction:UIButton! {
+        didSet {
+            btn_hip_abduction.tag = 480
+        }
+    }
+    @IBOutlet weak var btn_hip_abduction_slight:UIButton! {
+        didSet {
+            btn_hip_abduction_slight.tag = 490
+        }
+    }
+    @IBOutlet weak var btn_hip_abduction_moderate:UIButton! {
+        didSet {
+            btn_hip_abduction_moderate.tag = 500
+        }
+    }
+    @IBOutlet weak var btn_hip_abduction_excessive:UIButton! {
+        didSet {
+            btn_hip_abduction_excessive.tag = 510
+        }
+    }
+    
+    
+    // abduction
+    @IBOutlet weak var btn_hip_adduction:UIButton! {
+        didSet {
+            btn_hip_adduction.tag = 520
+        }
+    }
+    @IBOutlet weak var btn_hip_adduction_slight:UIButton! {
+        didSet {
+            btn_hip_adduction_slight.tag = 530
+        }
+    }
+    @IBOutlet weak var btn_hip_adduction_moderate:UIButton! {
+        didSet {
+            btn_hip_adduction_moderate.tag = 540
+        }
+    }
+    @IBOutlet weak var btn_hip_adduction_excessive:UIButton! {
+        didSet {
+            btn_hip_adduction_excessive.tag = 550
+        }
+    }
+    
+    
+    // Internal Rotation
+    @IBOutlet weak var btn_hip_internal_rotation:UIButton! {
+        didSet {
+            btn_hip_internal_rotation.tag = 560
+        }
+    }
+    @IBOutlet weak var btn_hip_internal_rotation_slight:UIButton! {
+        didSet {
+            btn_hip_internal_rotation_slight.tag = 570
+        }
+    }
+    @IBOutlet weak var btn_hip_internal_rotation_moderate:UIButton! {
+        didSet {
+            btn_hip_internal_rotation_moderate.tag = 580
+        }
+    }
+    @IBOutlet weak var btn_hip_internal_rotation_excessive:UIButton! {
+        didSet {
+            btn_hip_internal_rotation_excessive.tag = 590
+        }
+    }
+    
+    // Stiff Hip
+    @IBOutlet weak var btn_hip_stiff:UIButton! {
+        didSet {
+            btn_hip_stiff.tag = 600
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     @IBOutlet weak var btn_save_and_continue:UIButton! {
