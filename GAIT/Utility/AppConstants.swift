@@ -22,7 +22,10 @@ struct navigationTitle {
     static let sls = "Single Limb Support (SS)"
     static let tds = "Treminal Double Support (TDS)"
     static let swing = "Swing"
+    
     static let stance_phase = "Stance Phase"
+    static let rate_the_change = "rate the change"
+    static let recommendation = "recommendation"
     
     static let additional = "Additinal Deviations"
     static let intervention = "Intervention focus is on"

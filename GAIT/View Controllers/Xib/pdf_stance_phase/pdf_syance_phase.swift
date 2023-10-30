@@ -92,9 +92,9 @@ class pdf_syance_phase: UIView {
         self.stack_three.isHidden = true*/
         
         self.setUpUserData()
-        self.setUpIDSData()
-        self.setUpSSData()
-        self.setUpTDSData()
+        // self.setUpIDSData()
+        // self.setUpSSData()
+        // self.setUpTDSData()
         self.setUpSwingData()
         self.setUpFocusData()
         self.setUp_stance_phase()
@@ -191,6 +191,7 @@ class pdf_syance_phase: UIView {
         lblNotes.text = "\(selectedInterventionData["notes"] as? String ?? "")"
         
     }
+   
 }
 
 /*extension UIView {

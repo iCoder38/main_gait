@@ -37,7 +37,7 @@ class stance_phase: UIViewController {
 
         self.view.backgroundColor = .white
         // self.navigationController?.setNavigationBarHidden(true, animated: true)
-        self.navigationItem.title = "G.A.I.T App".uppercased()
+        self.navigationItem.title = "stance phase".uppercased()
         // Back Button X
         let backButton = UIBarButtonItem.init(image: #imageLiteral(resourceName: "back_icon").withRenderingMode(.alwaysOriginal) , style: .plain, target: self, action: #selector(self.backClickMethod))
         self.navigationItem.leftBarButtonItem = backButton
@@ -2335,6 +2335,43 @@ class stance_phase_table_cell: UITableViewCell {
             btn_knee_unstable.tag = 440
         }
     }
+    
+    @IBOutlet weak var lbl_foot_deviation:UILabel! {
+        didSet {
+            lbl_foot_deviation.backgroundColor = header_color
+        }
+    }
+    
+    @IBOutlet weak var lbl_ankle_deviation:UILabel! {
+        didSet {
+            lbl_ankle_deviation.backgroundColor = header_color
+        }
+    }
+    
+    @IBOutlet weak var lbl_knee_deviation:UILabel! {
+        didSet {
+            lbl_knee_deviation.backgroundColor = header_color
+        }
+    }
+    
+    @IBOutlet weak var lbl_hip_deviation:UILabel! {
+        didSet {
+            lbl_hip_deviation.backgroundColor = header_color
+        }
+    }
+    
+    @IBOutlet weak var lbl_pelvis_deviation:UILabel! {
+        didSet {
+            lbl_pelvis_deviation.backgroundColor = header_color
+        }
+    }
+    
+    @IBOutlet weak var lbl_trunk_deviation:UILabel! {
+        didSet {
+            lbl_trunk_deviation.backgroundColor = header_color
+        }
+    }
+    
     
     @IBOutlet weak var btn_save_and_continue:UIButton! {
         didSet {

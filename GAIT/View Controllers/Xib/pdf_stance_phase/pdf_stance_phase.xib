@@ -680,10 +680,8 @@ Intervals</string>
                 <outlet property="lbl_stance_phase_Knee" destination="7by-zh-ceB" id="I6K-CN-X5y"/>
                 <outlet property="lbl_stance_phase_Pelivs" destination="SjV-AM-71W" id="0nu-v7-xab"/>
                 <outlet property="lbl_stance_phase_Trunk" destination="PpD-fd-97O" id="Sjh-Lx-VAj"/>
-                <outlet property="stack_five" destination="Nsm-W1-g8x" id="jH2-3y-nd0"/>
-                <outlet property="stack_four" destination="H5v-XT-Bwn" id="Fzc-DC-SXj"/>
             </connections>
-            <point key="canvasLocation" x="140.625" y="105.63380281690141"/>
+            <point key="canvasLocation" x="-163" y="122"/>
         </view>
     </objects>
     <resources>

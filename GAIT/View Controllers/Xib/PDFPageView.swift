@@ -101,13 +101,13 @@ class PDFPageView: UIView {
         self.setUpTDSData()
         self.setUpSwingData()
         self.setUpFocusData()
-        self.setUp_stance_phase()
+        // self.setUp_stance_phase()
         
         print(self.setUpSwingData as Any)
         
     }
     
-    func setUpUserData(){
+    func setUpUserData() {
         // var normalText = "Hi am normal"
         // var boldText  = "And I am BOLD!"
         // var attributedString = NSMutableAttributedString(string:normalText)

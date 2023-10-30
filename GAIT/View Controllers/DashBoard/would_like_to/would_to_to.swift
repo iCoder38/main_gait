@@ -18,6 +18,7 @@ class would_to_to: UIViewController {
         super.viewDidLoad()
 
         UserDefaults.standard.set("", forKey: "key_quick_gait_assessment")
+        UserDefaults.standard.set("", forKey: "key_gait_comparision")
 
         self.view.backgroundColor = .white
         // self.navigationController?.setNavigationBarHidden(true, animated: true)
@@ -62,11 +63,10 @@ extension would_to_to:UITableViewDelegate,UITableViewDataSource{
         backgroundView.backgroundColor = .clear
         cell.selectedBackgroundView = backgroundView
         
-        
-        
         if (indexPath.row == 0) {
             cell.lbl_title.text = "LEARN"
-            cell.backgroundColor = .systemOrange
+            cell.backgroundColor = header_color
+            cell.lbl_title.textColor = .white
             
             cell.lbl_index_number.isHidden = true
             
@@ -97,7 +97,8 @@ extension would_to_to:UITableViewDelegate,UITableViewDataSource{
             
         } else if (indexPath.row == 4) {
             cell.lbl_title.text = "PERFORM"
-            cell.backgroundColor = .systemOrange
+            cell.backgroundColor = header_color
+            cell.lbl_title.textColor = .white
             
             cell.lbl_index_number.isHidden = true
             
@@ -105,6 +106,8 @@ extension would_to_to:UITableViewDelegate,UITableViewDataSource{
             cell.lbl_index_number.backgroundColor = UIColor.init(red: 230.0/255.0, green: 230.0/255.0, blue: 230.0/255.0, alpha: 1)
             
         } else if (indexPath.row == 5) {
+            UserDefaults.standard.set("", forKey: "key_quick_gait_assessment")
+            
             cell.lbl_title.text = "Comprehensive Gait Assessment"
             cell.accessoryType = .disclosureIndicator
             cell.lbl_index_number.isHidden = false
@@ -124,6 +127,8 @@ extension would_to_to:UITableViewDelegate,UITableViewDataSource{
             cell.lbl_index_number.backgroundColor = UIColor.init(red: 230.0/255.0, green: 230.0/255.0, blue: 230.0/255.0, alpha: 1)
             
         } else if (indexPath.row == 7) {
+            UserDefaults.standard.set("", forKey: "key_gait_comparision")
+            
             cell.lbl_title.text = "Gait Comparison"
             cell.accessoryType = .disclosureIndicator
             cell.lbl_index_number.isHidden = false
@@ -133,8 +138,9 @@ extension would_to_to:UITableViewDelegate,UITableViewDataSource{
             
         } else if (indexPath.row == 8) {
             cell.lbl_title.text = "PRACTICE"
-            cell.backgroundColor = .systemOrange
+            cell.backgroundColor = header_color
             cell.lbl_index_number.isHidden = true
+            cell.lbl_title.textColor = .white
             
         } else {
             cell.lbl_title.text = "Practice Gait Skills"
@@ -185,9 +191,11 @@ extension would_to_to:UITableViewDelegate,UITableViewDataSource{
             
         }  else if (indexPath.row == 7) {
             
-            let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "how_the_app_works_id") as? how_the_app_works
-            pushVC!.str_profile_name = "gait_comparision"
-            self.navigationController?.pushViewController(pushVC!, animated: true)
+            // let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "how_the_app_works_id") as? how_the_app_works
+            // pushVC!.str_profile_name = "gait_comparision"
+            // self.navigationController?.pushViewController(pushVC!, animated: true)
+            let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "gait_comparsion_id") as! gait_comparsion
+            self.navigationController?.pushViewController(pushVC, animated: false)
             
         }
         else if (indexPath.row == 9) {

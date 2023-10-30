@@ -130,7 +130,7 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </stackView>
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="owJ-TP-zP4" userLabel="Table data View">
-                            <rect key="frame" x="40" y="264" width="1120" height="434"/>
+                            <rect key="frame" x="40" y="264" width="1120" height="352"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Cmr-fL-NyE">
                                     <rect key="frame" x="2" y="2" width="1116" height="50"/>
@@ -193,7 +193,7 @@ Intervals</string>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </stackView>
                                 <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="555-nE-TNB">
-                                    <rect key="frame" x="2" y="54" width="1116" height="378"/>
+                                    <rect key="frame" x="2" y="54" width="1116" height="296"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="oPX-q5-3ry">
                                             <rect key="frame" x="0.0" y="0.0" width="1116" height="80"/>
@@ -438,64 +438,6 @@ Support
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </stackView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="RfI-Oh-H9z">
-                                            <rect key="frame" x="0.0" y="298" width="1116" height="80"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stance Phase" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tre-bP-fVL">
-                                                    <rect key="frame" x="0.0" y="0.0" width="157.66666666666666" height="80"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="BIE-B4-SUH"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwB-8Q-45t">
-                                                    <rect key="frame" x="159.66666666666669" y="0.0" width="157.66666666666669" height="80"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="11"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKW-jH-LzJ">
-                                                    <rect key="frame" x="319.33333333333331" y="0.0" width="157.66666666666669" height="80"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="11"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ud6-nd-SqV">
-                                                    <rect key="frame" x="479" y="0.0" width="158" height="80"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="11"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fck-mD-mVM">
-                                                    <rect key="frame" x="639" y="0.0" width="157.66666666666663" height="80"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="11"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4o-jq-RCR">
-                                                    <rect key="frame" x="798.66666666666663" y="0.0" width="157.66666666666663" height="80"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="11"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEd-na-xBJ">
-                                                    <rect key="frame" x="958.33333333333337" y="0.0" width="157.66666666666663" height="80"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="11"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </stackView>
                                     </subviews>
                                 </stackView>
                             </subviews>
@@ -512,7 +454,7 @@ Support
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCC-f9-gpw" userLabel="Temporal View">
-                            <rect key="frame" x="40" y="768" width="1120" height="70"/>
+                            <rect key="frame" x="40" y="686" width="1120" height="70"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="xSw-Ia-Neb">
                                     <rect key="frame" x="2" y="2" width="1116" height="66"/>
@@ -633,7 +575,7 @@ Support
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KVb-Pf-aNL">
-                            <rect key="frame" x="40" y="878" width="1120" height="81"/>
+                            <rect key="frame" x="40" y="796" width="1120" height="81"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NH6-gJ-vyu">
                                     <rect key="frame" x="0.0" y="0.0" width="1120" height="81"/>
@@ -728,7 +670,7 @@ Support
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="eHt-oM-Hna">
-                            <rect key="frame" x="40" y="999" width="1120" height="40"/>
+                            <rect key="frame" x="40" y="917" width="1120" height="40"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWd-K9-Aw5">
                                     <rect key="frame" x="0.0" y="0.0" width="1120" height="40"/>
@@ -778,7 +720,7 @@ Support
                                             </constraints>
                                         </view>
                                         <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNAUTHORIZED REPLICATION IS PROHIBITED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ZFw-PU-lOS">
-                                            <rect key="frame" x="635" y="11.666666666666742" width="323" height="17"/>
+                                            <rect key="frame" x="635" y="11.666666666666629" width="323" height="17"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -874,17 +816,6 @@ Support
                 <outlet property="lblTDSTrunk" destination="Vht-7N-Zqq" id="ASW-Xj-Bgc"/>
                 <outlet property="lblTreatmentGoal" destination="4qi-rX-P4s" id="KHj-9j-BId"/>
                 <outlet property="lblWidth" destination="m74-M5-hmL" id="WWW-ww-5kZ"/>
-                <outlet property="lbl_stance_phase_Ankle" destination="VKW-jH-LzJ" id="dvF-0x-pe9"/>
-                <outlet property="lbl_stance_phase_Foot" destination="mwB-8Q-45t" id="R5X-U7-H8e"/>
-                <outlet property="lbl_stance_phase_Hip" destination="Fck-mD-mVM" id="w8s-rd-Mwe"/>
-                <outlet property="lbl_stance_phase_Knee" destination="ud6-nd-SqV" id="SFF-Ti-xJp"/>
-                <outlet property="lbl_stance_phase_Pelivs" destination="s4o-jq-RCR" id="koT-fq-wPV"/>
-                <outlet property="lbl_stance_phase_Trunk" destination="AEd-na-xBJ" id="mEg-if-Lh8"/>
-                <outlet property="stack_five" destination="RfI-Oh-H9z" id="7tY-Is-wQ1"/>
-                <outlet property="stack_four" destination="ocm-0p-Yc6" id="Vto-WJ-P1c"/>
-                <outlet property="stack_one" destination="oPX-q5-3ry" id="26y-fi-paT"/>
-                <outlet property="stack_three" destination="oiG-gV-v1F" id="Iap-oc-aBx"/>
-                <outlet property="stack_two" destination="mjt-14-w5g" id="7oY-AZ-hfc"/>
             </connections>
             <point key="canvasLocation" x="140.625" y="105.63380281690141"/>
         </view>

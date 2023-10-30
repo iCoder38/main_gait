@@ -1,118 +1,18 @@
 //
-//  quick_gait_assessment.swift
+//  gait_comparsion.swift
 //  GAIT
 //
-//  Created by Dishant Rajput on 26/10/23.
+//  Created by Dishant Rajput on 30/10/23.
 //  Copyright © 2023 EVS. All rights reserved.
-//
-/*
-import UIKit
-
-class quick_gait_assessment: UIViewController {
-
-    @IBOutlet weak var tble_view:UITableView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationItem.title = "Quick GAIT Assessment".uppercased()
-        
-        self.tble_view.delegate = self
-        self.tble_view.dataSource = self
-        self.tble_view.reloadData()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        // Back Button X
-        let backButton = UIBarButtonItem.init(image: #imageLiteral(resourceName: "back_icon").withRenderingMode(.alwaysOriginal) , style: .plain, target: self, action: #selector(self.backClickMethod))
-        self.navigationItem.leftBarButtonItem = backButton
-        backButton.tintColor = .black
-        self.navigationController?.isNavigationBarHidden = false
-    }
-    
-    @objc func backClickMethod() {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-}
-
-
-extension quick_gait_assessment:UITableViewDelegate,UITableViewDataSource{
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell:quick_gait_assessment_table_cell = tableView.dequeueReusableCell(withIdentifier: "quick_gait_assessment_table_cell") as! quick_gait_assessment_table_cell
-        
-        cell.backgroundColor = .white
-        
-        let backgroundView = UIView()
-        backgroundView.backgroundColor = .clear
-        cell.selectedBackgroundView = backgroundView
-        
-        return cell
-        
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-         
-        
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
-    }
-    
-}
-
-
-class quick_gait_assessment_table_cell: UITableViewCell {
-
-    @IBOutlet weak var lbl_title:UILabel!
-  
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
-}
-*/
-//
-//  PatientInformationViewController.swift
-//  GAIT
-//
-//  Created by Shyam on 05/11/20.
-//  Copyright © 2020 EVS. All rights reserved.
 //
 
 import UIKit
 import DropDown
 
-/*struct userData {
-    var patientName: String
-    var patientDOB: String
-    var diagnosis: String
-    var observedSide: String
-    var assessmentDate: String
-}
+var userInfoData_gait_comparision = NSMutableDictionary.init()
 
-var userInfoData = NSMutableDictionary.init()
-*/
-class quick_gait_assessment: BaseViewController {
+
+class gait_comparsion: BaseViewController {
     
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtDiagnosis: UITextField!
@@ -209,15 +109,15 @@ class quick_gait_assessment: BaseViewController {
     }
     
     func saveUserData() {
-        userInfoData.removeAllObjects()
-        userInfoData.setObject(self.txtName.text!, forKey: "pName" as NSCopying)
-        // userInfoData.setObject(self.txtDOB.text!, forKey: "pDOB" as NSCopying)
-        // userInfoData.setObject(self.txtDiagnosis.text!, forKey: "pDiagnosis" as NSCopying)
-        userInfoData.setObject(self.txtSide.text!, forKey: "observedSide" as NSCopying)
-        // userInfoData.setObject(self.txtADate.text!, forKey: "assessmentDate" as NSCopying)
-        // userInfoData.setObject(self.txtOnsetDate.text!, forKey: "onsetDate" as NSCopying)
+        userInfoData_gait_comparision.removeAllObjects()
+        userInfoData_gait_comparision.setObject(self.txtName.text!, forKey: "pName" as NSCopying)
+        userInfoData_gait_comparision.setObject(self.txtDOB.text!, forKey: "pDOB" as NSCopying)
+        userInfoData_gait_comparision.setObject(self.txtDiagnosis.text!, forKey: "pDiagnosis" as NSCopying)
+        userInfoData_gait_comparision.setObject(self.txtSide.text!, forKey: "observedSide" as NSCopying)
+        userInfoData_gait_comparision.setObject(self.txtADate.text!, forKey: "assessmentDate" as NSCopying)
+        userInfoData_gait_comparision.setObject(self.txtOnsetDate.text!, forKey: "onsetDate" as NSCopying)
         // userInfoData.setObject(" \(self.txtViewGoal.text!)", forKey: "pGoal" as NSCopying)
-        userInfoData.setObject(self.txtWalkingAid.text!, forKey: "wakingAid" as NSCopying)
+        userInfoData_gait_comparision.setObject(self.txtWalkingAid.text!, forKey: "wakingAid" as NSCopying)
     }
     
     @objc func datePickerFromValueChanged(sender:UIDatePicker) {
@@ -227,16 +127,16 @@ class quick_gait_assessment: BaseViewController {
         
         dateFormatter.dateFormat = "dd MMM yyyy"
         
-        if sender.tag == self.txtDOB.tag{
+        if sender.tag == self.txtDOB.tag {
             self.txtDOB.text = dateFormatter.string(from: sender.date)
-        }else if sender.tag == self.txtADate.tag{
+        } else if sender.tag == self.txtADate.tag {
             self.txtADate.text = dateFormatter.string(from: sender.date)
-        }else if sender.tag == self.txtOnsetDate.tag{
+        } else if sender.tag == self.txtOnsetDate.tag {
             self.txtOnsetDate.text = dateFormatter.string(from: sender.date)
         }
     }
     
-    //MARK: - IBActions
+    //MARK: - IBActions -
     
     @IBAction func specialDateTextFieldClick(_ sender: UITextField) {
         let datePickerView:UIDatePicker = UIDatePicker()
@@ -291,13 +191,7 @@ class quick_gait_assessment: BaseViewController {
         // if isValid() == true {
         
         self.saveUserData()
-        
-        // old code
-        /*let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "StartAssessmentViewController") as! StartAssessmentViewController
-        self.navigationController?.pushViewController(pushVC, animated: true)*/
-        
-        // new update
-        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "stance_phase_id") as! stance_phase
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "rate_the_change_id") as! rate_the_change
         self.navigationController?.pushViewController(pushVC, animated: true)
         
         // }

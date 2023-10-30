@@ -53,6 +53,11 @@
 		B96F4DC728EFFF81002ABEAF /* calibrib.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B96F4DC428EFFF81002ABEAF /* calibrib.ttf */; };
 		B96F4DC828EFFF81002ABEAF /* calibril.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B96F4DC528EFFF81002ABEAF /* calibril.ttf */; };
 		B96F4DC928EFFF81002ABEAF /* Calibri.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B96F4DC628EFFF81002ABEAF /* Calibri.ttf */; };
+		B99D30872AEF8ACF007635B5 /* gait_comparsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99D30862AEF8ACF007635B5 /* gait_comparsion.swift */; };
+		B99D308A2AEF965B007635B5 /* rate_the_change.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99D30892AEF965B007635B5 /* rate_the_change.swift */; };
+		B99D308C2AEFA68D007635B5 /* recommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99D308B2AEFA68D007635B5 /* recommendation.swift */; };
+		B99D30932AEFA973007635B5 /* pdf_gait_comparision.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99D30922AEFA973007635B5 /* pdf_gait_comparision.xib */; };
+		B99D30952AEFA999007635B5 /* pdf_gait_comparision.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99D30942AEFA999007635B5 /* pdf_gait_comparision.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +111,11 @@
 		B96F4DC428EFFF81002ABEAF /* calibrib.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = calibrib.ttf; sourceTree = "<group>"; };
 		B96F4DC528EFFF81002ABEAF /* calibril.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = calibril.ttf; sourceTree = "<group>"; };
 		B96F4DC628EFFF81002ABEAF /* Calibri.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Calibri.ttf; sourceTree = "<group>"; };
+		B99D30862AEF8ACF007635B5 /* gait_comparsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gait_comparsion.swift; sourceTree = "<group>"; };
+		B99D30892AEF965B007635B5 /* rate_the_change.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rate_the_change.swift; sourceTree = "<group>"; };
+		B99D308B2AEFA68D007635B5 /* recommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recommendation.swift; sourceTree = "<group>"; };
+		B99D30922AEFA973007635B5 /* pdf_gait_comparision.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = pdf_gait_comparision.xib; sourceTree = "<group>"; };
+		B99D30942AEFA999007635B5 /* pdf_gait_comparision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pdf_gait_comparision.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +217,7 @@
 		527FEEA9255410C600C03BEF /* DashBoard */ = {
 			isa = PBXGroup;
 			children = (
+				B99D30852AEF8AAB007635B5 /* gate_comparision */,
 				B94709302AEA7CE700D5B355 /* stance_phase */,
 				B9435D0B2AE92C9D00EB0DD6 /* would_like_to */,
 				1852B0A528522BEF005DEA22 /* play_videos */,
@@ -258,6 +269,7 @@
 		52F5DDD6255EC12F00CF65FE /* Xib */ = {
 			isa = PBXGroup;
 			children = (
+				B99D308D2AEFA7E7007635B5 /* gait_comparision_pdf */,
 				B938CBEE2AEC05600015DC17 /* pdf_stance_phase */,
 				52F5DDD7255EC19D00CF65FE /* PDFPageView.swift */,
 				52F5DDD9255EC1AE00CF65FE /* PDFPageView.xib */,
@@ -325,6 +337,33 @@
 				B94709312AEA7D7A00D5B355 /* stance_phase.swift */,
 			);
 			path = stance_phase;
+			sourceTree = "<group>";
+		};
+		B99D30852AEF8AAB007635B5 /* gate_comparision */ = {
+			isa = PBXGroup;
+			children = (
+				B99D30862AEF8ACF007635B5 /* gait_comparsion.swift */,
+				B99D30882AEF964C007635B5 /* rate_the_change */,
+			);
+			path = gate_comparision;
+			sourceTree = "<group>";
+		};
+		B99D30882AEF964C007635B5 /* rate_the_change */ = {
+			isa = PBXGroup;
+			children = (
+				B99D30892AEF965B007635B5 /* rate_the_change.swift */,
+				B99D308B2AEFA68D007635B5 /* recommendation.swift */,
+			);
+			path = rate_the_change;
+			sourceTree = "<group>";
+		};
+		B99D308D2AEFA7E7007635B5 /* gait_comparision_pdf */ = {
+			isa = PBXGroup;
+			children = (
+				B99D30942AEFA999007635B5 /* pdf_gait_comparision.swift */,
+				B99D30922AEFA973007635B5 /* pdf_gait_comparision.xib */,
+			);
+			path = gait_comparision_pdf;
 			sourceTree = "<group>";
 		};
 		C61DAD2F52D70A63B69B837C /* Pods */ = {
@@ -417,6 +456,7 @@
 				52F5DDDA255EC1AE00CF65FE /* PDFPageView.xib in Resources */,
 				527D7E102570F0AC009AB6F5 /* gait_din_italic.otf in Resources */,
 				527FEE9B25540C5700C03BEF /* Main.storyboard in Resources */,
+				B99D30932AEFA973007635B5 /* pdf_gait_comparision.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,16 +531,20 @@
 				1852B0A728522C01005DEA22 /* play_videos.swift in Sources */,
 				52F5DDD5255EBE8900CF65FE /* SwiftPDFGenerator.swift in Sources */,
 				527FEEB92554172500C03BEF /* SLSViewController.swift in Sources */,
+				B99D30952AEFA999007635B5 /* pdf_gait_comparision.swift in Sources */,
 				527FEEC1255417DA00C03BEF /* InterventionViewController.swift in Sources */,
 				52F5DDD8255EC19D00CF65FE /* PDFPageView.swift in Sources */,
 				B9435D122AE9341600EB0DD6 /* how_the_app_works.swift in Sources */,
+				B99D30872AEF8ACF007635B5 /* gait_comparsion.swift in Sources */,
 				527FEEC925552CD700C03BEF /* AppConstants.swift in Sources */,
 				B9435D0D2AE92CE300EB0DD6 /* would_to_to.swift in Sources */,
 				527FEEB5255415CA00C03BEF /* StartAssessmentViewController.swift in Sources */,
+				B99D308A2AEF965B007635B5 /* rate_the_change.swift in Sources */,
 				527FEEBF255417BF00C03BEF /* AdditionalViewController.swift in Sources */,
 				B938CBF02AEC05990015DC17 /* pdf_syance_phase.swift in Sources */,
 				527FEEAD255411BB00C03BEF /* Extension_Class.swift in Sources */,
 				527FEE9425540C5700C03BEF /* AppDelegate.swift in Sources */,
+				B99D308C2AEFA68D007635B5 /* recommendation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,7 +690,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RFSX9JKQCY;
+				DEVELOPMENT_TEAM = NHVZESNL9B;
 				INFOPLIST_FILE = GAIT/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = G.A.I.T;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
@@ -656,8 +700,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.5;
-				PRODUCT_BUNDLE_IDENTIFIER = com.GAITApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GAITApp1;
 				PRODUCT_NAME = G.A.I.T;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -669,7 +716,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RFSX9JKQCY;
+				DEVELOPMENT_TEAM = NHVZESNL9B;
 				INFOPLIST_FILE = GAIT/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = G.A.I.T;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
@@ -679,8 +726,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.5;
-				PRODUCT_BUNDLE_IDENTIFIER = com.GAITApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GAITApp1;
 				PRODUCT_NAME = G.A.I.T;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
