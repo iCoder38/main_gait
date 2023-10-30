@@ -2298,12 +2298,166 @@ class stance_phase: UIViewController {
     
     /*
      
-     cell.btn_hip_internal_rotation.addTarget(self, action: #selector(hip_internal_rotation_clicked_method), for: .touchUpInside)
-     cell.btn_hip_internal_rotation_slight.addTarget(self, action: #selector(hip_internal_rotation_slight_clicked_method), for: .touchUpInside)
-     cell.btn_hip_internal_rotation_moderate.addTarget(self, action: #selector(hip_internal_rotation_moderate_clicked_method), for: .touchUpInside)
-     cell.btn_hip_internal_rotation_excessive.addTarget(self, action: #selector(hip_internal_rotation_excessive_clicked_method), for: .touchUpInside)
+     cell..addTarget(self, action: #selector(hip_internal_rotation_clicked_method), for: .touchUpInside)
+     cell..addTarget(self, action: #selector(hip_internal_rotation_slight_clicked_method), for: .touchUpInside)
+     cell..addTarget(self, action: #selector(hip_internal_rotation_moderate_clicked_method), for: .touchUpInside)
+     cell..addTarget(self, action: #selector(hip_internal_rotation_excessive_clicked_method), for: .touchUpInside)
      */
-    
+    // Internal Rotation
+    @objc func hip_internal_rotation_clicked_method() {
+        let indexPath = IndexPath.init(row: hip_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Internal Rotation"
+        
+        print(cell.btn_hip_internal_rotation.tag as Any)
+        if (cell.btn_hip_internal_rotation.tag == 560) {
+            
+            cell.btn_hip_internal_rotation.setImage(UIImage(named: "check_icon"), for: .normal)
+            
+            // add
+            self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+            
+            cell.btn_hip_internal_rotation.tag = 561
+        } else {
+            cell.btn_hip_internal_rotation.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            
+            // remove
+            self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+            
+            
+            cell.btn_hip_internal_rotation_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_hip_internal_rotation_slight.tag = 530
+             
+            cell.btn_hip_internal_rotation_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_hip_internal_rotation_excessive.tag = 550
+            
+            cell.btn_hip_internal_rotation_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_hip_internal_rotation_moderate.tag = 540
+            
+            self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Internal Rotation : Slight")
+            self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Internal Rotation : Moderate")
+            self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Internal Rotation : Excessive")
+            
+            
+            cell.btn_hip_internal_rotation.tag = 560
+        }
+    }
+    @objc func hip_internal_rotation_slight_clicked_method() {
+        let indexPath = IndexPath.init(row: hip_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Internal Rotation : Slight"
+        
+        if (cell.btn_hip_internal_rotation.tag == 561) {
+            
+            print(cell.btn_hip_internal_rotation_slight.tag as Any)
+            if (cell.btn_hip_internal_rotation_slight.tag == 570) {
+                
+                cell.btn_hip_internal_rotation_slight.setImage(UIImage(named: "check_icon"), for: .normal)
+                
+                // add
+                self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+                   
+                cell.btn_hip_internal_rotation_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_internal_rotation_excessive.tag = 590
+                
+                cell.btn_hip_internal_rotation_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_internal_rotation_moderate.tag = 580
+                
+                self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Internal Rotation : Moderate")
+                self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Internal Rotation : Excessive")
+                
+                
+                cell.btn_hip_internal_rotation_slight.tag = 571
+            } else {
+                cell.btn_hip_internal_rotation_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                
+                // remove
+                self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+                
+                cell.btn_hip_internal_rotation_slight.tag = 570
+            }
+        } else {
+            
+        }
+        
+    }
+    @objc func hip_internal_rotation_moderate_clicked_method() {
+        let indexPath = IndexPath.init(row: hip_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Internal Rotation : Moderate"
+        
+        if (cell.btn_hip_internal_rotation.tag == 561) {
+            
+            print(cell.btn_hip_internal_rotation_moderate.tag as Any)
+            if (cell.btn_hip_internal_rotation_moderate.tag == 580) {
+                
+                cell.btn_hip_internal_rotation_moderate.setImage(UIImage(named: "check_icon"), for: .normal)
+                
+                // add
+                // add
+                self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+                
+                
+                cell.btn_hip_internal_rotation_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_internal_rotation_slight.tag = 570
+                 
+                cell.btn_hip_internal_rotation_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_internal_rotation_excessive.tag = 590
+                
+                self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Internal Rotation : Slight")
+                self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Internal Rotation : Excessive")
+                
+                
+                cell.btn_hip_internal_rotation_moderate.tag = 581
+            } else {
+                cell.btn_hip_internal_rotation_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                
+                // remove
+                self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+                
+                cell.btn_hip_internal_rotation_moderate.tag = 580
+            }
+        } else {
+            
+        }
+    }
+    @objc func hip_internal_rotation_excessive_clicked_method() {
+        let indexPath = IndexPath.init(row: hip_index, section: 0)
+        let cell = self.tble_view.cellForRow(at: indexPath) as! stance_phase_table_cell
+        let my_name = "Internal Rotation : Excessive"
+        
+        if (cell.btn_hip_internal_rotation.tag == 561) {
+            
+            print(cell.btn_hip_internal_rotation_excessive.tag as Any)
+            if (cell.btn_hip_internal_rotation_excessive.tag == 590) {
+                
+                cell.btn_hip_internal_rotation_excessive.setImage(UIImage(named: "check_icon"), for: .normal)
+                
+                // add
+                self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+                
+                cell.btn_hip_internal_rotation_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_internal_rotation_slight.tag = 570
+                
+                cell.btn_hip_internal_rotation_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_internal_rotation_moderate.tag = 580
+                 
+                self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Internal Rotation : Slight")
+                self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Internal Rotation : Moderate")
+                
+                cell.btn_hip_internal_rotation_excessive.tag = 591
+            } else {
+                cell.btn_hip_internal_rotation_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                
+                // remove
+                self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
+                
+                cell.btn_hip_internal_rotation_excessive.tag = 590
+            }
+        } else {
+            
+        }
+    }
 }
 
 
@@ -2519,10 +2673,10 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
             cell.btn_hip_adduction_moderate.addTarget(self, action: #selector(hip_adduction_moderate_clicked_method), for: .touchUpInside)
             cell.btn_hip_adduction_excessive.addTarget(self, action: #selector(hip_adduction_excessive_clicked_method), for: .touchUpInside)
             
-            /*cell.btn_hip_internal_rotation.addTarget(self, action: #selector(hip_internal_rotation_clicked_method), for: .touchUpInside)
+            cell.btn_hip_internal_rotation.addTarget(self, action: #selector(hip_internal_rotation_clicked_method), for: .touchUpInside)
             cell.btn_hip_internal_rotation_slight.addTarget(self, action: #selector(hip_internal_rotation_slight_clicked_method), for: .touchUpInside)
             cell.btn_hip_internal_rotation_moderate.addTarget(self, action: #selector(hip_internal_rotation_moderate_clicked_method), for: .touchUpInside)
-            cell.btn_hip_internal_rotation_excessive.addTarget(self, action: #selector(hip_internal_rotation_excessive_clicked_method), for: .touchUpInside)*/
+            cell.btn_hip_internal_rotation_excessive.addTarget(self, action: #selector(hip_internal_rotation_excessive_clicked_method), for: .touchUpInside)
             
             
             return cell
