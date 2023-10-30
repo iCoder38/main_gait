@@ -4821,7 +4821,7 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="1180"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nI3-Ea-V6x">
-                                                <rect key="frame" x="20" y="20" width="280" height="550"/>
+                                                <rect key="frame" x="20" y="20" width="280" height="630"/>
                                                 <subviews>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Id4-j5-hYQ" userLabel="Name View">
                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="70"/>
@@ -5119,70 +5119,13 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                                             <constraint firstAttribute="trailing" secondItem="W8Z-HK-dEt" secondAttribute="trailing" id="l93-y5-hfo"/>
                                                         </constraints>
                                                     </view>
-                                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDX-yD-TDd" userLabel="Onside Date View">
-                                                        <rect key="frame" x="0.0" y="400" width="280" height="70"/>
-                                                        <subviews>
-                                                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OUJ-hn-exT">
-                                                                <rect key="frame" x="0.0" y="5" width="280" height="60"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENT ASSESSMENT DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuW-OB-X1P">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="20"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="20" id="oRM-lK-RMj"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="17"/>
-                                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <textField opaque="NO" clipsSubviews="YES" tag="66" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Date" textAlignment="justified" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="PHl-7x-VxB">
-                                                                        <rect key="frame" x="0.0" y="25" width="280" height="29"/>
-                                                                        <color key="tintColor" name="App_Color"/>
-                                                                        <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="16"/>
-                                                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress"/>
-                                                                    </textField>
-                                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5w-Q2-Dcf">
-                                                                        <rect key="frame" x="0.0" y="59" width="280" height="1"/>
-                                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="1" id="ONH-Jl-R1E"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cW0-L2-onV" userLabel="Btn Stack View">
-                                                                <rect key="frame" x="250" y="32" width="25" height="25"/>
-                                                                <subviews>
-                                                                    <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNm-fm-w2o">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="25" id="WW3-GE-LaM"/>
-                                                                            <constraint firstAttribute="width" secondItem="BNm-fm-w2o" secondAttribute="height" id="dtb-X5-dqU"/>
-                                                                        </constraints>
-                                                                        <state key="normal" image="calender_icon"/>
-                                                                    </button>
-                                                                </subviews>
-                                                            </stackView>
-                                                        </subviews>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstItem="OUJ-hn-exT" firstAttribute="leading" secondItem="nDX-yD-TDd" secondAttribute="leading" id="Fd4-0J-kvA"/>
-                                                            <constraint firstAttribute="trailing" secondItem="OUJ-hn-exT" secondAttribute="trailing" id="Ruw-HK-7Kl"/>
-                                                            <constraint firstItem="cW0-L2-onV" firstAttribute="trailing" secondItem="OUJ-hn-exT" secondAttribute="trailing" constant="-5" id="bvE-0f-iHW"/>
-                                                            <constraint firstItem="OUJ-hn-exT" firstAttribute="top" secondItem="nDX-yD-TDd" secondAttribute="top" constant="5" id="njv-sj-Ygo"/>
-                                                            <constraint firstAttribute="bottom" secondItem="OUJ-hn-exT" secondAttribute="bottom" constant="5" id="tGX-SC-8ue"/>
-                                                            <constraint firstItem="cW0-L2-onV" firstAttribute="centerY" secondItem="PHl-7x-VxB" secondAttribute="centerY" id="v2N-0u-9CD"/>
-                                                        </constraints>
-                                                    </view>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUu-BV-u3p" userLabel="Walking View">
-                                                        <rect key="frame" x="0.0" y="480" width="280" height="70"/>
+                                                        <rect key="frame" x="0.0" y="400" width="280" height="70"/>
                                                         <subviews>
                                                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="UFy-a5-HM0">
                                                                 <rect key="frame" x="0.0" y="5" width="280" height="60"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WALKING AID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7i-Br-YAA">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WALKING AID USED:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7i-Br-YAA">
                                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="20"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="20" id="swh-mB-pQO"/>
@@ -5241,6 +5184,130 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                                             <constraint firstItem="mut-Mx-Pph" firstAttribute="leading" secondItem="EBn-59-9pR" secondAttribute="leading" id="k1A-HC-kCs"/>
                                                             <constraint firstItem="6Ge-UX-J7n" firstAttribute="centerY" secondItem="EBn-59-9pR" secondAttribute="centerY" id="ny3-bW-c7T"/>
                                                             <constraint firstAttribute="bottom" secondItem="UFy-a5-HM0" secondAttribute="bottom" constant="5" id="qPp-wV-ATW"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDX-yD-TDd" userLabel="Onside Date View">
+                                                        <rect key="frame" x="0.0" y="480" width="280" height="70"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OUJ-hn-exT">
+                                                                <rect key="frame" x="0.0" y="5" width="280" height="60"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENT ASSESSMENT DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuW-OB-X1P">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="20"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="20" id="oRM-lK-RMj"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="17"/>
+                                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <textField opaque="NO" clipsSubviews="YES" tag="66" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Date" textAlignment="justified" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="PHl-7x-VxB">
+                                                                        <rect key="frame" x="0.0" y="25" width="280" height="29"/>
+                                                                        <color key="tintColor" name="App_Color"/>
+                                                                        <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="16"/>
+                                                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress"/>
+                                                                    </textField>
+                                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5w-Q2-Dcf">
+                                                                        <rect key="frame" x="0.0" y="59" width="280" height="1"/>
+                                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="1" id="ONH-Jl-R1E"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cW0-L2-onV" userLabel="Btn Stack View">
+                                                                <rect key="frame" x="250" y="32" width="25" height="25"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNm-fm-w2o">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="25" id="WW3-GE-LaM"/>
+                                                                            <constraint firstAttribute="width" secondItem="BNm-fm-w2o" secondAttribute="height" id="dtb-X5-dqU"/>
+                                                                        </constraints>
+                                                                        <state key="normal" image="calender_icon"/>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="OUJ-hn-exT" firstAttribute="leading" secondItem="nDX-yD-TDd" secondAttribute="leading" id="Fd4-0J-kvA"/>
+                                                            <constraint firstAttribute="trailing" secondItem="OUJ-hn-exT" secondAttribute="trailing" id="Ruw-HK-7Kl"/>
+                                                            <constraint firstItem="cW0-L2-onV" firstAttribute="trailing" secondItem="OUJ-hn-exT" secondAttribute="trailing" constant="-5" id="bvE-0f-iHW"/>
+                                                            <constraint firstItem="OUJ-hn-exT" firstAttribute="top" secondItem="nDX-yD-TDd" secondAttribute="top" constant="5" id="njv-sj-Ygo"/>
+                                                            <constraint firstAttribute="bottom" secondItem="OUJ-hn-exT" secondAttribute="bottom" constant="5" id="tGX-SC-8ue"/>
+                                                            <constraint firstItem="cW0-L2-onV" firstAttribute="centerY" secondItem="PHl-7x-VxB" secondAttribute="centerY" id="v2N-0u-9CD"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2a8-yw-svd" userLabel="Walking View">
+                                                        <rect key="frame" x="0.0" y="560" width="280" height="70"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="weV-uF-wDC">
+                                                                <rect key="frame" x="0.0" y="5" width="280" height="60"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WALKING AID USED:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FV2-bm-ht9">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="20"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="20" id="pJ6-HB-bfu"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="17"/>
+                                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Aid" textAlignment="justified" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ayd-0d-9LO">
+                                                                        <rect key="frame" x="0.0" y="25" width="280" height="29"/>
+                                                                        <color key="tintColor" name="App_Color"/>
+                                                                        <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="16"/>
+                                                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress"/>
+                                                                    </textField>
+                                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vep-FU-Pqq">
+                                                                        <rect key="frame" x="0.0" y="59" width="280" height="1"/>
+                                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="1" id="hZ4-MA-Xsa"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hej-0W-XP4">
+                                                                <rect key="frame" x="0.0" y="30" width="280" height="29"/>
+                                                                <connections>
+                                                                    <action selector="showWalkingAidDropDown2:" destination="fng-bx-mF1" eventType="touchUpInside" id="1v0-x9-amI"/>
+                                                                </connections>
+                                                            </button>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VRh-Az-KSt" userLabel="Btn Stack View">
+                                                                <rect key="frame" x="250" y="32" width="25" height="25"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sk-no-oP7">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="2sk-no-oP7" secondAttribute="height" id="D0I-cs-LBh"/>
+                                                                            <constraint firstAttribute="width" constant="25" id="YDQ-Ge-5wz"/>
+                                                                        </constraints>
+                                                                        <state key="normal" image="down_arrow_icon"/>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="hej-0W-XP4" firstAttribute="bottom" secondItem="ayd-0d-9LO" secondAttribute="bottom" id="2Uy-zC-f8x"/>
+                                                            <constraint firstItem="hej-0W-XP4" firstAttribute="top" secondItem="ayd-0d-9LO" secondAttribute="top" id="Al8-o3-kF7"/>
+                                                            <constraint firstItem="weV-uF-wDC" firstAttribute="leading" secondItem="2a8-yw-svd" secondAttribute="leading" id="D2x-QY-Q5L"/>
+                                                            <constraint firstItem="weV-uF-wDC" firstAttribute="top" secondItem="2a8-yw-svd" secondAttribute="top" constant="5" id="FAg-Ua-Ony"/>
+                                                            <constraint firstItem="hej-0W-XP4" firstAttribute="leading" secondItem="ayd-0d-9LO" secondAttribute="leading" id="RSB-XE-aN4"/>
+                                                            <constraint firstAttribute="bottom" secondItem="weV-uF-wDC" secondAttribute="bottom" constant="5" id="VMh-dU-LPj"/>
+                                                            <constraint firstItem="hej-0W-XP4" firstAttribute="trailing" secondItem="ayd-0d-9LO" secondAttribute="trailing" id="YcV-Bv-K0c"/>
+                                                            <constraint firstAttribute="trailing" secondItem="weV-uF-wDC" secondAttribute="trailing" id="dD5-iD-ZsZ"/>
+                                                            <constraint firstItem="VRh-Az-KSt" firstAttribute="centerY" secondItem="ayd-0d-9LO" secondAttribute="centerY" id="fEi-zP-kJQ"/>
+                                                            <constraint firstItem="VRh-Az-KSt" firstAttribute="trailing" secondItem="weV-uF-wDC" secondAttribute="trailing" constant="-5" id="wPY-Lm-JN8"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -5304,6 +5371,7 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                         <outlet property="txtOnsetDate" destination="h9x-hx-7dX" id="nDg-RQ-6sw"/>
                         <outlet property="txtSide" destination="prg-2I-kxT" id="xdN-XY-8AA"/>
                         <outlet property="txtWalkingAid" destination="EBn-59-9pR" id="b0H-UY-dnn"/>
+                        <outlet property="txtWalkingAid2" destination="ayd-0d-9LO" id="1Ym-pc-YAN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mKe-73-VGU" sceneMemberID="firstResponder"/>

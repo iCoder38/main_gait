@@ -10,15 +10,78 @@ import UIKit
 
 class pdf_gait_comparision: UIView {
 
+    @IBOutlet weak var lbl_title_balance:UILabel! {
+        didSet {
+            lbl_title_balance.text = "Balance / Stability\n\n(Improvement = Greater stability)"
+        }
+    }
+    
+    @IBOutlet weak var lbl_title_equality:UILabel! {
+        didSet {
+            lbl_title_equality.text = "Equality / Symmetry\n\n(Improvement = Similar limb movements observed)"
+        }
+    }
+    
+    @IBOutlet weak var lbl_title_energy:UILabel! {
+        didSet {
+            lbl_title_energy.text = "Energy Consumption\n\n(Improvement = Lower energy used for walking)"
+        }
+    }
+    
+    @IBOutlet weak var lbl_title_pregression:UILabel! {
+        didSet {
+            lbl_title_pregression.text = "Progression\n\n(Improvement = Faster walking speed)"
+        }
+    }
+    
+    @IBOutlet weak var lbl_title_shock:UILabel! {
+        didSet {
+            lbl_title_shock.text = "Shock Absorption\n\n(Improvement = “Normative” joint movement observed during weight transfer)"
+        }
+    }
+    
+    @IBOutlet weak var lbl_title_gait:UILabel! {
+        didSet {
+            lbl_title_gait.text = "Gait Deviations\n\n(Improvement = Fewer deviations observed)"
+        }
+    }
+    
+    @IBOutlet weak var lbl_title_stepLength:UILabel! {
+        didSet {
+            lbl_title_stepLength.text = "Step Length\n\n(Improvement = Greater symmetry in step length)"
+        }
+    }
+    
+    @IBOutlet weak var lbl_title_stance_time:UILabel! {
+        didSet {
+            lbl_title_stance_time.text = "Stance Time\n\n(Improvement = Greater symmetry in stance time)"
+        }
+    }
+    
+    @IBOutlet weak var lbl_title_step_width:UILabel! {
+        didSet {
+            lbl_title_step_width.text = "Step Width\n\n(Improvement = Greater symmetry in stance time)"
+        }
+    }
+    
+    @IBOutlet weak var lbl_title_toe:UILabel! {
+        didSet {
+            lbl_title_toe.text = "Toe Angle\n\n(Improvement = “Normative” toe out angle observed)"
+        }
+    }
+    
+    @IBOutlet weak var lbl_recommendation: UILabel!
+    
     //UserInfo
     @IBOutlet weak var lblPatName: UILabel!
-    @IBOutlet weak var lblPatDob: UILabel!
-    @IBOutlet weak var lblPatDogno: UILabel!
-    @IBOutlet weak var lblPatSide: UILabel!
-    @IBOutlet weak var lblPatAssDate: UILabel!
-    @IBOutlet weak var lblPatOnsetDate: UILabel!
-    @IBOutlet weak var lblPatGoal: UILabel!
-    @IBOutlet weak var lblPatWalkerAid: UILabel!
+    @IBOutlet weak var lblPatAge: UILabel!
+    @IBOutlet weak var lblPatDiagnosis: UILabel!
+    @IBOutlet weak var lblPatObservedSide: UILabel!
+    @IBOutlet weak var lblPatPreviusAssessmentDate: UILabel!
+    @IBOutlet weak var lblPatCurrentAssessmentDate: UILabel!
+    @IBOutlet weak var lblPatWalkingAidUser: UILabel!
+    @IBOutlet weak var lblPatCurrentWalkingAidUser: UILabel!
+    
     
     @IBOutlet weak var img_balance_significant_decline:UIImageView!
     @IBOutlet weak var img_balance_moderate_decline:UIImageView!
@@ -111,20 +174,36 @@ class pdf_gait_comparision: UIView {
     // MARK: - GAIT COMPARISION -
     func setUpUserDataForGaitComparision() {
        
+        if let loadedString = UserDefaults.standard.string(forKey: "key_save_recommendation") {
+            // print(loadedString) // "quick_gait_assessment" , "key_gait_comparision"
+            
+            self.lbl_recommendation.text = String(loadedString)
+        }
+        
         let normalFont = UIFont(name: "INSERT FONT NAME", size: 15)
         let boldFont = UIFont(name: "INSERT BOLD FONT", size: 15)
         
         //lblPatName.attributedText = addBoldText(fullString: "Check again in 30 DAYS to find more friends", boldPartOfString: "30 DAYS", font: normalFont!, boldFont: boldFont)
+        /*
+         userInfoData_gait_comparision.removeAllObjects()
+         userInfoData_gait_comparision.setObject(self.txtName.text!, forKey: "pName" as NSCopying)
+         userInfoData_gait_comparision.setObject(self.txtDOB.text!, forKey: "pDOB" as NSCopying)
+         userInfoData_gait_comparision.setObject(self.txtDiagnosis.text!, forKey: "pDiagnosis" as NSCopying)
+         userInfoData_gait_comparision.setObject(self.txtSide.text!, forKey: "observedSide" as NSCopying)
+         userInfoData_gait_comparision.setObject(self.txtADate.text!, forKey: "assessmentDate" as NSCopying)
+         userInfoData_gait_comparision.setObject(self.txtOnsetDate.text!, forKey: "onsetDate" as NSCopying)
+         userInfoData_gait_comparision.setObject(self.txtWalkingAid.text!, forKey: "wakingAid" as NSCopying)
+         userInfoData_gait_comparision.setObject(self.txtWalkingAid2.text!, forKey: "wakingAid2" as NSCopying)
+         */
         
-        lblPatName.text = "Patient Id : \(userInfoData["pName"] as? String ?? "")"
-        lblPatDob.text = "Patient Age : \(userInfoData["pDOB"] as? String ?? "")"
-        lblPatDogno.text = "Diagnosis : \(userInfoData["pDiagnosis"] as? String ?? "")"
-        lblPatSide.text = "Observed Side : \(userInfoData["observedSide"] as? String ?? "")"
-        lblPatAssDate.text = "Assessment Date : \(userInfoData["assessmentDate"] as? String ?? "")"
-        lblPatOnsetDate.text = "Onset of Injury/Illness : \(userInfoData["onsetDate"] as? String ?? "")"
-        //lblPatGoal.text = "PATIENT GOAL /n\(userInfoData["pGoal"] as? String ?? "")"
-        // lblPatGoal.text = "\(userInfoData["pGoal"] as? String ?? "")"
-        lblPatWalkerAid.text = "Walking Aid : \(userInfoData["wakingAid"] as? String ?? "")"
+        self.lblPatName.text = "Patient Id : \(userInfoData_gait_comparision["pName"] as? String ?? "")"
+        self.lblPatAge.text = "Patient Age : \(userInfoData_gait_comparision["pDOB"] as? String ?? "")"
+        self.lblPatDiagnosis.text = "Diagnosis : \(userInfoData_gait_comparision["pDiagnosis"] as? String ?? "")"
+        self.lblPatObservedSide.text = "Observed Side : \(userInfoData_gait_comparision["observedSide"] as? String ?? "")"
+        self.lblPatPreviusAssessmentDate.text = "Assessment Date : \(userInfoData_gait_comparision["assessmentDate"] as? String ?? "")"
+        self.lblPatCurrentAssessmentDate.text = "Current Assessment Date : \(userInfoData_gait_comparision["onsetDate"] as? String ?? "")"
+        self.lblPatWalkingAidUser.text = "Walking Aid Used : \(userInfoData_gait_comparision["wakingAid"] as? String ?? "")"
+        self.lblPatCurrentWalkingAidUser.text = "Current Walking Aid Used : \(userInfoData_gait_comparision["wakingAid2"] as? String ?? "")"
         
         // set
         self.set_up_gait_comparision()
@@ -637,7 +716,7 @@ class pdf_gait_comparision: UIView {
         }
         
         //
-        self.check_and_set_step_width(type: "toe")
+        self.check_and_set_toe_angle(type: "toe")
     }
     
     

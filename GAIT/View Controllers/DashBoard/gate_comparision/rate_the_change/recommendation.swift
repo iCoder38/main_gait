@@ -24,7 +24,8 @@ class recommendation: BaseViewController {
     }
     
     @IBAction func tapContinueBtn(_ sender : UIButton){
-       
+        UserDefaults.standard.set(self.txt_view.text, forKey: "key_save_recommendation")
+         
         let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "CongratulationsTwoId") as! CongratulationsTwo
         self.navigationController?.pushViewController(pushVC, animated: true)
         

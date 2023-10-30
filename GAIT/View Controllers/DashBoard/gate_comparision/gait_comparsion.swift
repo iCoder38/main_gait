@@ -16,18 +16,17 @@ class gait_comparsion: BaseViewController {
     
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtDiagnosis: UITextField!
-    @IBOutlet weak var txtGoal: UITextField!
-    @IBOutlet weak var txtViewGoal: UITextView!{
-        didSet{
-            txtViewGoal.layer.cornerRadius = 5
-            txtViewGoal.layer.borderWidth = 1
-            txtViewGoal.layer.borderColor = UIColor.appLightGrayColors().cgColor
-        }
-    }
-    
+     
     @IBOutlet weak var txtWalkingAid: UITextField!{
         didSet{
             txtWalkingAid.tag = 88
+            txtWalkingAid.isUserInteractionEnabled = false
+        }
+    }
+    
+    @IBOutlet weak var txtWalkingAid2: UITextField!{
+        didSet{
+            txtWalkingAid.tag = 99
             txtWalkingAid.isUserInteractionEnabled = false
         }
     }
@@ -65,6 +64,9 @@ class gait_comparsion: BaseViewController {
     let sideDropDown = DropDown()
     let walkingDropDown = DropDown()
     
+    let sideDropDown2 = DropDown()
+    let walkingDropDown2 = DropDown()
+    
     //MARK: - Life Cycle Func -
     
     override func viewDidLoad() {
@@ -99,10 +101,10 @@ class gait_comparsion: BaseViewController {
             Alert.showTostMessage(message: validationString.patientAsseDate, delay: 2.0, controller: self)
         }else if self.txtOnsetDate.text?.isEmpty == true{
             Alert.showTostMessage(message: validationString.patientOnsetDate, delay: 2.0, controller: self)
-        }else if self.txtViewGoal.text?.isEmpty == true {
+        } /*else if self.txtViewGoal.text?.isEmpty == true {
             //|| self.txtViewGoal.text == "Enter Goal"{
             Alert.showTostMessage(message: validationString.patientGoal, delay: 2.0, controller: self)
-        } else {
+        } */ else {
             return true
         }
         return false
@@ -118,6 +120,7 @@ class gait_comparsion: BaseViewController {
         userInfoData_gait_comparision.setObject(self.txtOnsetDate.text!, forKey: "onsetDate" as NSCopying)
         // userInfoData.setObject(" \(self.txtViewGoal.text!)", forKey: "pGoal" as NSCopying)
         userInfoData_gait_comparision.setObject(self.txtWalkingAid.text!, forKey: "wakingAid" as NSCopying)
+        userInfoData_gait_comparision.setObject(self.txtWalkingAid2.text!, forKey: "wakingAid2" as NSCopying)
     }
     
     @objc func datePickerFromValueChanged(sender:UIDatePicker) {
@@ -183,6 +186,22 @@ class gait_comparsion: BaseViewController {
         // Will set a custom width instead of the anchor view width
         walkingDropDown.width = 200
         walkingDropDown.show()
+    }
+    
+    @IBAction func showWalkingAidDropDown2(_ sender : UIButton){
+
+        walkingDropDown2.anchorView = sender
+        walkingDropDown2.bottomOffset = CGPoint(x: 0, y: sender.bounds.height)
+        walkingDropDown2.dataSource = ["None", "Cane", "Crutches", "Walker", "Orthosis", "Prosthesis", "Other" ]
+        // Action triggered on selection
+        walkingDropDown2.selectionAction = { [unowned self] (index: Int, item: String) in
+            print("Selected item: \(item) at index: \(index)")
+            self.txtWalkingAid2.text = item
+        }
+        // Will set a custom width instead of the anchor view width
+        walkingDropDown2.width = 200
+        walkingDropDown2.show()
+        
     }
 
     
