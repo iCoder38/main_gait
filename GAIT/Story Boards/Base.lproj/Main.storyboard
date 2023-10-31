@@ -5950,7 +5950,7 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="94b-GK-aZm">
-                                <rect key="frame" x="0.0" y="20" width="320" height="458"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="490"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -6042,30 +6042,17 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                     <action selector="tapContinueBtn:" destination="vdN-zs-g8d" eventType="touchUpInside" id="9tQ-cR-PhY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overall, the patient's / client's gait since the previuos assessment shows." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lrg-xz-Jl7">
-                                <rect key="frame" x="0.0" y="477" width="325" height="41"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="OMH-Zj-oHn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="14"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zol-P6-dlJ"/>
                         <color key="backgroundColor" name="App_Dark_Nav_Color"/>
                         <constraints>
-                            <constraint firstItem="sng-bk-VXU" firstAttribute="top" secondItem="94b-GK-aZm" secondAttribute="bottom" constant="40" id="1Qe-eN-GIh"/>
-                            <constraint firstItem="Lrg-xz-Jl7" firstAttribute="leading" secondItem="Zol-P6-dlJ" secondAttribute="leading" id="258-gL-R7T"/>
+                            <constraint firstItem="sng-bk-VXU" firstAttribute="top" secondItem="94b-GK-aZm" secondAttribute="bottom" constant="8" id="1Qe-eN-GIh"/>
                             <constraint firstItem="94b-GK-aZm" firstAttribute="top" secondItem="Zol-P6-dlJ" secondAttribute="top" id="75l-oL-gIl"/>
                             <constraint firstItem="Zol-P6-dlJ" firstAttribute="trailing" secondItem="sng-bk-VXU" secondAttribute="trailing" id="9VS-Wc-D1a"/>
-                            <constraint firstItem="Lrg-xz-Jl7" firstAttribute="trailing" secondItem="Zol-P6-dlJ" secondAttribute="trailing" constant="5" id="As9-zm-WIP"/>
                             <constraint firstItem="Zol-P6-dlJ" firstAttribute="bottom" secondItem="sng-bk-VXU" secondAttribute="bottom" id="J8H-S1-Yrd"/>
                             <constraint firstItem="94b-GK-aZm" firstAttribute="leading" secondItem="Zol-P6-dlJ" secondAttribute="leading" id="ayv-jm-nVq"/>
                             <constraint firstItem="94b-GK-aZm" firstAttribute="trailing" secondItem="Zol-P6-dlJ" secondAttribute="trailing" id="mX6-5v-3nS"/>
                             <constraint firstItem="sng-bk-VXU" firstAttribute="leading" secondItem="rTk-h7-WkB" secondAttribute="leading" id="mmd-3J-7hw"/>
-                            <constraint firstItem="sng-bk-VXU" firstAttribute="top" secondItem="Lrg-xz-Jl7" secondAttribute="bottom" id="ntn-zK-UtO"/>
                         </constraints>
                     </view>
                     <connections>

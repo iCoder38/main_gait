@@ -152,6 +152,14 @@ class pdf_gait_comparision: UIView {
     @IBOutlet weak var img_toe_angle_moderate_significant:UIImageView!
     @IBOutlet weak var img_toe_angle_significant_improvement:UIImageView!
     
+    // 11 : over all
+    @IBOutlet weak var img_overall_significant_decline:UIImageView!
+    @IBOutlet weak var img_overall_moderate_decline:UIImageView!
+    @IBOutlet weak var img_overall_no_change:UIImageView!
+    @IBOutlet weak var img_overall_moderate_significant:UIImageView!
+    @IBOutlet weak var img_overall_significant_improvement:UIImageView!
+    
+    
     var check_icon_image = UIImage(named: "check_icon")
     var uncheck_icon_image = UIImage(named: "uncheck_icon")
     
@@ -772,5 +780,62 @@ class pdf_gait_comparision: UIView {
             self.img_toe_angle_significant_improvement.image = uncheck_icon_image
             
         }
+        
+        //
+        self.check_and_set_overall(type: "overall")
     }
+    
+    // # 11 : overall
+    @objc func check_and_set_overall(type:String) {
+        if (select_rate_the_change[type] as? String) == "Significant Improvement" {
+            
+            self.img_overall_significant_decline.image = uncheck_icon_image
+            self.img_overall_moderate_decline.image = uncheck_icon_image
+            self.img_overall_no_change.image = uncheck_icon_image
+            self.img_overall_moderate_significant.image = uncheck_icon_image
+            self.img_overall_significant_improvement.image = check_icon_image
+            
+        } else if (select_rate_the_change[type] as? String) == "Moderate Improvement" {
+            
+            self.img_overall_significant_decline.image = uncheck_icon_image
+            self.img_overall_moderate_decline.image = uncheck_icon_image
+            self.img_overall_no_change.image = uncheck_icon_image
+            self.img_overall_moderate_significant.image = check_icon_image
+            self.img_overall_significant_improvement.image = uncheck_icon_image
+            
+        } else if (select_rate_the_change[type] as? String) == "No Change" {
+            
+            self.img_overall_significant_decline.image = uncheck_icon_image
+            self.img_overall_moderate_decline.image = uncheck_icon_image
+            self.img_overall_no_change.image = check_icon_image
+            self.img_overall_moderate_significant.image = uncheck_icon_image
+            self.img_overall_significant_improvement.image = uncheck_icon_image
+            
+        } else if (select_rate_the_change[type] as? String) == "Moderate Decline" {
+            
+            self.img_overall_significant_decline.image = uncheck_icon_image
+            self.img_overall_moderate_decline.image = check_icon_image
+            self.img_overall_no_change.image = uncheck_icon_image
+            self.img_overall_moderate_significant.image = uncheck_icon_image
+            self.img_overall_significant_improvement.image = uncheck_icon_image
+            
+        } else if (select_rate_the_change[type] as? String) == "Significant Decline" {
+            
+            self.img_overall_significant_decline.image = check_icon_image
+            self.img_overall_moderate_decline.image = uncheck_icon_image
+            self.img_overall_no_change.image = uncheck_icon_image
+            self.img_overall_moderate_significant.image = uncheck_icon_image
+            self.img_overall_significant_improvement.image = uncheck_icon_image
+            
+        } else {
+            
+            self.img_overall_significant_decline.image = uncheck_icon_image
+            self.img_overall_moderate_decline.image = uncheck_icon_image
+            self.img_overall_no_change.image = uncheck_icon_image
+            self.img_overall_moderate_significant.image = uncheck_icon_image
+            self.img_overall_significant_improvement.image = uncheck_icon_image
+            
+        }
+    }
+    
 }

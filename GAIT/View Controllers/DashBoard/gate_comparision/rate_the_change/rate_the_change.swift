@@ -95,7 +95,14 @@ class rate_the_change: BaseViewController {
                                    RowData.init(title: "Moderate Decline"),
                                    RowData.init(title: "Significant Decline"))
         
-        return [section1, section2, section3, section4, section5, section6, section7, section8, section9, section10]
+        let section11 = SectionData(title: "Overall, the patient's / client's gait since the previuos assessment shows.",
+                                   data: RowData.init(title: "Significant Improvement"),
+                                   RowData.init(title: "Moderate Improvement"),
+                                   RowData.init(title: "No Change"),
+                                   RowData.init(title: "Moderate Decline"),
+                                   RowData.init(title: "Significant Decline"))
+        
+        return [section1, section2, section3, section4, section5, section6, section7, section8, section9, section10, section11]
     }()
     
     var selectedSection : [Int] = [0,1,2,3,4]
@@ -142,8 +149,10 @@ class rate_the_change: BaseViewController {
                  stepLengthArr,
                  stanceArr,
                  stepWidthArr,
-                 toeArr
+                 toeArr,
+                 overallArr
             ) = ([String](),
+                 [String](),
                  [String](),
                  [String](),
                  [String](),
@@ -187,7 +196,9 @@ class rate_the_change: BaseViewController {
                 case 9:
                     let selectedStr = additionalListData[data.section].data[data.row].rowTitle
                     toeArr.append(selectedStr)
-                    
+                case 10:
+                    let selectedStr = additionalListData[data.section].data[data.row].rowTitle
+                    overallArr.append(selectedStr)
                 default:
                     break
                 }
@@ -202,6 +213,7 @@ class rate_the_change: BaseViewController {
             select_rate_the_change.setObject(stanceArr.joined(separator:", "), forKey: "stance" as NSCopying)
             select_rate_the_change.setObject(stepWidthArr.joined(separator:", "), forKey: "stepWidth" as NSCopying)
             select_rate_the_change.setObject(toeArr.joined(separator:", "), forKey: "toe" as NSCopying)
+            select_rate_the_change.setObject(overallArr.joined(separator:", "), forKey: "overall" as NSCopying)
             print(select_rate_the_change)
         }
     }
@@ -515,17 +527,32 @@ extension rate_the_change: UITableViewDelegate {
         
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 60))
         
+        
         let label = UILabel()
+        
         label.frame = CGRect.init(x: 0, y: 0, width: headerView.frame.width, height: 60)
         label.text = additionalListData[section].title
-        label.font = .systemFont(ofSize: 22)
+        
+        if (section == 10) {
+            label.font = .systemFont(ofSize: 18)
+        } else {
+            label.font = .systemFont(ofSize: 22)
+        }
+        
         label.textColor = .white
         label.backgroundColor = .clear
         label.textAlignment = .center
         label.backgroundColor = header_color
+        label.numberOfLines = 0
         
         let label2 = UILabel()
-        label2.frame = CGRect.init(x: 0, y: 60, width: headerView.frame.width, height: 60)
+        
+        if (section == 10) {
+            label2.frame = CGRect.init(x: 0, y: 60, width: headerView.frame.width, height: 0)
+        } else {
+            label2.frame = CGRect.init(x: 0, y: 60, width: headerView.frame.width, height: 60)
+        }
+        
         if (section == 0) {
             label2.text = "(Improvement = Greater stability)"
         } else if (section == 1) {
@@ -564,7 +591,12 @@ extension rate_the_change: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 120
+        if (section == 10) {
+            return 60
+        } else {
+            return 120
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, willDeselectRowAt indexPath: IndexPath) -> IndexPath? {
