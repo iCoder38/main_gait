@@ -122,13 +122,13 @@ class pdf_syance_phase: UIView {
         //lblPatName.attributedText = addBoldText(fullString: "Check again in 30 DAYS to find more friends", boldPartOfString: "30 DAYS", font: normalFont!, boldFont: boldFont)
         
         lblPatName.text = "Patient Id : \(userInfoData["pName"] as? String ?? "")"
-        lblPatDob.text = "Patient Age : \(userInfoData["pDOB"] as? String ?? "")"
-        lblPatDogno.text = "Diagnosis : \(userInfoData["pDiagnosis"] as? String ?? "")"
+        // lblPatDob.text = "Patient Age : \(userInfoData["pDOB"] as? String ?? "")"
+        // lblPatDogno.text = "Diagnosis : \(userInfoData["pDiagnosis"] as? String ?? "")"
         lblPatSide.text = "Observed Side : \(userInfoData["observedSide"] as? String ?? "")"
-        lblPatAssDate.text = "Assessment Date : \(userInfoData["assessmentDate"] as? String ?? "")"
-        lblPatOnsetDate.text = "Onset of Injury/Illness : \(userInfoData["onsetDate"] as? String ?? "")"
+        // lblPatAssDate.text = "Assessment Date : \(userInfoData["assessmentDate"] as? String ?? "")"
+        // lblPatOnsetDate.text = "Onset of Injury/Illness : \(userInfoData["onsetDate"] as? String ?? "")"
         //lblPatGoal.text = "PATIENT GOAL /n\(userInfoData["pGoal"] as? String ?? "")"
-        lblPatGoal.text = "\(userInfoData["pGoal"] as? String ?? "")"
+        // lblPatGoal.text = "\(userInfoData["pGoal"] as? String ?? "")"
         lblPatWalkerAid.text = "Walking Aid : \(userInfoData["wakingAid"] as? String ?? "")"
     }
     

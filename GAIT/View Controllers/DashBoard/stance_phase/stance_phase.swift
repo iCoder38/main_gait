@@ -2707,8 +2707,8 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
             return 568
         } else if (indexPath.row == 2) {
             return 524
-        } else if (indexPath.row == 5) {
-            return 304
+        } else if (indexPath.row == 4) {
+            return 336
         } else if (indexPath.row == 3) {
             return 620
         } else {
@@ -2726,6 +2726,7 @@ class stance_phase_table_cell: UITableViewCell {
     @IBOutlet  weak var btn_foot_farefoot:UIButton! {
         didSet {
             btn_foot_farefoot.tag = 10
+            
         }
     }
     @IBOutlet  weak var btn_foot_footFlat:UIButton! {
@@ -3037,37 +3038,37 @@ class stance_phase_table_cell: UITableViewCell {
     
     @IBOutlet weak var lbl_foot_deviation:UILabel! {
         didSet {
-            lbl_foot_deviation.backgroundColor = header_color
+            // lbl_foot_deviation.backgroundColor = app_ora
         }
     }
     
     @IBOutlet weak var lbl_ankle_deviation:UILabel! {
         didSet {
-            lbl_ankle_deviation.backgroundColor = header_color
+            // lbl_ankle_deviation.backgroundColor = header_color
         }
     }
     
     @IBOutlet weak var lbl_knee_deviation:UILabel! {
         didSet {
-            lbl_knee_deviation.backgroundColor = header_color
+            // lbl_knee_deviation.backgroundColor = header_color
         }
     }
     
     @IBOutlet weak var lbl_hip_deviation:UILabel! {
         didSet {
-            lbl_hip_deviation.backgroundColor = header_color
+            // lbl_hip_deviation.backgroundColor = header_color
         }
     }
     
     @IBOutlet weak var lbl_pelvis_deviation:UILabel! {
         didSet {
-            lbl_pelvis_deviation.backgroundColor = header_color
+            // lbl_pelvis_deviation.backgroundColor = header_color
         }
     }
     
     @IBOutlet weak var lbl_trunk_deviation:UILabel! {
         didSet {
-            lbl_trunk_deviation.backgroundColor = header_color
+            // lbl_trunk_deviation.backgroundColor = header_color
         }
     }
     
@@ -3196,7 +3197,7 @@ class stance_phase_table_cell: UITableViewCell {
         didSet {
             btn_save_and_continue.layer.cornerRadius = 20
             btn_save_and_continue.clipsToBounds = true
-            btn_save_and_continue.backgroundColor = .systemGreen
+            // btn_save_and_continue.backgroundColor = .systemGreen
             btn_save_and_continue.setTitleColor(.white, for: .normal)
         }
     }

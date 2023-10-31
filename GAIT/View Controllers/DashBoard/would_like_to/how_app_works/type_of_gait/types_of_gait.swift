@@ -138,7 +138,7 @@ extension types_of_gait:UITableViewDelegate,UITableViewDataSource{
                 backgroundView.backgroundColor = .clear
                 cell.selectedBackgroundView = backgroundView
                 
-                cell.lbl_title.text = "Apraxic gait (or gait apraxia) is an interesting condition because patients exhibit gait deviations, despite having no sensory loss, no motor weakness or cerebellar dysfunction. The typical gait pattern includes: difficulty with gait initiation, short shuffling and hesitating steps, reduced cadence and a relatively wider base of support. These patients are unable to perform coordinated lower limb movements in a weight bearing position, but are able to move both limbs \nin an alternative walking pattern or cycling pattern in a supine position. Even in a sitting position, gait apraxia patients are able to perform tasks such as writing on the floor with the foot. However, in a weight bearing position, their ability to perform walking-related movements gets impaired. Their gait pattern does not improve with visual or auditory cues, unlike other conditions, such as Parkinson’s disease."
+                cell.lbl_title.text = "Apraxic gait (or gait apraxia) is an interesting condition because patients exhibit gait deviations, despite having no sensory loss, no motor weakness or cerebellar dysfunction. The typical gait pattern includes: difficulty with gait initiation, short shuffling and hesitating steps, reduced speed and a relatively wider base of support. These patients are unable to perform coordinated lower limb movements in a weight bearing position, but are able to move both limbs \nin an alternative walking pattern or cycling pattern in a supine position. Even in a sitting position, gait apraxia patients are able to perform tasks such as writing on the floor with the foot. However, in a weight bearing position, their ability to perform walking-related movements gets impaired. Their gait pattern does not improve with visual or auditory cues, unlike other conditions, such as Parkinson’s disease."
                 
                 return cell
                 
@@ -480,7 +480,7 @@ extension types_of_gait:UITableViewDelegate,UITableViewDataSource{
                 backgroundView.backgroundColor = .clear
                 cell.selectedBackgroundView = backgroundView
                 
-                cell.lbl_title.text = "Senile means “of or belonging to old age or aged persons”. Senile apraxic gait refers to the condition of gait apraxia in elderly patients. These elderly patients have apraxic gait which results in: difficulty with gait initiation, short shuffling and hesitating steps, reduced cadence and a relatively wider base of support, as described earlier."
+                cell.lbl_title.text = "Senile means “of or belonging to old age or aged persons”. Senile apraxic gait refers to the condition of gait apraxia in elderly patients. These elderly patients have apraxic gait which results in: difficulty with gait initiation, short shuffling and hesitating steps, reduced speed and a relatively wider base of support, as described earlier."
                 
                 return cell
                 
