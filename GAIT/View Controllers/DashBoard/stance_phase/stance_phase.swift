@@ -933,9 +933,9 @@ class stance_phase: UIViewController {
             }
             
             // SUB TYPE ALSO DE-SELECT
-            cell.btn_inversion_main_Slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
-            cell.btn_inversion_main_Moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
-            cell.btn_inversion_main_Excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_inversion_main_Slight.setImage(UIImage(named: "unchecked"), for: .normal)
+            cell.btn_inversion_main_Moderate.setImage(UIImage(named: "unchecked"), for: .normal)
+            cell.btn_inversion_main_Excessive.setImage(UIImage(named: "unchecked"), for: .normal)
             
             cell.btn_inversion_main_Slight.tag = 230
             cell.btn_inversion_main_Moderate.tag = 240
@@ -956,7 +956,7 @@ class stance_phase: UIViewController {
             print(cell.btn_inversion_main_Slight.tag as Any)
             if (cell.btn_inversion_main_Slight.tag == 230) {
                 
-                cell.btn_inversion_main_Slight.setImage(UIImage(named: "check_icon"), for: .normal)
+                cell.btn_inversion_main_Slight.setImage(UIImage(named: "checked"), for: .normal)
                 
                 // add
                 self.add_data_in_array(dynamic_mut_arr: arr_ankle, my_name: my_name)
@@ -997,12 +997,12 @@ class stance_phase: UIViewController {
                 }
                 
                 // uncheck other
-                cell.btn_inversion_main_Moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
-                cell.btn_inversion_main_Excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_inversion_main_Moderate.setImage(UIImage(named: "unchecked"), for: .normal)
+                cell.btn_inversion_main_Excessive.setImage(UIImage(named: "unchecked"), for: .normal)
                 
                 cell.btn_inversion_main_Slight.tag = 231
             } else {
-                cell.btn_inversion_main_Slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_inversion_main_Slight.setImage(UIImage(named: "unchecked"), for: .normal)
                 
                 // remove
                 self.remove_data_in_array(dynamic_mut_arr: arr_ankle, my_name: my_name)
@@ -1025,7 +1025,7 @@ class stance_phase: UIViewController {
         print(cell.btn_inversion_main_Moderate.tag as Any)
         if (cell.btn_inversion_main_Moderate.tag == 240) {
             
-            cell.btn_inversion_main_Moderate.setImage(UIImage(named: "check_icon"), for: .normal)
+            cell.btn_inversion_main_Moderate.setImage(UIImage(named: "checked"), for: .normal)
             
             // add
             self.add_data_in_array(dynamic_mut_arr: arr_ankle, my_name: my_name)
@@ -1066,12 +1066,12 @@ class stance_phase: UIViewController {
             }
             
             // uncheck other
-            cell.btn_inversion_main_Slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
-            cell.btn_inversion_main_Excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_inversion_main_Slight.setImage(UIImage(named: "unchecked"), for: .normal)
+            cell.btn_inversion_main_Excessive.setImage(UIImage(named: "unchecked"), for: .normal)
             
             cell.btn_inversion_main_Moderate.tag = 241
         } else {
-            cell.btn_inversion_main_Moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_inversion_main_Moderate.setImage(UIImage(named: "unchecked"), for: .normal)
             
             // remove
             self.remove_data_in_array(dynamic_mut_arr: arr_ankle, my_name: my_name)
@@ -1092,7 +1092,7 @@ class stance_phase: UIViewController {
             print(cell.btn_inversion_main_Excessive.tag as Any)
             if (cell.btn_inversion_main_Excessive.tag == 250) {
                 
-                cell.btn_inversion_main_Excessive.setImage(UIImage(named: "check_icon"), for: .normal)
+                cell.btn_inversion_main_Excessive.setImage(UIImage(named: "checked"), for: .normal)
                 
                 // add
                 self.add_data_in_array(dynamic_mut_arr: arr_ankle, my_name: my_name)
@@ -1137,12 +1137,12 @@ class stance_phase: UIViewController {
                 
                 
                 // uncheck other
-                cell.btn_inversion_main_Slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
-                cell.btn_inversion_main_Moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_inversion_main_Slight.setImage(UIImage(named: "unchecked"), for: .normal)
+                cell.btn_inversion_main_Moderate.setImage(UIImage(named: "unchecked"), for: .normal)
                 
                 cell.btn_inversion_main_Excessive.tag = 251
             } else {
-                cell.btn_inversion_main_Excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_inversion_main_Excessive.setImage(UIImage(named: "unchecked"), for: .normal)
                 
                 // remove
                 self.remove_data_in_array(dynamic_mut_arr: arr_ankle, my_name: my_name)
@@ -1170,9 +1170,9 @@ class stance_phase: UIViewController {
             cell.btn_ankle_eversion_main.setImage(UIImage(named: "uncheck_icon"), for: .normal)
             
             // SUB TYPE ALSO DE-SELECT
-            cell.btn_ankle_eversion_main_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
-            cell.btn_ankle_eversion_main_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
-            cell.btn_ankle_eversion_main_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_ankle_eversion_main_slight.setImage(UIImage(named: "unchecked"), for: .normal)
+            cell.btn_ankle_eversion_main_moderate.setImage(UIImage(named: "unchecked"), for: .normal)
+            cell.btn_ankle_eversion_main_excessive.setImage(UIImage(named: "unchecked"), for: .normal)
             
             cell.btn_ankle_eversion_main_slight.tag = 270
             cell.btn_ankle_eversion_main_moderate.tag = 280
@@ -1196,7 +1196,7 @@ class stance_phase: UIViewController {
             print(cell.btn_ankle_eversion_main_slight.tag as Any)
             if (cell.btn_ankle_eversion_main_slight.tag == 270) {
                 
-                cell.btn_ankle_eversion_main_slight.setImage(UIImage(named: "check_icon"), for: .normal)
+                cell.btn_ankle_eversion_main_slight.setImage(UIImage(named: "checked"), for: .normal)
                 
                 // add
                 self.add_data_in_array(dynamic_mut_arr: arr_ankle, my_name: my_name)
@@ -1204,10 +1204,10 @@ class stance_phase: UIViewController {
                 
                 
                 // remove other two
-                cell.btn_ankle_eversion_main_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_ankle_eversion_main_moderate.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_ankle_eversion_main_moderate.tag = 280
                 
-                cell.btn_ankle_eversion_main_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_ankle_eversion_main_excessive.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_ankle_eversion_main_excessive.tag = 290
                 
                 self.remove_data_in_array(dynamic_mut_arr: arr_ankle, my_name: "Eversion : Moderate")
@@ -1215,7 +1215,7 @@ class stance_phase: UIViewController {
                 
                 cell.btn_ankle_eversion_main_slight.tag = 271
             } else {
-                cell.btn_ankle_eversion_main_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_ankle_eversion_main_slight.setImage(UIImage(named: "unchecked"), for: .normal)
                 
                 // remove
                 self.remove_data_in_array(dynamic_mut_arr: arr_ankle, my_name: my_name)
@@ -1237,15 +1237,15 @@ class stance_phase: UIViewController {
             print(cell.btn_ankle_eversion_main_moderate.tag as Any)
             if (cell.btn_ankle_eversion_main_moderate.tag == 280) {
                 
-                cell.btn_ankle_eversion_main_moderate.setImage(UIImage(named: "check_icon"), for: .normal)
+                cell.btn_ankle_eversion_main_moderate.setImage(UIImage(named: "checked"), for: .normal)
                 
                 // add
                 self.add_data_in_array(dynamic_mut_arr: arr_ankle, my_name: my_name)
                 
                 // remove two
-                cell.btn_ankle_eversion_main_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_ankle_eversion_main_slight.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_ankle_eversion_main_slight.tag = 270
-                cell.btn_ankle_eversion_main_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_ankle_eversion_main_excessive.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_ankle_eversion_main_excessive.tag = 290
                 
                 self.remove_data_in_array(dynamic_mut_arr: arr_ankle, my_name: "Eversion : Slight")
@@ -1253,7 +1253,7 @@ class stance_phase: UIViewController {
                 
                 cell.btn_ankle_eversion_main_moderate.tag = 281
             } else {
-                cell.btn_ankle_eversion_main_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_ankle_eversion_main_moderate.setImage(UIImage(named: "unchecked"), for: .normal)
                 
                 // remove
                 self.remove_data_in_array(dynamic_mut_arr: arr_ankle, my_name: my_name)
@@ -1276,15 +1276,15 @@ class stance_phase: UIViewController {
             print(cell.btn_ankle_eversion_main_excessive.tag as Any)
             if (cell.btn_ankle_eversion_main_excessive.tag == 290) {
                 
-                cell.btn_ankle_eversion_main_excessive.setImage(UIImage(named: "check_icon"), for: .normal)
+                cell.btn_ankle_eversion_main_excessive.setImage(UIImage(named: "checked"), for: .normal)
                 
                 // add
                 self.add_data_in_array(dynamic_mut_arr: arr_ankle, my_name: my_name)
                 
                 // remove two
-                cell.btn_ankle_eversion_main_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_ankle_eversion_main_slight.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_ankle_eversion_main_slight.tag = 270
-                cell.btn_ankle_eversion_main_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_ankle_eversion_main_moderate.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_ankle_eversion_main_moderate.tag = 280
                 
                 self.remove_data_in_array(dynamic_mut_arr: arr_ankle, my_name: "Eversion : Slight")
@@ -1292,7 +1292,7 @@ class stance_phase: UIViewController {
                 
                 cell.btn_ankle_eversion_main_excessive.tag = 291
             } else {
-                cell.btn_ankle_eversion_main_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_ankle_eversion_main_excessive.setImage(UIImage(named: "unchecked"), for: .normal)
                 
                 // remove
                 self.remove_data_in_array(dynamic_mut_arr: arr_ankle, my_name: my_name)
@@ -1453,9 +1453,9 @@ class stance_phase: UIViewController {
             cell.btn_knee_varus_main.setImage(UIImage(named: "uncheck_icon"), for: .normal)
             
             // uncheck sub category
-            cell.btn_knee_varus_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
-            cell.btn_knee_varus_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
-            cell.btn_knee_varus_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_knee_varus_slight.setImage(UIImage(named: "unchecked"), for: .normal)
+            cell.btn_knee_varus_moderate.setImage(UIImage(named: "unchecked"), for: .normal)
+            cell.btn_knee_varus_excessive.setImage(UIImage(named: "unchecked"), for: .normal)
             
             cell.btn_knee_varus_slight.tag = 360
             cell.btn_knee_varus_moderate.tag = 370
@@ -1478,15 +1478,15 @@ class stance_phase: UIViewController {
             print(cell.btn_knee_varus_slight.tag as Any)
             if (cell.btn_knee_varus_slight.tag == 360) {
                 
-                cell.btn_knee_varus_slight.setImage(UIImage(named: "check_icon"), for: .normal)
+                cell.btn_knee_varus_slight.setImage(UIImage(named: "checked"), for: .normal)
                 
                 // add
                 self.add_data_in_array(dynamic_mut_arr: arr_knee, my_name: my_name)
                 
                 // remove two
-                cell.btn_knee_varus_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_knee_varus_moderate.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_knee_varus_moderate.tag = 370
-                cell.btn_knee_varus_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_knee_varus_excessive.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_knee_varus_excessive.tag = 380
                 
                 self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Varus : Moderate")
@@ -1494,7 +1494,7 @@ class stance_phase: UIViewController {
                 
                 cell.btn_knee_varus_slight.tag = 361
             } else {
-                cell.btn_knee_varus_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_knee_varus_slight.setImage(UIImage(named: "unchecked"), for: .normal)
                 
                 // remove
                 self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: my_name)
@@ -1516,15 +1516,15 @@ class stance_phase: UIViewController {
         print(cell.btn_knee_varus_moderate.tag as Any)
         if (cell.btn_knee_varus_moderate.tag == 370) {
             
-            cell.btn_knee_varus_moderate.setImage(UIImage(named: "check_icon"), for: .normal)
+            cell.btn_knee_varus_moderate.setImage(UIImage(named: "checked"), for: .normal)
             
             // add
             self.add_data_in_array(dynamic_mut_arr: arr_knee, my_name: my_name)
             
             // remove two
-            cell.btn_knee_varus_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_knee_varus_slight.setImage(UIImage(named: "unchecked"), for: .normal)
             cell.btn_knee_varus_slight.tag = 360
-            cell.btn_knee_varus_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_knee_varus_excessive.setImage(UIImage(named: "unchecked"), for: .normal)
             cell.btn_knee_varus_excessive.tag = 380
             
             self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Varus : Slight")
@@ -1532,7 +1532,7 @@ class stance_phase: UIViewController {
             
             cell.btn_knee_varus_moderate.tag = 371
         } else {
-            cell.btn_knee_varus_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_knee_varus_moderate.setImage(UIImage(named: "unchecked"), for: .normal)
             
             // remove
             self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: my_name)
@@ -1553,15 +1553,15 @@ class stance_phase: UIViewController {
             print(cell.btn_knee_varus_excessive.tag as Any)
             if (cell.btn_knee_varus_excessive.tag == 380) {
                 
-                cell.btn_knee_varus_excessive.setImage(UIImage(named: "check_icon"), for: .normal)
+                cell.btn_knee_varus_excessive.setImage(UIImage(named: "checked"), for: .normal)
                 
                 // add
                 self.add_data_in_array(dynamic_mut_arr: arr_knee, my_name: my_name)
                 
                 // remove two
-                cell.btn_knee_varus_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_knee_varus_slight.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_knee_varus_slight.tag = 360
-                cell.btn_knee_varus_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_knee_varus_moderate.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_knee_varus_moderate.tag = 370
                 
                 self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Varus : Slight")
@@ -1569,7 +1569,7 @@ class stance_phase: UIViewController {
                 
                 cell.btn_knee_varus_excessive.tag = 381
             } else {
-                cell.btn_knee_varus_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_knee_varus_excessive.setImage(UIImage(named: "unchecked"), for: .normal)
                 
                 // remove
                 self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: my_name)
@@ -1602,11 +1602,11 @@ class stance_phase: UIViewController {
             cell.btn_knee_valgus_main.setImage(UIImage(named: "uncheck_icon"), for: .normal)
             
             // remove all
-            cell.btn_knee_valgus_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_knee_valgus_slight.setImage(UIImage(named: "unchecked"), for: .normal)
             cell.btn_knee_valgus_slight.tag = 400
-            cell.btn_knee_valgus_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_knee_valgus_moderate.setImage(UIImage(named: "unchecked"), for: .normal)
             cell.btn_knee_valgus_moderate.tag = 410
-            cell.btn_knee_valgus_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_knee_valgus_excessive.setImage(UIImage(named: "unchecked"), for: .normal)
             cell.btn_knee_valgus_excessive.tag = 420
             
             self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Valgus : Slight")
@@ -1626,15 +1626,15 @@ class stance_phase: UIViewController {
         print(cell.btn_knee_valgus_slight.tag as Any)
         if (cell.btn_knee_valgus_slight.tag == 400) {
             
-            cell.btn_knee_valgus_slight.setImage(UIImage(named: "check_icon"), for: .normal)
+            cell.btn_knee_valgus_slight.setImage(UIImage(named: "checked"), for: .normal)
             
             // add
             self.add_data_in_array(dynamic_mut_arr: arr_knee, my_name: my_name)
             
             // remove two
-            cell.btn_knee_valgus_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_knee_valgus_moderate.setImage(UIImage(named: "unchecked"), for: .normal)
             cell.btn_knee_valgus_moderate.tag = 410
-            cell.btn_knee_valgus_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_knee_valgus_excessive.setImage(UIImage(named: "unchecked"), for: .normal)
             cell.btn_knee_valgus_excessive.tag = 420
             
             self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Valgus : Moderate")
@@ -1642,7 +1642,7 @@ class stance_phase: UIViewController {
             
             cell.btn_knee_valgus_slight.tag = 401
         } else {
-            cell.btn_knee_valgus_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_knee_valgus_slight.setImage(UIImage(named: "unchecked"), for: .normal)
             
             // remove
             self.remove_data_in_array(dynamic_mut_arr:arr_knee, my_name: my_name)
@@ -1663,15 +1663,15 @@ class stance_phase: UIViewController {
         print(cell.btn_knee_valgus_moderate.tag as Any)
         if (cell.btn_knee_valgus_moderate.tag == 410) {
             
-            cell.btn_knee_valgus_moderate.setImage(UIImage(named: "check_icon"), for: .normal)
+            cell.btn_knee_valgus_moderate.setImage(UIImage(named: "checked"), for: .normal)
             
             // add
             self.add_data_in_array(dynamic_mut_arr: arr_knee, my_name: my_name)
             
             // remove two
-            cell.btn_knee_valgus_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_knee_valgus_slight.setImage(UIImage(named: "unchecked"), for: .normal)
             cell.btn_knee_valgus_slight.tag = 400
-            cell.btn_knee_valgus_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_knee_valgus_excessive.setImage(UIImage(named: "unchecked"), for: .normal)
             cell.btn_knee_valgus_excessive.tag = 420
             
             self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Valgus : Slight")
@@ -1679,7 +1679,7 @@ class stance_phase: UIViewController {
             
             cell.btn_knee_valgus_moderate.tag = 411
         } else {
-            cell.btn_knee_valgus_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_knee_valgus_moderate.setImage(UIImage(named: "unchecked"), for: .normal)
             
             // remove
             self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: my_name)
@@ -1700,15 +1700,15 @@ class stance_phase: UIViewController {
             print(cell.btn_knee_valgus_excessive.tag as Any)
             if (cell.btn_knee_valgus_excessive.tag == 420) {
                 
-                cell.btn_knee_valgus_excessive.setImage(UIImage(named: "check_icon"), for: .normal)
+                cell.btn_knee_valgus_excessive.setImage(UIImage(named: "checked"), for: .normal)
                 
                 // add
                 self.add_data_in_array(dynamic_mut_arr: arr_knee, my_name: my_name)
                 
                 // remove two
-                cell.btn_knee_valgus_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_knee_valgus_slight.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_knee_valgus_slight.tag = 400
-                cell.btn_knee_valgus_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_knee_valgus_moderate.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_knee_valgus_moderate.tag = 410
                 
                 self.remove_data_in_array(dynamic_mut_arr: arr_knee, my_name: "Valgus : Slight")
@@ -1716,7 +1716,7 @@ class stance_phase: UIViewController {
                 
                 cell.btn_knee_valgus_excessive.tag = 421
             } else {
-                cell.btn_knee_valgus_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_knee_valgus_excessive.setImage(UIImage(named: "unchecked"), for: .normal)
                 
                 // remove
                 self.remove_data_in_array(dynamic_mut_arr:arr_knee, my_name: my_name)
@@ -2001,13 +2001,13 @@ class stance_phase: UIViewController {
             // remove
             self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
             
-            cell.btn_hip_abduction_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_hip_abduction_slight.setImage(UIImage(named: "unchecked"), for: .normal)
             cell.btn_hip_abduction_slight.tag = 460
             
-            cell.btn_hip_abduction_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_hip_abduction_moderate.setImage(UIImage(named: "unchecked"), for: .normal)
             cell.btn_hip_abduction_moderate.tag = 470
             
-            cell.btn_hip_abduction_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_hip_abduction_excessive.setImage(UIImage(named: "unchecked"), for: .normal)
             cell.btn_hip_abduction_excessive.tag = 600
             
             self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Abduction : Slight")
@@ -2027,15 +2027,15 @@ class stance_phase: UIViewController {
             print(cell.btn_hip_abduction_slight.tag as Any)
             if (cell.btn_hip_abduction_slight.tag == 490) {
                 
-                cell.btn_hip_abduction_slight.setImage(UIImage(named: "check_icon"), for: .normal)
+                cell.btn_hip_abduction_slight.setImage(UIImage(named: "checked"), for: .normal)
                 
                 // add
                 self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
                 
-                cell.btn_hip_abduction_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_abduction_moderate.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_hip_abduction_moderate.tag = 500
                 
-                cell.btn_hip_abduction_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_abduction_excessive.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_hip_abduction_excessive.tag = 510
                 
                 self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Abduction : Moderate")
@@ -2043,7 +2043,7 @@ class stance_phase: UIViewController {
                 
                 cell.btn_hip_abduction_slight.tag = 491
             } else {
-                cell.btn_hip_abduction_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_abduction_slight.setImage(UIImage(named: "unchecked"), for: .normal)
                 
                 // remove
                 self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
@@ -2065,16 +2065,16 @@ class stance_phase: UIViewController {
         print(cell.btn_hip_abduction_moderate.tag as Any)
         if (cell.btn_hip_abduction_moderate.tag == 500) {
             
-            cell.btn_hip_abduction_moderate.setImage(UIImage(named: "check_icon"), for: .normal)
+            cell.btn_hip_abduction_moderate.setImage(UIImage(named: "checked"), for: .normal)
             
             // add
             // add
             self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
             
-            cell.btn_hip_abduction_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_hip_abduction_excessive.setImage(UIImage(named: "unchecked"), for: .normal)
             cell.btn_hip_abduction_excessive.tag = 510
             
-            cell.btn_hip_abduction_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_hip_abduction_slight.setImage(UIImage(named: "unchecked"), for: .normal)
             cell.btn_hip_abduction_slight.tag = 490
             
             self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Abduction : Slight")
@@ -2082,7 +2082,7 @@ class stance_phase: UIViewController {
             
             cell.btn_hip_abduction_moderate.tag = 501
         } else {
-            cell.btn_hip_abduction_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_hip_abduction_moderate.setImage(UIImage(named: "unchecked"), for: .normal)
             
             // remove
             self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
@@ -2103,16 +2103,16 @@ class stance_phase: UIViewController {
             print(cell.btn_hip_abduction_excessive.tag as Any)
             if (cell.btn_hip_abduction_excessive.tag == 510) {
                 
-                cell.btn_hip_abduction_excessive.setImage(UIImage(named: "check_icon"), for: .normal)
+                cell.btn_hip_abduction_excessive.setImage(UIImage(named: "checked"), for: .normal)
                 
                 // add
                 // add
                 self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
                 
-                cell.btn_hip_abduction_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_abduction_moderate.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_hip_abduction_moderate.tag = 470
                 
-                cell.btn_hip_abduction_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_abduction_slight.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_hip_abduction_slight.tag = 490
                 
                 self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Abduction : Slight")
@@ -2120,7 +2120,7 @@ class stance_phase: UIViewController {
                 
                 cell.btn_hip_abduction_excessive.tag = 511
             } else {
-                cell.btn_hip_abduction_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_abduction_excessive.setImage(UIImage(named: "unchecked"), for: .normal)
                 
                 // remove
                 self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
@@ -2162,13 +2162,13 @@ class stance_phase: UIViewController {
             self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
             
             
-            cell.btn_hip_adduction_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_hip_adduction_slight.setImage(UIImage(named: "unchecked"), for: .normal)
             cell.btn_hip_adduction_slight.tag = 530
              
-            cell.btn_hip_adduction_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_hip_adduction_excessive.setImage(UIImage(named: "unchecked"), for: .normal)
             cell.btn_hip_adduction_excessive.tag = 550
             
-            cell.btn_hip_adduction_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_hip_adduction_moderate.setImage(UIImage(named: "unchecked"), for: .normal)
             cell.btn_hip_adduction_moderate.tag = 540
             
             self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Adduction : Slight")
@@ -2189,15 +2189,15 @@ class stance_phase: UIViewController {
             print(cell.btn_hip_adduction_slight.tag as Any)
             if (cell.btn_hip_adduction_slight.tag == 530) {
                 
-                cell.btn_hip_adduction_slight.setImage(UIImage(named: "check_icon"), for: .normal)
+                cell.btn_hip_adduction_slight.setImage(UIImage(named: "checked"), for: .normal)
                 
                 // add
                 self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
                    
-                cell.btn_hip_adduction_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_adduction_excessive.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_hip_adduction_excessive.tag = 550
                 
-                cell.btn_hip_adduction_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_adduction_moderate.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_hip_adduction_moderate.tag = 540
                 
                 self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Adduction : Moderate")
@@ -2206,7 +2206,7 @@ class stance_phase: UIViewController {
                 
                 cell.btn_hip_adduction_slight.tag = 531
             } else {
-                cell.btn_hip_adduction_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_adduction_slight.setImage(UIImage(named: "unchecked"), for: .normal)
                 
                 // remove
                 self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
@@ -2228,17 +2228,17 @@ class stance_phase: UIViewController {
             print(cell.btn_hip_adduction_moderate.tag as Any)
             if (cell.btn_hip_adduction_moderate.tag == 540) {
                 
-                cell.btn_hip_adduction_moderate.setImage(UIImage(named: "check_icon"), for: .normal)
+                cell.btn_hip_adduction_moderate.setImage(UIImage(named: "checked"), for: .normal)
                 
                 // add
                 // add
                 self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
                 
                 
-                cell.btn_hip_adduction_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_adduction_slight.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_hip_adduction_slight.tag = 530
                  
-                cell.btn_hip_adduction_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_adduction_excessive.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_hip_adduction_excessive.tag = 550
                 
                 self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Adduction : Slight")
@@ -2247,7 +2247,7 @@ class stance_phase: UIViewController {
                 
                 cell.btn_hip_adduction_moderate.tag = 541
             } else {
-                cell.btn_hip_adduction_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_adduction_moderate.setImage(UIImage(named: "unchecked"), for: .normal)
                 
                 // remove
                 self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
@@ -2268,15 +2268,15 @@ class stance_phase: UIViewController {
             print(cell.btn_hip_adduction_excessive.tag as Any)
             if (cell.btn_hip_adduction_excessive.tag == 550) {
                 
-                cell.btn_hip_adduction_excessive.setImage(UIImage(named: "check_icon"), for: .normal)
+                cell.btn_hip_adduction_excessive.setImage(UIImage(named: "checked"), for: .normal)
                 
                 // add
                 self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
                 
-                cell.btn_hip_adduction_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_adduction_slight.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_hip_adduction_slight.tag = 530
                 
-                cell.btn_hip_adduction_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_adduction_moderate.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_hip_adduction_moderate.tag = 540
                  
                 self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Adduction : Slight")
@@ -2284,7 +2284,7 @@ class stance_phase: UIViewController {
                 
                 cell.btn_hip_adduction_excessive.tag = 551
             } else {
-                cell.btn_hip_adduction_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_adduction_excessive.setImage(UIImage(named: "unchecked"), for: .normal)
                 
                 // remove
                 self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
@@ -2325,13 +2325,13 @@ class stance_phase: UIViewController {
             self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
             
             
-            cell.btn_hip_internal_rotation_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_hip_internal_rotation_slight.setImage(UIImage(named: "unchecked"), for: .normal)
             cell.btn_hip_internal_rotation_slight.tag = 530
              
-            cell.btn_hip_internal_rotation_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_hip_internal_rotation_excessive.setImage(UIImage(named: "unchecked"), for: .normal)
             cell.btn_hip_internal_rotation_excessive.tag = 550
             
-            cell.btn_hip_internal_rotation_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+            cell.btn_hip_internal_rotation_moderate.setImage(UIImage(named: "unchecked"), for: .normal)
             cell.btn_hip_internal_rotation_moderate.tag = 540
             
             self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Internal Rotation : Slight")
@@ -2352,15 +2352,15 @@ class stance_phase: UIViewController {
             print(cell.btn_hip_internal_rotation_slight.tag as Any)
             if (cell.btn_hip_internal_rotation_slight.tag == 570) {
                 
-                cell.btn_hip_internal_rotation_slight.setImage(UIImage(named: "check_icon"), for: .normal)
+                cell.btn_hip_internal_rotation_slight.setImage(UIImage(named: "checked"), for: .normal)
                 
                 // add
                 self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
                    
-                cell.btn_hip_internal_rotation_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_internal_rotation_excessive.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_hip_internal_rotation_excessive.tag = 590
                 
-                cell.btn_hip_internal_rotation_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_internal_rotation_moderate.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_hip_internal_rotation_moderate.tag = 580
                 
                 self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Internal Rotation : Moderate")
@@ -2369,7 +2369,7 @@ class stance_phase: UIViewController {
                 
                 cell.btn_hip_internal_rotation_slight.tag = 571
             } else {
-                cell.btn_hip_internal_rotation_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_internal_rotation_slight.setImage(UIImage(named: "unchecked"), for: .normal)
                 
                 // remove
                 self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
@@ -2391,17 +2391,17 @@ class stance_phase: UIViewController {
             print(cell.btn_hip_internal_rotation_moderate.tag as Any)
             if (cell.btn_hip_internal_rotation_moderate.tag == 580) {
                 
-                cell.btn_hip_internal_rotation_moderate.setImage(UIImage(named: "check_icon"), for: .normal)
+                cell.btn_hip_internal_rotation_moderate.setImage(UIImage(named: "checked"), for: .normal)
                 
                 // add
                 // add
                 self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
                 
                 
-                cell.btn_hip_internal_rotation_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_internal_rotation_slight.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_hip_internal_rotation_slight.tag = 570
                  
-                cell.btn_hip_internal_rotation_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_internal_rotation_excessive.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_hip_internal_rotation_excessive.tag = 590
                 
                 self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Internal Rotation : Slight")
@@ -2410,7 +2410,7 @@ class stance_phase: UIViewController {
                 
                 cell.btn_hip_internal_rotation_moderate.tag = 581
             } else {
-                cell.btn_hip_internal_rotation_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_internal_rotation_moderate.setImage(UIImage(named: "unchecked"), for: .normal)
                 
                 // remove
                 self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
@@ -2431,15 +2431,15 @@ class stance_phase: UIViewController {
             print(cell.btn_hip_internal_rotation_excessive.tag as Any)
             if (cell.btn_hip_internal_rotation_excessive.tag == 590) {
                 
-                cell.btn_hip_internal_rotation_excessive.setImage(UIImage(named: "check_icon"), for: .normal)
+                cell.btn_hip_internal_rotation_excessive.setImage(UIImage(named: "checked"), for: .normal)
                 
                 // add
                 self.add_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
                 
-                cell.btn_hip_internal_rotation_slight.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_internal_rotation_slight.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_hip_internal_rotation_slight.tag = 570
                 
-                cell.btn_hip_internal_rotation_moderate.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_internal_rotation_moderate.setImage(UIImage(named: "unchecked"), for: .normal)
                 cell.btn_hip_internal_rotation_moderate.tag = 580
                  
                 self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: "Internal Rotation : Slight")
@@ -2447,7 +2447,7 @@ class stance_phase: UIViewController {
                 
                 cell.btn_hip_internal_rotation_excessive.tag = 591
             } else {
-                cell.btn_hip_internal_rotation_excessive.setImage(UIImage(named: "uncheck_icon"), for: .normal)
+                cell.btn_hip_internal_rotation_excessive.setImage(UIImage(named: "unchecked"), for: .normal)
                 
                 // remove
                 self.remove_data_in_array(dynamic_mut_arr: arr_hip, my_name: my_name)
@@ -2482,6 +2482,34 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
             backgroundView.backgroundColor = .clear
             cell.selectedBackgroundView = backgroundView
             
+            /*
+             @IBOutlet  weak var :UILabel!
+             @IBOutlet  weak var :UILabel!
+             @IBOutlet  weak var :UILabel!
+             @IBOutlet  weak var :UILabel!
+             @IBOutlet  weak var :UILabel!
+             */
+            
+            let tap1 = UITapGestureRecognizer(target: self, action: #selector(fareFootClickMethod))
+            cell.lbl_foot_farefoot.isUserInteractionEnabled = true
+            cell.lbl_foot_farefoot.addGestureRecognizer(tap1)
+            
+            let tap2 = UITapGestureRecognizer(target: self, action: #selector(footFlatClickMethod))
+            cell.lbl_foot_footFlat.isUserInteractionEnabled = true
+            cell.lbl_foot_footFlat.addGestureRecognizer(tap2)
+            
+            let tap3 = UITapGestureRecognizer(target: self, action: #selector(footSlapClickMethod))
+            cell.lbl_foot_footSlap.isUserInteractionEnabled = true
+            cell.lbl_foot_footSlap.addGestureRecognizer(tap3)
+            
+            let tap4 = UITapGestureRecognizer(target: self, action: #selector(earlyHeelRiseClickMethod))
+            cell.lbl_foot_earlyHeelRise.isUserInteractionEnabled = true
+            cell.lbl_foot_earlyHeelRise.addGestureRecognizer(tap4)
+            
+            let tap5 = UITapGestureRecognizer(target: self, action: #selector(delayedHeelRiseClickMethod))
+            cell.lbl_foot_delayedHeelRise.isUserInteractionEnabled = true
+            cell.lbl_foot_delayedHeelRise.addGestureRecognizer(tap5)
+            
             cell.btn_foot_farefoot.addTarget(self, action: #selector(fareFootClickMethod), for: .touchUpInside)
             cell.btn_foot_footFlat.addTarget(self, action: #selector(footFlatClickMethod), for: .touchUpInside)
             cell.btn_foot_footSlap.addTarget(self, action: #selector(footSlapClickMethod), for: .touchUpInside)
@@ -2499,6 +2527,44 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
             backgroundView.backgroundColor = .clear
             cell.selectedBackgroundView = backgroundView
           
+            /*
+             @IBOutlet weak var lbl_pelvis_insufficient_forward:UILabel!
+             @IBOutlet weak var lbl_pelvis_excessive_forward:UILabel!
+             @IBOutlet weak var lbl_pelvis_insufficient_backward:UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             */
+            
+            let tap1 = UITapGestureRecognizer(target: self, action: #selector(insufficientForwardClickMethod))
+            cell.lbl_pelvis_insufficient_forward.isUserInteractionEnabled = true
+            cell.lbl_pelvis_insufficient_forward.addGestureRecognizer(tap1)
+            
+            let tap2 = UITapGestureRecognizer(target: self, action: #selector(excessive_forward_ClickMethod))
+            cell.lbl_pelvis_excessive_forward.isUserInteractionEnabled = true
+            cell.lbl_pelvis_excessive_forward.addGestureRecognizer(tap2)
+            
+            let tap3 = UITapGestureRecognizer(target: self, action: #selector(insufficient_backward_ClickMethod))
+            cell.lbl_pelvis_insufficient_backward.isUserInteractionEnabled = true
+            cell.lbl_pelvis_insufficient_backward.addGestureRecognizer(tap3)
+            
+            let tap4 = UITapGestureRecognizer(target: self, action: #selector(excessive_backward_ClickMethod))
+            cell.lbl_pelvis_excessive_backward.isUserInteractionEnabled = true
+            cell.lbl_pelvis_excessive_backward.addGestureRecognizer(tap4)
+            
+            let tap5 = UITapGestureRecognizer(target: self, action: #selector(contralateral_dropClickMethod))
+            cell.lbl_pelvis_contralateral_drop.isUserInteractionEnabled = true
+            cell.lbl_pelvis_contralateral_drop.addGestureRecognizer(tap5)
+            
+            let tap6 = UITapGestureRecognizer(target: self, action: #selector(excessive_anteriorClickMethod))
+            cell.lbl_pelvis_excessive_anterior.isUserInteractionEnabled = true
+            cell.lbl_pelvis_excessive_anterior.addGestureRecognizer(tap6)
+            
+            let tap7 = UITapGestureRecognizer(target: self, action: #selector(restricted_pelvicClickMethod))
+            cell.lbl_pelvis_restricted_pelvic.isUserInteractionEnabled = true
+            cell.lbl_pelvis_restricted_pelvic.addGestureRecognizer(tap7)
+            
             cell.btn_pelvis_insufficient_forward.addTarget(self, action: #selector(insufficientForwardClickMethod), for: .touchUpInside)
             cell.btn_pelvis_excessive_forward.addTarget(self, action: #selector(excessive_forward_ClickMethod), for: .touchUpInside)
             cell.btn_pelvis_insufficient_backward.addTarget(self, action: #selector(insufficient_backward_ClickMethod), for: .touchUpInside)
@@ -2525,6 +2591,34 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
               Left Lean
               Restricted Trunk Rotation
              */
+            
+            /*
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             */
+            let tap1 = UITapGestureRecognizer(target: self, action: #selector(trunk_forward_ClickMethod))
+            cell.lbl_trunk_forward.isUserInteractionEnabled = true
+            cell.lbl_trunk_forward.addGestureRecognizer(tap1)
+            
+            let tap2 = UITapGestureRecognizer(target: self, action: #selector(trunk_backward_ClickMethod))
+            cell.lbl_trunk_backward.isUserInteractionEnabled = true
+            cell.lbl_trunk_backward.addGestureRecognizer(tap2)
+            
+            let tap3 = UITapGestureRecognizer(target: self, action: #selector(trunk_right_ClickMethod))
+            cell.lbl_trunk_right.isUserInteractionEnabled = true
+            cell.lbl_trunk_right.addGestureRecognizer(tap3)
+            
+            let tap4 = UITapGestureRecognizer(target: self, action: #selector(trunk_left_ClickMethod))
+            cell.lbl_trunk_left.isUserInteractionEnabled = true
+            cell.lbl_trunk_left.addGestureRecognizer(tap4)
+            
+            let tap5 = UITapGestureRecognizer(target: self, action: #selector(trunk_restricted_ClickMethod))
+            cell.lbl_trunk_restricted.isUserInteractionEnabled = true
+            cell.lbl_trunk_restricted.addGestureRecognizer(tap5)
+             
             cell.btn_trunk_forward.addTarget(self, action: #selector(trunk_forward_ClickMethod), for: .touchUpInside)
             cell.btn_trunk_backward.addTarget(self, action: #selector(trunk_backward_ClickMethod), for: .touchUpInside)
             cell.btn_trunk_right.addTarget(self, action: #selector(trunk_right_ClickMethod), for: .touchUpInside)
@@ -2567,6 +2661,79 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
              @IBOutlet weak var btn_ankle_eversion_main_excessive:UIButton!
              */
             
+            /*
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             */
+            
+            let tap1 = UITapGestureRecognizer(target: self, action: #selector(ankle_excessive_plant_clicked_method))
+            cell.lbl_ankle_excessive_plant.isUserInteractionEnabled = true
+            cell.lbl_ankle_excessive_plant.addGestureRecognizer(tap1)
+            
+            let tap2 = UITapGestureRecognizer(target: self, action: #selector(ankle_insufficient_plant_clicked_method))
+            cell.lbl_ankle_insufficient_plant.isUserInteractionEnabled = true
+            cell.lbl_ankle_insufficient_plant.addGestureRecognizer(tap2)
+            
+            let tap3 = UITapGestureRecognizer(target: self, action: #selector(ankle_excessive_dorsirflexion_clicked_method))
+            cell.lbl_ankle_excessive_dorsirflexion.isUserInteractionEnabled = true
+            cell.lbl_ankle_excessive_dorsirflexion.addGestureRecognizer(tap3)
+            
+            let tap4 = UITapGestureRecognizer(target: self, action: #selector(ankle_insufficient_dorsirflextion_clicked_method))
+            cell.lbl_ankle_insufficient_dorsirflextion.isUserInteractionEnabled = true
+            cell.lbl_ankle_insufficient_dorsirflextion.addGestureRecognizer(tap4)
+            
+            let tap5 = UITapGestureRecognizer(target: self, action: #selector(ankle_inversion_main_clicked_method))
+            cell.lbl_inversion_main.isUserInteractionEnabled = true
+            cell.lbl_inversion_main.addGestureRecognizer(tap5)
+            
+            let tap6 = UITapGestureRecognizer(target: self, action: #selector(ankle_inversion_main_Slight_clicked_method))
+            cell.lbl_inversion_main_Slight.isUserInteractionEnabled = true
+            cell.lbl_inversion_main_Slight.addGestureRecognizer(tap6)
+            
+            let tap7 = UITapGestureRecognizer(target: self, action: #selector(ankle_inversion_main_Moderate_clicked_method))
+            cell.lbl_inversion_main_Moderate.isUserInteractionEnabled = true
+            cell.lbl_inversion_main_Moderate.addGestureRecognizer(tap7)
+            
+            let tap8 = UITapGestureRecognizer(target: self, action: #selector(ankle_inversion_main_Excessive_clicked_method))
+            cell.lbl_inversion_main_Excessive.isUserInteractionEnabled = true
+            cell.lbl_inversion_main_Excessive.addGestureRecognizer(tap8)
+            
+            let tap9 = UITapGestureRecognizer(target: self, action: #selector(ankle_eversion_main_clicked_method))
+            cell.lbl_ankle_eversion_main.isUserInteractionEnabled = true
+            cell.lbl_ankle_eversion_main.addGestureRecognizer(tap9)
+            
+            let tap10 = UITapGestureRecognizer(target: self, action: #selector(ankle_eversion_main_slight_clicked_method))
+            cell.lbl_ankle_eversion_main_slight.isUserInteractionEnabled = true
+            cell.lbl_ankle_eversion_main_slight.addGestureRecognizer(tap10)
+            
+            let tap11 = UITapGestureRecognizer(target: self, action: #selector(ankle_eversion_main_moderate_clicked_method))
+            cell.lbl_ankle_eversion_main_moderate.isUserInteractionEnabled = true
+            cell.lbl_ankle_eversion_main_moderate.addGestureRecognizer(tap11)
+            
+            let tap12 = UITapGestureRecognizer(target: self, action: #selector(ankle_eversion_main_excessive_clicked_method))
+            cell.lbl_ankle_eversion_main_excessive.isUserInteractionEnabled = true
+            cell.lbl_ankle_eversion_main_excessive.addGestureRecognizer(tap12)
+            
+            let tap13 = UITapGestureRecognizer(target: self, action: #selector(ankle_stiff_clicked_method))
+            cell.lbl_ankle_stiff.isUserInteractionEnabled = true
+            cell.lbl_ankle_stiff.addGestureRecognizer(tap13)
+            
+            let tap14 = UITapGestureRecognizer(target: self, action: #selector(ankle_unstable_clicked_method))
+            cell.lbl_ankle_unstable.isUserInteractionEnabled = true
+            cell.lbl_ankle_unstable.addGestureRecognizer(tap14)
+            
             cell.btn_ankle_excessive_plant.addTarget(self, action: #selector(ankle_excessive_plant_clicked_method), for: .touchUpInside)
             cell.btn_ankle_insufficient_plant.addTarget(self, action: #selector(ankle_insufficient_plant_clicked_method), for: .touchUpInside)
             cell.btn_ankle_excessive_dorsirflexion.addTarget(self, action: #selector(ankle_excessive_dorsirflexion_clicked_method), for: .touchUpInside)
@@ -2600,20 +2767,96 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
             backgroundView.backgroundColor = .clear
             cell.selectedBackgroundView = backgroundView
           
+            /*
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             
+             
+             
+             */
+            
+            let tap1 = UITapGestureRecognizer(target: self, action: #selector(knee_excessive_flexion_clicked_method))
+            cell.lbl_knee_excessive_flexion.isUserInteractionEnabled = true
+            cell.lbl_knee_excessive_flexion.addGestureRecognizer(tap1)
+            
+            let tap2 = UITapGestureRecognizer(target: self, action: #selector(knee_insufficient_flexion_clicked_method))
+            cell.lbl_knee_insufficient_flexion.isUserInteractionEnabled = true
+            cell.lbl_knee_insufficient_flexion.addGestureRecognizer(tap2)
+            
+            let tap3 = UITapGestureRecognizer(target: self, action: #selector(knee_hyperextension_clicked_method))
+            cell.lbl_knee_hyperextension.isUserInteractionEnabled = true
+            cell.lbl_knee_hyperextension.addGestureRecognizer(tap3)
             
             cell.btn_knee_excessive_flexion.addTarget(self, action: #selector(knee_excessive_flexion_clicked_method), for: .touchUpInside)
             cell.btn_knee_insufficient_flexion.addTarget(self, action: #selector(knee_insufficient_flexion_clicked_method), for: .touchUpInside)
             cell.btn_knee_hyperextension.addTarget(self, action: #selector(knee_hyperextension_clicked_method), for: .touchUpInside)
+            
+//            @IBOutlet weak var :UILabel!
+//            @IBOutlet weak var :UILabel!
+//            @IBOutlet weak var :UILabel!
+//            @IBOutlet weak var :UILabel!
+            
+            let tap4 = UITapGestureRecognizer(target: self, action: #selector(knee_varus_main_clicked_method))
+            cell.lbl_knee_varus_main.isUserInteractionEnabled = true
+            cell.lbl_knee_varus_main.addGestureRecognizer(tap4)
+            
+            let tap5 = UITapGestureRecognizer(target: self, action: #selector(knee_varus_slight_clicked_method))
+            cell.lbl_knee_varus_slight.isUserInteractionEnabled = true
+            cell.lbl_knee_varus_slight.addGestureRecognizer(tap5)
+            
+            let tap6 = UITapGestureRecognizer(target: self, action: #selector(knee_varus_moderate_clicked_method))
+            cell.lbl_knee_varus_moderate.isUserInteractionEnabled = true
+            cell.lbl_knee_varus_moderate.addGestureRecognizer(tap6)
+            
+            let tap7 = UITapGestureRecognizer(target: self, action: #selector(knee_varus_excessive_clicked_method))
+            cell.lbl_knee_varus_excessive.isUserInteractionEnabled = true
+            cell.lbl_knee_varus_excessive.addGestureRecognizer(tap7)
             
             cell.btn_knee_varus_main.addTarget(self, action: #selector(knee_varus_main_clicked_method), for: .touchUpInside)
             cell.btn_knee_varus_slight.addTarget(self, action: #selector(knee_varus_slight_clicked_method), for: .touchUpInside)
             cell.btn_knee_varus_moderate.addTarget(self, action: #selector(knee_varus_moderate_clicked_method), for: .touchUpInside)
             cell.btn_knee_varus_excessive.addTarget(self, action: #selector(knee_varus_excessive_clicked_method), for: .touchUpInside)
             
+            /*
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             */
+            
+            let tap8 = UITapGestureRecognizer(target: self, action: #selector(knee_valgus_main_clicked_method))
+            cell.lbl_knee_valgus_main.isUserInteractionEnabled = true
+            cell.lbl_knee_valgus_main.addGestureRecognizer(tap8)
+            
+            let tap9 = UITapGestureRecognizer(target: self, action: #selector(knee_valgus_slight_clicked_method))
+            cell.lbl_knee_valgus_slight.isUserInteractionEnabled = true
+            cell.lbl_knee_valgus_slight.addGestureRecognizer(tap9)
+            
+            let tap10 = UITapGestureRecognizer(target: self, action: #selector(knee_valgus_moderate_clicked_method))
+            cell.lbl_knee_valgus_moderate.isUserInteractionEnabled = true
+            cell.lbl_knee_valgus_moderate.addGestureRecognizer(tap10)
+            
+            let tap11 = UITapGestureRecognizer(target: self, action: #selector(knee_valgus_excessive_clicked_method))
+            cell.lbl_knee_valgus_excessive.isUserInteractionEnabled = true
+            cell.lbl_knee_valgus_excessive.addGestureRecognizer(tap11)
+            
             cell.btn_knee_valgus_main.addTarget(self, action: #selector(knee_valgus_main_clicked_method), for: .touchUpInside)
             cell.btn_knee_valgus_slight.addTarget(self, action: #selector(knee_valgus_slight_clicked_method), for: .touchUpInside)
             cell.btn_knee_valgus_moderate.addTarget(self, action: #selector(knee_valgus_moderate_clicked_method), for: .touchUpInside)
             cell.btn_knee_valgus_excessive.addTarget(self, action: #selector(knee_valgus_excessive_clicked_method), for: .touchUpInside)
+            
+            /*
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             */
+            let tap12 = UITapGestureRecognizer(target: self, action: #selector(knee_stiff_clicked_method))
+            cell.lbl_knee_stiff.isUserInteractionEnabled = true
+            cell.lbl_knee_stiff.addGestureRecognizer(tap12)
+            
+            let tap13 = UITapGestureRecognizer(target: self, action: #selector(knee_unstable_clicked_method))
+            cell.lbl_knee_unstable.isUserInteractionEnabled = true
+            cell.lbl_knee_unstable.addGestureRecognizer(tap13)
             
             cell.btn_knee_stiff.addTarget(self, action: #selector(knee_stiff_clicked_method), for: .touchUpInside)
             cell.btn_knee_unstable.addTarget(self, action: #selector(knee_unstable_clicked_method), for: .touchUpInside)
@@ -2722,6 +2965,12 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
 
 class stance_phase_table_cell: UITableViewCell {
 
+    @IBOutlet  weak var lbl_foot_farefoot:UILabel!
+    @IBOutlet  weak var lbl_foot_footFlat:UILabel!
+    @IBOutlet  weak var lbl_foot_footSlap:UILabel!
+    @IBOutlet  weak var lbl_foot_earlyHeelRise:UILabel!
+    @IBOutlet  weak var lbl_foot_delayedHeelRise:UILabel!
+    
     // foot deviation
     @IBOutlet  weak var btn_foot_farefoot:UIButton! {
         didSet {
@@ -2775,6 +3024,14 @@ class stance_phase_table_cell: UITableViewCell {
       Restricted Pelvic Movement
      */
     // pelvis deviation
+    @IBOutlet weak var lbl_pelvis_insufficient_forward:UILabel!
+    @IBOutlet weak var lbl_pelvis_excessive_forward:UILabel!
+    @IBOutlet weak var lbl_pelvis_insufficient_backward:UILabel!
+    @IBOutlet weak var lbl_pelvis_excessive_backward:UILabel!
+    @IBOutlet weak var lbl_pelvis_contralateral_drop:UILabel!
+    @IBOutlet weak var lbl_pelvis_excessive_anterior:UILabel!
+    @IBOutlet weak var lbl_pelvis_restricted_pelvic:UILabel!
+    
     @IBOutlet weak var btn_pelvis_insufficient_forward:UIButton! {
         didSet {
             btn_pelvis_insufficient_forward.tag = 60
@@ -2818,6 +3075,13 @@ class stance_phase_table_cell: UITableViewCell {
       Left Lean
       Restricted Trunk Rotation
      */
+    
+    @IBOutlet weak var lbl_trunk_forward:UILabel!
+    @IBOutlet weak var lbl_trunk_backward:UILabel!
+    @IBOutlet weak var lbl_trunk_right:UILabel!
+    @IBOutlet weak var lbl_trunk_left:UILabel!
+    @IBOutlet weak var lbl_trunk_restricted:UILabel!
+    
     // trunk deviation
     @IBOutlet weak var btn_trunk_forward:UIButton! {
         didSet {
@@ -2865,6 +3129,22 @@ class stance_phase_table_cell: UITableViewCell {
       Stiff ankle
       Unstable Ankle
      */
+    
+    @IBOutlet weak var lbl_ankle_excessive_plant:UILabel!
+    @IBOutlet weak var lbl_ankle_insufficient_plant:UILabel!
+    @IBOutlet weak var lbl_ankle_excessive_dorsirflexion:UILabel!
+    @IBOutlet weak var lbl_ankle_insufficient_dorsirflextion:UILabel!
+    @IBOutlet weak var lbl_inversion_main:UILabel!
+    @IBOutlet weak var lbl_inversion_main_Slight:UILabel!
+    @IBOutlet weak var lbl_inversion_main_Moderate:UILabel!
+    @IBOutlet weak var lbl_inversion_main_Excessive:UILabel!
+    @IBOutlet weak var lbl_ankle_eversion_main:UILabel!
+    @IBOutlet weak var lbl_ankle_eversion_main_slight:UILabel!
+    @IBOutlet weak var lbl_ankle_eversion_main_moderate:UILabel!
+    @IBOutlet weak var lbl_ankle_eversion_main_excessive:UILabel!
+    @IBOutlet weak var lbl_ankle_stiff:UILabel!
+    @IBOutlet weak var lbl_ankle_unstable:UILabel!
+    
     // trunk deviation
     @IBOutlet weak var btn_ankle_excessive_plant:UIButton! {
         didSet {
@@ -2953,6 +3233,19 @@ class stance_phase_table_cell: UITableViewCell {
     }
     
     
+    @IBOutlet weak var lbl_knee_excessive_flexion:UILabel!
+    @IBOutlet weak var lbl_knee_insufficient_flexion:UILabel!
+    @IBOutlet weak var lbl_knee_hyperextension:UILabel!
+    @IBOutlet weak var lbl_knee_varus_main:UILabel!
+    @IBOutlet weak var lbl_knee_varus_slight:UILabel!
+    @IBOutlet weak var lbl_knee_varus_moderate:UILabel!
+    @IBOutlet weak var lbl_knee_varus_excessive:UILabel!
+    @IBOutlet weak var lbl_knee_valgus_main:UILabel!
+    @IBOutlet weak var lbl_knee_valgus_slight:UILabel!
+    @IBOutlet weak var lbl_knee_valgus_moderate:UILabel!
+    @IBOutlet weak var lbl_knee_valgus_excessive:UILabel!
+    @IBOutlet weak var lbl_knee_stiff:UILabel!
+    @IBOutlet weak var lbl_knee_unstable:UILabel!
     
     // knee deviation
     @IBOutlet weak var btn_knee_excessive_flexion:UIButton! {
@@ -3054,6 +3347,14 @@ class stance_phase_table_cell: UITableViewCell {
         }
     }
     
+    
+    
+    
+    
+    
+    
+    
+    // hip
     @IBOutlet weak var lbl_hip_deviation:UILabel! {
         didSet {
             // lbl_hip_deviation.backgroundColor = header_color
@@ -3077,7 +3378,22 @@ class stance_phase_table_cell: UITableViewCell {
     
     
     
-    
+    /*@IBOutlet weak var lbl_hip_deviation:UILabel!
+    @IBOutlet weak var lbl_hip_deviation:UILabel!
+    @IBOutlet weak var lbl_hip_deviation:UILabel!
+    @IBOutlet weak var lbl_hip_deviation:UILabel!
+    @IBOutlet weak var lbl_hip_deviation:UILabel!
+    @IBOutlet weak var lbl_hip_deviation:UILabel!
+    @IBOutlet weak var lbl_hip_deviation:UILabel!
+    @IBOutlet weak var lbl_hip_deviation:UILabel!
+    @IBOutlet weak var lbl_hip_deviation:UILabel!
+    @IBOutlet weak var lbl_hip_deviation:UILabel!
+    @IBOutlet weak var lbl_hip_deviation:UILabel!
+    @IBOutlet weak var lbl_hip_deviation:UILabel!
+    @IBOutlet weak var lbl_hip_deviation:UILabel!
+    @IBOutlet weak var lbl_hip_deviation:UILabel!
+    @IBOutlet weak var lbl_hip_deviation:UILabel!
+    @IBOutlet weak var lbl_hip_deviation:UILabel!*/
     
     // MARK: - HIP -
     @IBOutlet weak var btn_hip_insufficient_flexion:UIButton! {

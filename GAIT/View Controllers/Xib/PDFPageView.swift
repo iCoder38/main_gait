@@ -124,7 +124,7 @@ class PDFPageView: UIView {
         let boldFont = UIFont(name: "INSERT BOLD FONT", size: 15)
         
         //lblPatName.attributedText = addBoldText(fullString: "Check again in 30 DAYS to find more friends", boldPartOfString: "30 DAYS", font: normalFont!, boldFont: boldFont)
-        
+        // print(self.userInfoData)
         lblPatName.text = "Patient Id : \(userInfoData["pName"] as? String ?? "")"
         lblPatDob.text = "Patient Age : \(userInfoData["pDOB"] as? String ?? "")"
         lblPatDogno.text = "Diagnosis : \(userInfoData["pDiagnosis"] as? String ?? "")"

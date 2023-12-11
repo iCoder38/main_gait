@@ -176,6 +176,19 @@ class SplashViewController: BaseViewController {
                            "300627",
                            "300927",
                            "311227",
+                           
+                           // 6 - december - 2023
+                           "310328",
+                           "300628",
+                           "300928",
+                           "311228",
+                           "310329",
+                           "300629",
+                           "300929",
+                           "311229",
+                           "310330",
+                           "300630",
+                           
         ]
         
         let custom_code_date = ["Jan-31-2022" ,
@@ -220,7 +233,21 @@ class SplashViewController: BaseViewController {
                                 "Mar-31-2027",
                                 "Jun-30-2027",
                                 "Sep-30-2027",
-                                "Dec-31-2027"
+                                "Dec-31-2027",
+                                
+                                // 6 - december - 2023
+                                "Mar-31-2028",
+                                "Jun-30-2028",
+                                "Sep-30-2028",
+                                "Dec-31-2028",
+                                "Mar-31-2029",
+                                "Jun-30-2029",
+                                "Sep-30-2029",
+                                "Dec-31-2029",
+                                "Mar-31-2030",
+                                "Jun-30-2030",
+                                
+                                
         ]
         
         for indexx in 0..<custom_code.count {

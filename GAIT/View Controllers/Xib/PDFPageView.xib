@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -130,7 +130,7 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </stackView>
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="owJ-TP-zP4" userLabel="Table data View">
-                            <rect key="frame" x="40" y="264" width="1120" height="352"/>
+                            <rect key="frame" x="40" y="264" width="1120" height="382"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Cmr-fL-NyE">
                                     <rect key="frame" x="2" y="2" width="1116" height="50"/>
@@ -193,7 +193,7 @@ Intervals</string>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </stackView>
                                 <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="555-nE-TNB">
-                                    <rect key="frame" x="2" y="54" width="1116" height="296"/>
+                                    <rect key="frame" x="2" y="54" width="1116" height="326"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="oPX-q5-3ry">
                                             <rect key="frame" x="0.0" y="0.0" width="1116" height="80"/>
@@ -380,57 +380,57 @@ Support
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </stackView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ocm-0p-Yc6">
-                                            <rect key="frame" x="0.0" y="246" width="1116" height="50"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="LKo-Ao-aEB">
+                                            <rect key="frame" x="0.0" y="246" width="1116" height="80"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swing" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLj-cC-gom">
-                                                    <rect key="frame" x="0.0" y="0.0" width="157.66666666666666" height="50"/>
-                                                    <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SWING" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7H-1C-jJp">
+                                                    <rect key="frame" x="0.0" y="0.0" width="157.66666666666666" height="80"/>
+                                                    <color key="backgroundColor" red="0.7868086824712065" green="0.7868086824712065" blue="0.7868086824712065" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="pGv-Rf-Kfn"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="v89-yw-GFP"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1u-ez-2WT">
-                                                    <rect key="frame" x="159.66666666666669" y="0.0" width="157.66666666666669" height="50"/>
-                                                    <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWi-ui-5cR">
+                                                    <rect key="frame" x="159.66666666666669" y="0.0" width="157.66666666666669" height="80"/>
+                                                    <color key="backgroundColor" red="0.7868086824712065" green="0.7868086824712065" blue="0.7868086824712065" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9F-JB-MaE">
-                                                    <rect key="frame" x="319.33333333333331" y="0.0" width="157.66666666666669" height="50"/>
-                                                    <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHY-VI-qE6">
+                                                    <rect key="frame" x="319.33333333333331" y="0.0" width="157.66666666666669" height="80"/>
+                                                    <color key="backgroundColor" red="0.7868086824712065" green="0.7868086824712065" blue="0.7868086824712065" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKx-Q8-rdc">
-                                                    <rect key="frame" x="479" y="0.0" width="158" height="50"/>
-                                                    <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muI-Pe-mbW">
+                                                    <rect key="frame" x="479" y="0.0" width="158" height="80"/>
+                                                    <color key="backgroundColor" red="0.7868086824712065" green="0.7868086824712065" blue="0.7868086824712065" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PId-qn-e5J">
-                                                    <rect key="frame" x="639" y="0.0" width="157.66666666666663" height="50"/>
-                                                    <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGp-Og-0Vy">
+                                                    <rect key="frame" x="639" y="0.0" width="157.66666666666663" height="80"/>
+                                                    <color key="backgroundColor" red="0.7868086824712065" green="0.7868086824712065" blue="0.7868086824712065" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SrH-Of-y8P">
-                                                    <rect key="frame" x="798.66666666666663" y="0.0" width="157.66666666666663" height="50"/>
-                                                    <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5P-3T-e1l">
+                                                    <rect key="frame" x="798.66666666666663" y="0.0" width="157.66666666666663" height="80"/>
+                                                    <color key="backgroundColor" red="0.7868086824712065" green="0.7868086824712065" blue="0.7868086824712065" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNs-A4-FWb">
-                                                    <rect key="frame" x="958.33333333333337" y="0.0" width="157.66666666666663" height="50"/>
-                                                    <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgj-dO-RzD">
+                                                    <rect key="frame" x="958.33333333333337" y="0.0" width="157.66666666666663" height="80"/>
+                                                    <color key="backgroundColor" red="0.7868086824712065" green="0.7868086824712065" blue="0.7868086824712065" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -454,7 +454,7 @@ Support
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCC-f9-gpw" userLabel="Temporal View">
-                            <rect key="frame" x="40" y="686" width="1120" height="70"/>
+                            <rect key="frame" x="40" y="716" width="1120" height="70"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="xSw-Ia-Neb">
                                     <rect key="frame" x="2" y="2" width="1116" height="66"/>
@@ -575,7 +575,7 @@ Support
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KVb-Pf-aNL">
-                            <rect key="frame" x="40" y="796" width="1120" height="81"/>
+                            <rect key="frame" x="40" y="826" width="1120" height="81"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NH6-gJ-vyu">
                                     <rect key="frame" x="0.0" y="0.0" width="1120" height="81"/>
@@ -670,7 +670,7 @@ Support
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="eHt-oM-Hna">
-                            <rect key="frame" x="40" y="917" width="1120" height="40"/>
+                            <rect key="frame" x="40" y="947" width="1120" height="40"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWd-K9-Aw5">
                                     <rect key="frame" x="0.0" y="0.0" width="1120" height="40"/>
@@ -800,14 +800,14 @@ Support
                 <outlet property="lblSSKneee" destination="NIV-Lg-kq4" id="NGj-kg-YFz"/>
                 <outlet property="lblSSPelivs" destination="zhQ-3y-4I7" id="VQh-sJ-fHd"/>
                 <outlet property="lblSSTrunk" destination="fGF-Bc-iGp" id="qF5-hr-fF7"/>
-                <outlet property="lblSWingHip" destination="PId-qn-e5J" id="zFW-gi-ybN"/>
+                <outlet property="lblSWingHip" destination="VGp-Og-0Vy" id="DWc-al-6Va"/>
                 <outlet property="lblStanceTime" destination="pE1-dP-eML" id="ANK-HW-NVN"/>
                 <outlet property="lblSwing" destination="021-Gr-sOr" id="Uvm-6o-OCG"/>
-                <outlet property="lblSwingAnkle" destination="T9F-JB-MaE" id="4jK-3J-LTK"/>
-                <outlet property="lblSwingFoot" destination="e1u-ez-2WT" id="NP7-gS-9GQ"/>
-                <outlet property="lblSwingKnee" destination="hKx-Q8-rdc" id="sFG-OA-BNU"/>
-                <outlet property="lblSwingPelivs" destination="SrH-Of-y8P" id="lji-2k-UKW"/>
-                <outlet property="lblSwingTrunk" destination="cNs-A4-FWb" id="Rnq-RQ-5pY"/>
+                <outlet property="lblSwingAnkle" destination="iHY-VI-qE6" id="qxF-6J-oY4"/>
+                <outlet property="lblSwingFoot" destination="LWi-ui-5cR" id="krr-Ay-I5t"/>
+                <outlet property="lblSwingKnee" destination="muI-Pe-mbW" id="bOg-qk-zDk"/>
+                <outlet property="lblSwingPelivs" destination="P5P-3T-e1l" id="NMP-SD-8Xq"/>
+                <outlet property="lblSwingTrunk" destination="wgj-dO-RzD" id="f6I-nB-Vfw"/>
                 <outlet property="lblTDSAnkle" destination="H6q-Ci-SjJ" id="0yr-mf-4eJ"/>
                 <outlet property="lblTDSFoot" destination="Hzr-B5-z2e" id="yDq-xx-bej"/>
                 <outlet property="lblTDSHip" destination="UBH-Bd-wwn" id="D3I-p1-qxP"/>
@@ -817,7 +817,7 @@ Support
                 <outlet property="lblTreatmentGoal" destination="4qi-rX-P4s" id="KHj-9j-BId"/>
                 <outlet property="lblWidth" destination="m74-M5-hmL" id="WWW-ww-5kZ"/>
             </connections>
-            <point key="canvasLocation" x="140.625" y="105.63380281690141"/>
+            <point key="canvasLocation" x="140.57971014492756" y="105.16304347826087"/>
         </view>
     </objects>
     <resources>

@@ -80,7 +80,7 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
         if (self.str_profile_name == "how_the_app_works") {
             return 4
         } else if (self.str_profile_name == "sample_gait_videos") {
-            return 25
+            return 26
         } else if (self.str_profile_name == "types_of_gait") {
             return 11
         } else if (self.str_profile_name == "practice_gait_skills") {
@@ -124,7 +124,7 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
             
             if (indexPath.row == 0) {
                 cell.lbl_title.text = "Prosthetics"
-                cell.backgroundColor = .systemOrange
+                cell.backgroundColor = .appOrangColors()
                 cell.lbl_index_number.isHidden = true
                 
             } else if (indexPath.row == 1) {
@@ -160,7 +160,7 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
                 
             } else if (indexPath.row == 6) {
                 cell.lbl_title.text = "Orthotics"
-                cell.backgroundColor = .systemOrange
+                cell.backgroundColor = .appOrangColors()
                 cell.lbl_index_number.isHidden = true
                 
             } else if (indexPath.row == 7) {
@@ -195,7 +195,7 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
                 
             } else if (indexPath.row == 12) {
                 cell.lbl_title.text = "Neurological Conditions"
-                cell.backgroundColor = .systemOrange
+                cell.backgroundColor = .appOrangColors()
                 cell.lbl_index_number.isHidden = true
                 
             } else if (indexPath.row == 13) {
@@ -248,7 +248,8 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
                 
             } else if (indexPath.row == 21) {
                 cell.lbl_title.text = "Orthopedic Conditions"
-                cell.backgroundColor = .systemOrange
+                cell.lbl_title.textColor = .white
+                cell.backgroundColor = .appOrangColors()
                 cell.lbl_index_number.isHidden = true
                 
             } else if (indexPath.row == 22) {
@@ -269,7 +270,14 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "3"
                 
+            }  else if (indexPath.row == 25) {
+                cell.lbl_title.text = "Knee Osteoarthritis (OA)"
+                cell.accessoryType = .disclosureIndicator
+                cell.lbl_index_number.isHidden = false
+                cell.lbl_index_number.text = "4"
+                
             }
+            
             
         } else  if (self.str_profile_name == "types_of_gait") {
             
@@ -359,7 +367,8 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
             
             if (indexPath.row == 0) {
                 cell.lbl_title.text = "Prosthetics"
-                cell.backgroundColor = .systemOrange
+                cell.lbl_title.textColor = .white
+                cell.backgroundColor = .appOrangColors()
                 cell.lbl_index_number.isHidden = true
                 
             } else if (indexPath.row == 1) {
@@ -401,7 +410,8 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
             //
             else if (indexPath.row == 6) {
                 cell.lbl_title.text = "Orthotics"
-                cell.backgroundColor = .systemOrange
+                cell.lbl_title.textColor = .white
+                cell.backgroundColor = .appOrangColors()
                 cell.lbl_index_number.isHidden = true
                 
             }  else if (indexPath.row == 7) {
@@ -443,7 +453,8 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
             // 3
             else if (indexPath.row == 12) {
                 cell.lbl_title.text = "Neurological Conditions"
-                cell.backgroundColor = .systemOrange
+                cell.lbl_title.textColor = .white
+                cell.backgroundColor = .appOrangColors()
                 cell.lbl_index_number.isHidden = true
                 
             }  else if (indexPath.row == 13) {
@@ -484,7 +495,8 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
             }  // 4
             else if (indexPath.row == 18) {
                 cell.lbl_title.text = "Orthopedic Conditions"
-                cell.backgroundColor = .systemOrange
+                cell.lbl_title.textColor = .white
+                cell.backgroundColor = .appOrangColors()
                 cell.lbl_index_number.isHidden = true
                 
             }   else if (indexPath.row == 19) {
@@ -635,7 +647,7 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
                 self.navigationController?.pushViewController(pushVC, animated: true)
             } else if (indexPath.row == 17) {
                 let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-                pushVC.str_video_link = "https://vimeo.com/873797885/5838c97c15?share=copy"
+                pushVC.str_video_link = "https://vimeo.com/881367033/fb5536c713?share=copy"
                 pushVC.str_video_header = " Post-COVID Neuropathy"
                 self.navigationController?.pushViewController(pushVC, animated: true)
             } else if (indexPath.row == 18) {
@@ -667,6 +679,11 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
                 let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
                 pushVC.str_video_link = "https://vimeo.com/873945316/44420d7fb7?share=copy"
                 pushVC.str_video_header = " Total Hip Arthroplasty (THA)"
+                self.navigationController?.pushViewController(pushVC, animated: true)
+            } else if (indexPath.row == 25) {
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+                pushVC.str_video_link = "https://vimeo.com/875092167/cf1fe6c3e0?share=copy"
+                pushVC.str_video_header = " Knee Osteoarthritis (OA)"
                 self.navigationController?.pushViewController(pushVC, animated: true)
             }
             

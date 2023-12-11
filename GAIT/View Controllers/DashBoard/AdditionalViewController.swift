@@ -258,7 +258,7 @@ extension AdditionalViewController: UITableViewDataSource{
     }
     
     @objc func click_one_method(_ sender:UIButton) {
-        print("===> one <===")
+        print(sender.tag)
         
         if sender.tag == 1 {
             
@@ -284,7 +284,7 @@ extension AdditionalViewController: UITableViewDataSource{
         } else if sender.tag == 4 {
             
             let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
-            pushVC.str_video_link = "https://vimeo.com/747903723/4e44829b00"
+            pushVC.str_video_link = "https://vimeo.com/747903750/f670515880"
             pushVC.str_video_header = "Wide"
             self.navigationController?.pushViewController(pushVC, animated: true)
             

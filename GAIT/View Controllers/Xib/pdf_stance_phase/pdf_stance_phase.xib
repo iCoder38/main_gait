@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -97,7 +97,7 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </stackView>
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yMT-oU-X4T" userLabel="Table data View">
-                            <rect key="frame" x="40" y="222" width="1120" height="200"/>
+                            <rect key="frame" x="40" y="222" width="1120" height="217"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="hPI-3q-jIR">
                                     <rect key="frame" x="2" y="2" width="1116" height="50"/>
@@ -158,13 +158,13 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </stackView>
                                 <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="M0Z-mD-FTq">
-                                    <rect key="frame" x="2" y="54" width="1116" height="144"/>
+                                    <rect key="frame" x="2" y="54" width="1116" height="162"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Nsm-W1-g8x">
-                                            <rect key="frame" x="0.0" y="0.0" width="1116" height="92"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1116" height="80"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stance Phase" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xa9-ew-Au2">
-                                                    <rect key="frame" x="0.0" y="0.0" width="157.66666666666666" height="92"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="157.66666666666666" height="80"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="bQ9-jq-kD0"/>
@@ -174,42 +174,42 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIu-zL-cBr">
-                                                    <rect key="frame" x="159.66666666666669" y="0.0" width="157.66666666666669" height="92"/>
+                                                    <rect key="frame" x="159.66666666666669" y="0.0" width="157.66666666666669" height="80"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncy-PR-xWx">
-                                                    <rect key="frame" x="319.33333333333331" y="0.0" width="157.66666666666669" height="92"/>
+                                                    <rect key="frame" x="319.33333333333331" y="0.0" width="157.66666666666669" height="80"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7by-zh-ceB">
-                                                    <rect key="frame" x="479" y="0.0" width="158" height="92"/>
+                                                    <rect key="frame" x="479" y="0.0" width="158" height="80"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgL-WB-34N">
-                                                    <rect key="frame" x="639" y="0.0" width="157.66666666666663" height="92"/>
+                                                    <rect key="frame" x="639" y="0.0" width="157.66666666666663" height="80"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjV-AM-71W">
-                                                    <rect key="frame" x="798.66666666666663" y="0.0" width="157.66666666666663" height="92"/>
+                                                    <rect key="frame" x="798.66666666666663" y="0.0" width="157.66666666666663" height="80"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PpD-fd-97O">
-                                                    <rect key="frame" x="958.33333333333337" y="0.0" width="157.66666666666663" height="92"/>
+                                                    <rect key="frame" x="958.33333333333337" y="0.0" width="157.66666666666663" height="80"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="11"/>
                                                     <nil key="textColor"/>
@@ -218,57 +218,57 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </stackView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="H5v-XT-Bwn">
-                                            <rect key="frame" x="0.0" y="94" width="1116" height="50"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="gGn-SB-6Ir">
+                                            <rect key="frame" x="0.0" y="82" width="1116" height="80"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swing" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8I-Tv-2SX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="157.66666666666666" height="50"/>
-                                                    <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swing" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6V-6t-i1W">
+                                                    <rect key="frame" x="0.0" y="0.0" width="157.66666666666666" height="80"/>
+                                                    <color key="backgroundColor" red="0.79064972867670746" green="0.79064972867670746" blue="0.79064972867670746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="XCn-5o-gjM"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="ISD-Lr-PMk"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0p-jz-Rcl">
-                                                    <rect key="frame" x="159.66666666666669" y="0.0" width="157.66666666666669" height="50"/>
-                                                    <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbh-ni-alN">
+                                                    <rect key="frame" x="159.66666666666669" y="0.0" width="157.66666666666669" height="80"/>
+                                                    <color key="backgroundColor" red="0.79064972867670746" green="0.79064972867670746" blue="0.79064972867670746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mX1-5I-3PU">
-                                                    <rect key="frame" x="319.33333333333331" y="0.0" width="157.66666666666669" height="50"/>
-                                                    <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7P-ou-Exe">
+                                                    <rect key="frame" x="319.33333333333331" y="0.0" width="157.66666666666669" height="80"/>
+                                                    <color key="backgroundColor" red="0.79064972867670746" green="0.79064972867670746" blue="0.79064972867670746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPh-gT-qid">
-                                                    <rect key="frame" x="479" y="0.0" width="158" height="50"/>
-                                                    <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Er6-hq-jWw">
+                                                    <rect key="frame" x="479" y="0.0" width="158" height="80"/>
+                                                    <color key="backgroundColor" red="0.79064972867670746" green="0.79064972867670746" blue="0.79064972867670746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YU9-66-9Zt">
-                                                    <rect key="frame" x="639" y="0.0" width="157.66666666666663" height="50"/>
-                                                    <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LdX-uq-Q6A">
+                                                    <rect key="frame" x="639" y="0.0" width="157.66666666666663" height="80"/>
+                                                    <color key="backgroundColor" red="0.79064972867670746" green="0.79064972867670746" blue="0.79064972867670746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCT-H0-J2P">
-                                                    <rect key="frame" x="798.66666666666663" y="0.0" width="157.66666666666663" height="50"/>
-                                                    <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoB-HW-3ld">
+                                                    <rect key="frame" x="798.66666666666663" y="0.0" width="157.66666666666663" height="80"/>
+                                                    <color key="backgroundColor" red="0.79064972867670746" green="0.79064972867670746" blue="0.79064972867670746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rrc-gL-kE1">
-                                                    <rect key="frame" x="958.33333333333337" y="0.0" width="157.66666666666663" height="50"/>
-                                                    <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVY-43-LB2">
+                                                    <rect key="frame" x="958.33333333333337" y="0.0" width="157.66666666666663" height="80"/>
+                                                    <color key="backgroundColor" red="0.79064972867670746" green="0.79064972867670746" blue="0.79064972867670746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -277,9 +277,6 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </stackView>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="H5v-XT-Bwn" firstAttribute="top" secondItem="M0Z-mD-FTq" secondAttribute="top" constant="94" id="iMb-HJ-zDe"/>
-                                    </constraints>
                                 </stackView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -291,11 +288,11 @@
                                 <constraint firstAttribute="trailing" secondItem="hPI-3q-jIR" secondAttribute="trailing" constant="2" id="azc-d8-bqn"/>
                                 <constraint firstItem="M0Z-mD-FTq" firstAttribute="leading" secondItem="yMT-oU-X4T" secondAttribute="leading" constant="2" id="hDX-WB-GaH"/>
                                 <constraint firstItem="hPI-3q-jIR" firstAttribute="top" secondItem="yMT-oU-X4T" secondAttribute="top" constant="2" id="iNi-DK-QKq"/>
-                                <constraint firstAttribute="bottom" secondItem="M0Z-mD-FTq" secondAttribute="bottom" constant="2" id="sgz-TD-d3j"/>
+                                <constraint firstAttribute="bottom" secondItem="M0Z-mD-FTq" secondAttribute="bottom" constant="1" id="sgz-TD-d3j"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JSR-qn-Ezd" userLabel="Temporal View">
-                            <rect key="frame" x="40" y="492" width="1120" height="70"/>
+                            <rect key="frame" x="40" y="509" width="1120" height="70"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="TcM-Mf-Vko">
                                     <rect key="frame" x="2" y="2" width="1116" height="66"/>
@@ -416,7 +413,7 @@
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Rjm-ee-DKA">
-                            <rect key="frame" x="40" y="602" width="1120" height="81"/>
+                            <rect key="frame" x="40" y="619" width="1120" height="81"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="urS-W2-4Sg">
                                     <rect key="frame" x="0.0" y="0.0" width="1120" height="81"/>
@@ -511,7 +508,7 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="G7T-ic-RgF">
-                            <rect key="frame" x="40" y="723" width="1120" height="40"/>
+                            <rect key="frame" x="40" y="740" width="1120" height="40"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pOI-Rt-L8H">
                                     <rect key="frame" x="0.0" y="0.0" width="1120" height="40"/>
@@ -625,14 +622,14 @@
                 <outlet property="lblPatName" destination="oK4-BT-a3U" id="n1v-Bu-hDV"/>
                 <outlet property="lblPatSide" destination="eQH-OB-EIM" id="Zvj-Io-tcu"/>
                 <outlet property="lblPatWalkerAid" destination="6dD-K8-6xD" id="XHJ-nl-WZh"/>
-                <outlet property="lblSWingHip" destination="YU9-66-9Zt" id="gLc-o4-ex6"/>
+                <outlet property="lblSWingHip" destination="LdX-uq-Q6A" id="5YT-Y1-2T0"/>
                 <outlet property="lblStanceTime" destination="vmm-ha-4bU" id="4xV-Jl-PPZ"/>
                 <outlet property="lblSwing" destination="l30-Nv-SVH" id="cmg-Wo-G11"/>
-                <outlet property="lblSwingAnkle" destination="mX1-5I-3PU" id="V6W-OZ-juG"/>
-                <outlet property="lblSwingFoot" destination="f0p-jz-Rcl" id="EYW-LJ-n9P"/>
-                <outlet property="lblSwingKnee" destination="mPh-gT-qid" id="dh9-6P-tZY"/>
-                <outlet property="lblSwingPelivs" destination="YCT-H0-J2P" id="M4g-aW-H6X"/>
-                <outlet property="lblSwingTrunk" destination="Rrc-gL-kE1" id="Qiu-Zo-3jf"/>
+                <outlet property="lblSwingAnkle" destination="M7P-ou-Exe" id="sdL-SU-WpA"/>
+                <outlet property="lblSwingFoot" destination="gbh-ni-alN" id="xnP-lV-Mja"/>
+                <outlet property="lblSwingKnee" destination="Er6-hq-jWw" id="XUP-hD-S7Z"/>
+                <outlet property="lblSwingPelivs" destination="KoB-HW-3ld" id="QXh-TR-sRx"/>
+                <outlet property="lblSwingTrunk" destination="YVY-43-LB2" id="waL-sr-V3k"/>
                 <outlet property="lblTreatmentGoal" destination="XOw-jz-2Ua" id="EX8-w4-zBF"/>
                 <outlet property="lblWidth" destination="OXF-vi-yCI" id="UW3-US-PeS"/>
                 <outlet property="lbl_stance_phase_Ankle" destination="Ncy-PR-xWx" id="xvU-nU-NQz"/>

@@ -27,7 +27,7 @@ struct navigationTitle {
     static let rate_the_change = "rate the change"
     static let recommendation = "recommendation"
     
-    static let additional = "Additinal Deviations"
+    static let additional = "Additional Deviations"
     static let intervention = "Intervention focus is on"
     static let congratulation = "Congratulations!"
     static let pdfDetailsView = "Details View"

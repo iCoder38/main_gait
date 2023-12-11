@@ -118,12 +118,12 @@ class PatientInformationViewController: BaseViewController {
     func saveUserData(){
         userInfoData.removeAllObjects()
         userInfoData.setObject(self.txtName.text!, forKey: "pName" as NSCopying)
-        // userInfoData.setObject(self.txtDOB.text!, forKey: "pDOB" as NSCopying)
-        // userInfoData.setObject(self.txtDiagnosis.text!, forKey: "pDiagnosis" as NSCopying)
-        // userInfoData.setObject(self.txtSide.text!, forKey: "observedSide" as NSCopying)
-        // userInfoData.setObject(self.txtADate.text!, forKey: "assessmentDate" as NSCopying)
-        // userInfoData.setObject(self.txtOnsetDate.text!, forKey: "onsetDate" as NSCopying)
-        // userInfoData.setObject(" \(self.txtViewGoal.text!)", forKey: "pGoal" as NSCopying)
+         userInfoData.setObject(self.txtDOB.text!, forKey: "pDOB" as NSCopying)
+         userInfoData.setObject(self.txtDiagnosis.text!, forKey: "pDiagnosis" as NSCopying)
+         userInfoData.setObject(self.txtSide.text!, forKey: "observedSide" as NSCopying)
+         userInfoData.setObject(self.txtADate.text!, forKey: "assessmentDate" as NSCopying)
+         userInfoData.setObject(self.txtOnsetDate.text!, forKey: "onsetDate" as NSCopying)
+         userInfoData.setObject(" \(self.txtViewGoal.text!)", forKey: "pGoal" as NSCopying)
         userInfoData.setObject(self.txtWalkingAid.text!, forKey: "wakingAid" as NSCopying)
     }
     
