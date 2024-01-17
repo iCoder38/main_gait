@@ -15,7 +15,7 @@ var url_quick_gait_assessment_form = "https://vimeo.com/873781637/a971e2f1e9?sha
 var url_performing_gait_comparison = "https://vimeo.com/873782940/83e651cc45?share=copy"
 
 // var header_color = UIColor.orange
-var header_color = UIColor.init(red: 255.0/255.0, green: 90.0/255.0, blue: 0.0/255.0, alpha: 1)
+// var header_color = .appOrangColors()
 
 class Utils: NSObject {
 

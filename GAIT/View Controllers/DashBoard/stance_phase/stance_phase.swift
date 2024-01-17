@@ -2898,23 +2898,124 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
              @IBOutlet weak var btn_hip_internal_rotation_slight:UIButton!
              @IBOutlet weak var btn_hip_internal_rotation_moderate:UIButton!
              @IBOutlet weak var btn_hip_internal_rotation_excessive:UIButton!
-             // Stiff Hip
              
+             
+             
+             // Stiff Hip
+             /*
+              
+              
+              
+              
+              
+              */
              */
+            
+            /*
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             */
+            
+            let tap1 = UITapGestureRecognizer(target: self, action: #selector(hip_insufficient_flexion_clicked_method))
+            cell.lbl_hip_insufficient_flexion.isUserInteractionEnabled = true
+            cell.lbl_hip_insufficient_flexion.addGestureRecognizer(tap1)
+            
+            let tap2 = UITapGestureRecognizer(target: self, action: #selector(hip_insufficient_extension_clicked_method))
+            cell.lbl_hip_insufficient_extension.isUserInteractionEnabled = true
+            cell.lbl_hip_insufficient_extension.addGestureRecognizer(tap2)
+            
+            let tap3 = UITapGestureRecognizer(target: self, action: #selector(hip_excessive_external_rotation_clicked_method))
+            cell.lbl_hip_excessive_external_rotation.isUserInteractionEnabled = true
+            cell.lbl_hip_excessive_external_rotation.addGestureRecognizer(tap3)
+            
+            let tap4 = UITapGestureRecognizer(target: self, action: #selector(hip_stiff_clicked_method))
+            cell.lbl_hip_stiff.isUserInteractionEnabled = true
+            cell.lbl_hip_stiff.addGestureRecognizer(tap4)
+            
             cell.btn_hip_insufficient_flexion.addTarget(self, action: #selector(hip_insufficient_flexion_clicked_method), for: .touchUpInside)
             cell.btn_hip_insufficient_extension.addTarget(self, action: #selector(hip_insufficient_extension_clicked_method), for: .touchUpInside)
             cell.btn_hip_excessive_external_rotation.addTarget(self, action: #selector(hip_excessive_external_rotation_clicked_method), for: .touchUpInside)
             cell.btn_hip_stiff.addTarget(self, action: #selector(hip_stiff_clicked_method), for: .touchUpInside)
+            
+            /*
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             */
+            
+            let tap5 = UITapGestureRecognizer(target: self, action: #selector(hip_abduction_clicked_method))
+            cell.lbl_hip_abduction.isUserInteractionEnabled = true
+            cell.lbl_hip_abduction.addGestureRecognizer(tap5)
+            
+            let tap6 = UITapGestureRecognizer(target: self, action: #selector(hip_abduction_slight_clicked_method))
+            cell.lbl_hip_abduction_slight.isUserInteractionEnabled = true
+            cell.lbl_hip_abduction_slight.addGestureRecognizer(tap6)
+            
+            let tap7 = UITapGestureRecognizer(target: self, action: #selector(hip_abduction_moderate_clicked_method))
+            cell.lbl_hip_abduction_moderate.isUserInteractionEnabled = true
+            cell.lbl_hip_abduction_moderate.addGestureRecognizer(tap7)
+            
+            let tap8 = UITapGestureRecognizer(target: self, action: #selector(hip_abduction_excessive_clicked_method))
+            cell.lbl_hip_abduction_excessive.isUserInteractionEnabled = true
+            cell.lbl_hip_abduction_excessive.addGestureRecognizer(tap8)
+            
+            /*
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             */
             
             cell.btn_hip_abduction.addTarget(self, action: #selector(hip_abduction_clicked_method), for: .touchUpInside)
             cell.btn_hip_abduction_slight.addTarget(self, action: #selector(hip_abduction_slight_clicked_method), for: .touchUpInside)
             cell.btn_hip_abduction_moderate.addTarget(self, action: #selector(hip_abduction_moderate_clicked_method), for: .touchUpInside)
             cell.btn_hip_abduction_excessive.addTarget(self, action: #selector(hip_abduction_excessive_clicked_method), for: .touchUpInside)
             
+            let tap9 = UITapGestureRecognizer(target: self, action: #selector(hip_adduction_clicked_method))
+            cell.lbl_hip_adduction.isUserInteractionEnabled = true
+            cell.lbl_hip_adduction.addGestureRecognizer(tap9)
+            
+            let tap10 = UITapGestureRecognizer(target: self, action: #selector(hip_adduction_slight_clicked_method))
+            cell.lbl_hip_adduction_slight.isUserInteractionEnabled = true
+            cell.lbl_hip_adduction_slight.addGestureRecognizer(tap10)
+            
+            let tap11 = UITapGestureRecognizer(target: self, action: #selector(hip_adduction_moderate_clicked_method))
+            cell.lbl_hip_adduction_moderate.isUserInteractionEnabled = true
+            cell.lbl_hip_adduction_moderate.addGestureRecognizer(tap11)
+            
+            let tap12 = UITapGestureRecognizer(target: self, action: #selector(hip_adduction_excessive_clicked_method))
+            cell.lbl_hip_adduction_excessive.isUserInteractionEnabled = true
+            cell.lbl_hip_adduction_excessive.addGestureRecognizer(tap12)
+            
             cell.btn_hip_adduction.addTarget(self, action: #selector(hip_adduction_clicked_method), for: .touchUpInside)
             cell.btn_hip_adduction_slight.addTarget(self, action: #selector(hip_adduction_slight_clicked_method), for: .touchUpInside)
             cell.btn_hip_adduction_moderate.addTarget(self, action: #selector(hip_adduction_moderate_clicked_method), for: .touchUpInside)
             cell.btn_hip_adduction_excessive.addTarget(self, action: #selector(hip_adduction_excessive_clicked_method), for: .touchUpInside)
+            
+            /*
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             @IBOutlet weak var :UILabel!
+             */
+            let tap13 = UITapGestureRecognizer(target: self, action: #selector(hip_internal_rotation_clicked_method))
+            cell.lbl_hip_internal_rotation.isUserInteractionEnabled = true
+            cell.lbl_hip_internal_rotation.addGestureRecognizer(tap13)
+            
+            let tap14 = UITapGestureRecognizer(target: self, action: #selector(hip_internal_rotation_slight_clicked_method))
+            cell.lbl_hip_internal_rotation_slight.isUserInteractionEnabled = true
+            cell.lbl_hip_internal_rotation_slight.addGestureRecognizer(tap14)
+            
+            let tap15 = UITapGestureRecognizer(target: self, action: #selector(hip_internal_rotation_moderate_clicked_method))
+            cell.lbl_hip_internal_rotation_moderate.isUserInteractionEnabled = true
+            cell.lbl_hip_internal_rotation_moderate.addGestureRecognizer(tap15)
+            
+            let tap16 = UITapGestureRecognizer(target: self, action: #selector(hip_internal_rotation_excessive_clicked_method))
+            cell.lbl_hip_internal_rotation_excessive.isUserInteractionEnabled = true
+            cell.lbl_hip_internal_rotation_excessive.addGestureRecognizer(tap16)
             
             cell.btn_hip_internal_rotation.addTarget(self, action: #selector(hip_internal_rotation_clicked_method), for: .touchUpInside)
             cell.btn_hip_internal_rotation_slight.addTarget(self, action: #selector(hip_internal_rotation_slight_clicked_method), for: .touchUpInside)
@@ -3355,45 +3456,22 @@ class stance_phase_table_cell: UITableViewCell {
     
     
     // hip
-    @IBOutlet weak var lbl_hip_deviation:UILabel! {
-        didSet {
-            // lbl_hip_deviation.backgroundColor = header_color
-        }
-    }
-    
-    @IBOutlet weak var lbl_pelvis_deviation:UILabel! {
-        didSet {
-            // lbl_pelvis_deviation.backgroundColor = header_color
-        }
-    }
-    
-    @IBOutlet weak var lbl_trunk_deviation:UILabel! {
-        didSet {
-            // lbl_trunk_deviation.backgroundColor = header_color
-        }
-    }
-    
-    
-    
-    
-    
-    
-    /*@IBOutlet weak var lbl_hip_deviation:UILabel!
-    @IBOutlet weak var lbl_hip_deviation:UILabel!
-    @IBOutlet weak var lbl_hip_deviation:UILabel!
-    @IBOutlet weak var lbl_hip_deviation:UILabel!
-    @IBOutlet weak var lbl_hip_deviation:UILabel!
-    @IBOutlet weak var lbl_hip_deviation:UILabel!
-    @IBOutlet weak var lbl_hip_deviation:UILabel!
-    @IBOutlet weak var lbl_hip_deviation:UILabel!
-    @IBOutlet weak var lbl_hip_deviation:UILabel!
-    @IBOutlet weak var lbl_hip_deviation:UILabel!
-    @IBOutlet weak var lbl_hip_deviation:UILabel!
-    @IBOutlet weak var lbl_hip_deviation:UILabel!
-    @IBOutlet weak var lbl_hip_deviation:UILabel!
-    @IBOutlet weak var lbl_hip_deviation:UILabel!
-    @IBOutlet weak var lbl_hip_deviation:UILabel!
-    @IBOutlet weak var lbl_hip_deviation:UILabel!*/
+    @IBOutlet weak var lbl_hip_insufficient_flexion:UILabel!
+    @IBOutlet weak var lbl_hip_insufficient_extension:UILabel!
+    @IBOutlet weak var lbl_hip_excessive_external_rotation:UILabel!
+    @IBOutlet weak var lbl_hip_abduction:UILabel!
+    @IBOutlet weak var lbl_hip_abduction_slight:UILabel!
+    @IBOutlet weak var lbl_hip_abduction_moderate:UILabel!
+    @IBOutlet weak var lbl_hip_abduction_excessive:UILabel!
+    @IBOutlet weak var lbl_hip_adduction:UILabel!
+    @IBOutlet weak var lbl_hip_adduction_slight:UILabel!
+    @IBOutlet weak var lbl_hip_adduction_moderate:UILabel!
+    @IBOutlet weak var lbl_hip_adduction_excessive:UILabel!
+    @IBOutlet weak var lbl_hip_internal_rotation:UILabel!
+    @IBOutlet weak var lbl_hip_internal_rotation_slight:UILabel!
+    @IBOutlet weak var lbl_hip_internal_rotation_moderate:UILabel!
+    @IBOutlet weak var lbl_hip_internal_rotation_excessive:UILabel!
+    @IBOutlet weak var lbl_hip_stiff:UILabel!
     
     // MARK: - HIP -
     @IBOutlet weak var btn_hip_insufficient_flexion:UIButton! {
@@ -3493,8 +3571,8 @@ class stance_phase_table_cell: UITableViewCell {
     
     
     
-    
-    
+    @IBOutlet weak var lbl_pelvis_deviation:UILabel!
+    @IBOutlet weak var lbl_trunk_deviation:UILabel!
     
     
     

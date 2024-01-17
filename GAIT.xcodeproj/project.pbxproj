@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -58,6 +58,7 @@
 		B99D308C2AEFA68D007635B5 /* recommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99D308B2AEFA68D007635B5 /* recommendation.swift */; };
 		B99D30932AEFA973007635B5 /* pdf_gait_comparision.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99D30922AEFA973007635B5 /* pdf_gait_comparision.xib */; };
 		B99D30952AEFA999007635B5 /* pdf_gait_comparision.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99D30942AEFA999007635B5 /* pdf_gait_comparision.swift */; };
+		B9E7456A2B29DB59007E018A /* RPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E745692B29DB59007E018A /* RPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +117,7 @@
 		B99D308B2AEFA68D007635B5 /* recommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recommendation.swift; sourceTree = "<group>"; };
 		B99D30922AEFA973007635B5 /* pdf_gait_comparision.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = pdf_gait_comparision.xib; sourceTree = "<group>"; };
 		B99D30942AEFA999007635B5 /* pdf_gait_comparision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pdf_gait_comparision.swift; sourceTree = "<group>"; };
+		B9E745692B29DB59007E018A /* RPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 		527FEEA72554106F00C03BEF /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B9E745692B29DB59007E018A /* RPicker.swift */,
 				527FEEAE2554146300C03BEF /* BaseViewController.swift */,
 				52F5DDD4255EBE8800CF65FE /* SwiftPDFGenerator.swift */,
 				52F5DDD6255EC12F00CF65FE /* Xib */,
@@ -516,6 +519,7 @@
 				527FEEB1255414CE00C03BEF /* StartViewController.swift in Sources */,
 				527FEEB7255416CE00C03BEF /* IDSViewController.swift in Sources */,
 				52F5DDD3255C157F00CF65FE /* InvoiceComposer.swift in Sources */,
+				B9E7456A2B29DB59007E018A /* RPicker.swift in Sources */,
 				527FEEBB2554173D00C03BEF /* TDSViewController.swift in Sources */,
 				A4723C4E2604DD1E003D4984 /* CongratulationsTableCell.swift in Sources */,
 				A4723C4C2604DD05003D4984 /* CongratulationsTwo.swift in Sources */,
@@ -699,7 +703,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.8;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GAITApp;
 				PRODUCT_NAME = G.A.I.T;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -725,7 +729,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.8;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GAITApp;
 				PRODUCT_NAME = G.A.I.T;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

@@ -504,7 +504,7 @@ extension rate_the_change: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         guard let headerView = view as? UITableViewHeaderFooterView else { return }
-        headerView.backgroundColor = header_color
+        headerView.backgroundColor = .appOrangColors()
         headerView.tintColor = .white
         headerView.textLabel?.font = UIFont(name: "Arial Bold", size: 18)
     }
@@ -542,7 +542,7 @@ extension rate_the_change: UITableViewDelegate {
         label.textColor = .white
         label.backgroundColor = .clear
         label.textAlignment = .center
-        label.backgroundColor = header_color
+        label.backgroundColor = .appOrangColors()
         label.numberOfLines = 0
         
         let label2 = UILabel()

@@ -178,7 +178,6 @@ extension SwingViewController: UITableViewDataSource{
             
         }
         
-        
         else if tblCell.lblTitleName.text == " Insufficient Flexion" {
             
             tblCell.btn_info.tag = 4

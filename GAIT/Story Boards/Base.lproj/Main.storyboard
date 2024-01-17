@@ -4852,6 +4852,22 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                             <outlet property="btn_hip_internal_rotation_moderate" destination="PpS-w1-dDm" id="ijl-z2-fGp"/>
                                             <outlet property="btn_hip_internal_rotation_slight" destination="sld-fO-atw" id="fIR-qf-vWB"/>
                                             <outlet property="btn_hip_stiff" destination="FQN-bL-ZQ8" id="tKL-sv-Pl1"/>
+                                            <outlet property="lbl_hip_abduction" destination="OxJ-EL-agz" id="lR0-mf-tPZ"/>
+                                            <outlet property="lbl_hip_abduction_excessive" destination="cKB-xR-ZgR" id="L10-0E-LMZ"/>
+                                            <outlet property="lbl_hip_abduction_moderate" destination="f8K-Dx-cZm" id="MtG-Rr-8dn"/>
+                                            <outlet property="lbl_hip_abduction_slight" destination="Cvu-qN-nnK" id="xL5-fb-cx1"/>
+                                            <outlet property="lbl_hip_adduction" destination="CuJ-rp-EIi" id="0oE-hu-Uto"/>
+                                            <outlet property="lbl_hip_adduction_excessive" destination="s1I-Of-WXV" id="hJV-gF-Ub2"/>
+                                            <outlet property="lbl_hip_adduction_moderate" destination="le8-x7-3XZ" id="Zup-Kg-tBG"/>
+                                            <outlet property="lbl_hip_adduction_slight" destination="APy-QO-vVk" id="Udt-Lr-2RE"/>
+                                            <outlet property="lbl_hip_excessive_external_rotation" destination="17z-1n-9DQ" id="8HB-jU-xpT"/>
+                                            <outlet property="lbl_hip_insufficient_extension" destination="RJu-09-k8Q" id="gfZ-Ab-DUK"/>
+                                            <outlet property="lbl_hip_insufficient_flexion" destination="YoM-CV-JPz" id="rx2-jl-a81"/>
+                                            <outlet property="lbl_hip_internal_rotation" destination="vEQ-8r-1Yi" id="2cG-ou-wiK"/>
+                                            <outlet property="lbl_hip_internal_rotation_excessive" destination="N0Y-hS-oLR" id="H8p-9s-1PI"/>
+                                            <outlet property="lbl_hip_internal_rotation_moderate" destination="UyK-k9-uZb" id="AU7-zx-WSl"/>
+                                            <outlet property="lbl_hip_internal_rotation_slight" destination="z68-xg-B2v" id="8JF-KN-qPy"/>
+                                            <outlet property="lbl_hip_stiff" destination="jJR-sl-Bkm" id="xwp-FZ-0Ok"/>
                                             <outlet property="lbl_knee_deviation" destination="0Mp-6o-6BN" id="2Vf-QL-1JX"/>
                                             <outlet property="lbl_title" destination="YoM-CV-JPz" id="XCK-Fx-Y5G"/>
                                         </connections>
@@ -6180,10 +6196,10 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                 <rect key="frame" x="0.0" y="20" width="320" height="880"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TS3-vd-gGt">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="880"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="960"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ts2-cl-Rzg">
-                                                <rect key="frame" x="20" y="20" width="280" height="550"/>
+                                                <rect key="frame" x="20" y="20" width="280" height="630"/>
                                                 <subviews>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RE5-8O-pGs" userLabel="Name View">
                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="70"/>
@@ -6430,7 +6446,7 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JjY-yk-7jk">
                                                                 <rect key="frame" x="0.0" y="5" width="280" height="60"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASSESSMENT DATE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VND-Bd-7Xw">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PREVIOUS ASSESSMENT DATE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VND-Bd-7Xw">
                                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="20"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="20" id="zru-Cq-r7R"/>
@@ -6481,70 +6497,13 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                                             <constraint firstAttribute="trailing" secondItem="JjY-yk-7jk" secondAttribute="trailing" id="ywF-40-rL2"/>
                                                         </constraints>
                                                     </view>
-                                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H5D-o4-C0g" userLabel="Onside Date View">
-                                                        <rect key="frame" x="0.0" y="400" width="280" height="70"/>
-                                                        <subviews>
-                                                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Jvs-1K-UUP">
-                                                                <rect key="frame" x="0.0" y="5" width="280" height="60"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ONSET OF INJURY/ILLNESS:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfV-5d-Qk0">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="20"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="20" id="c9w-zE-StY"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="17"/>
-                                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <textField opaque="NO" clipsSubviews="YES" tag="66" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Date" textAlignment="justified" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="HUK-1a-1Z8">
-                                                                        <rect key="frame" x="0.0" y="25" width="280" height="29"/>
-                                                                        <color key="tintColor" name="App_Color"/>
-                                                                        <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="16"/>
-                                                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress"/>
-                                                                    </textField>
-                                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCh-PQ-p0J">
-                                                                        <rect key="frame" x="0.0" y="59" width="280" height="1"/>
-                                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="1" id="l5f-o2-64I"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nhI-fj-9oz" userLabel="Btn Stack View">
-                                                                <rect key="frame" x="250" y="32" width="25" height="25"/>
-                                                                <subviews>
-                                                                    <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhC-lW-4ET">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="AhC-lW-4ET" secondAttribute="height" id="4wm-ah-Ul7"/>
-                                                                            <constraint firstAttribute="width" constant="25" id="q1e-S2-ZY8"/>
-                                                                        </constraints>
-                                                                        <state key="normal" image="calender_icon"/>
-                                                                    </button>
-                                                                </subviews>
-                                                            </stackView>
-                                                        </subviews>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstItem="Jvs-1K-UUP" firstAttribute="top" secondItem="H5D-o4-C0g" secondAttribute="top" constant="5" id="5mP-jO-f6C"/>
-                                                            <constraint firstItem="Jvs-1K-UUP" firstAttribute="leading" secondItem="H5D-o4-C0g" secondAttribute="leading" id="HFy-2o-nV4"/>
-                                                            <constraint firstAttribute="bottom" secondItem="Jvs-1K-UUP" secondAttribute="bottom" constant="5" id="S6Y-G4-NIS"/>
-                                                            <constraint firstItem="nhI-fj-9oz" firstAttribute="centerY" secondItem="HUK-1a-1Z8" secondAttribute="centerY" id="Sfs-XU-tq2"/>
-                                                            <constraint firstItem="nhI-fj-9oz" firstAttribute="trailing" secondItem="Jvs-1K-UUP" secondAttribute="trailing" constant="-5" id="Wyl-x5-Nj5"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Jvs-1K-UUP" secondAttribute="trailing" id="vxX-pC-WNx"/>
-                                                        </constraints>
-                                                    </view>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qI3-zT-53u" userLabel="Walking View">
-                                                        <rect key="frame" x="0.0" y="480" width="280" height="70"/>
+                                                        <rect key="frame" x="0.0" y="400" width="280" height="70"/>
                                                         <subviews>
                                                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Hwm-gg-AkJ">
                                                                 <rect key="frame" x="0.0" y="5" width="280" height="60"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WALKING AID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ow7-qu-eYn">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WALKING AID USED:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ow7-qu-eYn">
                                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="20"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="20" id="HMh-yg-ypL"/>
@@ -6605,10 +6564,134 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                                             <constraint firstItem="NbU-74-0aH" firstAttribute="centerY" secondItem="FnE-0u-pP3" secondAttribute="centerY" id="vQ1-Rm-cSG"/>
                                                         </constraints>
                                                     </view>
+                                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H5D-o4-C0g" userLabel="Onside Date View">
+                                                        <rect key="frame" x="0.0" y="480" width="280" height="70"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Jvs-1K-UUP">
+                                                                <rect key="frame" x="0.0" y="5" width="280" height="60"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENT ONSET OF INJURY/ILLNESS:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfV-5d-Qk0">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="20"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="20" id="c9w-zE-StY"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="17"/>
+                                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <textField opaque="NO" clipsSubviews="YES" tag="66" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Date" textAlignment="justified" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="HUK-1a-1Z8">
+                                                                        <rect key="frame" x="0.0" y="25" width="280" height="29"/>
+                                                                        <color key="tintColor" name="App_Color"/>
+                                                                        <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="16"/>
+                                                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress"/>
+                                                                    </textField>
+                                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCh-PQ-p0J">
+                                                                        <rect key="frame" x="0.0" y="59" width="280" height="1"/>
+                                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="1" id="l5f-o2-64I"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nhI-fj-9oz" userLabel="Btn Stack View">
+                                                                <rect key="frame" x="250" y="32" width="25" height="25"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhC-lW-4ET">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="AhC-lW-4ET" secondAttribute="height" id="4wm-ah-Ul7"/>
+                                                                            <constraint firstAttribute="width" constant="25" id="q1e-S2-ZY8"/>
+                                                                        </constraints>
+                                                                        <state key="normal" image="calender_icon"/>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="Jvs-1K-UUP" firstAttribute="top" secondItem="H5D-o4-C0g" secondAttribute="top" constant="5" id="5mP-jO-f6C"/>
+                                                            <constraint firstItem="Jvs-1K-UUP" firstAttribute="leading" secondItem="H5D-o4-C0g" secondAttribute="leading" id="HFy-2o-nV4"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Jvs-1K-UUP" secondAttribute="bottom" constant="5" id="S6Y-G4-NIS"/>
+                                                            <constraint firstItem="nhI-fj-9oz" firstAttribute="centerY" secondItem="HUK-1a-1Z8" secondAttribute="centerY" id="Sfs-XU-tq2"/>
+                                                            <constraint firstItem="nhI-fj-9oz" firstAttribute="trailing" secondItem="Jvs-1K-UUP" secondAttribute="trailing" constant="-5" id="Wyl-x5-Nj5"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Jvs-1K-UUP" secondAttribute="trailing" id="vxX-pC-WNx"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjw-eN-wi5" userLabel="Walking View">
+                                                        <rect key="frame" x="0.0" y="560" width="280" height="70"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="UTR-mR-BMy">
+                                                                <rect key="frame" x="0.0" y="5" width="280" height="60"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WALKING AID USED:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPq-nl-6fo">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="20"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="20" id="Nj9-T7-lzR"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="17"/>
+                                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Aid" textAlignment="justified" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="uBu-aX-U7z">
+                                                                        <rect key="frame" x="0.0" y="25" width="280" height="29"/>
+                                                                        <color key="tintColor" name="App_Color"/>
+                                                                        <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="16"/>
+                                                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress"/>
+                                                                    </textField>
+                                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKR-Nh-4GH">
+                                                                        <rect key="frame" x="0.0" y="59" width="280" height="1"/>
+                                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="1" id="5iQ-H1-O2o"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4CC-8Z-OPB">
+                                                                <rect key="frame" x="0.0" y="30" width="280" height="29"/>
+                                                                <connections>
+                                                                    <action selector="showWalkingAidDropDown2:" destination="De7-qv-NOA" eventType="touchUpInside" id="Wo0-dd-YAf"/>
+                                                                </connections>
+                                                            </button>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QrR-va-PMJ" userLabel="Btn Stack View">
+                                                                <rect key="frame" x="250" y="32" width="25" height="25"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbU-r9-hhe">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="25" id="Sjc-Iw-z1y"/>
+                                                                            <constraint firstAttribute="width" secondItem="GbU-r9-hhe" secondAttribute="height" id="vls-dO-c3U"/>
+                                                                        </constraints>
+                                                                        <state key="normal" image="down_arrow_icon"/>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="UTR-mR-BMy" secondAttribute="trailing" id="1F9-Np-cOT"/>
+                                                            <constraint firstItem="QrR-va-PMJ" firstAttribute="trailing" secondItem="UTR-mR-BMy" secondAttribute="trailing" constant="-5" id="2E4-jC-CCo"/>
+                                                            <constraint firstItem="UTR-mR-BMy" firstAttribute="top" secondItem="bjw-eN-wi5" secondAttribute="top" constant="5" id="8Gj-Dv-ZaR"/>
+                                                            <constraint firstItem="4CC-8Z-OPB" firstAttribute="leading" secondItem="uBu-aX-U7z" secondAttribute="leading" id="AGt-Cu-Zbz"/>
+                                                            <constraint firstAttribute="bottom" secondItem="UTR-mR-BMy" secondAttribute="bottom" constant="5" id="Erk-6W-wKm"/>
+                                                            <constraint firstItem="QrR-va-PMJ" firstAttribute="centerY" secondItem="uBu-aX-U7z" secondAttribute="centerY" id="F9F-70-Vwg"/>
+                                                            <constraint firstItem="4CC-8Z-OPB" firstAttribute="top" secondItem="uBu-aX-U7z" secondAttribute="top" id="K0f-Ac-UYb"/>
+                                                            <constraint firstItem="UTR-mR-BMy" firstAttribute="leading" secondItem="bjw-eN-wi5" secondAttribute="leading" id="PdS-3u-1ab"/>
+                                                            <constraint firstItem="4CC-8Z-OPB" firstAttribute="bottom" secondItem="uBu-aX-U7z" secondAttribute="bottom" id="fSi-7F-3X1"/>
+                                                            <constraint firstItem="4CC-8Z-OPB" firstAttribute="trailing" secondItem="uBu-aX-U7z" secondAttribute="trailing" id="lyA-nQ-ztN"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
                                             </stackView>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsL-hZ-qTT" userLabel="Goals View">
-                                                <rect key="frame" x="20" y="580" width="280" height="4"/>
+                                                <rect key="frame" x="20" y="660" width="280" height="4"/>
                                                 <subviews>
                                                     <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lWb-mx-Siw">
                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="150"/>
@@ -6664,7 +6747,7 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTL-we-ZBQ">
-                                                <rect key="frame" x="20" y="592" width="280" height="50"/>
+                                                <rect key="frame" x="20" y="672" width="280" height="50"/>
                                                 <color key="backgroundColor" name="App_Dark_Nav_Color"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="di8-LJ-gj3"/>
@@ -6726,6 +6809,7 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                         <outlet property="txtOnsetDate" destination="HUK-1a-1Z8" id="Ft0-9n-4Oq"/>
                         <outlet property="txtSide" destination="Sqf-2b-LXd" id="y9a-5g-mPA"/>
                         <outlet property="txtWalkingAid" destination="FnE-0u-pP3" id="Pxb-zs-5EF"/>
+                        <outlet property="txtWalkingAid2" destination="uBu-aX-U7z" id="AMY-Wk-ZVz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M6u-UW-wL1" sceneMemberID="firstResponder"/>

@@ -65,7 +65,7 @@ extension would_to_to:UITableViewDelegate,UITableViewDataSource{
         
         if (indexPath.row == 0) {
             cell.lbl_title.text = "LEARN"
-            cell.backgroundColor = header_color
+            cell.backgroundColor = .appOrangColors()
             cell.lbl_title.textColor = .white
             
             cell.lbl_index_number.isHidden = true
@@ -98,7 +98,7 @@ extension would_to_to:UITableViewDelegate,UITableViewDataSource{
         } else if (indexPath.row == 4) {
             
             cell.lbl_title.text = "PERFORM"
-            cell.backgroundColor = header_color
+            cell.backgroundColor = .appOrangColors()
             cell.lbl_title.textColor = .white
             
             cell.lbl_index_number.isHidden = true
@@ -136,7 +136,7 @@ extension would_to_to:UITableViewDelegate,UITableViewDataSource{
         } else if (indexPath.row == 8) {
             
             cell.lbl_title.text = "PRACTICE"
-            cell.backgroundColor = header_color
+            cell.backgroundColor = .appOrangColors()
             cell.lbl_index_number.isHidden = true
             cell.lbl_title.textColor = .white
             

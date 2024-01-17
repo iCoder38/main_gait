@@ -119,7 +119,7 @@ class gait_comparsion: BaseViewController {
         userInfoData_gait_comparision.setObject(self.txtOnsetDate.text!, forKey: "onsetDate" as NSCopying)
         // userInfoData.setObject(" \(self.txtViewGoal.text!)", forKey: "pGoal" as NSCopying)
         userInfoData_gait_comparision.setObject(self.txtWalkingAid.text!, forKey: "wakingAid" as NSCopying)
-        // userInfoData_gait_comparision.setObject(self.txtWalkingAid2.text!, forKey: "wakingAid2" as NSCopying)
+         userInfoData_gait_comparision.setObject(self.txtWalkingAid2.text!, forKey: "wakingAid2" as NSCopying)
     }
     
     @objc func datePickerFromValueChanged(sender:UIDatePicker) {
@@ -132,7 +132,11 @@ class gait_comparsion: BaseViewController {
         if sender.tag == self.txtDOB.tag {
             self.txtDOB.text = dateFormatter.string(from: sender.date)
         } else if sender.tag == self.txtADate.tag {
-            self.txtADate.text = dateFormatter.string(from: sender.date)
+             self.txtADate.text = dateFormatter.string(from: sender.date)
+//            RPicker.selectDate(title: "Select Start Date", didSelectDate: {[weak self] (selectedDate) in
+//                // TODO: Your implementation for date
+//                self!.txtADate.text = selectedDate.dateString("yyyy-MM-dd")
+//            })
         } else if sender.tag == self.txtOnsetDate.tag {
             self.txtOnsetDate.text = dateFormatter.string(from: sender.date)
         }
@@ -215,4 +219,23 @@ class gait_comparsion: BaseViewController {
         // }
     }
     
+}
+
+extension Date {
+    
+    func dateString(_ format: String = "MMM-dd-YYYY, hh:mm a") -> String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        
+        return dateFormatter.string(from: self)
+    }
+    
+    func dateByAddingYears(_ dYears: Int) -> Date {
+        
+        var dateComponents = DateComponents()
+        dateComponents.year = dYears
+        
+        return Calendar.current.date(byAdding: dateComponents, to: self)!
+    }
 }

@@ -131,6 +131,8 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
                 cell.lbl_title.text = "Unilateral Below-Knee Amputee"
                 cell.accessoryType = .disclosureIndicator
                 
+                cell.lbl_title.isHidden = false
+                
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "\(indexPath.row)"
                 
@@ -167,23 +169,36 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
                 cell.lbl_title.text = "Metal Double-Upright Ankle Foot Orthosis"
                 cell.accessoryType = .disclosureIndicator
                 cell.lbl_index_number.isHidden = false
+                
+                cell.lbl_title.isHidden = false
+                
                 cell.lbl_index_number.text = "1"
                 
             } else if (indexPath.row == 8) {
                 cell.lbl_title.text = "Polypropylene Ankle Foot Orthosis"
                 cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_title.textColor = .black
+                cell.lbl_title.isHidden = false
+                
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "2"
                 
             } else if (indexPath.row == 9) {
                 cell.lbl_title.text = "Unilateral Carbon-fiber Ankle Foot Orthosis"
                 cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_title.isHidden = false
+                
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "3"
                 
             } else if (indexPath.row == 10) {
                 cell.lbl_title.text = "Bilateral Carbon-fiber Ankle Foot Orthoses"
                 cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_title.isHidden = false
+                
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "4"
                 
@@ -191,6 +206,9 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
                 cell.lbl_title.text = "Orthotic Shoes"
                 cell.accessoryType = .disclosureIndicator
                 cell.lbl_index_number.isHidden = false
+                
+                cell.lbl_title.isHidden = false
+                
                 cell.lbl_index_number.text = "5"
                 
             } else if (indexPath.row == 12) {
@@ -375,12 +393,18 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
                 cell.lbl_title.text = "Unilateral Below Knee Amputee"
                 cell.accessoryType = .disclosureIndicator
                 
+                cell.lbl_title.textColor = .black
+                cell.lbl_title.isHidden = false
+                
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "\(indexPath.row)"
                 
             } else if (indexPath.row == 2) {
                 cell.lbl_title.text = "Above-Knee Amputee – 1"
                 cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_title.textColor = .black
+                cell.lbl_title.isHidden = false
                 
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "\(indexPath.row)"
@@ -389,6 +413,9 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
                 cell.lbl_title.text = "Above-Knee Amputee – 2"
                 cell.accessoryType = .disclosureIndicator
                 
+                cell.lbl_title.textColor = .black
+                cell.lbl_title.isHidden = false
+                
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "\(indexPath.row)"
                 
@@ -396,12 +423,18 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
                 cell.lbl_title.text = "Bilateral Above & Below Knee Amputee"
                 cell.accessoryType = .disclosureIndicator
                 
+                cell.lbl_title.textColor = .black
+                cell.lbl_title.isHidden = false
+                
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "\(indexPath.row)"
                 
             } else if (indexPath.row == 5) {
                 cell.lbl_title.text = "Hip Disarticulation Amputee"
                 cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_title.textColor = .black
+                cell.lbl_title.isHidden = false
                 
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "\(indexPath.row)"
@@ -418,12 +451,18 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
                 cell.lbl_title.text = "Metal Double-Upright Ankle Foot Orthosis"
                 cell.accessoryType = .disclosureIndicator
                 
+                cell.lbl_title.textColor = .black
+                cell.lbl_title.isHidden = false
+                
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "1"
                 
             } else if (indexPath.row == 8) {
                 cell.lbl_title.text = "Unilateral Carbon-fiber Ankle Foot Orthosis"
                 cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_title.textColor = .black
+                cell.lbl_title.isHidden = false
                 
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "2"
@@ -432,6 +471,8 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
                 cell.lbl_title.text = "Bilateral Carbon-fiber Ankle Foot Orthoses"
                 cell.accessoryType = .disclosureIndicator
                 
+                cell.lbl_title.isHidden = false
+                
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "3"
                 
@@ -439,12 +480,18 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
                 cell.lbl_title.text = "Orthotics Practice Video 1"
                 cell.accessoryType = .disclosureIndicator
                 
+                cell.lbl_title.textColor = .black
+                cell.lbl_title.isHidden = false
+                
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "4"
                 
             } else if (indexPath.row == 11) {
                 cell.lbl_title.text = "Orthotics Practice Video 2"
                 cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_title.textColor = .black
+                cell.lbl_title.isHidden = false
                 
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "5"
@@ -461,12 +508,18 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
                 cell.lbl_title.text = "Cerebro-Vascular Accident (CVA)"
                 cell.accessoryType = .disclosureIndicator
                 
+                cell.lbl_title.textColor = .black
+                cell.lbl_title.isHidden = false
+                
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "1"
                 
             } else if (indexPath.row == 14) {
                 cell.lbl_title.text = "Guillian Barre"
                 cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_title.textColor = .black
+                cell.lbl_title.isHidden = false
                 
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "2"
@@ -475,6 +528,9 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
                 cell.lbl_title.text = "Cerebral Palsy (CP)"
                 cell.accessoryType = .disclosureIndicator
                 
+                cell.lbl_title.textColor = .black
+                cell.lbl_title.isHidden = false
+                
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "3"
                 
@@ -482,12 +538,16 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
                 cell.lbl_title.text = "Neuro Practice Video 1 (Foot Slap)"
                 cell.accessoryType = .disclosureIndicator
                 
+                cell.lbl_title.isHidden = false
+                
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "4"
                 
             } else if (indexPath.row == 17) {
                 cell.lbl_title.text = "Neuro Practice Video 2 (Shuffling Gait)"
                 cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_title.isHidden = false
                 
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "5"
@@ -503,12 +563,18 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
                 cell.lbl_title.text = "Polio"
                 cell.accessoryType = .disclosureIndicator
                 
+                cell.lbl_title.textColor = .black
+                cell.lbl_title.isHidden = false
+                
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "1"
                 
             } else if (indexPath.row == 20) {
                 cell.lbl_title.text = "Severe Osteoarthritis"
                 cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_title.textColor = .black
+                cell.lbl_title.isHidden = false
                 
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "2"
@@ -517,6 +583,9 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
                 cell.lbl_title.text = "Ortho Practice Video 1"
                 cell.accessoryType = .disclosureIndicator
                 
+                cell.lbl_title.textColor = .black
+                cell.lbl_title.isHidden = false
+                
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "3"
                 
@@ -524,12 +593,18 @@ extension how_the_app_works:UITableViewDelegate,UITableViewDataSource{
                 cell.lbl_title.text = "Ortho Practice Video 2"
                 cell.accessoryType = .disclosureIndicator
                 
+                cell.lbl_title.textColor = .black
+                cell.lbl_title.isHidden = false
+                
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "4"
                 
             } else if (indexPath.row == 23) {
                 cell.lbl_title.text = "Ortho Practice Video 3"
                 cell.accessoryType = .disclosureIndicator
+                
+                cell.lbl_title.textColor = .black
+                cell.lbl_title.isHidden = false
                 
                 cell.lbl_index_number.isHidden = false
                 cell.lbl_index_number.text = "5"
@@ -871,7 +946,12 @@ class how_the_app_works_table_cell: UITableViewCell {
         }
     }
     
-    @IBOutlet weak var lbl_title:UILabel!
+    @IBOutlet weak var lbl_title:UILabel! {
+        didSet {
+            lbl_title.textColor = .black
+            
+        }
+    }
   
     
     
