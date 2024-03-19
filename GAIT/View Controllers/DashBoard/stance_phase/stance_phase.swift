@@ -2614,25 +2614,53 @@ class stance_phase: UIViewController {
     
     // # 4
     @objc func btn_hip_deviation_one_click() {
-        // https://vimeo.com/897885808/3e12d31529?share=copy
+        //
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+        pushVC.str_video_link = "https://vimeo.com/897885808/3e12d31529?share=copy"
+        pushVC.str_video_header = " Insufficient Flexion"
+        self.navigationController?.pushViewController(pushVC, animated: true)
     }
     @objc func btn_hip_deviation_two_click() {
-        // https://vimeo.com/897885804/a521c98059?share=copy
+        //
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+        pushVC.str_video_link = "https://vimeo.com/897885804/a521c98059?share=copy"
+        pushVC.str_video_header = " Insufficient Extension"
+        self.navigationController?.pushViewController(pushVC, animated: true)
     }
     @objc func btn_hip_deviation_three_click() {
-        // https://vimeo.com/897885798/cd107952c5?share=copy
+        //
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+        pushVC.str_video_link = "https://vimeo.com/897885798/cd107952c5?share=copy"
+        pushVC.str_video_header = " Excessive External Rotation"
+        self.navigationController?.pushViewController(pushVC, animated: true)
     }
     @objc func btn_hip_deviation_four_click() {
-        // https://vimeo.com/897885791/a8f60e9c49?share=copy
+        //
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+        pushVC.str_video_link = "https://vimeo.com/897885791/a8f60e9c49?share=copy"
+        pushVC.str_video_header = " Abduction"
+        self.navigationController?.pushViewController(pushVC, animated: true)
     }
     @objc func btn_hip_deviation_five_click() {
-        // https://vimeo.com/897885785/39f118c013?share=copy
+        //
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+        pushVC.str_video_link = "https://vimeo.com/897885785/39f118c013?share=copy"
+        pushVC.str_video_header = " Adduction"
+        self.navigationController?.pushViewController(pushVC, animated: true)
     }
     @objc func btn_hip_deviation_six_click() {
-        // https://vimeo.com/897885771/3f5e79f678?share=copy
+        //
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+        pushVC.str_video_link = "https://vimeo.com/897885771/3f5e79f678?share=copy"
+        pushVC.str_video_header = " Internal Rotation"
+        self.navigationController?.pushViewController(pushVC, animated: true)
     }
     @objc func btn_hip_deviation_seven_click() {
-        // https://vimeo.com/897885754/dfd36ef2c2?share=copy
+        //
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+        pushVC.str_video_link = "https://vimeo.com/897885754/dfd36ef2c2?share=copy"
+        pushVC.str_video_header = " Stiff Hip"
+        self.navigationController?.pushViewController(pushVC, animated: true)
     }
     
     
