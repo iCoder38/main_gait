@@ -2666,25 +2666,53 @@ class stance_phase: UIViewController {
     
     // # 5
     @objc func btn_pelvis_one_click() {
-        // https://vimeo.com/897974760/54cccf321d?share=copy
+        //
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+        pushVC.str_video_link = "https://vimeo.com/897974760/54cccf321d?share=copy"
+        pushVC.str_video_header = " Insufficient Forward Rotation"
+        self.navigationController?.pushViewController(pushVC, animated: true)
     }
     @objc func btn_pelvis_two_click() {
-        // https://vimeo.com/897974755/f03108756a?share=copy
+        //
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+        pushVC.str_video_link = "https://vimeo.com/897974755/f03108756a?share=copy"
+        pushVC.str_video_header = " Excessive Forward Rotation"
+        self.navigationController?.pushViewController(pushVC, animated: true)
     }
     @objc func btn_pelvis_three_click() {
-        // https://vimeo.com/897974748/edfc60ea77?share=copy
+        //
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+        pushVC.str_video_link = "https://vimeo.com/897974748/edfc60ea77?share=copy"
+        pushVC.str_video_header = " Insufficient Backward Rotation"
+        self.navigationController?.pushViewController(pushVC, animated: true)
     }
     @objc func btn_pelvis_four_click() {
-        // https://vimeo.com/897974741/5f7dcbcd0d?share=copy
+        //
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+        pushVC.str_video_link = "https://vimeo.com/897974741/5f7dcbcd0d?share=copy"
+        pushVC.str_video_header = " Excessive Backward Rotation"
+        self.navigationController?.pushViewController(pushVC, animated: true)
     }
     @objc func btn_pelvis_five_click() {
-        // https://vimeo.com/897974728/4a4a984851?share=copy
+        //
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+        pushVC.str_video_link = "https://vimeo.com/897974728/4a4a984851?share=copy"
+        pushVC.str_video_header = " Contralateral Drop"
+        self.navigationController?.pushViewController(pushVC, animated: true)
     }
     @objc func btn_pelvis_six_click() {
-        // https://vimeo.com/897974719/ee8461597c?share=copy
+        //
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+        pushVC.str_video_link = "https://vimeo.com/897974719/ee8461597c?share=copy"
+        pushVC.str_video_header = " Excessive Anterior Tilt"
+        self.navigationController?.pushViewController(pushVC, animated: true)
     }
     @objc func btn_pelvis_seven_click() {
-        // https://vimeo.com/897974707/86d62b726d?share=copy
+        //
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+        pushVC.str_video_link = "https://vimeo.com/897974707/86d62b726d?share=copy"
+        pushVC.str_video_header = " Restricted Pelvic Movement"
+        self.navigationController?.pushViewController(pushVC, animated: true)
     }
     
     // # 6
