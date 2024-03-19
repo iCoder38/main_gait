@@ -3081,14 +3081,6 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
             cell.btn_ankle_deviation_seven.addTarget(self, action: #selector(btn_ankle_deviation_seven_click), for: .touchUpInside)
             cell.btn_ankle_deviation_eight.addTarget(self, action: #selector(btn_ankle_deviation_eight_click), for: .touchUpInside)
             
-            
-            
-            
-            
-            
-            
-            
-            
             return cell
             
         } else if (indexPath.row == 2) {
@@ -3104,9 +3096,6 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
              @IBOutlet weak var :UILabel!
              @IBOutlet weak var :UILabel!
              @IBOutlet weak var :UILabel!
-             
-             
-             
              */
             
             let tap1 = UITapGestureRecognizer(target: self, action: #selector(knee_excessive_flexion_clicked_method))
