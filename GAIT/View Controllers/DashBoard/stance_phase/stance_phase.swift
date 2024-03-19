@@ -2717,19 +2717,39 @@ class stance_phase: UIViewController {
     
     // # 6
     @objc func btn_trunk_one_click() {
-        // https://vimeo.com/898010877/b42525dc13?share=copy
+        //
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+        pushVC.str_video_link = "https://vimeo.com/898010877/b42525dc13?share=copy"
+        pushVC.str_video_header = " Forward Lean"
+        self.navigationController?.pushViewController(pushVC, animated: true)
     }
     @objc func btn_trunk_two_click() {
-        // https://vimeo.com/898010869/e6d4ddd1ce?share=copy
+        //
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+        pushVC.str_video_link = "https://vimeo.com/898010869/e6d4ddd1ce?share=copy"
+        pushVC.str_video_header = " Backward Lean"
+        self.navigationController?.pushViewController(pushVC, animated: true)
     }
     @objc func btn_trunk_three_click() {
-        // https://vimeo.com/898010860/466901b562?share=copy
+        //
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+        pushVC.str_video_link = "https://vimeo.com/898010860/466901b562?share=copy"
+        pushVC.str_video_header = " Right Lean"
+        self.navigationController?.pushViewController(pushVC, animated: true)
     }
     @objc func btn_trunk_four_click() {
-        // https://vimeo.com/898010849/0aa3dad0ef?share=copy
+        //
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+        pushVC.str_video_link = "https://vimeo.com/898010849/0aa3dad0ef?share=copy"
+        pushVC.str_video_header = " Left Lean"
+        self.navigationController?.pushViewController(pushVC, animated: true)
     }
     @objc func btn_trunk_five_click() {
-        // https://vimeo.com/898010883/0c694b895a?share=copy
+        //
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "play_videos_id") as! play_videos
+        pushVC.str_video_link = "https://vimeo.com/898010883/0c694b895a?share=copy"
+        pushVC.str_video_header = " Restricted Trunk Rotation"
+        self.navigationController?.pushViewController(pushVC, animated: true)
     }
     
 }
