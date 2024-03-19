@@ -2875,7 +2875,6 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
             cell.btn_pelvis_excessive_anterior.addTarget(self, action: #selector(excessive_anteriorClickMethod), for: .touchUpInside)
             cell.btn_pelvis_restricted_pelvic.addTarget(self, action: #selector(restricted_pelvicClickMethod), for: .touchUpInside)
             
-            
             cell.btn_pelvis_one.addTarget(self, action: #selector(btn_pelvis_one_click), for: .touchUpInside)
             cell.btn_pelvis_two.addTarget(self, action: #selector(btn_pelvis_two_click), for: .touchUpInside)
             cell.btn_pelvis_three.addTarget(self, action: #selector(btn_pelvis_three_click), for: .touchUpInside)
@@ -2883,7 +2882,6 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
             cell.btn_pelvis_five.addTarget(self, action: #selector(btn_pelvis_five_click), for: .touchUpInside)
             cell.btn_pelvis_six.addTarget(self, action: #selector(btn_pelvis_six_click), for: .touchUpInside)
             cell.btn_pelvis_seven.addTarget(self, action: #selector(btn_pelvis_seven_click), for: .touchUpInside)
-            
             
             return cell
             
@@ -2911,6 +2909,7 @@ extension stance_phase:UITableViewDelegate,UITableViewDataSource{
              @IBOutlet weak var :UILabel!
              @IBOutlet weak var :UILabel!
              */
+            
             let tap1 = UITapGestureRecognizer(target: self, action: #selector(trunk_forward_ClickMethod))
             cell.lbl_trunk_forward.isUserInteractionEnabled = true
             cell.lbl_trunk_forward.addGestureRecognizer(tap1)
