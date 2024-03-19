@@ -1,0 +1,6 @@
+framework module Pods_GAIT {
+  umbrella header "Pods-GAIT-umbrella.h"
+
+  export *
+  module * { export * }
+}

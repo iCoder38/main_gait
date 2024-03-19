@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="gait_bold.otf">
+            <string>D-DIN-Bold</string>
+        </array>
+        <array key="gait_din.otf">
+            <string>D-DIN</string>
+        </array>
+        <array key="gait_din_italic.otf">
+            <string>D-DINExp-Italic</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Zgg-Gy-6xN" customClass="pdf_gait_comparision" customModule="G_A_I_T" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1200" height="1498"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZw-lB-pmc">
+                    <rect key="frame" x="0.0" y="59" width="1200" height="1405"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="g2i-CH-qc1" userLabel="Logo Stack View">
+                            <rect key="frame" x="20" y="20" width="1160" height="120"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_logo_icon" translatesAutoresizingMaskIntoConstraints="NO" id="FYD-xY-lWO">
+                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="120" id="O0z-Jh-VPd"/>
+                                        <constraint firstAttribute="width" secondItem="FYD-xY-lWO" secondAttribute="height" id="VPt-om-aRv"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enability’s GAIT COMPARISON CHART" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="stb-H4-lVf">
+                                    <rect key="frame" x="140" y="80" width="880" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="HOz-Am-pHg"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="20"/>
+                                    <color key="textColor" name="App_Red_Color"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_logo_icon" translatesAutoresizingMaskIntoConstraints="NO" id="yfN-il-OdZ">
+                                    <rect key="frame" x="1040" y="0.0" width="120" height="120"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="yfN-il-OdZ" secondAttribute="height" id="1Rs-fa-o9n"/>
+                                        <constraint firstAttribute="height" constant="120" id="3m9-up-DxK"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3hU-0x-MiH" userLabel="Info Stack View">
+                            <rect key="frame" x="40" y="160" width="1120" height="74"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JKg-RE-Wsb">
+                                    <rect key="frame" x="0.0" y="0.0" width="1120" height="32"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patient Id : " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="owf-u4-bLi">
+                                            <rect key="frame" x="0.0" y="0.0" width="276.33333333333331" height="32"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="lfz-JV-SfV"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Patient Age : " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="PAm-Q3-ghY">
+                                            <rect key="frame" x="281.33333333333337" y="0.0" width="276.33333333333337" height="32"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Diagnosis" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="VUz-q9-Bvb">
+                                            <rect key="frame" x="562.66666666666663" y="0.0" width="276" height="32"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Observed side : " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="WUm-Cm-lwd">
+                                            <rect key="frame" x="843.66666666666663" y="0.0" width="276.33333333333337" height="32"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FoY-Bp-zBY">
+                                    <rect key="frame" x="0.0" y="42" width="1120" height="32"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PREVIUOS ASSESSMENT - Date :" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="hRF-Hw-oMW">
+                                            <rect key="frame" x="0.0" y="0.0" width="276.33333333333331" height="32"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Walking Aid Used : " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Cqj-Pl-LrZ">
+                                            <rect key="frame" x="281.33333333333337" y="0.0" width="276.33333333333337" height="32"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENT ASSESSMENT - Date : " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Lwi-gv-sZO">
+                                            <rect key="frame" x="562.66666666666663" y="0.0" width="276" height="32"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Walking Aid Used : " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="VR8-r3-iv4">
+                                            <rect key="frame" x="843.66666666666663" y="0.0" width="276.33333333333337" height="32"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cue-s1-4H7">
+                                    <rect key="frame" x="0.0" y="74" width="1120" height="0.0"/>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Avn-cu-w1o" userLabel="Table data View">
+                            <rect key="frame" x="40" y="264" width="1120" height="1010"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="1116" placeholderIntrinsicHeight="80" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="tHo-Pr-TgL">
+                                    <rect key="frame" x="2" y="2" width="1116" height="0.0"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="50" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1Z-7Z-9ep">
+                                            <rect key="frame" x="0.0" y="0.0" width="1116" height="0.0"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" id="xec-FK-dXN"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </stackView>
+                                <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Hse-Ku-rOi">
+                                    <rect key="frame" x="2" y="4" width="1116" height="1004"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="oRs-9M-U3J">
+                                            <rect key="frame" x="0.0" y="0.0" width="1116" height="80"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="80" text="Rate the change in following parameters since the previous assessment" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="220" translatesAutoresizingMaskIntoConstraints="NO" id="jaB-mc-ZKe">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="5vb-vn-CFS"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" text="Significant Decline" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="AGh-Jm-v81">
+                                                    <rect key="frame" x="242" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" text="Moderate Decline" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="POe-5r-D36">
+                                                    <rect key="frame" x="414" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" text="No Change" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="KyR-um-VpQ">
+                                                    <rect key="frame" x="586" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" text="Moderate Significant" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="ZTG-Iv-FfC">
+                                                    <rect key="frame" x="758" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" text="Signnificant Improvement" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="GD7-au-6fC">
+                                                    <rect key="frame" x="930" y="0.0" width="186" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="0E2-XZ-oh4">
+                                            <rect key="frame" x="0.0" y="82" width="1116" height="80"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="80" text="balance" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="220" translatesAutoresizingMaskIntoConstraints="NO" id="Z3L-g0-ZMf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="80"/>
+                                                    <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="UnE-MR-ugC"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="VQ7-fg-caY">
+                                                    <rect key="frame" x="242" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="kIv-te-OeU">
+                                                    <rect key="frame" x="414" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="K0d-Fz-mKM">
+                                                    <rect key="frame" x="586" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="mWd-tB-aqa">
+                                                    <rect key="frame" x="758" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="nXq-I4-n0h">
+                                                    <rect key="frame" x="930" y="0.0" width="186" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ga1-0g-BZu">
+                                            <rect key="frame" x="0.0" y="164" width="1116" height="80"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="80" text="Equality / Symmetry" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="220" translatesAutoresizingMaskIntoConstraints="NO" id="mzv-fp-2Lb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="KED-eM-ZTX"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="bjJ-pf-te4">
+                                                    <rect key="frame" x="242" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="9qD-rc-gJT">
+                                                    <rect key="frame" x="414" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="jSI-Rb-wjH">
+                                                    <rect key="frame" x="586" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="c7a-UD-2Ld">
+                                                    <rect key="frame" x="758" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="SAs-as-Uz5">
+                                                    <rect key="frame" x="930" y="0.0" width="186" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="gKh-ph-YuZ">
+                                            <rect key="frame" x="0.0" y="246" width="1116" height="80"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="80" text="Energy Consumption" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uA6-Co-yoJ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="80"/>
+                                                    <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="1yC-9k-XXv"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Mk0-RB-e4f">
+                                                    <rect key="frame" x="242" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="hKf-lO-I9X">
+                                                    <rect key="frame" x="414" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="1pO-fq-I4o">
+                                                    <rect key="frame" x="586" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Lxy-fj-Lf0">
+                                                    <rect key="frame" x="758" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="GfB-1X-hnT">
+                                                    <rect key="frame" x="930" y="0.0" width="186" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="gnI-1l-Apq">
+                                            <rect key="frame" x="0.0" y="328" width="1116" height="80"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="80" text="Progression" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xj4-U1-vDn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Sx6-Y1-km7"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="PQC-b2-gOc">
+                                                    <rect key="frame" x="242" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="9rh-dV-FIL">
+                                                    <rect key="frame" x="414" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="X2D-JS-iCM">
+                                                    <rect key="frame" x="586" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="MRr-4C-eTw">
+                                                    <rect key="frame" x="758" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Pfg-U5-LC2">
+                                                    <rect key="frame" x="930" y="0.0" width="186" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="2ip-P4-5MT">
+                                            <rect key="frame" x="0.0" y="410" width="1116" height="80"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="80" text="Shock Absorption" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaQ-5J-ji0">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="80"/>
+                                                    <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="guo-Xq-ucq"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="qkO-lZ-8c2">
+                                                    <rect key="frame" x="242" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="BGn-Zn-ZPA">
+                                                    <rect key="frame" x="414" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="5s7-Id-on7">
+                                                    <rect key="frame" x="586" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="utd-y0-dZx">
+                                                    <rect key="frame" x="758" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="lUX-8V-D4C">
+                                                    <rect key="frame" x="930" y="0.0" width="186" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="y7d-6I-9wi">
+                                            <rect key="frame" x="0.0" y="492" width="1116" height="80"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="80" text="Gait Deviation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpe-8W-mcm">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="FAc-dg-Jfy"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="IXg-sq-URL">
+                                                    <rect key="frame" x="242" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ONl-S7-fEN">
+                                                    <rect key="frame" x="414" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="XlJ-jS-tej">
+                                                    <rect key="frame" x="586" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ruc-n0-25m">
+                                                    <rect key="frame" x="758" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="kRN-du-Ci5">
+                                                    <rect key="frame" x="930" y="0.0" width="186" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="7YG-sX-gcg">
+                                            <rect key="frame" x="0.0" y="574" width="1116" height="80"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="80" text="Step Length" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRe-Yz-JFM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="80"/>
+                                                    <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="nz8-io-RNv"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="M62-l5-tq7">
+                                                    <rect key="frame" x="242" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="UtX-aV-Yno">
+                                                    <rect key="frame" x="414" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="hl5-yU-Jdb">
+                                                    <rect key="frame" x="586" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="2FA-3K-vZo">
+                                                    <rect key="frame" x="758" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="L6s-e0-ecH">
+                                                    <rect key="frame" x="930" y="0.0" width="186" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="PRb-NV-nEY">
+                                            <rect key="frame" x="0.0" y="656" width="1116" height="80"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="80" text="Stance Time" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Oo-fg-Cxr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="y93-Cc-uPD"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="DnN-IE-aPi">
+                                                    <rect key="frame" x="242" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Eu6-hQ-RAa">
+                                                    <rect key="frame" x="414" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="QDm-pW-9Xs">
+                                                    <rect key="frame" x="586" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="OsX-bf-NJv">
+                                                    <rect key="frame" x="758" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="XMu-l2-iKi">
+                                                    <rect key="frame" x="930" y="0.0" width="186" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="fP9-Hq-dhq">
+                                            <rect key="frame" x="0.0" y="738" width="1116" height="80"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="80" text="Step Width" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="186-xa-qGt">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="80"/>
+                                                    <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="yV3-x0-fP8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Vfm-gU-g1w">
+                                                    <rect key="frame" x="242" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="vHZ-tf-Ifv">
+                                                    <rect key="frame" x="414" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Uzb-aP-1if">
+                                                    <rect key="frame" x="586" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="NTz-EP-Vez">
+                                                    <rect key="frame" x="758" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Sg9-zk-S6u">
+                                                    <rect key="frame" x="930" y="0.0" width="186" height="80"/>
+                                                    <color key="backgroundColor" red="0.78431373829999995" green="0.78431373829999995" blue="0.78431373829999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="keA-4P-63T">
+                                            <rect key="frame" x="0.0" y="820" width="1116" height="80"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="80" text="Toe Angle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsh-Wm-fEz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Nd5-zi-Fbt"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="NjL-GW-48K">
+                                                    <rect key="frame" x="242" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="mcP-1R-nbH">
+                                                    <rect key="frame" x="414" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Po0-QG-KnN">
+                                                    <rect key="frame" x="586" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="4Eu-pL-OzP">
+                                                    <rect key="frame" x="758" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Gt3-hv-hRG">
+                                                    <rect key="frame" x="930" y="0.0" width="186" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="1116" placeholderIntrinsicHeight="10" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="gaG-Ox-vrJ">
+                                            <rect key="frame" x="0.0" y="902" width="1116" height="20"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="1116" placeholderIntrinsicHeight="20" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQw-rq-oqx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="1116" height="20"/>
+                                                    <color key="backgroundColor" red="0.75967609879999998" green="0.83396500350000002" blue="0.92544841769999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="wNt-rh-Ypb"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="MM2-OV-Xhe">
+                                            <rect key="frame" x="0.0" y="924" width="1116" height="80"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="80" text="Overall, the patient's / client's gait since the previuos assessment shows :" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLj-7D-Nn5">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="jHv-da-84i"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="JO4-lA-tLt">
+                                                    <rect key="frame" x="242" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ZPE-ju-E59">
+                                                    <rect key="frame" x="414" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="D6t-54-wWu">
+                                                    <rect key="frame" x="586" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="a1h-4T-A5d">
+                                                    <rect key="frame" x="758" y="0.0" width="170" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" verticalHuggingPriority="251" placeholderIntrinsicWidth="170" placeholderIntrinsicHeight="80" image="uncheck_icon" translatesAutoresizingMaskIntoConstraints="NO" id="8cF-a8-oxl">
+                                                    <rect key="frame" x="930" y="0.0" width="186" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="tHo-Pr-TgL" firstAttribute="top" secondItem="Avn-cu-w1o" secondAttribute="top" constant="2" id="Jyb-wv-irN"/>
+                                <constraint firstItem="tHo-Pr-TgL" firstAttribute="leading" secondItem="Avn-cu-w1o" secondAttribute="leading" constant="2" id="Mjn-g4-1jP"/>
+                                <constraint firstItem="Hse-Ku-rOi" firstAttribute="top" secondItem="tHo-Pr-TgL" secondAttribute="bottom" constant="2" id="N6U-gl-2nR"/>
+                                <constraint firstAttribute="trailing" secondItem="tHo-Pr-TgL" secondAttribute="trailing" constant="2" id="Y58-rx-u9j"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="YTg-mZ-4T1"/>
+                                <constraint firstAttribute="bottom" secondItem="Hse-Ku-rOi" secondAttribute="bottom" constant="2" id="cVa-kF-29o"/>
+                                <constraint firstAttribute="trailing" secondItem="Hse-Ku-rOi" secondAttribute="trailing" constant="2" id="e4C-Pi-3gF"/>
+                                <constraint firstItem="Hse-Ku-rOi" firstAttribute="leading" secondItem="Avn-cu-w1o" secondAttribute="leading" constant="2" id="s7T-AU-fWa"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="qwerty test text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHc-1o-xIr">
+                            <rect key="frame" x="226" y="1282" width="932" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="sPF-OS-eJd"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="D-DINExp-Italic" family="D-DIN Exp" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECOMMENDATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rZ-O3-fcq">
+                            <rect key="frame" x="38" y="1301" width="185" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="185" id="ItL-tH-GXG"/>
+                                <constraint firstAttribute="height" constant="22" id="mYa-IA-vW2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="vfv-PG-wTT">
+                            <rect key="frame" x="38" y="1357" width="1122.6666666666667" height="40"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybg-wY-HIw">
+                                    <rect key="frame" x="0.0" y="0.0" width="1122.6666666666667" height="40"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COPYRIGHT © 2020 ENABILITY LLC. USA - ALL RIGHTS RESERVED." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="BaX-Rb-kmp">
+                                            <rect key="frame" x="20" y="2.6666666666666643" width="466.33333333333331" height="35"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="Ywk-uH-E2g"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWQ-R9-7yG">
+                                            <rect key="frame" x="486.33333333333326" y="5" width="150" height="30"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9VK-D7-8Rx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                                                    <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="17"/>
+                                                    <state key="normal" title="www.EnAbility.com">
+                                                        <color key="titleColor" systemColor="linkColor"/>
+                                                    </state>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Bw-3J-ba4" userLabel="Line">
+                                                    <rect key="frame" x="5" y="27" width="140" height="1"/>
+                                                    <color key="backgroundColor" systemColor="linkColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="42Z-hS-0CH"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="3Bw-3J-ba4" firstAttribute="bottom" secondItem="9VK-D7-8Rx" secondAttribute="bottom" constant="-2" id="Hnd-na-rVQ"/>
+                                                <constraint firstAttribute="height" constant="30" id="KyE-bp-TGx"/>
+                                                <constraint firstItem="3Bw-3J-ba4" firstAttribute="leading" secondItem="9VK-D7-8Rx" secondAttribute="leading" constant="5" id="Tzm-v9-UcO"/>
+                                                <constraint firstItem="9VK-D7-8Rx" firstAttribute="top" secondItem="HWQ-R9-7yG" secondAttribute="top" id="VTC-za-Cgn"/>
+                                                <constraint firstAttribute="width" constant="150" id="ibK-L3-w4V"/>
+                                                <constraint firstAttribute="trailing" secondItem="9VK-D7-8Rx" secondAttribute="trailing" id="qct-3a-ev1"/>
+                                                <constraint firstAttribute="bottom" secondItem="9VK-D7-8Rx" secondAttribute="bottom" id="rC9-zM-tkB"/>
+                                                <constraint firstItem="9VK-D7-8Rx" firstAttribute="leading" secondItem="HWQ-R9-7yG" secondAttribute="leading" id="y9v-8N-IOz"/>
+                                                <constraint firstItem="3Bw-3J-ba4" firstAttribute="trailing" secondItem="9VK-D7-8Rx" secondAttribute="trailing" constant="-5" id="yW7-Do-TLb"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNAUTHORIZED REPLICATION IS PROHIBITED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="3mH-2O-4yj">
+                                            <rect key="frame" x="636.33333333333337" y="11.666666666666671" width="323" height="17"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="BaX-Rb-kmp" firstAttribute="centerY" secondItem="HWQ-R9-7yG" secondAttribute="centerY" id="0Lq-Zn-Tiv"/>
+                                        <constraint firstItem="HWQ-R9-7yG" firstAttribute="centerY" secondItem="ybg-wY-HIw" secondAttribute="centerY" id="8Qn-Ed-5kc"/>
+                                        <constraint firstItem="HWQ-R9-7yG" firstAttribute="leading" secondItem="BaX-Rb-kmp" secondAttribute="trailing" id="9Hm-co-xeh"/>
+                                        <constraint firstItem="3mH-2O-4yj" firstAttribute="leading" secondItem="HWQ-R9-7yG" secondAttribute="trailing" id="MKI-S1-BsG"/>
+                                        <constraint firstItem="BaX-Rb-kmp" firstAttribute="leading" secondItem="ybg-wY-HIw" secondAttribute="leading" constant="20" symbolic="YES" id="Vqa-ZO-5K2"/>
+                                        <constraint firstItem="3mH-2O-4yj" firstAttribute="centerY" secondItem="HWQ-R9-7yG" secondAttribute="centerY" id="ahh-fz-on1"/>
+                                        <constraint firstAttribute="height" constant="40" id="iwC-eX-hwL"/>
+                                        <constraint firstItem="HWQ-R9-7yG" firstAttribute="centerX" secondItem="ybg-wY-HIw" secondAttribute="centerX" id="q3i-qp-WeM"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="8rZ-O3-fcq" firstAttribute="top" secondItem="Avn-cu-w1o" secondAttribute="bottom" constant="27" id="26n-hx-fsC"/>
+                        <constraint firstItem="g2i-CH-qc1" firstAttribute="top" secondItem="fZw-lB-pmc" secondAttribute="top" constant="20" symbolic="YES" id="5cV-v3-tO8"/>
+                        <constraint firstItem="g2i-CH-qc1" firstAttribute="leading" secondItem="fZw-lB-pmc" secondAttribute="leading" constant="20" symbolic="YES" id="Doz-fi-BdY"/>
+                        <constraint firstItem="cHc-1o-xIr" firstAttribute="top" secondItem="Avn-cu-w1o" secondAttribute="bottom" constant="8" id="F0e-iu-MXW"/>
+                        <constraint firstAttribute="trailing" secondItem="Avn-cu-w1o" secondAttribute="trailing" constant="40" id="L3S-wN-xmc"/>
+                        <constraint firstAttribute="trailing" secondItem="g2i-CH-qc1" secondAttribute="trailing" constant="20" symbolic="YES" id="OSV-V3-sub"/>
+                        <constraint firstItem="Avn-cu-w1o" firstAttribute="leading" secondItem="fZw-lB-pmc" secondAttribute="leading" constant="40" id="Wap-OP-fgz"/>
+                        <constraint firstItem="3hU-0x-MiH" firstAttribute="top" secondItem="g2i-CH-qc1" secondAttribute="bottom" constant="20" id="kqu-x1-J5f"/>
+                        <constraint firstItem="cHc-1o-xIr" firstAttribute="leading" secondItem="8rZ-O3-fcq" secondAttribute="trailing" constant="3" id="plG-Kd-9oA"/>
+                        <constraint firstAttribute="trailing" secondItem="cHc-1o-xIr" secondAttribute="trailing" constant="42" id="wck-1F-JsL"/>
+                        <constraint firstItem="3hU-0x-MiH" firstAttribute="trailing" secondItem="Avn-cu-w1o" secondAttribute="trailing" id="wsz-zV-ckW"/>
+                        <constraint firstItem="8rZ-O3-fcq" firstAttribute="leading" secondItem="fZw-lB-pmc" secondAttribute="leading" constant="38" id="yUG-8F-1Ym"/>
+                        <constraint firstItem="Avn-cu-w1o" firstAttribute="top" secondItem="3hU-0x-MiH" secondAttribute="bottom" constant="30" id="yyD-YN-aQp"/>
+                        <constraint firstItem="3hU-0x-MiH" firstAttribute="leading" secondItem="Avn-cu-w1o" secondAttribute="leading" id="zfG-XK-8gp"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="oir-hi-rGe"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="oir-hi-rGe" firstAttribute="bottom" secondItem="fZw-lB-pmc" secondAttribute="bottom" id="AfW-vt-GPZ"/>
+                <constraint firstItem="fZw-lB-pmc" firstAttribute="top" secondItem="oir-hi-rGe" secondAttribute="top" id="SD2-Uy-VJs"/>
+                <constraint firstItem="fZw-lB-pmc" firstAttribute="leading" secondItem="oir-hi-rGe" secondAttribute="leading" id="ZH1-7o-onx"/>
+                <constraint firstItem="oir-hi-rGe" firstAttribute="trailing" secondItem="fZw-lB-pmc" secondAttribute="trailing" id="hg2-2l-MaB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="img_balance_moderate_decline" destination="kIv-te-OeU" id="ge7-CE-GAm"/>
+                <outlet property="img_balance_moderate_significant" destination="mWd-tB-aqa" id="yAP-9u-Tbz"/>
+                <outlet property="img_balance_no_change" destination="K0d-Fz-mKM" id="iat-OZ-keG"/>
+                <outlet property="img_balance_significant_decline" destination="VQ7-fg-caY" id="v7N-A6-xdO"/>
+                <outlet property="img_balance_significant_improvement" destination="nXq-I4-n0h" id="KDL-Zf-lWb"/>
+                <outlet property="img_energy_moderate_decline" destination="hKf-lO-I9X" id="JvF-ZJ-8Ow"/>
+                <outlet property="img_energy_moderate_significant" destination="Lxy-fj-Lf0" id="fUO-c3-wtE"/>
+                <outlet property="img_energy_no_change" destination="1pO-fq-I4o" id="bCP-CH-v83"/>
+                <outlet property="img_energy_significant_decline" destination="Mk0-RB-e4f" id="0eC-B3-X76"/>
+                <outlet property="img_energy_significant_improvement" destination="GfB-1X-hnT" id="9kf-Fk-7BC"/>
+                <outlet property="img_equality_moderate_decline" destination="9qD-rc-gJT" id="aqY-Jn-DGT"/>
+                <outlet property="img_equality_moderate_significant" destination="c7a-UD-2Ld" id="HhH-uo-scm"/>
+                <outlet property="img_equality_no_change" destination="jSI-Rb-wjH" id="vZq-1f-uc1"/>
+                <outlet property="img_equality_significant_decline" destination="bjJ-pf-te4" id="Z4l-AQ-feU"/>
+                <outlet property="img_equality_significant_improvement" destination="SAs-as-Uz5" id="xbM-gu-bUS"/>
+                <outlet property="img_gait_deviation_moderate_decline" destination="ONl-S7-fEN" id="yVQ-xo-Ctl"/>
+                <outlet property="img_gait_deviation_moderate_significant" destination="ruc-n0-25m" id="wTW-Zu-eBH"/>
+                <outlet property="img_gait_deviation_no_change" destination="XlJ-jS-tej" id="vAF-3l-xih"/>
+                <outlet property="img_gait_deviation_significant_decline" destination="IXg-sq-URL" id="TeD-zt-pnX"/>
+                <outlet property="img_gait_deviation_significant_improvement" destination="kRN-du-Ci5" id="sEY-4S-FTL"/>
+                <outlet property="img_overall_moderate_decline" destination="ZPE-ju-E59" id="I0z-bA-qJz"/>
+                <outlet property="img_overall_moderate_significant" destination="a1h-4T-A5d" id="JOa-Pf-OX2"/>
+                <outlet property="img_overall_no_change" destination="D6t-54-wWu" id="rER-Fu-0C1"/>
+                <outlet property="img_overall_significant_decline" destination="JO4-lA-tLt" id="SsV-Xq-CNq"/>
+                <outlet property="img_overall_significant_improvement" destination="8cF-a8-oxl" id="F84-mf-a2f"/>
+                <outlet property="img_progression_moderate_decline" destination="9rh-dV-FIL" id="FsN-Iy-fWm"/>
+                <outlet property="img_progression_moderate_significant" destination="MRr-4C-eTw" id="gL4-IA-eWm"/>
+                <outlet property="img_progression_no_change" destination="X2D-JS-iCM" id="eRA-5l-fM2"/>
+                <outlet property="img_progression_significant_decline" destination="PQC-b2-gOc" id="wb8-1H-NNy"/>
+                <outlet property="img_progression_significant_improvement" destination="Pfg-U5-LC2" id="hWd-sk-VoD"/>
+                <outlet property="img_shock_moderate_decline" destination="BGn-Zn-ZPA" id="3DR-QP-1Tz"/>
+                <outlet property="img_shock_moderate_significant" destination="utd-y0-dZx" id="Fa7-Zo-pAS"/>
+                <outlet property="img_shock_no_change" destination="5s7-Id-on7" id="yKz-yJ-WW8"/>
+                <outlet property="img_shock_significant_decline" destination="qkO-lZ-8c2" id="3Mg-zW-Byf"/>
+                <outlet property="img_shock_significant_improvement" destination="lUX-8V-D4C" id="yAz-0x-7d6"/>
+                <outlet property="img_stance_time_moderate_decline" destination="Eu6-hQ-RAa" id="LhC-lC-rkB"/>
+                <outlet property="img_stance_time_moderate_significant" destination="OsX-bf-NJv" id="U56-11-8Sr"/>
+                <outlet property="img_stance_time_no_change" destination="QDm-pW-9Xs" id="g3s-Qt-7qK"/>
+                <outlet property="img_stance_time_significant_decline" destination="DnN-IE-aPi" id="MMT-KK-nDs"/>
+                <outlet property="img_stance_time_significant_improvement" destination="XMu-l2-iKi" id="DeF-Gg-KDC"/>
+                <outlet property="img_step_length_moderate_decline" destination="UtX-aV-Yno" id="pVe-7O-G5r"/>
+                <outlet property="img_step_length_moderate_significant" destination="2FA-3K-vZo" id="VS7-dp-o63"/>
+                <outlet property="img_step_length_no_change" destination="hl5-yU-Jdb" id="0i2-ZB-enQ"/>
+                <outlet property="img_step_length_significant_decline" destination="M62-l5-tq7" id="k7r-Tf-7vJ"/>
+                <outlet property="img_step_length_significant_improvement" destination="L6s-e0-ecH" id="RNc-VP-bWV"/>
+                <outlet property="img_step_width_moderate_decline" destination="vHZ-tf-Ifv" id="mhn-nB-ISS"/>
+                <outlet property="img_step_width_moderate_significant" destination="NTz-EP-Vez" id="guu-2c-jqT"/>
+                <outlet property="img_step_width_no_change" destination="Uzb-aP-1if" id="Ibc-vl-zTA"/>
+                <outlet property="img_step_width_significant_decline" destination="Vfm-gU-g1w" id="uFr-51-Ltk"/>
+                <outlet property="img_step_width_significant_improvement" destination="Sg9-zk-S6u" id="2mZ-yn-een"/>
+                <outlet property="img_toe_angle_moderate_decline" destination="mcP-1R-nbH" id="mAL-VI-f2p"/>
+                <outlet property="img_toe_angle_moderate_significant" destination="4Eu-pL-OzP" id="aAJ-Y6-KCd"/>
+                <outlet property="img_toe_angle_no_change" destination="Po0-QG-KnN" id="O8q-Ic-IKi"/>
+                <outlet property="img_toe_angle_significant_decline" destination="NjL-GW-48K" id="Se5-7Y-XOM"/>
+                <outlet property="img_toe_angle_significant_improvement" destination="Gt3-hv-hRG" id="tuF-fd-iKI"/>
+                <outlet property="lblPatAge" destination="PAm-Q3-ghY" id="tBi-B2-VUI"/>
+                <outlet property="lblPatCurrentAssessmentDate" destination="Lwi-gv-sZO" id="Bdw-fp-L7X"/>
+                <outlet property="lblPatCurrentWalkingAidUser" destination="VR8-r3-iv4" id="n96-4c-55t"/>
+                <outlet property="lblPatDiagnosis" destination="VUz-q9-Bvb" id="5tb-id-xVh"/>
+                <outlet property="lblPatName" destination="owf-u4-bLi" id="Kt6-wg-MC8"/>
+                <outlet property="lblPatObservedSide" destination="WUm-Cm-lwd" id="9qf-Fm-Q8J"/>
+                <outlet property="lblPatPreviusAssessmentDate" destination="hRF-Hw-oMW" id="4RH-oY-sKT"/>
+                <outlet property="lblPatWalkingAidUser" destination="Cqj-Pl-LrZ" id="WEK-at-6k5"/>
+                <outlet property="lbl_recommendation" destination="cHc-1o-xIr" id="2wt-hh-VuZ"/>
+                <outlet property="lbl_title_balance" destination="Z3L-g0-ZMf" id="szo-JO-x4H"/>
+                <outlet property="lbl_title_energy" destination="uA6-Co-yoJ" id="lgh-wx-kHF"/>
+                <outlet property="lbl_title_equality" destination="mzv-fp-2Lb" id="krr-ZB-LFJ"/>
+                <outlet property="lbl_title_gait" destination="lpe-8W-mcm" id="y9u-LL-pB0"/>
+                <outlet property="lbl_title_pregression" destination="xj4-U1-vDn" id="LHo-Po-hTh"/>
+                <outlet property="lbl_title_shock" destination="GaQ-5J-ji0" id="6MX-Ye-T4K"/>
+                <outlet property="lbl_title_stance_time" destination="6Oo-fg-Cxr" id="dwM-G4-3kN"/>
+                <outlet property="lbl_title_stepLength" destination="lRe-Yz-JFM" id="zN2-RY-MqD"/>
+                <outlet property="lbl_title_step_width" destination="186-xa-qGt" id="til-aq-JCy"/>
+                <outlet property="lbl_title_toe" destination="Fsh-Wm-fEz" id="397-Yp-tgl"/>
+            </connections>
+            <point key="canvasLocation" x="-163.35877862595419" y="156.33802816901408"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="app_logo_icon" width="210" height="198.5"/>
+        <image name="uncheck_icon" width="24" height="24"/>
+        <namedColor name="App_Red_Color">
+            <color red="0.88627450980392153" green="0.12156862745098039" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,28 @@
+PODS:
+  - DropDown (2.3.13)
+  - IQKeyboardManagerSwift (6.5.6)
+  - TextFieldEffects (1.6.0)
+  - Toast-Swift (5.0.1)
+
+DEPENDENCIES:
+  - DropDown
+  - IQKeyboardManagerSwift
+  - TextFieldEffects
+  - Toast-Swift
+
+SPEC REPOS:
+  trunk:
+    - DropDown
+    - IQKeyboardManagerSwift
+    - TextFieldEffects
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+
+PODFILE CHECKSUM: 00ad6a77fefb73950785dc3055d30d2bb725dc72
+
+COCOAPODS: 1.13.0
