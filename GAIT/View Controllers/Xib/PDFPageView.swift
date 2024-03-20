@@ -126,7 +126,25 @@ class PDFPageView: UIView {
         
         //lblPatName.attributedText = addBoldText(fullString: "Check again in 30 DAYS to find more friends", boldPartOfString: "30 DAYS", font: normalFont!, boldFont: boldFont)
         // print(self.userInfoData)
-        lblPatName.text = "Patient Id : \(userInfoData["pName"] as? String ?? "")"
+        
+        self.lblPatName.attributedText = NSAttributedString(string: "Assessment Id :", attributes:
+            [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        self.lblPatDob.attributedText = NSAttributedString(string: "Patient Age :", attributes:
+            [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        self.lblPatDogno.attributedText = NSAttributedString(string: "Diagnosis :", attributes:
+            [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        self.lblPatSide.attributedText = NSAttributedString(string: "Observed Side :", attributes:
+            [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        self.lblPatAssDate.attributedText = NSAttributedString(string: "Assessment Date :", attributes:
+            [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        self.lblPatOnsetDate.attributedText = NSAttributedString(string: "Onset of Injury/Illness :", attributes:
+            [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        self.lblPatGoal.attributedText = NSAttributedString(string: "Goal :", attributes:
+            [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        self.lblPatWalkerAid.attributedText = NSAttributedString(string: "Walking Aid :", attributes:
+            [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        
+        lblPatName.text = "Assessment Id : \(userInfoData["pName"] as? String ?? "")"
         lblPatDob.text = "Patient Age : \(userInfoData["pDOB"] as? String ?? "")"
         lblPatDogno.text = "Diagnosis : \(userInfoData["pDiagnosis"] as? String ?? "")"
         lblPatSide.text = "Observed Side : \(userInfoData["observedSide"] as? String ?? "")"

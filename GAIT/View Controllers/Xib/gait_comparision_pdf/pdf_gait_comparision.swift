@@ -204,7 +204,24 @@ class pdf_gait_comparision: UIView {
          userInfoData_gait_comparision.setObject(self.txtWalkingAid2.text!, forKey: "wakingAid2" as NSCopying)
          */
         
-        self.lblPatName.text = "Patient Id : \(userInfoData_gait_comparision["pName"] as? String ?? "")"
+        self.lblPatName.attributedText = NSAttributedString(string: "Assessment Id :", attributes:
+            [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        self.lblPatAge.attributedText = NSAttributedString(string: "Patient Age : ", attributes:
+            [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        self.lblPatDiagnosis.attributedText = NSAttributedString(string: "Diagnosis :", attributes:
+            [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        self.lblPatObservedSide.attributedText = NSAttributedString(string: "Observed Side :", attributes:
+            [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        self.lblPatPreviusAssessmentDate.attributedText = NSAttributedString(string: "Assessment Date : ", attributes:
+            [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        self.lblPatCurrentAssessmentDate.attributedText = NSAttributedString(string: "Current Assessment Date :", attributes:
+            [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        self.lblPatWalkingAidUser.attributedText = NSAttributedString(string: "Walking Aid Used :", attributes:
+            [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        self.lblPatCurrentWalkingAidUser.attributedText = NSAttributedString(string: "Current Walking Aid Used :", attributes:
+            [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        
+        self.lblPatName.text = "Assessment Id : \(userInfoData_gait_comparision["pName"] as? String ?? "")"
         self.lblPatAge.text = "Patient Age : \(userInfoData_gait_comparision["pDOB"] as? String ?? "")"
         self.lblPatDiagnosis.text = "Diagnosis : \(userInfoData_gait_comparision["pDiagnosis"] as? String ?? "")"
         self.lblPatObservedSide.text = "Observed Side : \(userInfoData_gait_comparision["observedSide"] as? String ?? "")"
