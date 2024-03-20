@@ -214,7 +214,7 @@ class quick_gait_assessment: BaseViewController {
         // userInfoData.setObject(self.txtDOB.text!, forKey: "pDOB" as NSCopying)
         // userInfoData.setObject(self.txtDiagnosis.text!, forKey: "pDiagnosis" as NSCopying)
         userInfoData.setObject(self.txtSide.text!, forKey: "observedSide" as NSCopying)
-        // userInfoData.setObject(self.txtADate.text!, forKey: "assessmentDate" as NSCopying)
+        userInfoData.setObject(self.txtADate.text!, forKey: "assessmentDate" as NSCopying)
         // userInfoData.setObject(self.txtOnsetDate.text!, forKey: "onsetDate" as NSCopying)
         // userInfoData.setObject(" \(self.txtViewGoal.text!)", forKey: "pGoal" as NSCopying)
         userInfoData.setObject(self.txtWalkingAid.text!, forKey: "wakingAid" as NSCopying)
@@ -227,13 +227,15 @@ class quick_gait_assessment: BaseViewController {
         
         dateFormatter.dateFormat = "dd MMM yyyy"
         
-        if sender.tag == self.txtDOB.tag{
+        self.txtADate.text = dateFormatter.string(from: sender.date)
+        
+        /*if sender.tag == self.txtDOB.tag{
             self.txtDOB.text = dateFormatter.string(from: sender.date)
         }else if sender.tag == self.txtADate.tag{
             self.txtADate.text = dateFormatter.string(from: sender.date)
         }else if sender.tag == self.txtOnsetDate.tag{
             self.txtOnsetDate.text = dateFormatter.string(from: sender.date)
-        }
+        }*/
     }
     
     //MARK: - IBActions
@@ -252,7 +254,7 @@ class quick_gait_assessment: BaseViewController {
             //datePickerView.set18YearValidation(backYear: 0)
             self.txtADate.inputView = datePickerView
         }else{
-            self.txtOnsetDate.inputView = datePickerView
+            self.txtADate.inputView = datePickerView
         }
         datePickerView.addTarget(self, action: #selector(self.datePickerFromValueChanged), for: UIControl.Event.valueChanged)
     }

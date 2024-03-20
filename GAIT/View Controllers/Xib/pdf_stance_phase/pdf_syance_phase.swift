@@ -125,7 +125,7 @@ class pdf_syance_phase: UIView {
         // lblPatDob.text = "Patient Age : \(userInfoData["pDOB"] as? String ?? "")"
         // lblPatDogno.text = "Diagnosis : \(userInfoData["pDiagnosis"] as? String ?? "")"
         lblPatSide.text = "Observed Side : \(userInfoData["observedSide"] as? String ?? "")"
-        // lblPatAssDate.text = "Assessment Date : \(userInfoData["assessmentDate"] as? String ?? "")"
+        lblPatAssDate.text = "Assessment Date : \(userInfoData["assessmentDate"] as? String ?? "")"
         // lblPatOnsetDate.text = "Onset of Injury/Illness : \(userInfoData["onsetDate"] as? String ?? "")"
         //lblPatGoal.text = "PATIENT GOAL /n\(userInfoData["pGoal"] as? String ?? "")"
         // lblPatGoal.text = "\(userInfoData["pGoal"] as? String ?? "")"

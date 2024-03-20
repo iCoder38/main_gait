@@ -428,7 +428,7 @@
                                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Patient Id" textAlignment="justified" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Em8-Kt-QH4">
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a Unique ID for this Assessment" textAlignment="justified" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Em8-Kt-QH4">
                                                                         <rect key="frame" x="0.0" y="25" width="280" height="29"/>
                                                                         <color key="tintColor" name="App_Color"/>
                                                                         <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="16"/>
@@ -2937,8 +2937,8 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fa5-zX-4ho">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="980"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bef-9P-wb5">
-                                                <rect key="frame" x="20" y="20" width="280" height="233"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bef-9P-wb5">
+                                                <rect key="frame" x="20" y="20" width="280" height="299"/>
                                                 <subviews>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QwY-9g-jSG" userLabel="Name View">
                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="71"/>
@@ -2955,7 +2955,7 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Patient Id" textAlignment="justified" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Bqh-Is-4zr">
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a Unique ID for this Assessment" textAlignment="justified" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Bqh-Is-4zr">
                                                                         <rect key="frame" x="0.0" y="25" width="280" height="30"/>
                                                                         <color key="tintColor" name="App_Color"/>
                                                                         <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="16"/>
@@ -2997,8 +2997,65 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                                             <constraint firstItem="Bz4-1N-2Wy" firstAttribute="top" secondItem="QwY-9g-jSG" secondAttribute="top" constant="5" id="ynr-4Z-6Uw"/>
                                                         </constraints>
                                                     </view>
+                                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZA-e3-kiv" userLabel="Side View">
+                                                        <rect key="frame" x="0.0" y="76" width="280" height="71"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qpZ-UK-7mm">
+                                                                <rect key="frame" x="0.0" y="5" width="280" height="61"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assessment Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALG-zP-FRU">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="20"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="20" id="fOQ-6Q-aFR"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="17"/>
+                                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Date" textAlignment="justified" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="f2E-xe-1yY">
+                                                                        <rect key="frame" x="0.0" y="25" width="280" height="30"/>
+                                                                        <color key="tintColor" name="App_Color"/>
+                                                                        <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="16"/>
+                                                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress"/>
+                                                                    </textField>
+                                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdl-vK-LmV">
+                                                                        <rect key="frame" x="0.0" y="60" width="280" height="1"/>
+                                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="1" id="sLS-wI-w9X"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="A1M-IU-Toy" userLabel="Btn Stack View">
+                                                                <rect key="frame" x="250" y="32.5" width="25" height="25"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vH-Ib-dDH">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="1vH-Ib-dDH" secondAttribute="height" id="sJe-Ja-M47"/>
+                                                                            <constraint firstAttribute="width" constant="25" id="yA4-ku-GTg"/>
+                                                                        </constraints>
+                                                                        <state key="normal" image="calender_icon"/>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="qpZ-UK-7mm" secondAttribute="bottom" constant="5" id="Ojv-Iw-CID"/>
+                                                            <constraint firstAttribute="trailing" secondItem="qpZ-UK-7mm" secondAttribute="trailing" id="WaK-D3-lgX"/>
+                                                            <constraint firstItem="A1M-IU-Toy" firstAttribute="centerY" secondItem="f2E-xe-1yY" secondAttribute="centerY" id="aG0-Iq-aRg"/>
+                                                            <constraint firstItem="qpZ-UK-7mm" firstAttribute="top" secondItem="jZA-e3-kiv" secondAttribute="top" constant="5" id="cNe-AK-mop"/>
+                                                            <constraint firstItem="qpZ-UK-7mm" firstAttribute="leading" secondItem="jZA-e3-kiv" secondAttribute="leading" id="kIp-YF-clO"/>
+                                                            <constraint firstItem="A1M-IU-Toy" firstAttribute="trailing" secondItem="qpZ-UK-7mm" secondAttribute="trailing" constant="-5" id="yr1-jF-O8k"/>
+                                                        </constraints>
+                                                    </view>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tc0-3m-JPd" userLabel="Side View">
-                                                        <rect key="frame" x="0.0" y="81" width="280" height="71"/>
+                                                        <rect key="frame" x="0.0" y="152" width="280" height="71"/>
                                                         <subviews>
                                                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="imh-2Z-mzR">
                                                                 <rect key="frame" x="0.0" y="5" width="280" height="61"/>
@@ -3065,7 +3122,7 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                                         </constraints>
                                                     </view>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWZ-3k-TtA" userLabel="Walking View">
-                                                        <rect key="frame" x="0.0" y="162" width="280" height="71"/>
+                                                        <rect key="frame" x="0.0" y="228" width="280" height="71"/>
                                                         <subviews>
                                                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1in-BL-qt5">
                                                                 <rect key="frame" x="0.0" y="5" width="280" height="61"/>
@@ -3134,7 +3191,7 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CiX-lK-nEa">
-                                                <rect key="frame" x="20" y="261" width="280" height="50"/>
+                                                <rect key="frame" x="20" y="327" width="280" height="50"/>
                                                 <color key="backgroundColor" name="App_Dark_Nav_Color"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="DBL-K9-8rC"/>
@@ -3159,7 +3216,7 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                             <constraint firstAttribute="trailing" secondItem="bef-9P-wb5" secondAttribute="trailing" constant="20" id="3IM-se-fdw"/>
                                             <constraint firstItem="bef-9P-wb5" firstAttribute="leading" secondItem="fa5-zX-4ho" secondAttribute="leading" constant="20" id="Iet-ct-dfv"/>
                                             <constraint firstItem="CiX-lK-nEa" firstAttribute="leading" secondItem="fa5-zX-4ho" secondAttribute="leading" constant="20" symbolic="YES" id="PmO-Bd-MQt"/>
-                                            <constraint firstItem="CiX-lK-nEa" firstAttribute="top" secondItem="bef-9P-wb5" secondAttribute="bottom" constant="8" symbolic="YES" id="psN-Lz-SSu"/>
+                                            <constraint firstItem="CiX-lK-nEa" firstAttribute="top" secondItem="bef-9P-wb5" secondAttribute="bottom" constant="8" id="psN-Lz-SSu"/>
                                             <constraint firstItem="bef-9P-wb5" firstAttribute="top" secondItem="fa5-zX-4ho" secondAttribute="top" constant="20" id="ziB-r4-f74"/>
                                         </constraints>
                                     </view>
@@ -3185,6 +3242,7 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                     </view>
                     <size key="freeformSize" width="320" height="1000"/>
                     <connections>
+                        <outlet property="txtADate" destination="f2E-xe-1yY" id="k4D-lI-dTq"/>
                         <outlet property="txtName" destination="Bqh-Is-4zr" id="ziV-ZS-DmU"/>
                         <outlet property="txtSide" destination="CwQ-xx-PTs" id="eQ4-PZ-ihd"/>
                         <outlet property="txtWalkingAid" destination="xhx-KW-gX5" id="GjY-XP-7qw"/>
@@ -3192,7 +3250,7 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="05z-3B-hPr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5685" y="-729"/>
+            <point key="canvasLocation" x="5685" y="-729.92957746478874"/>
         </scene>
         <!--Stance phase-->
         <scene sceneID="0Wj-8s-RA8">
@@ -5919,7 +5977,7 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Patient Id" textAlignment="justified" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="xTh-7S-YSe">
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a Unique ID for this Assessment" textAlignment="justified" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="xTh-7S-YSe">
                                                                         <rect key="frame" x="0.0" y="25" width="280" height="29"/>
                                                                         <color key="tintColor" name="App_Color"/>
                                                                         <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="16"/>
@@ -6684,7 +6742,7 @@ Gait Analysis: Normal and Pathological Function (nih.gov)</string>
                                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Patient Id" textAlignment="justified" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="FMK-lk-x23">
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a Unique ID for this Assessment" textAlignment="justified" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="FMK-lk-x23">
                                                                         <rect key="frame" x="0.0" y="25" width="280" height="29"/>
                                                                         <color key="tintColor" name="App_Color"/>
                                                                         <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="16"/>

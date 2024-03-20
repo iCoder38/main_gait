@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -65,7 +65,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="1120" height="32"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="oK4-BT-a3U">
-                                            <rect key="frame" x="0.0" y="0.0" width="370" height="32"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="276.33333333333331" height="32"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="ZmL-t9-PPH"/>
@@ -75,14 +75,21 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Observed Side : " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="eQH-OB-EIM">
-                                            <rect key="frame" x="375" y="0.0" width="370" height="32"/>
+                                            <rect key="frame" x="281.33333333333337" y="0.0" width="276.33333333333337" height="32"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Walking AID : " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="6dD-K8-6xD">
-                                            <rect key="frame" x="750" y="0.0" width="370" height="32"/>
+                                            <rect key="frame" x="562.66666666666663" y="0.0" width="276" height="32"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Assessment Date :" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Hn6-sG-eJj">
+                                            <rect key="frame" x="843.66666666666663" y="0.0" width="276.33333333333337" height="32"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -604,6 +611,7 @@
                 <outlet property="lblIntervFoucs" destination="qFM-OF-GSq" id="RLK-gq-2TN"/>
                 <outlet property="lblLength" destination="ggk-vF-Vxr" id="bh2-Cd-wVR"/>
                 <outlet property="lblNotes" destination="oee-gt-EnI" id="cMB-0h-Tef"/>
+                <outlet property="lblPatAssDate" destination="Hn6-sG-eJj" id="zAt-IY-2XH"/>
                 <outlet property="lblPatName" destination="oK4-BT-a3U" id="n1v-Bu-hDV"/>
                 <outlet property="lblPatSide" destination="eQH-OB-EIM" id="Zvj-Io-tcu"/>
                 <outlet property="lblPatWalkerAid" destination="6dD-K8-6xD" id="XHJ-nl-WZh"/>
