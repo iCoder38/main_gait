@@ -204,22 +204,18 @@ class pdf_gait_comparision: UIView {
          userInfoData_gait_comparision.setObject(self.txtWalkingAid2.text!, forKey: "wakingAid2" as NSCopying)
          */
         
-        self.lblPatName.attributedText = NSAttributedString(string: "Assessment Id :", attributes:
-            [.underlineStyle: NSUnderlineStyle.single.rawValue])
-        self.lblPatAge.attributedText = NSAttributedString(string: "Patient Age : ", attributes:
-            [.underlineStyle: NSUnderlineStyle.single.rawValue])
-        self.lblPatDiagnosis.attributedText = NSAttributedString(string: "Diagnosis :", attributes:
-            [.underlineStyle: NSUnderlineStyle.single.rawValue])
-        self.lblPatObservedSide.attributedText = NSAttributedString(string: "Observed Side :", attributes:
-            [.underlineStyle: NSUnderlineStyle.single.rawValue])
-        self.lblPatPreviusAssessmentDate.attributedText = NSAttributedString(string: "Assessment Date : ", attributes:
-            [.underlineStyle: NSUnderlineStyle.single.rawValue])
-        self.lblPatCurrentAssessmentDate.attributedText = NSAttributedString(string: "Current Assessment Date :", attributes:
-            [.underlineStyle: NSUnderlineStyle.single.rawValue])
-        self.lblPatWalkingAidUser.attributedText = NSAttributedString(string: "Walking Aid Used :", attributes:
-            [.underlineStyle: NSUnderlineStyle.single.rawValue])
-        self.lblPatCurrentWalkingAidUser.attributedText = NSAttributedString(string: "Current Walking Aid Used :", attributes:
-            [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        self.lblPatName.font = UIFont.systemFontItalic(size: 12.0, fontWeight: .black)
+        self.lblPatAge.font = UIFont.systemFontItalic(size: 12.0, fontWeight: .black)
+        self.lblPatDiagnosis.font = UIFont.systemFontItalic(size: 12.0, fontWeight: .black)
+        self.lblPatObservedSide.font = UIFont.systemFontItalic(size: 12.0, fontWeight: .black)
+        self.lblPatPreviusAssessmentDate.font = UIFont.systemFontItalic(size: 12.0, fontWeight: .black)
+        self.lblPatCurrentAssessmentDate.font = UIFont.systemFontItalic(size: 12.0, fontWeight: .black)
+        self.lblPatWalkingAidUser.font = UIFont.systemFontItalic(size: 12.0, fontWeight: .black)
+        self.lblPatCurrentWalkingAidUser.font = UIFont.systemFontItalic(size: 12.0, fontWeight: .black)
+        
+        
+        
+        
         
         self.lblPatName.text = "Assessment Id : \(userInfoData_gait_comparision["pName"] as? String ?? "")"
         self.lblPatAge.text = "Patient Age : \(userInfoData_gait_comparision["pDOB"] as? String ?? "")"
@@ -233,6 +229,7 @@ class pdf_gait_comparision: UIView {
         // set
         self.set_up_gait_comparision()
     }
+    
     
     func set_up_gait_comparision() {
         
@@ -855,4 +852,10 @@ class pdf_gait_comparision: UIView {
         }
     }
     
+}
+extension UIFont {
+    static func systemFontItalic(size fontSize: CGFloat = 17.0, fontWeight: UIFont.Weight = .regular) -> UIFont {
+        let font = UIFont.systemFont(ofSize: fontSize, weight: fontWeight)
+        return UIFont(descriptor: font.fontDescriptor.withSymbolicTraits(.traitItalic)!, size: fontSize)
+    }
 }

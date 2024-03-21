@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 16.0, *)
 class would_to_to: UIViewController {
 
     @IBOutlet weak var tble_view:UITableView!
@@ -23,10 +24,12 @@ class would_to_to: UIViewController {
         self.view.backgroundColor = .white
         // self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.navigationItem.title = "G.A.I.T App".uppercased()
+        
         // Back Button X
         let backButton = UIBarButtonItem.init(image: #imageLiteral(resourceName: "back_icon").withRenderingMode(.alwaysOriginal) , style: .plain, target: self, action: #selector(self.backClickMethod))
         self.navigationItem.leftBarButtonItem = backButton
         backButton.tintColor = .black
+        backButton.isHidden = true
         self.navigationController?.isNavigationBarHidden = false
         
         self.tble_view.separatorColor = .clear
@@ -44,6 +47,7 @@ class would_to_to: UIViewController {
 }
 
 
+@available(iOS 16.0, *)
 extension would_to_to:UITableViewDelegate,UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -698,12 +698,12 @@
 				INFOPLIST_FILE = GAIT/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = G.A.I.T;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GAITApp;
 				PRODUCT_NAME = G.A.I.T;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -724,12 +724,12 @@
 				INFOPLIST_FILE = GAIT/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = G.A.I.T;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GAITApp;
 				PRODUCT_NAME = G.A.I.T;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

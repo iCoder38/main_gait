@@ -121,14 +121,19 @@ class pdf_syance_phase: UIView {
         
         //lblPatName.attributedText = addBoldText(fullString: "Check again in 30 DAYS to find more friends", boldPartOfString: "30 DAYS", font: normalFont!, boldFont: boldFont)
         
-        self.lblPatName.attributedText = NSAttributedString(string: "Assessment Id :", attributes:
+        /*self.lblPatName.attributedText = NSAttributedString(string: "Assessment Id :", attributes:
             [.underlineStyle: NSUnderlineStyle.single.rawValue])
         self.lblPatSide.attributedText = NSAttributedString(string: "Observed Side :", attributes:
             [.underlineStyle: NSUnderlineStyle.single.rawValue])
         self.lblPatAssDate.attributedText = NSAttributedString(string: "Assessment Date :", attributes:
             [.underlineStyle: NSUnderlineStyle.single.rawValue])
         self.lblPatWalkerAid.attributedText = NSAttributedString(string: "Walking Aid :", attributes:
-            [.underlineStyle: NSUnderlineStyle.single.rawValue])
+            [.underlineStyle: NSUnderlineStyle.single.rawValue])*/
+        
+        self.lblPatName.font = UIFont.systemFontItalic(size: 12.0, fontWeight: .black)
+        self.lblPatSide.font = UIFont.systemFontItalic(size: 12.0, fontWeight: .black)
+        self.lblPatAssDate.font = UIFont.systemFontItalic(size: 12.0, fontWeight: .black)
+        self.lblPatWalkerAid.font = UIFont.systemFontItalic(size: 12.0, fontWeight: .black)
         
         lblPatName.text = "Assessment Id : \(userInfoData["pName"] as? String ?? "")"
         // lblPatDob.text = "Patient Age : \(userInfoData["pDOB"] as? String ?? "")"

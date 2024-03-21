@@ -127,7 +127,7 @@ class PDFPageView: UIView {
         //lblPatName.attributedText = addBoldText(fullString: "Check again in 30 DAYS to find more friends", boldPartOfString: "30 DAYS", font: normalFont!, boldFont: boldFont)
         // print(self.userInfoData)
         
-        self.lblPatName.attributedText = NSAttributedString(string: "Assessment Id :", attributes:
+        /*self.lblPatName.attributedText = NSAttributedString(string: "Assessment Id :", attributes:
             [.underlineStyle: NSUnderlineStyle.single.rawValue])
         self.lblPatDob.attributedText = NSAttributedString(string: "Patient Age :", attributes:
             [.underlineStyle: NSUnderlineStyle.single.rawValue])
@@ -142,7 +142,16 @@ class PDFPageView: UIView {
         self.lblPatGoal.attributedText = NSAttributedString(string: "Goal :", attributes:
             [.underlineStyle: NSUnderlineStyle.single.rawValue])
         self.lblPatWalkerAid.attributedText = NSAttributedString(string: "Walking Aid :", attributes:
-            [.underlineStyle: NSUnderlineStyle.single.rawValue])
+            [.underlineStyle: NSUnderlineStyle.single.rawValue])*/
+        
+        self.lblPatName.font = UIFont.systemFontItalic(size: 12.0, fontWeight: .black)
+        self.lblPatDob.font = UIFont.systemFontItalic(size: 12.0, fontWeight: .black)
+        self.lblPatDogno.font = UIFont.systemFontItalic(size: 12.0, fontWeight: .black)
+        self.lblPatSide.font = UIFont.systemFontItalic(size: 12.0, fontWeight: .black)
+        self.lblPatAssDate.font = UIFont.systemFontItalic(size: 12.0, fontWeight: .black)
+        self.lblPatOnsetDate.font = UIFont.systemFontItalic(size: 12.0, fontWeight: .black)
+        self.lblPatGoal.font = UIFont.systemFontItalic(size: 12.0, fontWeight: .black)
+        self.lblPatWalkerAid.font = UIFont.systemFontItalic(size: 12.0, fontWeight: .black)
         
         lblPatName.text = "Assessment Id : \(userInfoData["pName"] as? String ?? "")"
         lblPatDob.text = "Patient Age : \(userInfoData["pDOB"] as? String ?? "")"
@@ -155,7 +164,7 @@ class PDFPageView: UIView {
         lblPatWalkerAid.text = "Walking Aid : \(userInfoData["wakingAid"] as? String ?? "")"
     }
     
-    func setUpIDSData(){
+    func setUpIDSData() {
         lblIDSFoot.text   = selectedIDSData["foot"] as? String
         lblIDSAnkle.text  = selectedIDSData["ankle"] as? String
         lblIDSKnee.text   = selectedIDSData["knee"] as? String
@@ -164,7 +173,7 @@ class PDFPageView: UIView {
         lblIDSTrunk.text  = selectedIDSData["trunk"] as? String
     }
     
-    func setUpSSData(){
+    func setUpSSData() {
         lblSSFoot.text   = selectedSLSData["foot"] as? String
         lblSSAnkle.text  = selectedSLSData["ankle"] as? String
         lblSSKneee.text  = selectedSLSData["knee"] as? String
@@ -173,7 +182,7 @@ class PDFPageView: UIView {
         lblSSTrunk.text  = selectedSLSData["trunk"] as? String
     }
     
-    func setUpTDSData(){
+    func setUpTDSData() {
         lblTDSFoot.text   = selectedTDSData["foot"] as? String
         lblTDSAnkle.text  = selectedTDSData["ankle"] as? String
         lblTDSKnee.text   = selectedTDSData["knee"] as? String
@@ -182,7 +191,7 @@ class PDFPageView: UIView {
         lblTDSTrunk.text  = selectedTDSData["trunk"] as? String
     }
     
-    func setUpSwingData(){
+    func setUpSwingData() {
         lblSwingFoot.text   = selectedSwingData["foot"] as? String
         lblSwingAnkle.text  = selectedSwingData["ankle"] as? String
         lblSwingKnee.text   = selectedSwingData["knee"] as? String
@@ -208,7 +217,7 @@ class PDFPageView: UIView {
 //        lblSwingTrunk.text  = selectedSwingData["trunk"] as? String
 //    }
     
-    func setUpFocusData(){
+    func setUpFocusData() {
         lblLength.text = "\(selectedAdditionalData["lenght"] as? String ?? "")"
         lblWidth.text  = "\(selectedAdditionalData["width"] as? String ?? "")"
         lblSwing.text  = "\(selectedAdditionalData["swing"] as? String ?? "")"

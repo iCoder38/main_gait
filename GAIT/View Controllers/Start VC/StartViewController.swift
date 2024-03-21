@@ -127,11 +127,15 @@ class StartViewController: BaseViewController , UITextFieldDelegate {
     
     @IBAction func tapUrlBtn(_ sender : UIButton) {
         
-        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "StartAssessmentViewController") as! StartAssessmentViewController
-        self.navigationController?.pushViewController(pushVC, animated: true)
-        let strUrl = "https://enability.com/"
-        guard URL(string: strUrl) != nil else { return }
+//        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "StartAssessmentViewController") as! StartAssessmentViewController
+//        self.navigationController?.pushViewController(pushVC, animated: true)
+//        let strUrl = "https://enability.com/"
+//        guard URL(string: strUrl) != nil else { return }
         //UIApplication.shared.open(url)
+        
+        if let url = URL(string: "https://enability.com/") {
+            UIApplication.shared.open(url)
+        }
         
     }
         
